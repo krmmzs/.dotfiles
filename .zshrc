@@ -79,6 +79,12 @@ plugins=(git zsh-history-substring-search zsh-autosuggestions )
 
 source $ZSH/oh-my-zsh.sh
 
+# vim mode
+bindkey -v
+
+# let editor is vim default
+export EDITOR=vim
+
 # User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
