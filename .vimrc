@@ -13,7 +13,6 @@ if v:progname =~? "evim"
   finish
 endif
 
-
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 set nocompatible
@@ -55,6 +54,10 @@ Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
 " Optional:
 Plug 'honza/vim-snippets'
+
+"check syntax for vim 
+Plug 'w0rp/ale'
+Plug 'scrooloose/syntastic'
 
 "jedi-vim
 Plug 'davidhalter/jedi-vim'
