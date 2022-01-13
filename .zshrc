@@ -2,18 +2,24 @@
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/root/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Color matching compatible with TMUX
-export TERM=screen-256color
+
+#in my y7000p with ubuntu, It is not need it to add it
+#export TERM=screen-256color
+
+# plug: autojump configure
+. /usr/share/autojump/autojump.sh
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
+ZSH_THEME="robbyrussell"
 #ZSH_THEME="agnoster"
-ZSH_THEME="steeef"
+#ZSH_THEME="ys"
+#ZSH_THEME="theunraveler"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -75,7 +81,7 @@ ZSH_THEME="steeef"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-history-substring-search zsh-autosuggestions )
+plugins=(git zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,8 +113,13 @@ export EDITOR=vim
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gl="git log --all --graph --decorate"
+alias gcp="git add . && git commit -m "." && git push"
+alias clash="cd ~/clash && ./clash -d ."
+alias cman="man -M /usr/share/man/zh_CN"
+alias csen="vim ~/MyGit/English/CS_English.md"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
