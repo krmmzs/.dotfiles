@@ -62,6 +62,9 @@ Plug 'scrooloose/syntastic'
 "jedi-vim
 Plug 'davidhalter/jedi-vim'
 
+"shellcheck
+Plug 'neomake/neomake'
+
 call plug#end()
 
 "语法高亮
