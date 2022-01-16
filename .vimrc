@@ -65,6 +65,9 @@ Plug 'davidhalter/jedi-vim'
 "shellcheck
 Plug 'neomake/neomake'
 
+"serach vim do history
+Plug 'mbbill/undotree'
+
 call plug#end()
 
 "语法高亮
