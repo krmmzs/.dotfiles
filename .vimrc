@@ -70,6 +70,9 @@ Plug 'mbbill/undotree'
 
 call plug#end()
 
+"map command to hotkey
+nnoremap <F5> :UndotreeToggle<CR>
+
 "语法高亮
 syntax enable
 syntax on
