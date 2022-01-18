@@ -132,3 +132,6 @@ alias dir="nautilus"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+#autojump
+
+. /usr/share/autojump/autojump.sh
