@@ -128,6 +128,7 @@ alias gcp="git add . && git commit -m "." && git push"
 alias clash="cd ~/clash && ./clash -d ."
 alias cman="man -M /usr/share/man/zh_CN"
 alias csen="vim ~/MyGit/English/CS_English.md"
+alias dir="nautilus"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
