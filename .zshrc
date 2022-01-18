@@ -81,8 +81,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting)
 
+# This list is incomplete as there are too many frameworks / plugin managers to list them all here.
+
+# zsh-history-substring-search
 source $ZSH/oh-my-zsh.sh
 
 # vim mode
@@ -90,6 +93,9 @@ bindkey -v
 
 # let editor is vim default
 export EDITOR=vim
+
+# zsh-history-substring-search
+# source ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
 # User configuration
 
@@ -113,6 +119,7 @@ export EDITOR=vim
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
+
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
@@ -123,3 +130,4 @@ alias cman="man -M /usr/share/man/zh_CN"
 alias csen="vim ~/MyGit/English/CS_English.md"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
