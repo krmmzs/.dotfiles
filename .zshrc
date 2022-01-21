@@ -125,6 +125,8 @@ export EDITOR=vim
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gl="git log --all --graph --decorate"
 alias gcp="git add . && git commit -m "." && git push"
+alias gcf="git cat-file -p"
+alias git="LANG=en_GB git" # using English message
 alias clash="cd ~/clash && ./clash -d ."
 alias cman="man -M /usr/share/man/zh_CN"
 alias csen="vim ~/MyGit/English/CS_English.md"
