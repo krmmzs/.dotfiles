@@ -50,15 +50,20 @@ call plug#begin('~/.vim/plugged')
 " LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+" Snippets
+Plug 'honza/vim-snippets'
+
+" vim theme
 Plug 'liuchengxu/space-vim-theme'
 
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
 Plug 'garbas/vim-snipmate'
+
 " Optional:
 Plug 'honza/vim-snippets'
 
-"check syntax for vim 
+"check syntax for vim but now, I use LSP, such as Coc
 "Plug 'w0rp/ale'
 "Plug 'scrooloose/syntastic'
 
@@ -76,6 +81,9 @@ Plug 'tpope/vim-fugitive'
 
 "文件浏览器
 Plug 'preservim/nerdtree'
+
+" FZF Vim integration
+Plug 'junegunn/fzf'
 
 call plug#end()
 
@@ -316,9 +324,9 @@ let g:snipMate = { 'snippet_version' : 1 }
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""'
 "run
 "```
-" 316,485s/^"//g
+" n1,n2s/^"//g
 "```
-"即可取消这些注释
+"即可取消这些注释,n1是起始行号，n2是结尾行号
 
 "" Coc
 "" Set internal encoding of vim, not needed on neovim, since coc.nvim using some
@@ -354,11 +362,11 @@ let g:snipMate = { 'snippet_version' : 1 }
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+" inoremap <silent><expr> <TAB>
+"       \ pumvisible() ? "\<C-n>" :
+"       \ <SID>check_back_space() ? "\<TAB>" :
+"       \ coc#refresh()
+" inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 "function! s:check_back_space() abort
 "  let col = col('.') - 1
@@ -489,3 +497,15 @@ inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 "nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 "" Resume latest coc list.
 "nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+"
+
+
+" coc-snippets
+
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
+
+" vim-snippets
+let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnippets"]
+
+
