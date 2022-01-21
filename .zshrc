@@ -131,6 +131,7 @@ alias clash="cd ~/clash && ./clash -d ."
 alias cman="man -M /usr/share/man/zh_CN"
 alias csen="vim ~/MyGit/English/CS_English.md"
 alias dir="nautilus"
+alias alidrive="cd ~/softwares/阿里小白羊版Linux\ v2.9.24/ && ./阿里云盘小白羊版"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
