@@ -1,6 +1,5 @@
 [global_config]
   window_state = maximise
-  always_on_top = True
 [keybindings]
 [profiles]
   [[default]]
