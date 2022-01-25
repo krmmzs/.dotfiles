@@ -23,8 +23,18 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnippets"]
 Plug 'liuchengxu/space-vim-theme'
 Plug 'ayu-theme/ayu-vim'
 
+" vim airline
+"Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline-themes'
+"let g:airline_theme='light'
+"let g:airline_theme='papercolor'
+
+" tmuxline in vim
+" Plug 'edkolev/tmuxline.vim'
+
 " Optional:
 Plug 'honza/vim-snippets'
+
 
 "jedi-vim
 Plug 'davidhalter/jedi-vim'
@@ -54,6 +64,17 @@ nnoremap <C-p> :Files<Cr>
 
 " vim for markdown
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+
+" ag
+Plug 'rking/ag.vim'
+
+"注释
+Plug 'preservim/nerdcommenter'
+
+"vim indentLine
+Plug 'Yggdroot/indentLine'
+let g:indentLine_setColors = 0
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 " snipmate 套件
 " 自动补全，因为使用coc.vim LSP而弃用
@@ -202,7 +223,7 @@ set t_Co=256
 "colorscheme darkblue
 "colorscheme torte
 "colorscheme default
-"colorscheme space_vim_theme
+colorscheme space_vim_theme
 "colorscheme ayu
 
 "set termguicolors     " enable true colors support
@@ -259,7 +280,7 @@ if &t_Co > 2 || has("gui_running")
 endif
 
 " 增加鼠标行高亮
-"set cursorline
+set cursorline
 "hi CursorLine  cterm=NONE   ctermbg=darkred ctermfg=white
 "autocmd ColorScheme * highlight! Cursorline cterm=bold ctermbg=236 guibg=Grey90
 "autocmd ColorScheme * highlight! CursorLineNr cterm=bold ctermfg=159 ctermbg=236 guibg=Grey90
