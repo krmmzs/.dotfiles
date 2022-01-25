@@ -1,0 +1,14 @@
+session_name: startwork
+start_directory: ~/MyGit
+windows:
+    - window_name: shell
+      layout: main-vertical
+      panes:
+          - shell_command:
+              - ls
+          - shell_command:
+              - git status
+    - window_name: vim
+      panes:
+          - shell_command:
+              - vim
