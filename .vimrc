@@ -21,6 +21,7 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnippets"]
 
 " vim theme
 Plug 'liuchengxu/space-vim-theme'
+Plug 'ayu-theme/ayu-vim'
 
 " Optional:
 Plug 'honza/vim-snippets'
@@ -194,7 +195,7 @@ set hlsearch
 set incsearch
 
 " 着色模式
-"set t_Co=256
+set t_Co=256
 "colorscheme wombat256mod
 "colorscheme gardener
 "colorscheme elflord
@@ -203,9 +204,14 @@ set incsearch
 "colorscheme darkblue
 "colorscheme torte
 "colorscheme default
-colorscheme space_vim_theme
+"colorscheme space_vim_theme
+"colorscheme ayu
 
-"True color support
+"set termguicolors     " enable true colors support
+"let ayucolor="light"  " for light version of theme
+""let ayucolor="mirage" " for mirage version of theme
+""let ayucolor="dark"   " for dark version of theme
+"set background=light " for the light version
 
 " 字体 && 字号
 set guifont=Monaco:h13
@@ -213,21 +219,6 @@ set guifont=Monaco:h13
 
 " Ubuntu Gvim
 " set guifont=Monaco\ 12
-
-" :LoadTemplate       根据文件后缀自动加载模板
-"let g:template_path='/home/ruchee/.vim/template/'
-
-" :AuthorInfoDetect   自动添加作者、时间等信息，本质是NERD_commenter && authorinfo的结合
-""let g:vimrc_author='sunshanlu'
-""let g:vimrc_email='sunshanlu@baidu.com'
-""let g:vimrc_homepage='http://www.sunshanlu.com'
-"
-"
-" Ctrl + E            一步加载语法模板和作者、时间信息
-""map <c-e> <ESC>:AuthorInfoDetect<CR><ESC>Gi
-""imap <c-e> <ESC>:AuthorInfoDetect<CR><ESC>Gi
-""vmap <c-e> <ESC>:AuthorInfoDetect<CR><ESC>Gi
-
 
 
 " ======= 引号 && 括号自动匹配 ======= "
@@ -258,13 +249,13 @@ set guifont=Monaco:h13
 
 " 每行超过80个的字符用下划线标示
 ""au BufRead,BufNewFile *.s,*.asm,*.h,*.c,*.cpp,*.java,*.cs,*.lisp,*.el,*.erl,*.tex,*.sh,*.lua,*.pl,*.php,*.tpl,*.py,*.rb,*.erb,*.vim,*.js,*.jade,*.coffee,*.css,*.xml,*.html,*.shtml,*.xhtml Underlined /.\%81v/
-"
-"
+
+
 " For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
 " let &guioptions = substitute(&guioptions, "t", "", "g")
 
 " Don't use Ex mode, use Q for formatting
-map Q gq
+nnoremap Q gq
 
 " This is an alternative that also works in block mode, but the deleted
 " text is lost and it only works for putting the current register.
