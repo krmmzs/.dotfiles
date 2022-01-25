@@ -49,9 +49,12 @@ call plug#begin('~/.vim/plugged')
 
 " LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Use <C-l> for trigger snippet expand.
+imap <C-l> <Plug>(coc-snippets-expand)
 
 " Snippets
 Plug 'honza/vim-snippets'
+let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnippets"]
 
 " vim theme
 Plug 'liuchengxu/space-vim-theme'
@@ -70,12 +73,25 @@ Plug 'mbbill/undotree'
 
 "Git
 Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/gv.vim'
 
 "文件浏览器
 Plug 'preservim/nerdtree'
+Plug 'mhinz/vim-startify' "启动屏幕
 
 " FZF Vim integration
-Plug 'junegunn/fzf'
+" Plug 'junegunn/fzf'
+
+" fzf-vim
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+
+nnoremap <C-p> :Files<Cr>
+
+
+" vim for markdown
+Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 
 " snipmate 套件
 " 自动补全，因为使用coc.vim LSP而弃用
@@ -91,7 +107,8 @@ call plug#end()
 
 "map command to hotkey
 nnoremap <F5> :UndotreeToggle<CR>
-nnoremap <F6> :NERDTreeToggle<CR>
+nnoremap <F9> :NERDTreeToggle<CR>
+nnoremap <F10> :NERDTreeFind<CR>
 
 "语法高亮
 syntax enable
@@ -499,15 +516,3 @@ endif
 "nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 "" Resume latest coc list.
 "nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
-"
-
-
-" coc-snippets
-
-" Use <C-l> for trigger snippet expand.
-imap <C-l> <Plug>(coc-snippets-expand)
-
-" vim-snippets
-let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnippets"]
-
-
