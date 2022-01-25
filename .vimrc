@@ -1,40 +1,3 @@
-" An example for a vimrc file.
-"
-" To use it, copy it to
-"     for Unix and OS/2:  ~/.vimrc
-"	      for Amiga:  s:.vimrc
-"  for MS-DOS and Win32:  $VIM\_vimrc
-"	    for OpenVMS:  sys$login:.vimrc
-
-"export TERM=screen-256color-bce
-
-" When started as "evim", evim.vim will already have done these settings.
-if v:progname =~? "evim"
-  finish
-endif
-
-" Use Vim settings, rather then Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-set nocompatible
-
-" allow backspacing over everything in insert mode
-set backspace=indent,eol,start
-
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-else
-  set backup		" keep a backup file
-endif
-set history=50		" keep 50 lines of command line history
-set ruler		" show the cursor position all the time
-set showcmd		" display incomplete commands
-set incsearch		" do incremental searching
-"==========================================================================
-"My Setting-sunshanlu
-"==========================================================================
-vmap <leader>y :w! /tmp/vitmp<CR>
-nmap <leader>p :r! cat /tmp/vitmp<CR>
-
 "如果没有安装就自动安装vim-plug插件
 "Automatic installation
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -86,9 +49,7 @@ Plug 'mhinz/vim-startify' "启动屏幕
 " fzf-vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
 nnoremap <C-p> :Files<Cr>
-
 
 " vim for markdown
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
@@ -105,10 +66,35 @@ Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn in
 
 call plug#end()
 
-"map command to hotkey
+" map command to hotkey
 nnoremap <F5> :UndotreeToggle<CR>
 nnoremap <F9> :NERDTreeToggle<CR>
 nnoremap <F10> :NERDTreeFind<CR>
+
+" When started as "evim", evim.vim will already have done these settings.
+if v:progname =~? "evim"
+  finish
+endif
+
+" Use Vim settings, rather then Vi settings (much better!).
+" This must be first, because it changes other options as a side effect.
+set nocompatible
+
+" allow backspacing over everything in insert mode
+set backspace=indent,eol,start
+
+" for gvim backup
+if has("vms")
+  set nobackup		" do not keep a backup file, use versions instead
+else
+  set backup		" keep a backup file
+endif
+
+set history=100 "keep 50 lines of command line history
+set ruler " show the cursor position all the time
+set showcmd " display incomplete commands
+set incsearch " do incremental searching
+
 
 "语法高亮
 syntax enable
@@ -208,7 +194,7 @@ set hlsearch
 set incsearch
 
 " 着色模式
-set t_Co=256
+"set t_Co=256
 "colorscheme wombat256mod
 "colorscheme gardener
 "colorscheme elflord
@@ -218,6 +204,8 @@ set t_Co=256
 "colorscheme torte
 "colorscheme default
 colorscheme space_vim_theme
+
+"True color support
 
 " 字体 && 字号
 set guifont=Monaco:h13
@@ -325,17 +313,13 @@ endif " has("autocmd")
 "set cursorline
 "hi CursorLine  cterm=NONE   ctermbg=darkred ctermfg=white
 
-set cursorline
-autocmd ColorScheme * highlight! Cursorline cterm=bold ctermbg=236 guibg=Grey90
-autocmd ColorScheme * highlight! CursorLineNr cterm=bold ctermfg=159 ctermbg=236 guibg=Grey90
+"set cursorline
+"autocmd ColorScheme * highlight! Cursorline cterm=bold ctermbg=236 guibg=Grey90
+"autocmd ColorScheme * highlight! CursorLineNr cterm=bold ctermfg=159 ctermbg=236 guibg=Grey90
 
 " 设置tab是四个空格
 set ts=4
 set expandtab
-
-" 主要给Tlist使用
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_Auto_Open = 1
 
 " snipMate
 let g:snipMate = { 'snippet_version' : 1 }
