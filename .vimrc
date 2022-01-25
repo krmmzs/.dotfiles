@@ -20,24 +20,20 @@ Plug 'honza/vim-snippets'
 let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnippets"]
 
 " vim theme
-Plug 'liuchengxu/space-vim-theme'
+Plug 'liuchengxu/space-vim-theme' " It's best theme both vim and tmux in light now!!!
 Plug 'ayu-theme/ayu-vim'
 
 " vim airline
-"Plug 'vim-airline/vim-airline'
-"Plug 'vim-airline/vim-airline-themes'
-"let g:airline_theme='light'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+let g:airline_theme='light'
 "let g:airline_theme='papercolor'
 
 " tmuxline in vim
-" Plug 'edkolev/tmuxline.vim'
+"Plug 'edkolev/tmuxline.vim'
 
-" Optional:
+" Optional
 Plug 'honza/vim-snippets'
-
-
-"jedi-vim
-Plug 'davidhalter/jedi-vim'
 
 "shellcheck
 Plug 'neomake/neomake'
@@ -65,16 +61,19 @@ nnoremap <C-p> :Files<Cr>
 " vim for markdown
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 
-" ag
+" ag in vim
 Plug 'rking/ag.vim'
 
-"注释
+"add comment quikly
 Plug 'preservim/nerdcommenter'
 
-"vim indentLine
-Plug 'Yggdroot/indentLine'
-let g:indentLine_setColors = 0
-let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+"jedi-vim in Python using library Jedi
+"Plug 'davidhalter/jedi-vim'
+
+"vim indentLine, I need't!!!
+"Plug 'Yggdroot/indentLine'
+"let g:indentLine_setColors = 0
+"let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 " snipmate 套件
 " 自动补全，因为使用coc.vim LSP而弃用
