@@ -102,13 +102,11 @@ syntax enable
 syntax on
 "显示行号
 set nu
-set relativenumber
+set relativenumber " 相对
 
 "修改默认注释颜色
 "hi Comment ctermfg=DarkCyan
-"允许退格键删除
-"set backspace=2
-"启用鼠标
+"启用鼠标可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
 set mouse=a
 set selection=exclusive
 set selectmode=mouse,key
@@ -129,8 +127,6 @@ set nobackup
 set showmatch
 "括号匹配显示时间为1(单位是十分之一秒)
 set matchtime=5
-"显示当前的行号列号：
-set ruler
 "在状态栏显示正在输入的命令
 set showcmd
 
@@ -145,10 +141,12 @@ set cmdheight=2
 " This setting makes search case-insensitive when all characters in the string
 " being searched are lowercase. However, the search becomes case-sensitive if
 " it contains any capital letters. This makes searching more convenient.
+" 当'ignorecase'和'smartcase'都打开时，如果模式包含大写字母，则区分大小写，否则不区分大小写。
 set ignorecase
 set smartcase
 
 " 显示Tab符，使用一高亮竖线代替
+" such as 制表符被显示为“^I”
 set list
 "set listchars=tab:\|\ ,
 set listchars=tab:>-,trail:-
@@ -166,7 +164,7 @@ filetype plugin on
 "为特定文件类型载入相关缩进文件
 filetype indent on
 " 启用自动补全
-filetype plugin indent on 
+filetype plugin indent on
 
 
 "设置编码自动识别, 中文引号显示
@@ -250,16 +248,8 @@ set guifont=Monaco:h13
 " 每行超过80个的字符用下划线标示
 ""au BufRead,BufNewFile *.s,*.asm,*.h,*.c,*.cpp,*.java,*.cs,*.lisp,*.el,*.erl,*.tex,*.sh,*.lua,*.pl,*.php,*.tpl,*.py,*.rb,*.erb,*.vim,*.js,*.jade,*.coffee,*.css,*.xml,*.html,*.shtml,*.xhtml Underlined /.\%81v/
 
-
-" For Win32 GUI: remove 't' flag from 'guioptions': no tearoff menu entries
-" let &guioptions = substitute(&guioptions, "t", "", "g")
-
 " Don't use Ex mode, use Q for formatting
 nnoremap Q gq
-
-" This is an alternative that also works in block mode, but the deleted
-" text is lost and it only works for putting the current register.
-"vnoremap p "_dp
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -268,43 +258,9 @@ if &t_Co > 2 || has("gui_running")
   set hlsearch
 endif
 
-" Only do this part when compiled with support for autocommands.
-if has("autocmd")
-
-  " Enable file type detection.
-  " Use the default filetype settings, so that mail gets 'tw' set to 72,
-  " 'cindent' is on in C files, etc.
-  " Also load indent files, to automatically do language-dependent indenting.
-  filetype plugin indent on
-
-  " Put these in an autocmd group, so that we can delete them easily.
-  augroup vimrcEx
-  au!
-
-  " For all text files set 'textwidth' to 80 characters.
-  autocmd FileType text setlocal textwidth=80
-
-  " When editing a file, always jump to the last known cursor position.
-  " Don't do it when the position is invalid or when inside an event handler
-  " (happens when dropping a file on gvim).
-  autocmd BufReadPost *
-    \ if line("'\"") > 0 && line("'\"") <= line("$") |
-    \   exe "normal g`\"" |
-    \ endif
-
-  augroup END
-
-else
-
-  set autoindent		" always set autoindenting on
-
-endif " has("autocmd")
-
 " 增加鼠标行高亮
 "set cursorline
 "hi CursorLine  cterm=NONE   ctermbg=darkred ctermfg=white
-
-"set cursorline
 "autocmd ColorScheme * highlight! Cursorline cterm=bold ctermbg=236 guibg=Grey90
 "autocmd ColorScheme * highlight! CursorLineNr cterm=bold ctermfg=159 ctermbg=236 guibg=Grey90
 
@@ -313,45 +269,12 @@ set ts=4
 set expandtab
 
 " snipMate
-let g:snipMate = { 'snippet_version' : 1 }
+"let g:snipMate = { 'snippet_version' : 1 }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""'
-"run
-"```
-" n1,n2s/^"//g
-"```
-"即可取消这些注释,n1是起始行号，n2是结尾行号
 
-"" Coc
-"" Set internal encoding of vim, not needed on neovim, since coc.nvim using some
-"" unicode characters in the file autoload/float.vim
-"set encoding=utf-8
-"
-"" TextEdit might fail if hidden is not set.
-"set hidden
-"
-"" Some servers have issues with backup files, see #649.
-"set nobackup
-"set nowritebackup
-
-"" Give more space for displaying messages.
-"set cmdheight=2
-
-" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
-" delays and poor user experience.
-set updatetime=300
-
-"" Don't pass messages to |ins-completion-menu|.
-"set shortmess+=c
-"
-"" Always show the signcolumn, otherwise it would shift the text each time
-"" diagnostics appear/become resolved.
-"if has("nvim-0.5.0") || has("patch-8.1.1564")
-"  " Recently vim can merge signcolumn and number column into one
-"  set signcolumn=number
-"else
-"  set signcolumn=yes
-"endif
+" Don't pass messages to |ins-completion-menu|.
+set shortmess+=c
 
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
@@ -378,37 +301,37 @@ endif
 "" format on enter, <cr> could be remapped by other vim plugin
 "inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
 "                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-"
-"" Use `[g` and `]g` to navigate diagnostics
-"" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-"nmap <silent> [g <Plug>(coc-diagnostic-prev)
-"nmap <silent> ]g <Plug>(coc-diagnostic-next)
-"
-"" GoTo code navigation.
-"nmap <silent> gd <Plug>(coc-definition)
-"nmap <silent> gy <Plug>(coc-type-definition)
-"nmap <silent> gi <Plug>(coc-implementation)
-"nmap <silent> gr <Plug>(coc-references)
-"
-"" Use K to show documentation in preview window.
-"nnoremap <silent> K :call <SID>show_documentation()<CR>
-"
-"function! s:show_documentation()
-"  if (index(['vim','help'], &filetype) >= 0)
-"    execute 'h '.expand('<cword>')
-"  elseif (coc#rpc#ready())
-"    call CocActionAsync('doHover')
-"  else
-"    execute '!' . &keywordprg . " " . expand('<cword>')
-"  endif
-"endfunction
-"
-"" Highlight the symbol and its references when holding the cursor.
-"autocmd CursorHold * silent call CocActionAsync('highlight')
-"
-"" Symbol renaming.
-"nmap <leader>rn <Plug>(coc-rename)
-"
+
+" Use `[g` and `]g` to navigate diagnostics
+" Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
+nmap <silent> <Leader>[ <Plug>(coc-diagnostic-prev)
+nmap <silent> <Leader>] <Plug>(coc-diagnostic-next)
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K to show documentation in preview window.
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if (index(['vim','help'], &filetype) >= 0)
+    execute 'h '.expand('<cword>')
+  elseif (coc#rpc#ready())
+    call CocActionAsync('doHover')
+  else
+    execute '!' . &keywordprg . " " . expand('<cword>')
+  endif
+endfunction
+
+" Highlight the symbol and its references when holding the cursor.
+autocmd CursorHold * silent call CocActionAsync('highlight')
+
+" Symbol renaming.
+nmap <leader>rn <Plug>(coc-rename)
+
 "" Formatting selected code.
 "xmap <leader>f  <Plug>(coc-format-selected)
 "nmap <leader>f  <Plug>(coc-format-selected)
