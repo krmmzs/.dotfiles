@@ -139,6 +139,8 @@ alias gcp="git add . && git commit -m "." && git push"
 alias gcf="git cat-file -p"
 alias git="LANG=en_GB git" # using English message
 alias gs="git status"
+alias ga="git add"
+alias gcm="git commit -m"
 alias clash="cd ~/clash && ./clash -d ."
 alias cman="man -M /usr/share/man/zh_CN"
 alias csen="vim ~/MyGit/English/CS_English.md"
