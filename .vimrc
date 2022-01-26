@@ -67,7 +67,8 @@ Plug 'rking/ag.vim'
 "add comment quikly
 Plug 'preservim/nerdcommenter'
 
-"jedi-vim in Python using library Jedi
+"Surround.vim is all about "surroundings": parentheses, brackets, quotes
+Plug 'tpope/vim-surround'
 "Plug 'davidhalter/jedi-vim'
 
 "vim indentLine, I need't!!!
@@ -120,6 +121,7 @@ set incsearch " do incremental searching
 "语法高亮
 syntax enable
 syntax on
+
 "显示行号
 set nu
 set relativenumber " 相对
