@@ -116,7 +116,7 @@ set history=100 "keep 50 lines of command line history
 set ruler " show the cursor position all the time
 set showcmd " display incomplete commands
 set incsearch " do incremental searching
-
+set hlsearch "设置高亮搜索
 
 "语法高亮
 syntax enable
@@ -207,12 +207,6 @@ set encoding=utf-8
 "set encoding=gb2312
 "set ambiwidth=double
 set fileformat=unix
-
-
-"设置高亮搜索
-set hlsearch
-"在搜索时，输入的词句的逐字符高亮
-set incsearch
 
 " 着色模式
 set t_Co=256
