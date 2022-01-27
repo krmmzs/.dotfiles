@@ -12,6 +12,13 @@ set history=100
 "在状态栏显示正在输入的命令
 "设置使用 c/c++ 语言的自动缩进方式 
 set cindent
+set autoindent
+set smartindent
+set shiftwidth=4
+
+" tab是4个空格
+set ts=4
+set expandtab
 
 "设置在左侧显示行号和相对行号
 set nu
