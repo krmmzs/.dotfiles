@@ -56,7 +56,7 @@ Plug 'mhinz/vim-startify' "启动屏幕
 " fzf-vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-nnoremap <C-p> :Files<Cr>
+nnoremap <C-f> :Files<Cr>
 
 " vim for markdown
 Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
@@ -66,6 +66,12 @@ Plug 'rking/ag.vim'
 
 "add comment quikly
 Plug 'preservim/nerdcommenter'
+
+"move in vim
+" 使用 mm 启用
+Plug 'easymotion/vim-easymotion'
+
+nmap mm <Plug>(easymotion-s2)
 
 "Surround.vim is all about "surroundings": parentheses, brackets, quotes
 Plug 'tpope/vim-surround'
