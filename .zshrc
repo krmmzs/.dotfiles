@@ -9,6 +9,8 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PATH=$PATH:~/go/bin:
+#export PATH=$PATH:~/.cargo:
+source $HOME/.cargo/env
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -137,7 +139,7 @@ export EDITOR=vim
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias gl="git log --all --graph --decorate"
-alias gcp="git add . && git commit -m "." && git push"
+alias gcp="git add . && git commit && git push"
 alias gcf="git cat-file -p"
 alias git="LANG=en_GB git" # using English message
 alias gs="git status"
@@ -149,10 +151,10 @@ alias csen="vim ~/MyGit/English/CS_English.md"
 alias dir="nautilus"
 alias alidrive="cd ~/softwares/阿里小白羊版Linux\ v2.9.24/ && ./阿里云盘小白羊版"
 alias vim2="vim -u ~/.vimrcs/.algorithm_vimrc"
+alias mv="mv -i"
+alias cp="cp -i"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-#autojump
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh

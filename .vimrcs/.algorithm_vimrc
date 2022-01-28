@@ -3,6 +3,7 @@ call plug#begin('~/.vim/plugged')
 " Auto Pairs
 Plug 'jiangmiao/auto-pairs'
 
+Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
