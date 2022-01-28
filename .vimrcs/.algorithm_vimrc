@@ -1,3 +1,11 @@
+call plug#begin('~/.vim/plugged')
+
+" Auto Pairs
+Plug 'jiangmiao/auto-pairs'
+
+
+call plug#end()
+
 set nocompatible
 
 set enc=utf-8
@@ -35,4 +43,44 @@ highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NO
 "srarch
 set incsearch
 set hlsearch
+
+" 启用鼠标
+set mouse=a
+
+"
+":inoremap ( ()<ESC>i
+
+":inoremap ) <c-r>=ClosePair(')')<CR>
+
+":inoremap { {}<ESC>i
+"输入大括号后马上按回车
+:inoremap {<CR> {<CR>}<ESC>O
+
+":inoremap } <c-r>=ClosePair('}')<CR>
+"
+":inoremap [ []<ESC>i
+
+":inoremap ] <c-r>=ClosePair(']')<CR>
+"
+":inoremap < <><ESC>i
+
+":inoremap > <c-r>=ClosePair('>')<CR>
+
+":inoremap " ""<ESC>i
+
+":inoremap ' ''<ESC>i
+"
+":inoremap ` ``<ESC>i
+
+":inoremap * **<ESC>i
+
+"function ClosePair(char)
+"    if getline('.')[col('.') - 1] == a:char
+"        return "\<Right>"
+"    else
+"        return a:char
+"    endif
+"endif
+"endfunction
+
 

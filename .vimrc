@@ -77,6 +77,9 @@ nmap mm <Plug>(easymotion-s2)
 Plug 'tpope/vim-surround'
 "Plug 'davidhalter/jedi-vim'
 
+" Auto Pairs
+Plug 'jiangmiao/auto-pairs'
+
 "vim indentLine, I need't!!!
 "Plug 'Yggdroot/indentLine'
 "let g:indentLine_setColors = 0
@@ -246,26 +249,39 @@ set guifont=Monaco:h13
 ":inoremap ( ()<ESC>i
 
 ":inoremap ) <c-r>=ClosePair(')')<CR>
-"
+
 ":inoremap { {}<ESC>i
-"
+"输入大括号后马上按回车
+:inoremap {<CR> {<CR>}<ESC>O
+
 ":inoremap } <c-r>=ClosePair('}')<CR>
-"
+
 ":inoremap [ []<ESC>i
-"
+
 ":inoremap ] <c-r>=ClosePair(']')<CR>
-"
+
 ":inoremap < <><ESC>i
-"
+
 ":inoremap > <c-r>=ClosePair('>')<CR>
-"
-"":inoremap " ""<ESC>i
-"
+
+":inoremap " ""<ESC>i
+
 ":inoremap ' ''<ESC>i
-"
+
 ":inoremap ` ``<ESC>i
-"
+
 ":inoremap * **<ESC>i
+
+"function ClosePair(char)
+    "if getline('.')[col('.') - 1] == a:char
+        "return "\<Right>"
+    "else
+        "return a:char
+    "endif
+"endif
+"endfunction
+
+
 
 " 每行超过80个的字符用下划线标示
 ""au BufRead,BufNewFile *.s,*.asm,*.h,*.c,*.cpp,*.java,*.cs,*.lisp,*.el,*.erl,*.tex,*.sh,*.lua,*.pl,*.php,*.tpl,*.py,*.rb,*.erb,*.vim,*.js,*.jade,*.coffee,*.css,*.xml,*.html,*.shtml,*.xhtml Underlined /.\%81v/
@@ -276,8 +292,8 @@ nnoremap Q gq
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
 if &t_Co > 2 || has("gui_running")
-  syntax on
-  set hlsearch
+    syntax on
+    set hlsearch
 endif
 
 " 增加鼠标行高亮
@@ -302,21 +318,21 @@ set shortmess+=c
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
+            \ pumvisible() ? "\<C-n>" :
+            \ <SID>check_back_space() ? "\<TAB>" :
+            \ coc#refresh()
 inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
 function! s:check_back_space() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
 endfunction
 
 " Use <c-space> to trigger completion.
 if has('nvim')
-  inoremap <silent><expr> <c-space> coc#refresh()
+    inoremap <silent><expr> <c-space> coc#refresh()
 else
-  inoremap <silent><expr> <c-@> coc#refresh()
+    inoremap <silent><expr> <c-@> coc#refresh()
 endif
 
 "" Make <CR> auto-select the first completion item and notify coc.nvim to
@@ -339,13 +355,13 @@ nmap <silent> gr <Plug>(coc-references)
 nnoremap <silent> K :call <SID>show_documentation()<CR>
 
 function! s:show_documentation()
-  if (index(['vim','help'], &filetype) >= 0)
-    execute 'h '.expand('<cword>')
-  elseif (coc#rpc#ready())
-    call CocActionAsync('doHover')
-  else
-    execute '!' . &keywordprg . " " . expand('<cword>')
-  endif
+    if (index(['vim','help'], &filetype) >= 0)
+        execute 'h '.expand('<cword>')
+    elseif (coc#rpc#ready())
+        call CocActionAsync('doHover')
+    else
+        execute '!' . &keywordprg . " " . expand('<cword>')
+    endif
 endfunction
 
 " Highlight the symbol and its references when holding the cursor.
