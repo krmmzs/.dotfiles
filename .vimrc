@@ -29,30 +29,36 @@ Plug 'vim-airline/vim-airline-themes'
 let g:airline_theme='light'
 "let g:airline_theme='papercolor'
 
-" tmuxline in vim
+" vim Floaterm
+Plug 'voldikss/vim-floaterm'
+let g:floaterm_keymap_new = '<F6>'
+let g:floaterm_keymap_next = '<F8>'
+let g:floaterm_keymap_prev   = '<F7>'
+let g:floaterm_keymap_toggle = '<F12>'
+let g:floaterm_keymap_kill = '<Leader><F12>'
+
+" tmuxline in vim, but I don't like it now
 "Plug 'edkolev/tmuxline.vim'
 
 " Optional
 Plug 'honza/vim-snippets'
 
-"shellcheck
+" shellcheck
 Plug 'neomake/neomake'
 
-"serach vim do history
+" serach vim do history
 Plug 'mbbill/undotree'
 
-"Git
+" Git
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/gv.vim'
 
-"文件浏览器
+" 文件浏览器
 Plug 'preservim/nerdtree'
 Plug 'mhinz/vim-startify' "启动屏幕
 
 " FZF Vim integration
-" Plug 'junegunn/fzf'
-
 " fzf-vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -64,23 +70,23 @@ Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn in
 " ag in vim
 Plug 'rking/ag.vim'
 
-"add comment quikly
+" add comment quikly
 Plug 'preservim/nerdcommenter'
 
-"move in vim
+" move in vim
 " 使用 mm 启用
 Plug 'easymotion/vim-easymotion'
 
 nmap mm <Plug>(easymotion-s2)
 
-"Surround.vim is all about "surroundings": parentheses, brackets, quotes
+" Surround.vim is all about "surroundings": parentheses, brackets, quotes
 Plug 'tpope/vim-surround'
 "Plug 'davidhalter/jedi-vim'
 
 " Auto Pairs
 Plug 'jiangmiao/auto-pairs'
 
-"vim indentLine, I need't!!!
+" vim indentLine, I need't!!!
 "Plug 'Yggdroot/indentLine'
 "let g:indentLine_setColors = 0
 "let g:indentLine_char_list = ['|', '¦', '┆', '┊']
@@ -91,7 +97,7 @@ Plug 'jiangmiao/auto-pairs'
 " Plug 'tomtom/tlib_vim'
 " Plug 'garbas/vim-snipmate'
 
-"check syntax for vim but now, I use LSP, such as Coc
+" check syntax for vim but now, I use LSP, such as Coc
 "Plug 'w0rp/ale'
 "Plug 'scrooloose/syntastic'
 
