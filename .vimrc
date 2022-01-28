@@ -243,12 +243,23 @@ colorscheme space_vim_theme
 "set background=light " for the light version
 
 " 字体 && 字号
-set guifont=Monaco:h13
+set guifont=Monaco:h12
 "set guifont=Consolas:h10
 
 " Ubuntu Gvim
 " set guifont=Monaco\ 12
 
+"My keymap
+"give the break point to undo
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap <CR> <CR><c-g>u
+
+" moving text
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
 
 " ======= 引号 && 括号自动匹配 ======= "
 "
