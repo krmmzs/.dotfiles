@@ -6,7 +6,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PATH=$PATH:~/go/bin:
 #export PATH=$PATH:~/.cargo:
@@ -145,7 +145,8 @@ alias git="LANG=en_GB git" # using English message
 alias gs="git status"
 alias ga="git add"
 alias gcm="git commit -m"
-alias clash="cd ~/clash && ./clash -d ."
+alias clash1="cd ~/softwares/clash1.8.0 && ./clash -d ."
+alias clash2="cd ~/softwares/clash1.9.0 && ./clash -d ."
 alias cman="man -M /usr/share/man/zh_CN"
 alias csen="vim ~/MyGit/English/CS_English.md"
 alias dir="nautilus"
@@ -153,6 +154,7 @@ alias alidrive="cd ~/softwares/阿里小白羊版Linux\ v2.9.24/ && ./阿里云�
 alias vim2="vim -u ~/.vimrcs/.algorithm_vimrc"
 alias mv="mv -i"
 alias cp="cp -i"
+alias ls="exa"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
