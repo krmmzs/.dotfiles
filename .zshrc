@@ -9,7 +9,7 @@ fi
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 export PATH=$PATH:~/go/bin:
-#export PATH=$PATH:~/.cargo:
+export PATH=$PATH:~/.cargo:
 source $HOME/.cargo/env
 
 # Path to your oh-my-zsh installation.
@@ -155,6 +155,7 @@ alias vim2="vim -u ~/.vimrcs/.algorithm_vimrc"
 alias mv="mv -i"
 alias cp="cp -i"
 alias ls="exa"
+alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'" # 用bat来做fzf的预览器
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
