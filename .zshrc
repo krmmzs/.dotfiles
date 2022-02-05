@@ -152,10 +152,10 @@ alias csen="vim ~/MyGit/English/CS_English.md"
 alias dir="nautilus"
 alias alidrive="cd ~/softwares/阿里小白羊版Linux\ v2.9.24/ && ./阿里云盘小白羊版"
 alias vim2="vim -u ~/.vimrcs/.algorithm_vimrc"
-alias mv="mv -i"
-alias cp="cp -i"
-alias ls="exa"
-alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'" # 用bat来做fzf的预览器
+alias mv="mv -i"  # add attention
+alias cp="cp -i"  # add attention
+alias ls="exa" # replace ls to exa but with command ls
+alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'" # 用bat来做fzf的预览器, need to install bat
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

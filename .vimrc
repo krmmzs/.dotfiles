@@ -10,7 +10,7 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
-" LSP
+"LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
@@ -21,13 +21,17 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnippets"]
 
 " vim theme
 Plug 'liuchengxu/space-vim-theme' " It's best theme both vim and tmux in light now!!!
-Plug 'ayu-theme/ayu-vim'
+"Plug 'ayu-theme/ayu-vim'
 
 " vim airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-let g:airline_theme='light'
-"let g:airline_theme='papercolor'
+"let g:airline_theme='light'
+let g:airline_theme='papercolor'
+
+"Smarter tab line
+"let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " vim Floaterm
 Plug 'voldikss/vim-floaterm'
@@ -65,10 +69,10 @@ Plug 'junegunn/fzf.vim'
 nnoremap <C-f> :Files<Cr>
 
 " vim for markdown
-Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+"Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
 
 " ag in vim
-Plug 'rking/ag.vim'
+"Plug 'rking/ag.vim'
 
 " add comment quikly
 Plug 'preservim/nerdcommenter'
@@ -77,14 +81,25 @@ Plug 'preservim/nerdcommenter'
 " 使用 mm 启用
 Plug 'easymotion/vim-easymotion'
 
-nmap mm <Plug>(easymotion-s2)
+nmap <Leader>m <Plug>(easymotion-s2)
 
 " Surround.vim is all about "surroundings": parentheses, brackets, quotes
 Plug 'tpope/vim-surround'
+nmap <Leader>s ysaw
 "Plug 'davidhalter/jedi-vim'
+
+" Capture the map by
+"Plug 'tpope/vim-repeat'
 
 " Auto Pairs
 Plug 'jiangmiao/auto-pairs'
+
+" textobj
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-user' " add 'ae' to represent entire file text
+
+" translate in vim 
+Plug 'voldikss/vim-translator'
 
 " vim indentLine, I need't!!!
 "Plug 'Yggdroot/indentLine'
@@ -251,11 +266,11 @@ set guifont=Monaco:h12
 
 "My keymap
 "give the break point to undo
-inoremap , ,<c-g>u
-inoremap . .<c-g>u
-inoremap ! !<c-g>u
-inoremap ? ?<c-g>u
-inoremap <CR> <CR><c-g>u
+"inoremap , ,<c-g>u
+"inoremap . .<c-g>u
+"inoremap ! !<c-g>u
+"inoremap ? ?<c-g>u
+"inoremap <CR> <CR><c-g>u
 
 " moving text
 vnoremap J :m '>+1<CR>gv=gv
