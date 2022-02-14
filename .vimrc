@@ -330,13 +330,17 @@ endif
 
 " 增加鼠标行高亮
 set cursorline
+
 "hi CursorLine  cterm=NONE   ctermbg=darkred ctermfg=white
 "autocmd ColorScheme * highlight! Cursorline cterm=bold ctermbg=236 guibg=Grey90
 "autocmd ColorScheme * highlight! CursorLineNr cterm=bold ctermfg=159 ctermbg=236 guibg=Grey90
 
+"不使用space theme的时候把下面的注释取消
+highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
+
 " 设置tab是四个空格
 set ts=4
-set expandtab
+set expandtab " tab原本的制表符改成空格
 
 " snipMate
 "let g:snipMate = { 'snippet_version' : 1 }

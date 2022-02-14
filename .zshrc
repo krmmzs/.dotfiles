@@ -155,7 +155,7 @@ alias vim2="vim -u ~/.vimrcs/.algorithm_vimrc"
 alias mv="mv -i"  # add attention
 alias cp="cp -i"  # add attention
 alias ls="exa" # replace ls to exa but with command ls
-alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'" # 用bat来做fzf的预览器, need to install bat
+alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'" # 用bat来做fzf的预览器, need to install bat firstly
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
