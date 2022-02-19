@@ -101,6 +101,12 @@ Plug 'kana/vim-textobj-user' " add 'ae' to represent entire file text
 " translate in vim 
 Plug 'voldikss/vim-translator'
 
+" vim cpp 增强高亮
+Plug 'octol/vim-cpp-enhanced-highlight'
+
+" [wakatime](https://wakatime.com/)
+Plug 'wakatime/vim-wakatime'
+
 " vim indentLine, I need't!!!
 "Plug 'Yggdroot/indentLine'
 "let g:indentLine_setColors = 0
