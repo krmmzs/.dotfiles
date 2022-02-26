@@ -107,10 +107,14 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 " [wakatime](https://wakatime.com/)
 Plug 'wakatime/vim-wakatime'
 
-" vim indentLine, I need't!!!
-"Plug 'Yggdroot/indentLine'
-"let g:indentLine_setColors = 0
-"let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+" vim indentLine, if you write pyton,it may have worth for you
+Plug 'Yggdroot/indentLine'
+let g:indentLine_setColors = 0 "highlight conceal color with my colorscheme
+let g:indentLine_enabled = 0 "Disable by default
+let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+"Commands
+":IndentLinesToggle toggles lines on and off.
+nnoremap <F4> :IndentLinesToggle<CR>
 
 " snipmate 套件
 " 自动补全，因为使用coc.vim LSP而弃用
