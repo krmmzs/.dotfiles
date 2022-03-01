@@ -12,8 +12,27 @@ call plug#begin('~/.vim/plugged')
 
 "LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+"coc-snippets
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
+
+" Use <C-j> for select text for visual placeholder of snippet.
+vmap <C-j> <Plug>(coc-snippets-select)
+
+" Use <C-j> for jump to next placeholder, it's default of coc.nvim
+let g:coc_snippet_next = '<c-j>'
+
+" Use <C-k> for jump to previous placeholder, it's default of coc.nvim
+let g:coc_snippet_prev = '<c-k>'
+
+" Use <C-j> for both expand and jump (make expand higher priority.)
+imap <C-j> <Plug>(coc-snippets-expand-jump)
+
+let g:coc_snippet_next = '<tab>'
+
+"wechatminiapps
+Plug 'chemzqm/wxapp.vim'
 
 " Snippets
 Plug 'honza/vim-snippets'
@@ -91,8 +110,8 @@ nmap <Leader>s ysaw
 " Capture the map by
 "Plug 'tpope/vim-repeat'
 
-" Auto Pairs
-Plug 'jiangmiao/auto-pairs'
+" Auto Pairs, because of coc, this extension is not use again
+"Plug 'jiangmiao/auto-pairs'
 
 " textobj
 Plug 'kana/vim-textobj-entire'
@@ -292,9 +311,10 @@ vnoremap K :m '<-2<CR>gv=gv
 
 ":inoremap ) <c-r>=ClosePair(')')<CR>
 
-":inoremap { {}<ESC>i
 "输入大括号后马上按回车
 :inoremap {<CR> {<CR>}<ESC>O
+
+":inoremap { {}<ESC>i
 
 ":inoremap } <c-r>=ClosePair('}')<CR>
 
@@ -345,7 +365,6 @@ set cursorline
 "autocmd ColorScheme * highlight! Cursorline cterm=bold ctermbg=236 guibg=Grey90
 "autocmd ColorScheme * highlight! CursorLineNr cterm=bold ctermfg=159 ctermbg=236 guibg=Grey90
 
-"不使用space theme的时候把下面的注释取消
 highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
 
 " 设置tab是四个空格
