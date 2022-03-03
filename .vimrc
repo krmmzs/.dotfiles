@@ -13,6 +13,9 @@ call plug#begin('~/.vim/plugged')
 "LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+"debugging
+Plug 'puremourning/vimspector'
+
 "coc-snippets
 " Use <C-l> for trigger snippet expand.
 imap <C-l> <Plug>(coc-snippets-expand)
@@ -54,11 +57,11 @@ let g:airline_theme='papercolor'
 
 " vim Floaterm
 Plug 'voldikss/vim-floaterm'
-let g:floaterm_keymap_new = '<F6>'
-let g:floaterm_keymap_next = '<F8>'
-let g:floaterm_keymap_prev   = '<F7>'
-let g:floaterm_keymap_toggle = '<F12>'
-let g:floaterm_keymap_kill = '<Leader><F12>'
+let g:floaterm_keymap_new = '<Leader>fw'
+let g:floaterm_keymap_next = '<Leader>fn'
+let g:floaterm_keymap_prev   = '<Leader>fb'
+let g:floaterm_keymap_toggle = '<<Leader>ft'
+let g:floaterm_keymap_kill = '<Leader>fk'
 
 " tmuxline in vim, but I don't like it now
 "Plug 'edkolev/tmuxline.vim'
@@ -133,7 +136,7 @@ let g:indentLine_enabled = 0 "Disable by default
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 "Commands
 ":IndentLinesToggle toggles lines on and off.
-nnoremap <F4> :IndentLinesToggle<CR>
+nnoremap <Leader>4 :IndentLinesToggle<CR>
 
 " snipmate 套件
 " 自动补全，因为使用coc.vim LSP而弃用
@@ -145,12 +148,22 @@ nnoremap <F4> :IndentLinesToggle<CR>
 "Plug 'w0rp/ale'
 "Plug 'scrooloose/syntastic'
 
+"web
+Plug 'mattn/emmet-vim'
+
+"ctags
+Plug 'xolox/vim-misc' "vim-easytags depend plugin
+Plug 'xolox/vim-easytags' " easy to auto make ctags without your hands"
+Plug 'preservim/tagbar' "a class outline viewer for Vim
+nnoremap <Leader>tt :TagbarToggle <CR>
+
 call plug#end()
 
 " map command to hotkey
-nnoremap <F5> :UndotreeToggle<CR>
-nnoremap <F9> :NERDTreeToggle<CR>
-nnoremap <F10> :NERDTreeFind<CR>
+nnoremap <Leader>u :UndotreeToggle<CR>
+nnoremap nt :NERDTreeToggle<CR>
+nnoremap nf :NERDTreeFind<CR>
+inoremap <Leader>p <ESC>"+p
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
