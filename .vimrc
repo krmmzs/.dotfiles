@@ -15,8 +15,6 @@ call plug#begin('~/.vim/plugged')
 "LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
-"debugging
-Plug 'puremourning/vimspector'
 
 "coc-snippets
 " Use <C-l> for trigger snippet expand.
@@ -35,6 +33,9 @@ let g:coc_snippet_prev = '<c-k>'
 imap <C-j> <Plug>(coc-snippets-expand-jump)
 
 let g:coc_snippet_next = '<tab>'
+
+"debugging
+Plug 'puremourning/vimspector'
 
 "wechatminiapps
 Plug 'chemzqm/wxapp.vim'
@@ -59,7 +60,7 @@ let g:airline_theme='papercolor'
 
 " vim Floaterm
 Plug 'voldikss/vim-floaterm'
-let g:floaterm_keymap_new = '<Leader>fw'
+let g:floaterm_keymap_new = '<Leader>fe'
 let g:floaterm_keymap_next = '<Leader>fn'
 let g:floaterm_keymap_prev   = '<Leader>fb'
 let g:floaterm_keymap_toggle = '<<Leader>ft'
@@ -105,7 +106,6 @@ Plug 'preservim/nerdcommenter'
 " move in vim
 " 使用 mm 启用
 Plug 'easymotion/vim-easymotion'
-
 nmap <Leader>m <Plug>(easymotion-s2)
 
 " Surround.vim is all about "surroundings": parentheses, brackets, quotes
@@ -155,13 +155,14 @@ nnoremap <Leader>il :IndentLinesToggle<CR>
 Plug 'mattn/emmet-vim'
 Plug 'othree/xml.vim'
 
-"ctags
+"ctags and find functions
 Plug 'xolox/vim-misc' "vim-easytags depend plugin
 Plug 'xolox/vim-easytags' " easy to auto make ctags without your hands"
 Plug 'preservim/tagbar' "a class outline viewer for Vim
 nnoremap <Leader>tt :TagbarToggle <CR>
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 noremap <Leader>f :LeaderfFunction!<cr>
+"and type "!" to fuzzy serach, and type "Tab" to return back
 
 call plug#end()
 
