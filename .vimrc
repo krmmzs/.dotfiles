@@ -1,3 +1,5 @@
+let mapleader = ","
+
 "如果没有安装就自动安装vim-plug插件
 "Automatic installation
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -89,6 +91,7 @@ Plug 'mhinz/vim-startify' "启动屏幕
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 nnoremap <C-f> :Files<Cr>
+Plug 'nvim-lua/plenary.nvim'
 
 " vim for markdown
 "Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
@@ -136,7 +139,7 @@ let g:indentLine_enabled = 0 "Disable by default
 let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 "Commands
 ":IndentLinesToggle toggles lines on and off.
-nnoremap <Leader>4 :IndentLinesToggle<CR>
+nnoremap <Leader>il :IndentLinesToggle<CR>
 
 " snipmate 套件
 " 自动补全，因为使用coc.vim LSP而弃用
@@ -150,12 +153,15 @@ nnoremap <Leader>4 :IndentLinesToggle<CR>
 
 "web
 Plug 'mattn/emmet-vim'
+Plug 'othree/xml.vim'
 
 "ctags
 Plug 'xolox/vim-misc' "vim-easytags depend plugin
 Plug 'xolox/vim-easytags' " easy to auto make ctags without your hands"
 Plug 'preservim/tagbar' "a class outline viewer for Vim
 nnoremap <Leader>tt :TagbarToggle <CR>
+Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
+noremap <Leader>f :LeaderfFunction!<cr>
 
 call plug#end()
 
