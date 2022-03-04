@@ -15,6 +15,18 @@ call plug#begin('~/.vim/plugged')
 "LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+"异步编译运行
+Plug 'skywind3000/asyncrun.vim'
+" 自动打开 quickfix window ，高度为 6
+let g:asyncrun_open = 6
+" 任务结束时候响铃提醒
+let g:asyncrun_bell = 1
+" 设置 <Leader>0 打开/关闭 Quickfix 窗口
+nnoremap <Leader>0 :call asyncrun#quickfix_toggle(6)<cr>
+" 在vim里编译当前文件(c++)
+nnoremap <silent> <Leader>9 :AsyncRun g++ -Wall -O2 "$(VIM_FILEPATH)" -o "$(VIM_FILEDIR)/$(VIM_FILENOEXT)" <cr>
+" 在vim里运行python3
+nnoremap <silent> <Leader>8 :AsyncRun python3 "$(VIM_FILEPATH)"<cr>
 
 "coc-snippets
 " Use <C-l> for trigger snippet expand.
@@ -116,12 +128,16 @@ nmap <Leader>s ysaw
 " Capture the map by
 "Plug 'tpope/vim-repeat'
 
-" Auto Pairs, because of coc, this extension is not use again
-"Plug 'jiangmiao/auto-pairs'
-
 " textobj
-Plug 'kana/vim-textobj-entire'
-Plug 'kana/vim-textobj-user' " add 'ae' to represent entire file text
+Plug 'kana/vim-textobj-user'
+Plug 'kana/vim-textobj-entire' "整个文件
+Plug 'bps/vim-textobj-python' "python
+Plug 'kana/vim-textobj-indent' "同缩进
+Plug 'sgur/vim-textobj-parameter' "函数参数
+
+"它新定义的文本对象主要有：
+"i, 和 a, ：参数对象，写代码一半在修改，现在可以用 di, 或 ci, 一次性删除/改写当前参数
+"ii 和 ai ：缩进对象，同一个缩进层次的代码，可以用 vii 选中，dii / cii 删除或改写
 
 " translate in vim 
 Plug 'voldikss/vim-translator'
@@ -129,7 +145,7 @@ Plug 'voldikss/vim-translator'
 " vim cpp 增强高亮
 Plug 'octol/vim-cpp-enhanced-highlight'
 
-" [wakatime](https://wakatime.com/)
+" https://wakatime.com/
 Plug 'wakatime/vim-wakatime'
 
 " vim indentLine, if you write pyton,it may have worth for you
@@ -156,8 +172,9 @@ Plug 'mattn/emmet-vim'
 Plug 'othree/xml.vim'
 
 "ctags and find functions
-Plug 'xolox/vim-misc' "vim-easytags depend plugin
-Plug 'xolox/vim-easytags' " easy to auto make ctags without your hands"
+"Plug 'xolox/vim-misc' "vim-easytags depend plugin
+"Plug 'xolox/vim-easytags' " easy to auto make ctags without your hands"
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'preservim/tagbar' "a class outline viewer for Vim
 nnoremap <Leader>tt :TagbarToggle <CR>
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
@@ -313,7 +330,7 @@ set guifont=Monaco:h12
 " Ubuntu Gvim
 " set guifont=Monaco\ 12
 
-"My keymap
+"mymap
 "give the break point to undo
 "inoremap , ,<c-g>u
 "inoremap . .<c-g>u
@@ -324,6 +341,8 @@ set guifont=Monaco:h12
 " moving text
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
+
+" html add label
 
 " ======= 引号 && 括号自动匹配 ======= "
 "
