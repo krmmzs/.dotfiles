@@ -75,7 +75,7 @@ Plug 'voldikss/vim-floaterm'
 let g:floaterm_keymap_new = '<Leader>fe'
 let g:floaterm_keymap_next = '<Leader>fn'
 let g:floaterm_keymap_prev   = '<Leader>fb'
-let g:floaterm_keymap_toggle = '<<Leader>ft'
+let g:floaterm_keymap_toggle = '<Leader>ft'
 let g:floaterm_keymap_kill = '<Leader>fk'
 
 " tmuxline in vim, but I don't like it now
@@ -97,6 +97,8 @@ Plug 'junegunn/gv.vim'
 
 " 文件浏览器
 Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin' "A plugin of NERDTree showing git status flags.
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "add highlight
 Plug 'mhinz/vim-startify' "启动屏幕
 
 " FZF Vim integration
@@ -107,7 +109,8 @@ nnoremap <C-f> :Files<Cr>
 Plug 'nvim-lua/plenary.nvim'
 
 " vim for markdown
-"Plug 'instant-markdown/vim-instant-markdown', {'for': 'markdown', 'do': 'yarn install'}
+Plug 'godlygeek/tabular' "自动对齐
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } "预览
 
 " ag in vim
 "Plug 'rking/ag.vim'
@@ -181,13 +184,40 @@ Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 noremap <Leader>f :LeaderfFunction!<cr>
 "and type "!" to fuzzy serach, and type "Tab" to return back
 
+"vim-gutentags config
+
+" gutentags 搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归
+let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
+
+" 所生成的数据文件的名称
+let g:gutentags_ctags_tagfile = '.tags'
+
+" 将自动生成的 tags 文件全部放入 ~/.cache/tags 目录中，避免污染工程目录
+let s:vim_tags = expand('~/.cache/tags')
+let g:gutentags_cache_dir = s:vim_tags
+
+" 配置 ctags 的参数
+let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+
+" 检测 ~/.cache/tags 不存在就新建
+if !isdirectory(s:vim_tags)
+   silent! call mkdir(s:vim_tags, 'p')
+endif
+
+"leetcode
+
 call plug#end()
 
 " map command to hotkey
 nnoremap <Leader>u :UndotreeToggle<CR>
-nnoremap nt :NERDTreeToggle<CR>
-nnoremap nf :NERDTreeFind<CR>
+nnoremap <Leader>nc :NERDTreeFocus <CR>
+nnoremap <Leader>nt :NERDTreeToggle<CR>
+nnoremap <Leader>nf :NERDTreeFind<CR>
 inoremap <Leader>p <ESC>"+p
+vnoremap <Leader>y "+y
+map <Leader>1 :set relativenumber!<CR>
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
