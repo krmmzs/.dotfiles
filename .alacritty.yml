@@ -1,0 +1,79 @@
+colors:
+  primary:
+    #background: "#f8f8f8"
+    #foreground: "#2a2b33"
+    #cursor: "#bbbbbb"
+    #selection_background: "#ececec"
+    #color0: "#000000"
+    #color8: "#000000"
+    #color1: "#de3d35"
+    #color9: "#de3d35"
+    #color2: "#3e953a"
+    #color10: "#3e953a"
+    #color3: "#d2b67b"
+    #color11: "#d2b67b"
+    #color4: "#2f5af3"
+    #color12: "#2f5af3"
+    #color5: "#950095"
+    #color13: "#a00095"
+    #color6: "#3e953a"
+    #color14: "#3e953a"
+    #color7: "#bbbbbb"
+    #color15: "#ffffff"
+    #selection_foregrou"nd: "#f8f8f8"
+    
+# Colors (Night Owlish Light)
+colors:
+  bright:
+    blue: '#5ca7e4'
+    cyan: '#00c990'
+    green: '#49d0c5'
+    magenta: '#697098'
+    red: '#f76e6e'
+    yellow: '#dac26b'
+  cursor:
+    cursor: '#403f53'
+    text: '#fbfbfb'
+  normal:
+    black: '#011627'
+    blue: '#4876d6'
+    cyan: '#08916a'
+    green: '#2aa298'
+    magenta: '#403f53'
+    red: '#d3423e'
+    white: '#7a8181'
+    yellow: '#daaa01'
+  primary:
+    background: '#ffffff'
+    foreground: '#403f53'
+  selection:
+    background: '#f2f2f2'
+    text: '#403f53'
+
+# Colors (Night)
+colors:
+  bright:
+    red: '#c82829'
+    orange: '#f5871f'
+    yellow: '#eab700'
+    green: '#718c00'
+    aqua: '#3e999f'
+    blue: '#4271ae'
+    purple: '#8959a8'
+  cursor:
+    cursor: '#403f53'
+    text: '#fbfbfb'
+  normal:
+    red: '#c82829'
+    orange: '#f5871f'
+    yellow: '#eab700'
+    green: '#718c00'
+    aqua: '#3e999f'
+    blue: '#4271ae'
+    purple: '#8959a8'
+  primary:
+    background: '#ffffff'
+    foreground: '#403f53'
+  selection:
+    background: '#f2f2f2'
+    text: '#403f53'
