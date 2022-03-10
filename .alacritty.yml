@@ -77,3 +77,15 @@ colors:
   selection:
     background: '#f2f2f2'
     text: '#403f53'
+font:
+  # 常规字体
+  normal:
+    # family: Hack
+    # family: "Sarasa Mono SC"
+    family: "Monaco Nerd Font"
+    #family: "Monaco"
+    # 字体风格
+    style: Regular
+      
+
+  size: 13

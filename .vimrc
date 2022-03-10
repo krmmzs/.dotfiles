@@ -25,8 +25,6 @@ let g:asyncrun_bell = 1
 nnoremap <Leader>0 :call asyncrun#quickfix_toggle(6)<cr>
 " 在vim里编译当前文件(c++)
 nnoremap <silent> <Leader>9 :AsyncRun g++ -Wall -O2 "$(VIM_FILEPATH)" -o "$(VIM_FILEDIR)/$(VIM_FILENOEXT)" <cr>
-" 在vim里运行python3
-nnoremap <silent> <Leader>8 :AsyncRun python3 "$(VIM_FILEPATH)"<cr>
 
 "coc-snippets
 " Use <C-l> for trigger snippet expand.
@@ -48,9 +46,6 @@ let g:coc_snippet_next = '<tab>'
 
 "debugging
 Plug 'puremourning/vimspector'
-
-"wechatminiapps
-Plug 'chemzqm/wxapp.vim'
 
 " Snippets
 Plug 'honza/vim-snippets'
@@ -81,7 +76,7 @@ let g:floaterm_keymap_kill = '<Leader>fk'
 " tmuxline in vim, but I don't like it now
 "Plug 'edkolev/tmuxline.vim'
 
-" Optional
+" snippets
 Plug 'honza/vim-snippets'
 
 " shellcheck
@@ -142,11 +137,11 @@ Plug 'sgur/vim-textobj-parameter' "函数参数
 "i, 和 a, ：参数对象，写代码一半在修改，现在可以用 di, 或 ci, 一次性删除/改写当前参数
 "ii 和 ai ：缩进对象，同一个缩进层次的代码，可以用 vii 选中，dii / cii 删除或改写
 
-" translate in vim 
-Plug 'voldikss/vim-translator'
-
 " vim cpp 增强高亮
 Plug 'octol/vim-cpp-enhanced-highlight'
+
+" vim python 增强高亮等IDE enhance
+Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
 
 " https://wakatime.com/
 Plug 'wakatime/vim-wakatime'
@@ -173,13 +168,23 @@ nnoremap <Leader>il :IndentLinesToggle<CR>
 "web
 Plug 'mattn/emmet-vim'
 Plug 'othree/xml.vim'
+" post install (yarn install | npm install) then load plugin only for editing supported files
+Plug 'prettier/vim-prettier', {
+  \ 'do': 'yarn install --frozen-lockfile --production',
+  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'] }
+"which format html,css,js,markdown if they have/support the \"@format\" pragma annotation in the header of the file
+let g:prettier#autoformat = 1 "Enable auto formatting of files that have \"@format\" or \"@prettier\" tag
+
 
 "ctags and find functions
 "Plug 'xolox/vim-misc' "vim-easytags depend plugin
-"Plug 'xolox/vim-easytags' " easy to auto make ctags without your hands"
+"Plug 'xolox/vim-easytags' " easy to auto make ctags without your hands
 Plug 'ludovicchabant/vim-gutentags'
-Plug 'preservim/tagbar' "a class outline viewer for Vim
-nnoremap <Leader>tt :TagbarToggle <CR>
+"Plug 'preservim/tagbar' "a class outline viewer for Vim
+"nnoremap <Leader>tt :TagbarToggle <CR>
+Plug 'liuchengxu/vista.vim' "replace tagbar which could support LSP
+noremap <Leader>vv :Vista!!<CR>
+noremap <Leader>vf :Vista finder<CR>
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 noremap <Leader>f :LeaderfFunction!<cr>
 "and type "!" to fuzzy serach, and type "Tab" to return back
@@ -206,9 +211,16 @@ if !isdirectory(s:vim_tags)
    silent! call mkdir(s:vim_tags, 'p')
 endif
 
-"leetcode
+" vista config
+
+" To enable fzf's preview window set g:vista_fzf_preview.
+" The elements of g:vista_fzf_preview will be passed as arguments to fzf#vim#with_preview()
+" For example:
+let g:vista_fzf_preview = ['right:50%']
 
 call plug#end()
+
+"vim for python
 
 " map command to hotkey
 nnoremap <Leader>u :UndotreeToggle<CR>
@@ -373,6 +385,10 @@ vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
 " html add label
+
+"yapf for python
+noremap <Leader>p= :0,$!yapf<CR>
+
 
 " ======= 引号 && 括号自动匹配 ======= "
 "
