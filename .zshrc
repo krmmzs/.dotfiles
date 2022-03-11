@@ -117,7 +117,8 @@ export EDITOR=vim
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANGUAGE=en_US
+export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -152,6 +153,7 @@ alias csen="vim ~/MyGit/English/CS_English.md"
 alias dir="nautilus"
 alias alidrive="cd ~/softwares/阿里小白羊版Linux\ v2.9.24/ && ./阿里云盘小白羊版"
 alias vim2="vim -u ~/.vimrcs/.algorithm_vimrc"
+alias vim3="vim -u ~/.vimrcs/.text_vimrc"
 alias mv="mv -i"  # add attention
 alias cp="cp -i"  # add attention
 alias ls="exa" # replace ls to exa but with command ls
@@ -163,3 +165,4 @@ alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 eval $(thefuck --alias)
+fpath+=${ZDOTDIR:-~}/.zsh_functions

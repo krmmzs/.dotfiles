@@ -60,6 +60,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "let g:airline_theme='light'
 let g:airline_theme='papercolor'
+let g:airline#extensions#tabline#enabled = 1 "Automatically displays all buffers when there's only one tab open
 
 "Smarter tab line
 "let g:airline#extensions#tabline#enabled = 1
@@ -67,11 +68,11 @@ let g:airline_theme='papercolor'
 
 " vim Floaterm
 Plug 'voldikss/vim-floaterm'
-let g:floaterm_keymap_new = '<Leader>fe'
-let g:floaterm_keymap_next = '<Leader>fn'
-let g:floaterm_keymap_prev   = '<Leader>fb'
-let g:floaterm_keymap_toggle = '<Leader>ft'
-let g:floaterm_keymap_kill = '<Leader>fk'
+let g:floaterm_keymap_new = '<Leader>2'
+let g:floaterm_keymap_next = '<Leader>4'
+let g:floaterm_keymap_prev   = '<Leader>3'
+let g:floaterm_keymap_toggle = '<Leader>5'
+let g:floaterm_keymap_kill = '<Leader>6'
 
 " tmuxline in vim, but I don't like it now
 "Plug 'edkolev/tmuxline.vim'
@@ -95,20 +96,21 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin' "A plugin of NERDTree showing git status flags.
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "add highlight
 Plug 'mhinz/vim-startify' "启动屏幕
+Plug 'ryanoasis/vim-devicons' "icons for them
 
 " FZF Vim integration
 " fzf-vim
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 nnoremap <C-f> :Files<Cr>
-Plug 'nvim-lua/plenary.nvim'
+"Plug 'nvim-lua/plenary.nvim'
 
 " vim for markdown
 Plug 'godlygeek/tabular' "自动对齐
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } "预览
 
 " ag in vim
-"Plug 'rking/ag.vim'
+Plug 'rking/ag.vim'
 
 " add comment quikly
 Plug 'preservim/nerdcommenter'
@@ -140,8 +142,13 @@ Plug 'sgur/vim-textobj-parameter' "函数参数
 " vim cpp 增强高亮
 Plug 'octol/vim-cpp-enhanced-highlight'
 
-" vim python 增强高亮等IDE enhance
+" vim python IDE in vim
 Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
+" documentation:
+"Run python code (<leader>r)
+"Add/remove breakpoints (<leader>b)
+"Search in python documentation (<leader>K)
+"Go to definition (<C-c>g)
 
 " https://wakatime.com/
 Plug 'wakatime/vim-wakatime'
@@ -175,19 +182,20 @@ Plug 'prettier/vim-prettier', {
 "which format html,css,js,markdown if they have/support the \"@format\" pragma annotation in the header of the file
 let g:prettier#autoformat = 1 "Enable auto formatting of files that have \"@format\" or \"@prettier\" tag
 
-
 "ctags and find functions
-"Plug 'xolox/vim-misc' "vim-easytags depend plugin
-"Plug 'xolox/vim-easytags' " easy to auto make ctags without your hands
-Plug 'ludovicchabant/vim-gutentags'
-"Plug 'preservim/tagbar' "a class outline viewer for Vim
-"nnoremap <Leader>tt :TagbarToggle <CR>
+Plug 'ludovicchabant/vim-gutentags' "build ctas
 Plug 'liuchengxu/vista.vim' "replace tagbar which could support LSP
 noremap <Leader>vv :Vista!!<CR>
 noremap <Leader>vf :Vista finder<CR>
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-noremap <Leader>f :LeaderfFunction!<cr>
+noremap <Leader>fg :LeaderfFunction!<cr>
+noremap <Leader>ff :LeaderfFile<cr>
 "and type "!" to fuzzy serach, and type "Tab" to return back
+"To enable popup mode
+let g:Lf_WindowPosition = 'popup'
+let g:Lf_PreviewInPopup = 1
+"  leaderf 会自动从项目根目录(用.git来定位root)往下搜索文件
+let g:Lf_WorkingDirectoryMode = 'a'
 
 "vim-gutentags config
 
@@ -224,12 +232,16 @@ call plug#end()
 
 " map command to hotkey
 nnoremap <Leader>u :UndotreeToggle<CR>
-nnoremap <Leader>nc :NERDTreeFocus <CR>
+nnoremap <Leader>no :NERDTreeFocus <CR>
 nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader>nf :NERDTreeFind<CR>
 inoremap <Leader>p <ESC>"+p
 vnoremap <Leader>y "+y
 map <Leader>1 :set relativenumber!<CR>
+
+"buffer
+nnoremap <Leader>bn :bn<CR>
+nnoremap <Leader>bp :bp<CR>
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -374,11 +386,11 @@ set guifont=Monaco:h12
 
 "mymap
 "give the break point to undo
-"inoremap , ,<c-g>u
-"inoremap . .<c-g>u
-"inoremap ! !<c-g>u
-"inoremap ? ?<c-g>u
-"inoremap <CR> <CR><c-g>u
+inoremap , ,<c-g>u
+inoremap . .<c-g>u
+inoremap ! !<c-g>u
+inoremap ? ?<c-g>u
+inoremap <CR> <CR><c-g>u
 
 " moving text
 vnoremap J :m '>+1<CR>gv=gv
@@ -455,6 +467,9 @@ highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NO
 " 设置tab是四个空格
 set ts=4
 set expandtab " tab原本的制表符改成空格
+
+" 命令行按 tab 补全时，显示一个候选菜单
+set wildmenu
 
 " snipMate
 "let g:snipMate = { 'snippet_version' : 1 }

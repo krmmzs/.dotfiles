@@ -1,5 +1,20 @@
-colors:
-  primary:
+live_config_reload: true
+
+tabspaces: 4
+
+window.opacity: 0.9
+
+shell:
+  program: /bin/zsh
+
+cursor:
+  style:
+    shape: Block #default
+
+    vi_mode_style: None
+
+#colors:
+  #primary:
     #background: "#f8f8f8"
     #foreground: "#2a2b33"
     #cursor: "#bbbbbb"
@@ -21,36 +36,36 @@ colors:
     #color7: "#bbbbbb"
     #color15: "#ffffff"
     #selection_foregrou"nd: "#f8f8f8"
-    
-# Colors (Night Owlish Light)
-colors:
-  bright:
-    blue: '#5ca7e4'
-    cyan: '#00c990'
-    green: '#49d0c5'
-    magenta: '#697098'
-    red: '#f76e6e'
-    yellow: '#dac26b'
-  cursor:
-    cursor: '#403f53'
-    text: '#fbfbfb'
-  normal:
-    black: '#011627'
-    blue: '#4876d6'
-    cyan: '#08916a'
-    green: '#2aa298'
-    magenta: '#403f53'
-    red: '#d3423e'
-    white: '#7a8181'
-    yellow: '#daaa01'
-  primary:
-    background: '#ffffff'
-    foreground: '#403f53'
-  selection:
-    background: '#f2f2f2'
-    text: '#403f53'
 
-# Colors (Night)
+# Colors (Night Owlish Light)
+#colors:
+  #bright:
+    #blue: '#5ca7e4'
+    #cyan: '#00c990'
+    #green: '#49d0c5'
+    #magenta: '#697098'
+    #red: '#f76e6e'
+    #yellow: '#dac26b'
+  #cursor:
+    #cursor: '#403f53'
+    #text: '#fbfbfb'
+  #normal:
+    #black: '#011627'
+    #blue: '#4876d6'
+    #cyan: '#08916a'
+    #green: '#2aa298'
+    #magenta: '#403f53'
+    #red: '#d3423e'
+    #white: '#7a8181'
+    #yellow: '#daaa01'
+  #primary:
+    #background: '#ffffff'
+    #foreground: '#403f53'
+  #selection:
+    #background: '#f2f2f2'
+    #text: '#403f53'
+
+# Colors (by myself)
 colors:
   bright:
     red: '#c82829'
@@ -78,14 +93,23 @@ colors:
     background: '#f2f2f2'
     text: '#403f53'
 font:
-  # 常规字体
+  # Normal (roman) font face
   normal:
     # family: Hack
     # family: "Sarasa Mono SC"
     family: "Monaco Nerd Font"
     #family: "Monaco"
-    # 字体风格
+    # 
     style: Regular
-      
 
-  size: 13
+
+  size: 12
+
+  # 字符间距
+  #"offset.y" 可以控制行距，"offset.x" 可以改变字符间距。
+  offset:
+    #x: 1
+    y: 1
+
+key_bindings:
+  - { key: F11, action: ToggleFullscreen }
