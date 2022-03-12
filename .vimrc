@@ -54,7 +54,8 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnippets"]
 " vim theme
 Plug 'liuchengxu/space-vim-theme' " It's best theme both vim and tmux in light now!!!
 "Plug 'ayu-theme/ayu-vim'
-"Plug 'morhetz/gruvbox'
+Plug 'morhetz/gruvbox'
+Plug 'luisiacc/gruvbox-baby'
 
 " vim airline
 Plug 'vim-airline/vim-airline'
@@ -93,9 +94,9 @@ Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/gv.vim'
 
 " 文件浏览器 but now I need't it
-"Plug 'preservim/nerdtree'
-"Plug 'Xuyuanp/nerdtree-git-plugin' "A plugin of NERDTree showing git status flags.
-"Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "add highlight
+Plug 'preservim/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin' "A plugin of NERDTree showing git status flags.
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "add highlight
 
 
 " FZF Vim integration
@@ -240,9 +241,9 @@ call plug#end()
 
 " map command to hotkey
 nnoremap <Leader>u :UndotreeToggle<CR>
-"nnoremap <Leader>no :NERDTreeFocus <CR>
-"nnoremap <Leader>nt :NERDTreeToggle<CR>
-"nnoremap <Leader>nf :NERDTreeFind<CR>
+nnoremap <Leader>no :NERDTreeFocus <CR>
+nnoremap <Leader>nt :NERDTreeToggle<CR>
+nnoremap <Leader>nf :NERDTreeFind<CR>
 inoremap <Leader>p <ESC>"+p
 vnoremap <Leader>y "+y
 map <Leader>1 :set relativenumber!<CR>
@@ -283,6 +284,12 @@ syntax on
 "显示行号
 set nu
 set relativenumber " 相对
+
+" 增加鼠标行高亮
+set cursorline
+
+"取消视觉多行
+set nowrap
 
 "修改默认注释颜色
 "hi Comment ctermfg=DarkCyan
@@ -367,7 +374,7 @@ set encoding=utf-8
 set fileformat=unix
 
 " 着色模式
-"set t_Co=256
+set t_Co=256
 "colorscheme wombat256mod
 "colorscheme gardener
 "colorscheme elflord
@@ -376,15 +383,46 @@ set fileformat=unix
 "colorscheme darkblue
 "colorscheme torte
 "colorscheme default
-"colorscheme ayu
-colorscheme space_vim_theme
-"colorscheme gruvbox
 
-"set termguicolors     " enable true colors support
+"colorscheme ayu
+
+"using ayu
 "let ayucolor="light"  " for light version of theme
 ""let ayucolor="mirage" " for mirage version of theme
 ""let ayucolor="dark"   " for dark version of theme
 "set background=light " for the light version
+
+"alacritty true Support \"True" (24-bit color)
+" https://github.com/alacritty/alacritty/issues/109#issuecomment-859990495
+"" using gruvbox
+"colorscheme gruvbox
+"set background=dark
+"highlight ColorColumn ctermbg=0 guibg=lightgrey
+"if exists('+termguicolors')
+  "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
+  "let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
+  "set termguicolors
+"endif
+
+" using space_vim_theme
+colorscheme space_vim_theme
+set background=light
+highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
+
+"highlight Cursor guifg=white guibg=black
+"highlight iCursor guifg=white guibg=steelblue
+
+""""""""""""""""""""
+"hi CursorLine  cterm=NONE   ctermbg=darkred ctermfg=white
+"autocmd ColorScheme * highlight! Cursorline cterm=bold ctermbg=236 guibg=Grey90
+"autocmd ColorScheme * highlight! CursorLineNr cterm=bold ctermfg=159 ctermbg=236 guibg=Grey90
+
+" Highlight the symbol and its references when holding the cursor.
+"autocmd CursorHold * silent call CocActionAsync('highlight')
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " 字体 && 字号
 set guifont=Monaco:h12
@@ -464,14 +502,6 @@ if &t_Co > 2 || has("gui_running")
     set hlsearch
 endif
 
-" 增加鼠标行高亮
-set cursorline
-
-"hi CursorLine  cterm=NONE   ctermbg=darkred ctermfg=white
-"autocmd ColorScheme * highlight! Cursorline cterm=bold ctermbg=236 guibg=Grey90
-"autocmd ColorScheme * highlight! CursorLineNr cterm=bold ctermfg=159 ctermbg=236 guibg=Grey90
-
-highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
 
 " 设置tab是四个空格
 set ts=4
@@ -538,8 +568,6 @@ function! s:show_documentation()
     endif
 endfunction
 
-" Highlight the symbol and its references when holding the cursor.
-autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
