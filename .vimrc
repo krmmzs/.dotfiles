@@ -54,6 +54,7 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnippets"]
 " vim theme
 Plug 'liuchengxu/space-vim-theme' " It's best theme both vim and tmux in light now!!!
 "Plug 'ayu-theme/ayu-vim'
+"Plug 'morhetz/gruvbox'
 
 " vim airline
 Plug 'vim-airline/vim-airline'
@@ -91,12 +92,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/gv.vim'
 
-" 文件浏览器
-Plug 'preservim/nerdtree'
-Plug 'Xuyuanp/nerdtree-git-plugin' "A plugin of NERDTree showing git status flags.
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "add highlight
-Plug 'mhinz/vim-startify' "启动屏幕
-Plug 'ryanoasis/vim-devicons' "icons for them
+" 文件浏览器 but now I need't it
+"Plug 'preservim/nerdtree'
+"Plug 'Xuyuanp/nerdtree-git-plugin' "A plugin of NERDTree showing git status flags.
+"Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "add highlight
+
 
 " FZF Vim integration
 " fzf-vim
@@ -107,6 +107,7 @@ nnoremap <C-f> :Files<Cr>
 
 " vim for markdown
 Plug 'godlygeek/tabular' "自动对齐
+Plug 'preservim/vim-markdown' "write markdown better
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } "预览
 
 " ag in vim
@@ -188,8 +189,8 @@ Plug 'liuchengxu/vista.vim' "replace tagbar which could support LSP
 noremap <Leader>vv :Vista!!<CR>
 noremap <Leader>vf :Vista finder<CR>
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-noremap <Leader>fg :LeaderfFunction!<cr>
-noremap <Leader>ff :LeaderfFile<cr>
+noremap <Leader>f :LeaderfFunction!<cr>
+noremap <C-p> :LeaderfFile<cr>
 "and type "!" to fuzzy serach, and type "Tab" to return back
 "To enable popup mode
 let g:Lf_WindowPosition = 'popup'
@@ -226,15 +227,22 @@ endif
 " For example:
 let g:vista_fzf_preview = ['right:50%']
 
+" vim marks
+Plug 'kshenoy/vim-signature'
+
+" vim look
+Plug 'mhinz/vim-startify' "启动屏幕
+Plug 'ryanoasis/vim-devicons' "icons for them
+
 call plug#end()
 
 "vim for python
 
 " map command to hotkey
 nnoremap <Leader>u :UndotreeToggle<CR>
-nnoremap <Leader>no :NERDTreeFocus <CR>
-nnoremap <Leader>nt :NERDTreeToggle<CR>
-nnoremap <Leader>nf :NERDTreeFind<CR>
+"nnoremap <Leader>no :NERDTreeFocus <CR>
+"nnoremap <Leader>nt :NERDTreeToggle<CR>
+"nnoremap <Leader>nf :NERDTreeFind<CR>
 inoremap <Leader>p <ESC>"+p
 vnoremap <Leader>y "+y
 map <Leader>1 :set relativenumber!<CR>
@@ -359,7 +367,7 @@ set encoding=utf-8
 set fileformat=unix
 
 " 着色模式
-set t_Co=256
+"set t_Co=256
 "colorscheme wombat256mod
 "colorscheme gardener
 "colorscheme elflord
@@ -368,8 +376,9 @@ set t_Co=256
 "colorscheme darkblue
 "colorscheme torte
 "colorscheme default
-colorscheme space_vim_theme
 "colorscheme ayu
+colorscheme space_vim_theme
+"colorscheme gruvbox
 
 "set termguicolors     " enable true colors support
 "let ayucolor="light"  " for light version of theme
