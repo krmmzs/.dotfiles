@@ -75,9 +75,9 @@ colors:
     aqua: '#3e999f'
     blue: '#4271ae'
     purple: '#8959a8'
-  cursor:
-    cursor: '#403f53'
-    text: '#fbfbfb'
+  #cursor:
+    #cursor: '#403f53'
+    #text: '#fbfbfb'
   normal:
     red: '#c82829'
     orange: '#f5871f'
@@ -99,9 +99,7 @@ font:
     # family: "Sarasa Mono SC"
     family: "Monaco Nerd Font"
     #family: "Monaco"
-    # 
     style: Regular
-
 
   size: 12
 
