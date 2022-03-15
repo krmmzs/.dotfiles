@@ -53,7 +53,6 @@ let g:UltiSnipsSnippetDirectories=["UltiSnips","mysnippets"]
 
 " vim theme
 Plug 'liuchengxu/space-vim-theme' " It's best theme both vim and tmux in light now!!!
-"Plug 'ayu-theme/ayu-vim'
 Plug 'morhetz/gruvbox'
 Plug 'luisiacc/gruvbox-baby'
 
@@ -100,15 +99,10 @@ Plug 'preservim/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin' "A plugin of NERDTree showing git status flags.
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "add highlight
 
-
-
 " vim for markdown
 Plug 'godlygeek/tabular' "自动对齐
 Plug 'preservim/vim-markdown' "write markdown better
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } "预览
-
-" ag in vim
-Plug 'mileszs/ack.vim'
 
 " add comment quikly
 Plug 'preservim/nerdcommenter'
@@ -398,12 +392,6 @@ set t_Co=256
 
 "colorscheme ayu
 
-"using ayu
-"let ayucolor="light"  " for light version of theme
-""let ayucolor="mirage" " for mirage version of theme
-""let ayucolor="dark"   " for dark version of theme
-"set background=light " for the light version
-
 "alacritty true Support \"True" (24-bit color)
 " https://github.com/alacritty/alacritty/issues/109#issuecomment-859990495
 "" using gruvbox
@@ -418,7 +406,7 @@ let g:airline_theme='hybrid'
   "set termguicolors
 "endif
 
-" using space_vim_theme
+ "using space_vim_theme
 "colorscheme space_vim_theme
 "set background=light
 "highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
@@ -447,8 +435,8 @@ set guifont=Monaco:h12
 " set guifont=Monaco\ 12
 
 "mymap
-"open terminal to solve small project
-nnoremap \\ :terminal<CR>
+"open terminal to solve small project in vim now pwd
+nnoremap \\ :cd %:h<CR> :terminal<CR>
 
 "give the break point to undo
 inoremap , ,<c-g>u
@@ -588,6 +576,9 @@ nmap <silent> gi <Plug>(coc-implementation)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+"Use <cr> to confirm completion
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 function! s:show_documentation()
     if (index(['vim','help'], &filetype) >= 0)
