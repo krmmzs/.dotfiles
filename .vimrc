@@ -61,7 +61,6 @@ Plug 'luisiacc/gruvbox-baby'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "let g:airline_theme='light'
-let g:airline_theme='papercolor'
 let g:airline#extensions#tabline#enabled = 1 "Automatically displays all buffers when there's only one tab open
 
 "Smarter tab line
@@ -76,7 +75,7 @@ let g:floaterm_keymap_prev   = '<Leader>3'
 let g:floaterm_keymap_toggle = '<Leader>5'
 let g:floaterm_keymap_kill = '<Leader>6'
 
-" tmuxline in vim, but I don't like it now
+" tmuxline in vim, but I don't like it now using LeaderF to replace it
 "Plug 'edkolev/tmuxline.vim'
 
 " snippets
@@ -92,6 +91,9 @@ Plug 'mbbill/undotree'
 Plug 'tpope/vim-fugitive'
 Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/gv.vim'
+nmap <Leader>gh :diffget //3<CR>
+nmap <Leader>gu :diffget //2<CR>
+nmap <Leader>gs :G<CR>
 
 " 文件浏览器 but now I need't it
 Plug 'preservim/nerdtree'
@@ -99,12 +101,6 @@ Plug 'Xuyuanp/nerdtree-git-plugin' "A plugin of NERDTree showing git status flag
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "add highlight
 
 
-" FZF Vim integration
-" fzf-vim
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'junegunn/fzf.vim'
-nnoremap <C-f> :Files<Cr>
-"Plug 'nvim-lua/plenary.nvim'
 
 " vim for markdown
 Plug 'godlygeek/tabular' "自动对齐
@@ -112,7 +108,7 @@ Plug 'preservim/vim-markdown' "write markdown better
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  } "预览
 
 " ag in vim
-Plug 'rking/ag.vim'
+Plug 'mileszs/ack.vim'
 
 " add comment quikly
 Plug 'preservim/nerdcommenter'
@@ -124,7 +120,6 @@ nmap <Leader>m <Plug>(easymotion-s2)
 
 " Surround.vim is all about "surroundings": parentheses, brackets, quotes
 Plug 'tpope/vim-surround'
-nmap <Leader>s ysaw
 "Plug 'davidhalter/jedi-vim'
 
 " Capture the map by
@@ -141,16 +136,14 @@ Plug 'sgur/vim-textobj-parameter' "函数参数
 "i, 和 a, ：参数对象，写代码一半在修改，现在可以用 di, 或 ci, 一次性删除/改写当前参数
 "ii 和 ai ：缩进对象，同一个缩进层次的代码，可以用 vii 选中，dii / cii 删除或改写
 
-" vim cpp 增强高亮
+" vim cpp
 Plug 'octol/vim-cpp-enhanced-highlight'
 
-" vim python IDE in vim
-Plug 'python-mode/python-mode', { 'for': 'python', 'branch': 'develop' }
-" documentation:
-"Run python code (<leader>r)
-"Add/remove breakpoints (<leader>b)
-"Search in python documentation (<leader>K)
-"Go to definition (<C-c>g)
+" vim python
+"add PEP 8 check
+Plug 'nvie/vim-flake8'
+autocmd FileType python map <buffer> <Leader>pc :call flake8#Flake8()<CR>
+Plug 'vim-python/python-syntax'
 
 " https://wakatime.com/
 Plug 'wakatime/vim-wakatime'
@@ -165,7 +158,7 @@ let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 nnoremap <Leader>il :IndentLinesToggle<CR>
 
 " snipmate 套件
-" 自动补全，因为使用coc.vim LSP而弃用
+" 自动补全，因为使用coc.nvim LSP而弃用
 " Plug 'MarcWeber/vim-addon-mw-utils'
 " Plug 'tomtom/tlib_vim'
 " Plug 'garbas/vim-snipmate'
@@ -174,7 +167,7 @@ nnoremap <Leader>il :IndentLinesToggle<CR>
 "Plug 'w0rp/ale'
 "Plug 'scrooloose/syntastic'
 
-"web
+"write web better
 Plug 'mattn/emmet-vim'
 Plug 'othree/xml.vim'
 " post install (yarn install | npm install) then load plugin only for editing supported files
@@ -184,20 +177,34 @@ Plug 'prettier/vim-prettier', {
 "which format html,css,js,markdown if they have/support the \"@format\" pragma annotation in the header of the file
 let g:prettier#autoformat = 1 "Enable auto formatting of files that have \"@format\" or \"@prettier\" tag
 
-"ctags and find functions
+"find ctags, functions and files in vim
 Plug 'ludovicchabant/vim-gutentags' "build ctas
 Plug 'liuchengxu/vista.vim' "replace tagbar which could support LSP
 noremap <Leader>vv :Vista!!<CR>
 noremap <Leader>vf :Vista finder<CR>
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
-noremap <Leader>f :LeaderfFunction!<cr>
-noremap <C-p> :LeaderfFile<cr>
+Plug 'tamago324/LeaderF-filer'
+Plug 'Yggdroot/LeaderF-marks'
+nnoremap <C-f> :LeaderfFile<CR>
+nnoremap <Leader>ff :LeaderfFunction!<CR>
+nnoremap <Leader>fh :LeaderfSelf<CR>
+nnoremap <Leader>fr :LeaderfRgInteractive<CR>
+nnoremap <Leader>ft :LeaderfRgRecall<CR>
+nnoremap <Leader>fm :LeaderfMarks<CR>
+nnoremap <Leader>fd :Leaderf filer<CR>
 "and type "!" to fuzzy serach, and type "Tab" to return back
 "To enable popup mode
 let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
-"  leaderf 会自动从项目根目录(用.git来定位root)往下搜索文件
+"  leaderf 会自动从项目根目录(用.git来定位root)往下搜索文件(如果有.git)
 let g:Lf_WorkingDirectoryMode = 'a'
+
+" FZF Vim integration
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+"Plug 'junegunn/fzf.vim'
+"Plug 'stsewd/fzf-checkout.vim'
+"let g:fzf_layout = { 'window': { 'width': 0.8, 'height': 0.8} }
+"let $FZF_DEFAULT_OPTS='--reverse'
 
 "vim-gutentags config
 
@@ -237,8 +244,6 @@ Plug 'ryanoasis/vim-devicons' "icons for them
 
 call plug#end()
 
-"vim for python
-
 " map command to hotkey
 nnoremap <Leader>u :UndotreeToggle<CR>
 nnoremap <Leader>no :NERDTreeFocus <CR>
@@ -277,6 +282,12 @@ set showcmd " display incomplete commands
 set incsearch " do incremental searching
 set hlsearch "设置高亮搜索
 
+"启用手动折叠
+set foldmethod=manual
+" 自动保存折叠 from https://vim.fandom.com/wiki/Make_views_automatic
+autocmd BufWinLeave *.* mkview
+autocmd BufWinEnter *.* silent loadview
+
 "语法高亮
 syntax enable
 syntax on
@@ -304,7 +315,8 @@ set smartindent
 set shiftwidth=4
 
 " 允许在有未保存的修改时切换缓冲区
-"set hidden
+" and make coc.nvim better
+set hidden
 
 " 设置无备份文件
 set writebackup
@@ -395,9 +407,11 @@ set t_Co=256
 "alacritty true Support \"True" (24-bit color)
 " https://github.com/alacritty/alacritty/issues/109#issuecomment-859990495
 "" using gruvbox
-"colorscheme gruvbox
-"set background=dark
-"highlight ColorColumn ctermbg=0 guibg=lightgrey
+colorscheme gruvbox
+set background=dark
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+let g:airline_theme='hybrid'
+"if you want 256 ture color: uncomment them, but I think it is better in 256 false color is better, hhh
 "if exists('+termguicolors')
   "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
   "let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
@@ -405,9 +419,10 @@ set t_Co=256
 "endif
 
 " using space_vim_theme
-colorscheme space_vim_theme
-set background=light
-highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
+"colorscheme space_vim_theme
+"set background=light
+"highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
+"let g:airline_theme='papercolor'
 
 "highlight Cursor guifg=white guibg=black
 "highlight iCursor guifg=white guibg=steelblue
@@ -432,6 +447,9 @@ set guifont=Monaco:h12
 " set guifont=Monaco\ 12
 
 "mymap
+"open terminal to solve small project
+nnoremap \\ :terminal<CR>
+
 "give the break point to undo
 inoremap , ,<c-g>u
 inoremap . .<c-g>u
@@ -439,15 +457,29 @@ inoremap ! !<c-g>u
 inoremap ? ?<c-g>u
 inoremap <CR> <CR><c-g>u
 
+"Y as same meran like D and C
+nnoremap Y y$
+
 " moving text
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
+"Keeping it contered
+nnoremap n nzz
+nnoremap N Nzz
+nnoremap J mzJ'z
+
+"Jumplist mutations, solve jump list could save <number>j or <number>k
+noremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+noremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+
 " html add label
 
 "yapf for python
-noremap <Leader>p= :0,$!yapf<CR>
+noremap <Leader>pf :0,$!yapf<CR>
 
+" run python3 in vim
+map <Leader>8 :w<CR>:! clear; python3 %<CR>
 
 " ======= 引号 && 括号自动匹配 ======= "
 "
@@ -488,7 +520,6 @@ noremap <Leader>p= :0,$!yapf<CR>
 "endfunction
 
 
-
 " 每行超过80个的字符用下划线标示
 ""au BufRead,BufNewFile *.s,*.asm,*.h,*.c,*.cpp,*.java,*.cs,*.lisp,*.el,*.erl,*.tex,*.sh,*.lua,*.pl,*.php,*.tpl,*.py,*.rb,*.erb,*.vim,*.js,*.jade,*.coffee,*.css,*.xml,*.html,*.shtml,*.xhtml Underlined /.\%81v/
 
@@ -510,10 +541,10 @@ set expandtab " tab原本的制表符改成空格
 " 命令行按 tab 补全时，显示一个候选菜单
 set wildmenu
 
-" snipMate
-"let g:snipMate = { 'snippet_version' : 1 }
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""'
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience.
+set updatetime=300
 
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
@@ -551,9 +582,9 @@ nmap <silent> <Leader>] <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gr <Plug>(coc-references)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
-nmap <silent> gr <Plug>(coc-references)
 
 " Use K to show documentation in preview window.
 nnoremap <silent> K :call <SID>show_documentation()<CR>
