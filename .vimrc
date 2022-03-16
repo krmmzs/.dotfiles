@@ -286,6 +286,12 @@ autocmd BufWinEnter *.* silent loadview
 syntax enable
 syntax on
 
+"solve在终端中按 ESC 后有延时
+set timeout           " for mappings
+set timeoutlen=1000   " default value
+set ttimeout          " for key codes
+set ttimeoutlen=10    " unnoticeable small value
+
 "显示行号
 set nu
 set relativenumber " 相对
@@ -361,7 +367,6 @@ filetype plugin indent on
 
 
 "设置编码自动识别, 中文引号显示
-filetype on "打开文件类型检测
 "set fileencodings=euc-cn,ucs-bom,utf-8,cp936,gb2312,gb18030,gbk,big5,euc-jp,euc-kr,latin1
 set fileencodings=utf-8,gb2312,gbk,gb18030
 "这个用能很给劲，不管encoding是什么编码，都能将文本显示汉字
@@ -395,10 +400,10 @@ set t_Co=256
 "alacritty true Support \"True" (24-bit color)
 " https://github.com/alacritty/alacritty/issues/109#issuecomment-859990495
 "" using gruvbox
-colorscheme gruvbox
-set background=dark
-highlight ColorColumn ctermbg=0 guibg=lightgrey
-let g:airline_theme='hybrid'
+"colorscheme gruvbox
+"set background=dark
+"highlight ColorColumn ctermbg=0 guibg=lightgrey
+"let g:airline_theme='hybrid'
 "if you want 256 ture color: uncomment them, but I think it is better in 256 false color is better, hhh
 "if exists('+termguicolors')
   "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
@@ -406,11 +411,11 @@ let g:airline_theme='hybrid'
   "set termguicolors
 "endif
 
- "using space_vim_theme
-"colorscheme space_vim_theme
-"set background=light
-"highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
-"let g:airline_theme='papercolor'
+"using space_vim_theme
+colorscheme space_vim_theme
+set background=light
+highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
+let g:airline_theme='papercolor'
 
 "highlight Cursor guifg=white guibg=black
 "highlight iCursor guifg=white guibg=steelblue
