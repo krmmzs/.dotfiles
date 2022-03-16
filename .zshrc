@@ -152,7 +152,6 @@ alias cman="man -M /usr/share/man/zh_CN"
 alias csen="vim ~/MyGit/English/CS_English.md"
 alias dir="nautilus"
 alias alidrive="cd ~/softwares/阿里小白羊版Linux\ v2.9.24/ && ./阿里云盘小白羊版"
-alias vim="vim -u ~/.vimrcs/.vimrc"
 alias vim2="vim -u ~/.vimrcs/.algorithm_vimrc"
 alias vim3="vim -u ~/.vimrcs/.no_plugins_vimrc"
 alias mv="mv -i"  # add attention

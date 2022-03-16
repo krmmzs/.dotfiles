@@ -276,12 +276,6 @@ set showcmd " display incomplete commands
 set incsearch " do incremental searching
 set hlsearch "设置高亮搜索
 
-"启用手动折叠
-set foldmethod=manual
-" 自动保存折叠 from https://vim.fandom.com/wiki/Make_views_automatic
-autocmd BufWinLeave *.* mkview
-autocmd BufWinEnter *.* silent loadview
-
 "语法高亮
 syntax enable
 syntax on
