@@ -270,6 +270,12 @@ else
   set backup		" keep a backup file
 endif
 
+"打开文件时恢复光标位置
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+
 set history=100 "keep 50 lines of command line history
 set ruler " show the cursor position all the time
 set showcmd " display incomplete commands
@@ -394,10 +400,10 @@ set t_Co=256
 "alacritty true Support \"True" (24-bit color)
 " https://github.com/alacritty/alacritty/issues/109#issuecomment-859990495
 "" using gruvbox
-"colorscheme gruvbox
-"set background=dark
-"highlight ColorColumn ctermbg=0 guibg=lightgrey
-"let g:airline_theme='hybrid'
+colorscheme gruvbox
+set background=dark
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+let g:airline_theme='hybrid'
 "if you want 256 ture color: uncomment them, but I think it is better in 256 false color is better, hhh
 "if exists('+termguicolors')
   "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
@@ -406,10 +412,10 @@ set t_Co=256
 "endif
 
 "using space_vim_theme
-colorscheme space_vim_theme
-set background=light
-highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
-let g:airline_theme='papercolor'
+"colorscheme space_vim_theme
+"set background=light
+"highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
+"let g:airline_theme='papercolor'
 
 "highlight Cursor guifg=white guibg=black
 "highlight iCursor guifg=white guibg=steelblue
@@ -564,8 +570,8 @@ endif
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
-nmap <silent> <Leader>[ <Plug>(coc-diagnostic-prev)
-nmap <silent> <Leader>] <Plug>(coc-diagnostic-next)
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 
 " GoTo code navigation.
 nmap <silent> gd <Plug>(coc-definition)
@@ -596,7 +602,7 @@ nmap <leader>rn <Plug>(coc-rename)
 "" Formatting selected code.
 "xmap <leader>f  <Plug>(coc-format-selected)
 "nmap <leader>f  <Plug>(coc-format-selected)
-"
+
 "augroup mygroup
 "  autocmd!
 "  " Setup formatexpr specified filetype(s).
