@@ -1,4 +1,5 @@
 let mapleader = ","
+nnoremap ,, ,
 
 "如果没有安装就自动安装vim-plug插件
 "Automatic installation
@@ -11,6 +12,9 @@ endif
 "vim-plug安装插件的命令
 
 call plug#begin('~/.vim/plugged')
+
+" chinese vimdoc
+Plug 'yianwillis/vimcdoc'
 
 "LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -93,6 +97,7 @@ Plug 'junegunn/gv.vim'
 nmap <Leader>gh :diffget //3<CR>
 nmap <Leader>gu :diffget //2<CR>
 nmap <Leader>gs :G<CR>
+nmap <Leader>gd :Gvdiff<CR>
 
 " 文件浏览器 but now I need't it
 Plug 'preservim/nerdtree'
@@ -137,6 +142,8 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 "add PEP 8 check
 Plug 'nvie/vim-flake8'
 autocmd FileType python map <buffer> <Leader>pc :call flake8#Flake8()<CR>
+"yapf for python
+noremap <Leader>pf :0,$!yapf<CR>
 Plug 'vim-python/python-syntax'
 
 " https://wakatime.com/
@@ -248,8 +255,9 @@ vnoremap <Leader>y "+y
 map <Leader>1 :set relativenumber!<CR>
 
 "buffer
-nnoremap <Leader>bn :bn<CR>
-nnoremap <Leader>bp :bp<CR>
+"nnoremap <Leader>bn :bn<CR>
+"nnoremap <Leader>bp :bp<CR>
+"useless any more, change it to :bn or :bp and @:(noraml) and @@ to repeat it
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
@@ -300,7 +308,7 @@ set relativenumber " 相对
 set cursorline
 
 "取消视觉多行
-set nowrap
+"set nowrap
 
 "修改默认注释颜色
 "hi Comment ctermfg=DarkCyan
@@ -347,8 +355,7 @@ set smartcase
 " 显示Tab符，使用一高亮竖线代替
 " such as 制表符被显示为“^I”
 set list
-"set listchars=tab:\|\ ,
-set listchars=tab:>-,trail:-
+set listchars=tab:>-
 
 " Disable audible bell because it's annoying.
 set noerrorbells visualbell t_vb=
@@ -400,10 +407,10 @@ set t_Co=256
 "alacritty true Support \"True" (24-bit color)
 " https://github.com/alacritty/alacritty/issues/109#issuecomment-859990495
 "" using gruvbox
-colorscheme gruvbox
-set background=dark
-highlight ColorColumn ctermbg=0 guibg=lightgrey
-let g:airline_theme='hybrid'
+"colorscheme gruvbox
+"set background=dark
+"highlight ColorColumn ctermbg=0 guibg=lightgrey
+"let g:airline_theme='hybrid'
 "if you want 256 ture color: uncomment them, but I think it is better in 256 false color is better, hhh
 "if exists('+termguicolors')
   "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
@@ -412,10 +419,10 @@ let g:airline_theme='hybrid'
 "endif
 
 "using space_vim_theme
-"colorscheme space_vim_theme
-"set background=light
-"highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
-"let g:airline_theme='papercolor'
+colorscheme space_vim_theme
+set background=light
+highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
+let g:airline_theme='papercolor'
 
 "highlight Cursor guifg=white guibg=black
 "highlight iCursor guifg=white guibg=steelblue
@@ -467,9 +474,6 @@ noremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 noremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 
 " html add label
-
-"yapf for python
-noremap <Leader>pf :0,$!yapf<CR>
 
 " run python3 in vim
 map <Leader>8 :w<CR>:! clear; python3 %<CR>
