@@ -1,0 +1,30 @@
+pane	Algorithm	0	1	:*	0	:/home/mouzaisi/MyGit/Algorithm-journey/牛客竞赛/2022牛客寒假算法基础集训营/1	1	zsh	:
+pane	Algorithm	0	1	:*	1	:/home/mouzaisi/MyGit/Algorithm-journey	0	zsh	:
+pane	RGP	0	1	:*	0	:/home/mouzaisi/MyGit	1	zsh	:
+pane	SICP	0	1	:*	0	:/home/mouzaisi/MyGit/SICP/bookSentence	1	zsh	:
+pane	SICP	0	1	:*	1	:/home/mouzaisi/MyGit/SICP/booklab/1.x	0	zsh	:
+pane	SICP	0	1	:*	2	:/home/mouzaisi/MyGit/SICP	0	zsh	:
+pane	Vim	0	1	:*	0	:/home/mouzaisi/MyGit/practical_vim	1	zsh	:
+pane	autojs	0	1	:*	0	:/home/mouzaisi/MyGit/autojs	1	zsh	:
+pane	clash	0	1	:*	0	:/home/mouzaisi/softwares/clash1.8.0	1	./clash	:./clash -d .
+pane	cs61l	0	1	:*	0	:/home/mouzaisi/MyGit/CS106L/demo/2	1	zsh	:
+pane	django	0	1	:*	0	:/home/mouzaisi	0	zsh	:
+pane	django	0	1	:*	1	:/home/mouzaisi	1	zsh	:
+pane	record	0	1	:*	0	:/home/mouzaisi/MyGit/Algorithm-journey	0	vim	:vim README.md
+pane	record	0	1	:*	1	:/home/mouzaisi/MyGit/Plan-book-list/2大二下	1	vim	:vim README.md
+pane	software	0	1	:*	0	:/home/mouzaisi/softwares	1	zsh	:
+pane	software	0	1	:*	1	:/home/mouzaisi/softwares	0	zsh	:
+pane	ssh	0	1	:*	0	:/home/mouzaisi	1	zsh	:
+pane	ssh	0	1	:*	1	:/home/mouzaisi	0	zsh	:
+window	Algorithm	0	:zsh	1	:*	e295,80x23,0,0[80x10,0,0,1,80x12,0,11,2]	:
+window	RGP	0	:zsh	1	:*	cca0,79x39,0,0,3	:
+window	SICP	0	:zsh	1	:*	6b41,80x23,0,0{36x23,0,0,4,43x23,37,0[43x10,37,0,5,43x12,37,11,6]}	:
+window	Vim	0	:zsh	1	:*	ae64,80x23,0,0,7	:
+window	autojs	0	:zsh	1	:*	ae65,80x23,0,0,8	:
+window	clash	0	:./clash	1	:*	cca6,79x39,0,0,9	:
+window	cs61l	0	:zsh	1	:*	667f,79x39,0,0,10	:
+window	django	0	:zsh	1	:*	0049,80x23,0,0[80x10,0,0,11,80x12,0,11,12]	:
+window	record	0	:vim	1	:*	c108,159x42,0,0[159x21,0,0,13,159x20,0,22,14]	:
+window	software	0	:zsh	1	:*	0053,80x23,0,0[80x10,0,0,15,80x12,0,11,16]	:
+window	ssh	0	:zsh	1	:*	0058,80x23,0,0[80x10,0,0,17,80x12,0,11,18]	:
+state	record	clash

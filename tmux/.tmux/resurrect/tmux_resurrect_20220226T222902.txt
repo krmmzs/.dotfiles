@@ -1,0 +1,33 @@
+pane	Algorithm	0	1	:*	0	:/home/mouzaisi/MyGit/Algorithm-journey/牛客竞赛/2022牛客寒假算法基础集训营/1	0	zsh	:
+pane	Algorithm	0	1	:*	1	:/home/mouzaisi/MyGit/Algorithm-journey	1	zsh	:
+pane	RGP	0	1	:*	0	:/home/mouzaisi/MyGit	1	zsh	:
+pane	SICP	0	1	:*	0	:/home/mouzaisi/MyGit/SICP/bookSentence	1	zsh	:
+pane	SICP	0	1	:*	1	:/home/mouzaisi/MyGit/SICP/booklab/1.x	0	zsh	:
+pane	SICP	0	1	:*	2	:/home/mouzaisi/MyGit/SICP	0	zsh	:
+pane	Vim	0	1	:*	0	:/home/mouzaisi/MyGit/practical_vim	1	zsh	:
+pane	autojs	0	1	:*	0	:/home/mouzaisi/MyGit/autojs	1	zsh	:
+pane	clash	0	1	:*	0	:/home/mouzaisi/softwares/clash1.8.0	1	./clash	:./clash -d .
+pane	cs61l	0	1	:*Z	0	:/home/mouzaisi/MyGit/CS106L	0	git	:git log --all --graph --decorate
+pane	cs61l	0	1	:*Z	1	:/home/mouzaisi/MyGit/CS106L/demo/CS106L-201920-master/lecture3-sequence/STLPreview	1	zsh	:
+pane	django	0	1	:*	0	:/home/mouzaisi	0	zsh	:
+pane	django	0	1	:*	1	:/home/mouzaisi	1	zsh	:
+pane	record	0	1	:*	0	:/home/mouzaisi/MyGit/Algorithm-journey	0	vim	:vim README.md
+pane	record	0	1	:*	1	:/home/mouzaisi/MyGit/Plan-book-list/2大二下	1	vim	:vim README.md
+pane	software	0	1	:*	0	:/home/mouzaisi/softwares	1	zsh	:
+pane	software	0	1	:*	1	:/home/mouzaisi/softwares	0	zsh	:
+pane	ssh	0	1	:*	0	:/home/mouzaisi	1	zsh	:
+pane	ssh	0	1	:*	1	:/home/mouzaisi	0	zsh	:
+pane	wechatminiapps	0	1	:*	0	:/home/mouzaisi/clone/wechat_web_devtools	1	zsh	:su
+window	Algorithm	0	:zsh	1	:*	b345,79x39,0,0[79x18,0,0,1,79x20,0,19,2]	:
+window	RGP	0	:zsh	1	:*	cca0,79x39,0,0,3	:
+window	SICP	0	:zsh	1	:*	108b,79x39,0,0{35x39,0,0,4,43x39,36,0[43x18,36,0,5,43x20,36,19,6]}	:
+window	Vim	0	:zsh	1	:*	cca4,79x39,0,0,7	:
+window	autojs	0	:zsh	1	:*	cca5,79x39,0,0,8	:
+window	clash	0	:./clash	1	:*	b846,159x42,0,0,9	:
+window	cs61l	0	:zsh	1	:*Z	6218,79x39,0,0[79x20,0,0,10,79x18,0,21,23]	:
+window	django	0	:zsh	1	:*	345a,79x39,0,0[79x18,0,0,11,79x20,0,19,12]	:
+window	record	0	:vim	1	:*	b49e,79x39,0,0[79x19,0,0,13,79x19,0,20,14]	:
+window	software	0	:zsh	1	:*	3464,79x39,0,0[79x18,0,0,15,79x20,0,19,16]	:
+window	ssh	0	:zsh	1	:*	3469,79x39,0,0[79x18,0,0,17,79x20,0,19,18]	:
+window	wechatminiapps	0	:zsh	1	:*	6688,79x39,0,0,19	:
+state	cs61l	wechatminiapps

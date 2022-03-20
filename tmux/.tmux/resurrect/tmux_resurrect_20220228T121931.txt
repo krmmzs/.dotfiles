@@ -1,0 +1,33 @@
+pane	Algorithm	0	1	:*	0	:/home/mouzaisi/MyGit/Algorithm-journey/牛客竞赛/2022牛客寒假算法基础集训营/1	0	zsh	:
+pane	Algorithm	0	1	:*	1	:/home/mouzaisi/MyGit/Algorithm-journey	1	zsh	:
+pane	RGP	0	1	:*	0	:/home/mouzaisi/MyGit	1	zsh	:
+pane	SICP	0	1	:*	0	:/home/mouzaisi/MyGit/SICP/bookSentence	1	zsh	:
+pane	SICP	0	1	:*	1	:/home/mouzaisi/MyGit/SICP/booklab/1.x	0	zsh	:
+pane	SICP	0	1	:*	2	:/home/mouzaisi/MyGit/SICP	0	zsh	:
+pane	Vim	0	1	:*	0	:/home/mouzaisi/MyGit	1	zsh	:
+pane	autojs	0	1	:*	0	:/home/mouzaisi/MyGit/autojs	1	zsh	:
+pane	clash	0	1	:*	0	:/home/mouzaisi/softwares/clash1.8.0	1	./clash	:./clash -d .
+pane	cs61l	0	1	:*	0	:/home/mouzaisi/MyGit/CS106L/CS106L-201920-master/lecture4-associtaive/MapExample	1	zsh	:
+pane	cs61l	0	1	:*	1	:/home/mouzaisi/MyGit/CS106L	0	zsh	:
+pane	django	0	1	:*	0	:/home/mouzaisi	0	zsh	:
+pane	django	0	1	:*	1	:/home/mouzaisi	1	zsh	:
+pane	record	0	1	:*	0	:/home/mouzaisi/MyGit/Linux	1	zsh	:
+pane	record	0	1	:*	1	:/home/mouzaisi/MyGit/Plan-book-list/2大二下	0	zsh	:
+pane	software	0	1	:*	0	:/home/mouzaisi/softwares	1	zsh	:
+pane	software	0	1	:*	1	:/home/mouzaisi/softwares	0	zsh	:
+pane	ssh	0	1	:*	0	:/home/mouzaisi	1	zsh	:
+pane	ssh	0	1	:*	1	:/home/mouzaisi	0	zsh	:
+pane	wechatminiapps	0	1	:*	0	:/home/mouzaisi/clone/wechat_web_devtools	1	zsh	:
+window	Algorithm	0	:zsh	1	:*	8f00,159x42,0,0[159x20,0,0,1,159x21,0,21,2]	:
+window	RGP	0	:zsh	1	:*	b840,159x42,0,0,3	:
+window	SICP	0	:zsh	1	:*	a2e6,159x42,0,0{76x42,0,0,4,82x42,77,0[82x20,77,0,5,82x21,77,21,6]}	:
+window	Vim	0	:zsh	1	:*	b844,159x42,0,0,7	:
+window	autojs	0	:zsh	1	:*	b845,159x42,0,0,8	:
+window	clash	0	:./clash	1	:*	b846,159x42,0,0,9	:
+window	cs61l	0	:zsh	1	:*	2f84,159x42,0,0[159x20,0,0,10,159x21,0,21,11]	:
+window	django	0	:zsh	1	:*	2f87,159x42,0,0[159x20,0,0,12,159x21,0,21,13]	:
+window	record	0	:zsh	1	:*	574a,159x42,0,0[159x22,0,0,14,159x19,0,23,15]	:
+window	software	0	:zsh	1	:*	2f8d,159x42,0,0[159x20,0,0,16,159x21,0,21,17]	:
+window	ssh	0	:zsh	1	:*	2f90,159x42,0,0[159x20,0,0,18,159x21,0,21,19]	:
+window	wechatminiapps	0	:zsh	1	:*	dc4f,159x42,0,0,20	:
+state	record	clash

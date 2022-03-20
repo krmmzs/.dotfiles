@@ -1,0 +1,24 @@
+pane	Algorithm	0	1	:*	0	:/home/mouzaisi/MyGit/Algorithm-journey/牛客竞赛/2022牛客寒假算法基础集训营/1	1	zsh	:
+pane	Algorithm	0	1	:*	1	:/home/mouzaisi/MyGit/Algorithm-journey	0	zsh	:
+pane	RGP	0	1	:*	0	:/home/mouzaisi/MyGit/KC	1	zsh	:
+pane	SICP	0	1	:*Z	0	:/home/mouzaisi/MyGit/SICP/booklab/1.x	1	zsh	:
+pane	SICP	0	1	:*Z	1	:/home/mouzaisi/MyGit/SICP/booklab/1.x	0	scheme	:scheme
+pane	SICP	0	1	:*Z	2	:/home/mouzaisi/MyGit/SICP	0	zsh	:
+pane	Vim	0	1	:*	0	:/home/mouzaisi/MyGit/practical_vim	1	zsh	:
+pane	autojs	0	1	:*	0	:/home/mouzaisi/MyGit/autojs	1	zsh	:
+pane	clash	0	1	:*	0	:/home/mouzaisi/softwares/clash1.8.0	1	./clash	:./clash -d .
+pane	django	0	1	:*	0	:/home/mouzaisi	0	zsh	:
+pane	django	0	1	:*	1	:/home/mouzaisi	1	zsh	:
+pane	software	0	1	:*	0	:/home/mouzaisi/softwares	1	./Mathpix_Snipping_Tool-x86_64.v03.00.0074.AppImage	:./Mathpix_Snipping_Tool-x86_64.v03.00.0074.AppImage
+pane	software	0	1	:*	1	:/home/mouzaisi/softwares	0	zsh	:
+pane	ssh	0	1	:*	0	:/home/mouzaisi	1	zsh	:
+window	Algorithm	0	:zsh	1	:*	cd95,146x37,0,0[146x18,0,0,1,146x18,0,19,2]	:
+window	RGP	0	:zsh	1	:*	cca0,79x39,0,0,3	:
+window	SICP	0	:zsh	1	:*Z	4ff2,146x37,0,0{68x37,0,0,4,77x37,69,0[77x18,69,0,5,77x18,69,19,6]}	:
+window	Vim	0	:zsh	1	:*	cca4,79x39,0,0,7	:
+window	autojs	0	:zsh	1	:*	cca5,79x39,0,0,8	:
+window	clash	0	:./clash	1	:*	d246,159x39,0,0,9	:
+window	django	0	:zsh	1	:*	d445,159x39,0,0[159x19,0,0,10,159x19,0,20,11]	:
+window	software	0	:./Mathpix_Snipping_Tool-x86_64.v03.00.0074.AppImage	1	:*	bcb0,146x37,0,0[146x18,0,0,12,146x18,0,19,13]	:
+window	ssh	0	:zsh	1	:*	6473,146x37,0,0,14	:
+state	ssh	
