@@ -18,6 +18,7 @@ Plug 'yianwillis/vimcdoc'
 
 "LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'wellle/tmux-complete.vim'
 
 "异步编译运行
 Plug 'skywind3000/asyncrun.vim'
@@ -72,11 +73,13 @@ let g:airline#extensions#tabline#enabled = 1 "Automatically displays all buffers
 
 " vim Floaterm
 Plug 'voldikss/vim-floaterm'
-let g:floaterm_keymap_new = '<Leader>2'
-let g:floaterm_keymap_next = '<Leader>4'
-let g:floaterm_keymap_prev   = '<Leader>3'
-let g:floaterm_keymap_toggle = '<Leader>5'
-let g:floaterm_keymap_kill = '<Leader>6'
+let g:floaterm_keymap_new = '<Leader>lb'
+let g:floaterm_keymap_next = '<Leader>ln'
+let g:floaterm_keymap_prev   = '<Leader>lp'
+let g:floaterm_keymap_toggle = '<Leader>ll'
+let g:floaterm_keymap_kill = '<Leader>lk'
+let g:floaterm_width = 0.8
+let g:floaterm_height = 0.8
 
 " tmuxline in vim, but I don't like it now using LeaderF to replace it
 "Plug 'edkolev/tmuxline.vim'
@@ -101,6 +104,9 @@ nmap <Leader>gd :Gvdiff<CR>
 
 " 文件浏览器 but now I need't it
 Plug 'preservim/nerdtree'
+"Just one NERDTree, always and ever. It will always look the same in all tabs, including expanded/collapsed nodes, scroll position etc.
+" When you close a file, the tab closes with it. No NERDTree hanging open.
+Plug 'jistr/vim-nerdtree-tabs'
 Plug 'Xuyuanp/nerdtree-git-plugin' "A plugin of NERDTree showing git status flags.
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' "add highlight
 
@@ -246,8 +252,10 @@ Plug 'ryanoasis/vim-devicons' "icons for them
 call plug#end()
 
 " map command to hotkey
-nnoremap <Leader>u :UndotreeToggle<CR>
-nnoremap <Leader>no :NERDTreeFocus <CR>
+"nnoremap <Leader>u :UndotreeToggle<CR>
+nnoremap <Leader>u :NERDTreeTabsToggle<CR>
+"nnoremap <Leader>no :NERDTreeFocus <CR>
+nnoremap <Leader>no ::NERDTreeTabsFind <CR>
 nnoremap <Leader>nt :NERDTreeToggle<CR>
 nnoremap <Leader>nf :NERDTreeFind<CR>
 inoremap <Leader>p <ESC>"+p

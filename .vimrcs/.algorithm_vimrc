@@ -1,3 +1,5 @@
+let mapleader = ","
+
 call plug#begin('~/.vim/plugged')
 
 " Auto Pairs
@@ -84,4 +86,5 @@ set mouse=a
 "endif
 "endfunction
 
-
+inoremap <Leader>p <ESC>"+p
+vnoremap <Leader>y "+y
