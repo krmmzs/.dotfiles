@@ -185,10 +185,13 @@ Plug 'prettier/vim-prettier', {
 let g:prettier#autoformat = 1 "Enable auto formatting of files that have \"@format\" or \"@prettier\" tag
 
 "find ctags, functions and files in vim
-Plug 'ludovicchabant/vim-gutentags' "build ctas
+set tags=./.tags;,.tags
+
+Plug 'ludovicchabant/vim-gutentags' "build ctags auto and silent
 Plug 'liuchengxu/vista.vim' "replace tagbar which could support LSP
 noremap <Leader>vv :Vista!!<CR>
-noremap <Leader>vf :Vista finder<CR>
+noremap <Leader>vf :Vista finder 
+
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'tamago324/LeaderF-filer'
 Plug 'Yggdroot/LeaderF-marks'
@@ -227,8 +230,8 @@ let g:gutentags_cache_dir = s:vim_tags
 
 " 配置 ctags 的参数
 let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
-let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
-let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxl']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+pxl']
 
 " 检测 ~/.cache/tags 不存在就新建
 if !isdirectory(s:vim_tags)
@@ -236,11 +239,30 @@ if !isdirectory(s:vim_tags)
 endif
 
 " vista config
+function! NearestMethodOrFunction() abort
+  return get(b:, 'vista_nearest_method_or_function', '')
+endfunction
 
-" To enable fzf's preview window set g:vista_fzf_preview.
-" The elements of g:vista_fzf_preview will be passed as arguments to fzf#vim#with_preview()
-" For example:
-let g:vista_fzf_preview = ['right:50%']
+set statusline+=%{NearestMethodOrFunction()}
+
+" By default vista.vim never run if you don't call it explicitly.
+"
+" If you want to show the nearest function in your statusline automatically,
+" you can add the following line to your vimrc
+autocmd VimEnter * call vista#RunForNearestMethodOrFunction()
+
+let g:vista_default_executive = 'ctags' "I use universal-ctags
+let g:vista_executive_for = {
+  \ 'cpp': 'coc',
+  \ 'php': 'coc',
+  \ }
+
+"let g:vista_ctags_cmd = {
+            "\ 'haskell': 'hasktags -x -o - -c',
+            "\ 'cpp': 'ctags -R --c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v --fields=+liaS --extra=+q'
+            "\ }
+let g:vista#renderer#enable_icon = 1
+
 
 " vim marks
 Plug 'kshenoy/vim-signature'
@@ -415,10 +437,10 @@ set t_Co=256
 "alacritty true Support \"True" (24-bit color)
 " https://github.com/alacritty/alacritty/issues/109#issuecomment-859990495
 "" using gruvbox
-"colorscheme gruvbox
-"set background=dark
-"highlight ColorColumn ctermbg=0 guibg=lightgrey
-"let g:airline_theme='hybrid'
+colorscheme gruvbox
+set background=dark
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+let g:airline_theme='hybrid'
 "if you want 256 ture color: uncomment them, but I think it is better in 256 false color is better, hhh
 "if exists('+termguicolors')
   "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
@@ -427,10 +449,10 @@ set t_Co=256
 "endif
 
 "using space_vim_theme
-colorscheme space_vim_theme
-set background=light
-highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
-let g:airline_theme='papercolor'
+"colorscheme space_vim_theme
+"set background=light
+"highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
+"let g:airline_theme='papercolor'
 
 "highlight Cursor guifg=white guibg=black
 "highlight iCursor guifg=white guibg=steelblue
