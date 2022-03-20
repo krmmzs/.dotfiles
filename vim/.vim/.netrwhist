@@ -1,0 +1,11 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/home/mouzaisi/.vimrcs'
+let g:netrw_dirhist_8='/etc/fonts/conf.d'
+let g:netrw_dirhist_7='/home/mouzaisi/MyGit/Algorithm-journey/Algorithm-Improvement/图论/负环/01分数规划'
+let g:netrw_dirhist_6='/home/mouzaisi/MyGit/Algorithm-journey/Algorithm-Improvement/图论/负环'
+let g:netrw_dirhist_5='/home/mouzaisi/MyGit/Plan-book-list/1大二寒假'
+let g:netrw_dirhist_4='/home/mouzaisi/.vim'
+let g:netrw_dirhist_3='/home/mouzaisi/MyGit/Plan-book-list/Things To Do'
+let g:netrw_dirhist_2='/home/mouzaisi/MyGit/The-Missing-Semester-of-Your-CS-Education/2020/Lecture9_Security_and_Cryptography'
+let g:netrw_dirhist_1='/home/mouzaisi/IdeaProjects/ubuntufirstjava'
