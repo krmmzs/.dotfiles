@@ -190,7 +190,7 @@ set tags=./.tags;,.tags
 Plug 'ludovicchabant/vim-gutentags' "build ctags auto and silent
 Plug 'liuchengxu/vista.vim' "replace tagbar which could support LSP
 noremap <Leader>vv :Vista!!<CR>
-noremap <Leader>vf :Vista finder 
+noremap <Leader>vf :Vista finder fzf<CR>
 
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'tamago324/LeaderF-filer'
@@ -232,11 +232,12 @@ let g:gutentags_cache_dir = s:vim_tags
 let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
 let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxl']
 let g:gutentags_ctags_extra_args += ['--c-kinds=+pxl']
+let g:gutentags_ctags_extra_args += ['--output-format=e-ctags']
 
 " 检测 ~/.cache/tags 不存在就新建
-if !isdirectory(s:vim_tags)
-   silent! call mkdir(s:vim_tags, 'p')
-endif
+"if !isdirectory(s:vim_tags)
+   "silent! call mkdir(s:vim_tags, 'p')
+"endif
 
 " vista config
 function! NearestMethodOrFunction() abort
@@ -258,9 +259,9 @@ let g:vista_executive_for = {
   \ }
 
 "let g:vista_ctags_cmd = {
-            "\ 'haskell': 'hasktags -x -o - -c',
-            "\ 'cpp': 'ctags -R --c++-kinds=+p+l+x+c+d+e+f+g+m+n+s+t+u+v --fields=+liaS --extra=+q'
-            "\ }
+      "\ 'haskell': 'hasktags -x -o - -c',
+      "\ 'cpp': 'ctags -R --c++-kinds=+plxcdefgmnstuv --fields=+liaS --extra=+q',
+      "\ }
 let g:vista#renderer#enable_icon = 1
 
 
@@ -437,10 +438,10 @@ set t_Co=256
 "alacritty true Support \"True" (24-bit color)
 " https://github.com/alacritty/alacritty/issues/109#issuecomment-859990495
 "" using gruvbox
-colorscheme gruvbox
-set background=dark
-highlight ColorColumn ctermbg=0 guibg=lightgrey
-let g:airline_theme='hybrid'
+"colorscheme gruvbox
+"set background=dark
+"highlight ColorColumn ctermbg=0 guibg=lightgrey
+"let g:airline_theme='hybrid'
 "if you want 256 ture color: uncomment them, but I think it is better in 256 false color is better, hhh
 "if exists('+termguicolors')
   "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
@@ -449,10 +450,10 @@ let g:airline_theme='hybrid'
 "endif
 
 "using space_vim_theme
-"colorscheme space_vim_theme
-"set background=light
-"highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
-"let g:airline_theme='papercolor'
+colorscheme space_vim_theme
+set background=light
+highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
+let g:airline_theme='papercolor'
 
 "highlight Cursor guifg=white guibg=black
 "highlight iCursor guifg=white guibg=steelblue
