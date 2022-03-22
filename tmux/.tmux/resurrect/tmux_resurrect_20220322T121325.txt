@@ -1,0 +1,51 @@
+pane	Algorithm	0	1	:*	0	:/home/mouzaisi/MyGit/lanqiao/lectures/binary_search	0	zsh	:
+pane	Algorithm	0	1	:*	1	:/home/mouzaisi/MyGit/lanqiao	1	zsh	:
+pane	CS106L	0	1	:*	0	:/home/mouzaisi/MyGit/CS106L_Assignment/cs106L-assignment2	0	zsh	:
+pane	CS106L	0	1	:*	1	:/home/mouzaisi/MyGit/Algorithm/Java	1	vim	:vim ioput_in_javaoj.md
+pane	CS106L	0	1	:*	2	:/home/mouzaisi/MyGit/c++test/src	0	zsh	:
+pane	CS106L	0	1	:*	3	:/home/mouzaisi	0	vim	:vim vimrc_vista
+pane	RGP	0	1	:*	0	:/home/mouzaisi/MyGit	1	zsh	:
+pane	SICP	0	1	:*	0	:/home/mouzaisi/MyGit/SICP	1	zsh	:
+pane	SICP	0	1	:*	1	:/home/mouzaisi/MyGit/SICP/booklab/1.x	0	zsh	:
+pane	Vim	0	1	:*Z	0	:/home/mouzaisi/MyGit/LearnMyselfCS	1	zsh	:
+pane	Vim	0	1	:*Z	1	:/home/mouzaisi	0	zsh	:
+pane	autojs	0	1	:*	0	:/home/mouzaisi/MyGit/autojs	1	zsh	:
+pane	clash	0	1	:*	0	:/home/mouzaisi/softwares/clash1.8.0	1	./clash	:./clash -d .
+pane	django	0	1	:*	0	:/home/mouzaisi	0	zsh	:
+pane	django	0	1	:*	1	:/home/mouzaisi	1	zsh	:
+pane	fonts	0	1	:*	0	:/home/mouzaisi/MyGit	0	zsh	:
+pane	fonts	0	1	:*	1	:/home/mouzaisi/MyGit	0	zsh	:
+pane	fonts	0	1	:*	2	:/home/mouzaisi/MyGit/Linux/Linux/Alacritty	1	zsh	:
+pane	fonts	0	1	:*	3	:/home/mouzaisi/MyGit/Linux/Ubuntu/fonts	0	zsh	:
+pane	leetcode	0	1	:*	0	:/home/mouzaisi/MyGit/Leetcode	0	zsh	:
+pane	leetcode	0	1	:*	1	:/home/mouzaisi/MyGit/Leetcode	1	zsh	:
+pane	python	0	1	:*	0	:/home/mouzaisi/MyGit/Python-Journey/pythonDemos/school/2	1	zsh	:
+pane	record	0	1	:*	0	:/home/mouzaisi/Pictures	1	zsh	:
+pane	record	0	1	:*	1	:/home/mouzaisi/MyGit/Plan-book-list	0	zsh	:
+pane	record	0	1	:*	2	:/home/mouzaisi/MyGit/WEB	0	zsh	:
+pane	software	0	1	:*	0	:/home/mouzaisi/Downloads	1	zsh	:
+pane	ssh	0	1	:*	0	:/home/mouzaisi	0	zsh	:
+pane	ssh	0	1	:*	1	:/home/mouzaisi	1	zsh	:
+pane	web	0	1	:*	0	:/home/mouzaisi/MyGit/WEB	1	zsh	:
+pane	web	0	1	:*	1	:/home/mouzaisi/MyGit/WEB	0	zsh	:
+pane	web	0	1	:*	2	:/home/mouzaisi/MyGit/WEB/practice	0	zsh	:
+pane	web	0	1	:*	3	:/home/mouzaisi/MyGit/WEB/practice	0	zsh	:
+pane	wechatminiapps	0	1	:*	0	:/home/mouzaisi/MyGit/wechatMiniApps	0	zsh	:
+pane	wechatminiapps	0	1	:*	1	:/home/mouzaisi	1	zsh	:
+window	Algorithm	0	:python3.8	1	:*	fe48,66x27,0,0[66x13,0,0,1,66x13,0,14,2]	off
+window	CS106L	0	:vim	1	:*	b081,66x27,0,0{20x27,0,0[20x13,0,0,3,20x13,0,14,4],21x27,21,0,5,23x27,43,0,6}	:
+window	RGP	0	:zsh	1	:*	c0e4,66x27,0,0,7	:
+window	SICP	0	:zsh	1	:*	2fb8,66x27,0,0{30x27,0,0,8,35x27,31,0,9}	:
+window	Vim	0	:zsh	1	:*Z	c68b,80x46,0,0[80x23,0,0,10,80x22,0,24,11]	:
+window	autojs	0	:zsh	1	:*	60a1,66x27,0,0,12	:
+window	clash	0	:./clash	1	:*	5f62,80x46,0,0,13	:
+window	django	0	:zsh	1	:*	cc28,66x27,0,0[66x12,0,0,15,66x14,0,13,16]	:
+window	fonts	0	:zsh	1	:*	c38a,66x27,0,0[66x13,0,0{33x13,0,0,17,32x13,34,0,18},66x13,0,14{33x13,0,14,19,32x13,34,14,20}]	:
+window	leetcode	0	:python3.8	1	:*	1fa0,66x27,0,0[66x13,0,0,21,66x13,0,14,22]	off
+window	python	0	:zsh	1	:*	e0a2,66x27,0,0,23	:
+window	record	0	:python3.8	1	:*	8727,66x27,0,0[66x17,0,0,24,66x4,0,18,25,66x4,0,23,26]	off
+window	software	0	:zsh	1	:*	e0a6,66x27,0,0,27	:
+window	ssh	0	:zsh	1	:*	8c31,66x27,0,0[66x12,0,0,28,66x14,0,13,29]	:
+window	web	0	:zsh	1	:*	0088,66x27,0,0[66x17,0,0{64x17,0,0,30,1x17,65,0,31},66x4,0,18,32,66x4,0,23,33]	:
+window	wechatminiapps	0	:zsh	1	:*	a528,66x27,0,0[66x10,0,0,34,66x16,0,11,35]	:
+state	clash	
