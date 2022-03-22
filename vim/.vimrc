@@ -285,6 +285,7 @@ inoremap <Leader>p <ESC>"+p
 vnoremap <Leader>y "+y
 map <Leader>1 :set relativenumber!<CR>
 
+
 "buffer
 "nnoremap <Leader>bn :bn<CR>
 "nnoremap <Leader>bp :bp<CR>
