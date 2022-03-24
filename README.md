@@ -13,3 +13,8 @@ git clone git@github.com:alexpearce/dotfiles.git ~/.dotfiles
 cd ~/.dotfiles
 stow zsh vim git # plus whatever else you'd like
 ```
+
+if you want to remove ln, just typing:
+```shell
+stow -D <dir>
+```
