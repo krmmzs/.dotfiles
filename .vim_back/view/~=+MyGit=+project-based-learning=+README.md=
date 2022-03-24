@@ -1,0 +1,184 @@
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+argglobal
+let s:cpo_save=&cpo
+set cpo&vim
+inoremap <buffer> <nowait> <silent> <C-K> =coc#rpc#request('snippetPrev', [])
+inoremap <buffer> <silent> <Plug>MarkdownPreviewToggle :MarkdownPreviewToggle
+inoremap <buffer> <silent> <Plug>MarkdownPreviewStop :MarkdownPreviewStopa
+inoremap <buffer> <silent> <Plug>MarkdownPreview :MarkdownPreviewa
+snoremap <buffer> <nowait> <silent> 	 :call coc#rpc#request('snippetNext', [])
+snoremap <buffer> <nowait> <silent>  :call coc#rpc#request('snippetPrev', [])
+nmap <buffer> ,hp <Plug>(GitGutterPreviewHunk)
+nmap <buffer> ,hu <Plug>(GitGutterUndoHunk)
+nmap <buffer> ,hs <Plug>(GitGutterStageHunk)
+xmap <buffer> ,hs <Plug>(GitGutterStageHunk)
+nmap <buffer> [c <Plug>(GitGutterPrevHunk)
+nnoremap <buffer> <silent> [" :call search('\%(^\s*<!--.*\n\)\%(^\s*-->\)\@!', 'bW')
+xmap <buffer> [] <Plug>Markdown_MoveToPreviousSiblingHeader
+nmap <buffer> [] <Plug>Markdown_MoveToPreviousSiblingHeader
+xmap <buffer> [[ <Plug>Markdown_MoveToPreviousHeader
+nmap <buffer> [[ <Plug>Markdown_MoveToPreviousHeader
+nmap <buffer> ]c <Plug>(GitGutterNextHunk)
+nnoremap <buffer> <silent> ]" :call search('^\(\s*<!--.*\n\)\@<!\(\s*-->\)', 'W')
+xmap <buffer> ]h <Plug>Markdown_MoveToCurHeader
+nmap <buffer> ]h <Plug>Markdown_MoveToCurHeader
+xmap <buffer> ]u <Plug>Markdown_MoveToParentHeader
+nmap <buffer> ]u <Plug>Markdown_MoveToParentHeader
+xmap <buffer> ][ <Plug>Markdown_MoveToNextSiblingHeader
+nmap <buffer> ][ <Plug>Markdown_MoveToNextSiblingHeader
+xmap <buffer> ]] <Plug>Markdown_MoveToNextHeader
+nmap <buffer> ]] <Plug>Markdown_MoveToNextHeader
+xmap <buffer> ac <Plug>(GitGutterTextObjectOuterVisual)
+omap <buffer> ac <Plug>(GitGutterTextObjectOuterPending)
+xmap <buffer> ge <Plug>Markdown_EditUrlUnderCursor
+nmap <buffer> ge <Plug>Markdown_EditUrlUnderCursor
+xmap <buffer> gx <Plug>Markdown_OpenUrlUnderCursor
+nmap <buffer> gx <Plug>Markdown_OpenUrlUnderCursor
+xmap <buffer> ic <Plug>(GitGutterTextObjectInnerVisual)
+omap <buffer> ic <Plug>(GitGutterTextObjectInnerPending)
+snoremap <buffer> <nowait> <silent> <C-K> :call coc#rpc#request('snippetPrev', [])
+nnoremap <buffer> <silent> <Plug>MarkdownPreviewToggle :MarkdownPreviewToggle
+noremap <buffer> <silent> <Plug>MarkdownPreviewStop :MarkdownPreviewStop
+noremap <buffer> <silent> <Plug>MarkdownPreview :MarkdownPreview
+inoremap <buffer> <nowait> <silent> 	 =coc#rpc#request('snippetNext', [])
+inoremap <buffer> <nowait> <silent>  =coc#rpc#request('snippetPrev', [])
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal cindent
+setlocal cinkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=b:>,b:*,b:+,b:-
+setlocal commentstring=<!--%s-->
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal cursorline
+setlocal cursorlineopt=both
+setlocal define=
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'markdown'
+setlocal filetype=markdown
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=Foldexpr_markdown(v:lnum)
+setlocal foldignore=#
+setlocal foldlevel=100
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=expr
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tqlnr
+setlocal formatlistpat=^\\s*\\d\\+\\.\\s\\+\\|^[-*+]\\s\\+\\|^\\[^\\ze[^\\]]\\+\\]:
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=
+setlocal includeexpr=
+setlocal indentexpr=GetMarkdownIndent()
+setlocal indentkeys=0{,0},0),0],:,0#,!^F,o,O,e
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255,58,-
+setlocal keywordprg=
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal list
+setlocal listchars=
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal relativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal scrolloff=-1
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal showbreak=
+setlocal sidescrolloff=-1
+setlocal signcolumn=auto
+setlocal smartindent
+setlocal softtabstop=0
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal spelloptions=
+setlocal statusline=%!airline#statusline(1)
+setlocal suffixesadd=
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'markdown'
+setlocal syntax=markdown
+endif
+setlocal tabstop=4
+setlocal tagcase=
+setlocal tagfunc=
+setlocal tags=~/.cache/tags/home-mouzaisi-MyGit-project-based-learning-.tags,./tags,./TAGS,tags,TAGS
+setlocal termwinkey=
+setlocal termwinscroll=10000
+setlocal termwinsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal thesaurusfunc=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal varsofttabstop=
+setlocal vartabstop=
+setlocal virtualedit=
+setlocal wincolor=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal nowrap
+setlocal wrapmargin=0
+2
+normal! zo
+let s:l = 14 - ((2 * winheight(0) + 3) / 7)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 14
+normal! 0
+lcd ~/MyGit/project-based-learning
+let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
+doautoall SessionLoadPost
+" vim: set ft=vim :

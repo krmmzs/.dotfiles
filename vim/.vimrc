@@ -18,6 +18,7 @@ Plug 'yianwillis/vimcdoc'
 
 " withespace delete
 Plug 'bronson/vim-trailing-whitespace'
+nnoremap <Leader>cb :FixWhitespace<CR>
 
 "LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -372,7 +373,7 @@ set matchtime=5
 "在状态栏显示正在输入的命令
 set showcmd
 
-set foldmethod=syntax
+set foldmethod=manual
 "默认情况下不折叠
 set foldlevel=100
 " 开启状态栏信息 Always show the status line at the bottom, even if you only have one window open.

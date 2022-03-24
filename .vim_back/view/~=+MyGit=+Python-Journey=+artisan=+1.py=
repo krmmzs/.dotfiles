@@ -1,0 +1,168 @@
+let s:so_save = &g:so | let s:siso_save = &g:siso | setg so=0 siso=0 | setl so=-1 siso=-1
+argglobal
+let s:cpo_save=&cpo
+set cpo&vim
+nmap <buffer> ,hp <Plug>(GitGutterPreviewHunk)
+nmap <buffer> ,hu <Plug>(GitGutterUndoHunk)
+nmap <buffer> ,hs <Plug>(GitGutterStageHunk)
+xmap <buffer> ,hs <Plug>(GitGutterStageHunk)
+map <buffer> ,pc :call flake8#Flake8()
+nmap <buffer> [c <Plug>(GitGutterPrevHunk)
+omap <buffer> [pc <Plug>(textobj-python-class-p)
+xmap <buffer> [pc <Plug>(textobj-python-class-p)
+nmap <buffer> [pc <Plug>(textobj-python-class-p)
+omap <buffer> [pf <Plug>(textobj-python-function-p)
+xmap <buffer> [pf <Plug>(textobj-python-function-p)
+nmap <buffer> [pf <Plug>(textobj-python-function-p)
+nmap <buffer> ]c <Plug>(GitGutterNextHunk)
+omap <buffer> ]pc <Plug>(textobj-python-class-n)
+xmap <buffer> ]pc <Plug>(textobj-python-class-n)
+nmap <buffer> ]pc <Plug>(textobj-python-class-n)
+omap <buffer> ]pf <Plug>(textobj-python-function-n)
+xmap <buffer> ]pf <Plug>(textobj-python-function-n)
+nmap <buffer> ]pf <Plug>(textobj-python-function-n)
+omap <buffer> ac <Plug>(textobj-python-class-a)
+xmap <buffer> ac <Plug>(textobj-python-class-a)
+omap <buffer> af <Plug>(textobj-python-function-a)
+xmap <buffer> af <Plug>(textobj-python-function-a)
+omap <buffer> ic <Plug>(textobj-python-class-i)
+xmap <buffer> ic <Plug>(textobj-python-class-i)
+omap <buffer> if <Plug>(textobj-python-function-i)
+xmap <buffer> if <Plug>(textobj-python-function-i)
+let &cpo=s:cpo_save
+unlet s:cpo_save
+setlocal keymap=
+setlocal noarabic
+setlocal autoindent
+setlocal backupcopy=
+setlocal balloonexpr=
+setlocal nobinary
+setlocal nobreakindent
+setlocal breakindentopt=
+setlocal bufhidden=
+setlocal buflisted
+setlocal buftype=
+setlocal cindent
+setlocal cinkeys=0{,0},0),0],:,!^F,o,O,e
+setlocal cinoptions=
+setlocal cinwords=if,else,while,do,for,switch
+setlocal colorcolumn=
+setlocal comments=b:#,fb:-
+setlocal commentstring=#\ %s
+setlocal complete=.,w,b,u,t,i
+setlocal concealcursor=
+setlocal conceallevel=0
+setlocal completefunc=
+setlocal nocopyindent
+setlocal cryptmethod=
+setlocal nocursorbind
+setlocal nocursorcolumn
+setlocal cursorline
+setlocal cursorlineopt=both
+setlocal define=^\\s*\\(def\\|class\\)
+setlocal dictionary=
+setlocal nodiff
+setlocal equalprg=
+setlocal errorformat=
+setlocal expandtab
+if &filetype != 'python'
+setlocal filetype=python
+endif
+setlocal fixendofline
+setlocal foldcolumn=0
+setlocal foldenable
+setlocal foldexpr=0
+setlocal foldignore=#
+setlocal foldlevel=100
+setlocal foldmarker={{{,}}}
+setlocal foldmethod=syntax
+setlocal foldminlines=1
+setlocal foldnestmax=20
+setlocal foldtext=foldtext()
+setlocal formatexpr=
+setlocal formatoptions=tcq
+setlocal formatlistpat=^\\s*\\d\\+[\\]:.)}\\t\ ]\\s*
+setlocal formatprg=
+setlocal grepprg=
+setlocal iminsert=0
+setlocal imsearch=-1
+setlocal include=^\\s*\\(from\\|import\\)
+setlocal includeexpr=substitute(substitute(substitute(v:fname,b:grandparent_match,b:grandparent_sub,''),b:parent_match,b:parent_sub,''),b:child_match,b:child_sub,'g')
+setlocal indentexpr=GetPythonIndent(v:lnum)
+setlocal indentkeys=0{,0},0),0],:,!^F,o,O,e,<:>,=elif,=except
+setlocal noinfercase
+setlocal iskeyword=@,48-57,_,192-255
+setlocal keywordprg=python3\ -m\ pydoc
+setlocal nolinebreak
+setlocal nolisp
+setlocal lispwords=
+setlocal list
+setlocal listchars=
+setlocal makeencoding=
+setlocal makeprg=
+setlocal matchpairs=(:),{:},[:]
+setlocal modeline
+setlocal modifiable
+setlocal nrformats=bin,octal,hex
+setlocal number
+setlocal numberwidth=4
+setlocal omnifunc=python3complete#Complete
+setlocal path=
+setlocal nopreserveindent
+setlocal nopreviewwindow
+setlocal quoteescape=\\
+setlocal noreadonly
+setlocal relativenumber
+setlocal norightleft
+setlocal rightleftcmd=search
+setlocal noscrollbind
+setlocal scrolloff=-1
+setlocal shiftwidth=4
+setlocal noshortname
+setlocal showbreak=
+setlocal sidescrolloff=-1
+setlocal signcolumn=auto
+setlocal smartindent
+setlocal softtabstop=4
+setlocal nospell
+setlocal spellcapcheck=[.?!]\\_[\\])'\"\	\ ]\\+
+setlocal spellfile=
+setlocal spelllang=en
+setlocal spelloptions=
+setlocal statusline=%!airline#statusline(1)
+setlocal suffixesadd=.py
+setlocal swapfile
+setlocal synmaxcol=3000
+if &syntax != 'python'
+setlocal syntax=python
+endif
+setlocal tabstop=4
+setlocal tagcase=
+setlocal tagfunc=
+setlocal tags=~/.cache/tags/home-mouzaisi-MyGit-Python-Journey-.tags,./tags,./TAGS,tags,TAGS
+setlocal termwinkey=
+setlocal termwinscroll=10000
+setlocal termwinsize=
+setlocal textwidth=0
+setlocal thesaurus=
+setlocal thesaurusfunc=
+setlocal noundofile
+setlocal undolevels=-123456
+setlocal varsofttabstop=
+setlocal vartabstop=
+setlocal virtualedit=
+setlocal wincolor=
+setlocal nowinfixheight
+setlocal nowinfixwidth
+setlocal nowrap
+setlocal wrapmargin=0
+let s:l = 1 - ((0 * winheight(0) + 21) / 43)
+if s:l < 1 | let s:l = 1 | endif
+keepjumps exe s:l
+normal! zt
+keepjumps 1
+normal! 0
+let &g:so = s:so_save | let &g:siso = s:siso_save
+nohlsearch
+doautoall SessionLoadPost
+" vim: set ft=vim :
