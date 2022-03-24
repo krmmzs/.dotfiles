@@ -16,6 +16,9 @@ call plug#begin('~/.vim/plugged')
 " chinese vimdoc
 Plug 'yianwillis/vimcdoc'
 
+" withespace delete
+Plug 'bronson/vim-trailing-whitespace'
+
 "LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'wellle/tmux-complete.vim'
@@ -384,10 +387,11 @@ set cmdheight=2
 set ignorecase
 set smartcase
 
-" 显示Tab符，使用一高亮竖线代替
-" such as 制表符被显示为“^I”
-set list
-set listchars=tab:>-
+"using vim list and listchars options to show hidden something
+" enable list mode
+"set list
+" dsiplay chars for tabs and trailing space
+"set listchars=tab:>-,trail:-
 
 " Disable audible bell because it's annoying.
 set noerrorbells visualbell t_vb=

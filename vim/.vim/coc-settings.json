@@ -22,5 +22,10 @@
                 "buildDirectory": "build"
             }
         }
-    }
+    },
+
+    "pyright.enable": true,
+    "python.analysis.autoImportCompletions": true,
+    "python.pythonPath": "/usr/bin/python3/",
+    "python.analysis.diagnosticMode": "workspace"
 }
