@@ -1,0 +1,5 @@
+IdeaVIM
+com.intellij.zh
+com.github.tuchg.nonasciicodecompletionhelper
+AceJump
+org.jetbrains.IdeaVim-EasyMotion
