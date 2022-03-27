@@ -3,9 +3,9 @@
 # for examples
 
 # javajdk
-export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
+export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
 export PATH=$JAVA_HOME/bin:$PATH
-export CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+export CLASSPATH=.:$JAVA_HOME/lib
 
 #让tmux适配vim的颜色
 export TERM=screen-256color-bce

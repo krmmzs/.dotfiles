@@ -18,7 +18,7 @@ Plug 'yianwillis/vimcdoc'
 
 " withespace delete
 Plug 'bronson/vim-trailing-whitespace'
-nnoremap <Leader>cb :FixWhitespace<CR>
+nnoremap <Leader><space> :FixWhitespace<CR>
 
 "LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -279,12 +279,12 @@ Plug 'ryanoasis/vim-devicons' "icons for them
 call plug#end()
 
 " map command to hotkey
-"nnoremap <Leader>u :UndotreeToggle<CR>
-nnoremap <Leader>u :NERDTreeTabsToggle<CR>
-"nnoremap <Leader>no :NERDTreeFocus <CR>
-nnoremap <Leader>no ::NERDTreeTabsFind <CR>
-nnoremap <Leader>nt :NERDTreeToggle<CR>
-nnoremap <Leader>nf :NERDTreeFind<CR>
+nnoremap <Leader>u :UndotreeToggle<CR>
+nnoremap <Leader>no :NERDTreeFocus <CR>
+"nnoremap <Leader>nt :NERDTreeToggle<CR>
+nnoremap <Leader>nt :NERDTreeTabsToggle<CR>
+"nnoremap <Leader>nf :NERDTreeFind<CR>
+nnoremap <Leader>nf ::NERDTreeTabsFind <CR>
 inoremap <Leader>p <ESC>"+p
 vnoremap <Leader>y "+y
 map <Leader>1 :set relativenumber!<CR>
@@ -373,10 +373,11 @@ set matchtime=5
 "在状态栏显示正在输入的命令
 set showcmd
 
-set foldmethod=manual
+"set foldmethod=manual
 "默认情况下不折叠
-set foldlevel=100
+"set foldlevel=100
 " 开启状态栏信息 Always show the status line at the bottom, even if you only have one window open.
+set nofoldenable
 set laststatus=2
 " 命令行的高度，默认为1，这里设为2
 set cmdheight=2
@@ -514,6 +515,9 @@ noremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 
 " run python3 in vim
 map <Leader>8 :w<CR>:! clear; python3 %<CR>
+
+"backto
+noremap <Leader>w <C-W>w
 
 " ======= 引号 && 括号自动匹配 ======= "
 "
