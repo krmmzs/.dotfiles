@@ -2,5 +2,6 @@
   <component name="UpdatesConfigurable">
     <option name="LAST_BUILD_CHECKED" value="PY-213.7172.26" />
     <option name="LAST_TIME_CHECKED" value="1648304825325" />
+    <option name="THIRD_PARTY_PLUGINS_ALLOWED" value="true" />
   </component>
 </application>

@@ -25,7 +25,7 @@
     <property name="PyCharm.InitialConfiguration.V5" value="true" />
     <property name="PyCharm.InitialConfiguration.V6" value="true" />
     <property name="PyCharm.InitialConfiguration.V7" value="true" />
-    <property name="appcds.runOnSecondStart" value="PY-213.7172.26-4c1f36a8350bcc8499beb9303e93a200e1183883eb8ab9277af95c63e166be59" />
+    <property name="appcds.runOnSecondStart" value="PY-213.7172.26-75c4cdc072345f75b86aa312e2329751ec094b3de12889fa072fc05370fe4ca5" />
     <property name="ask.about.ctrl.y.shortcut.v2" value="true" />
     <property name="bundled.plugins.list.saved.version" value="PY-213.7172.26" />
     <property name="evlsprt3.213" value="7" />
@@ -44,7 +44,7 @@
   </component>
   <component name="TerminalCommandHistoryManager">
     <command-history-files>
-      <command-history-file filename="pythonProject-history" project-path="$USER_HOME$/PycharmProjects/pythonProject" last-access-time="1648304822540" />
+      <command-history-file filename="pythonProject-history" project-path="$USER_HOME$/PycharmProjects/pythonProject" last-access-time="1648361228828" />
     </command-history-files>
   </component>
 </application>

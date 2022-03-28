@@ -445,10 +445,10 @@ set t_Co=256
 "alacritty true Support \"True" (24-bit color)
 " https://github.com/alacritty/alacritty/issues/109#issuecomment-859990495
 "" using gruvbox
-"colorscheme gruvbox
-"set background=dark
-"highlight ColorColumn ctermbg=0 guibg=lightgrey
-"let g:airline_theme='hybrid'
+colorscheme gruvbox
+set background=dark
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+let g:airline_theme='hybrid'
 "if you want 256 ture color: uncomment them, but I think it is better in 256 false color is better, hhh
 "if exists('+termguicolors')
   "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
@@ -457,10 +457,10 @@ set t_Co=256
 "endif
 
 "using space_vim_theme
-colorscheme space_vim_theme
-set background=light
-highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
-let g:airline_theme='papercolor'
+"set background=light
+"colorscheme space_vim_theme
+"highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
+"let g:airline_theme='papercolor'
 
 "highlight Cursor guifg=white guibg=black
 "highlight iCursor guifg=white guibg=steelblue
@@ -478,11 +478,10 @@ let g:airline_theme='papercolor'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " 字体 && 字号
-set guifont=Monaco:h12
+"set guifont=Monaco:h12
 "set guifont=Consolas:h10
-
-" Ubuntu Gvim
-" set guifont=Monaco\ 12
+ set guifont=Monaco\ Nerd\ Font\ 12 " vim in linux
+"set guifont=Monacot\ 12
 
 "mymap
 "open terminal to solve small project in vim now pwd

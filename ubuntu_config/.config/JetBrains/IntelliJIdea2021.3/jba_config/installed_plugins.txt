@@ -3,3 +3,5 @@ com.intellij.zh
 com.github.tuchg.nonasciicodecompletionhelper
 AceJump
 org.jetbrains.IdeaVim-EasyMotion
+com.vincentp.gruvbox-theme
+com.jetbrains.CyanTheme

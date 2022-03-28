@@ -1,20 +1,23 @@
 <application>
   <component name="VimHistorySettings">
     <history>
+      <history-search />
       <history-cmd>
         <entry encoding="base64">dw==</entry>
       </history-cmd>
+      <history-expr />
+      <history-input />
     </history>
   </component>
   <component name="VimMarksSettings">
     <globalmarks />
     <filemarks>
-      <file name="$USER_HOME$/IdeaProjects/javahelloworld/src/a/main.java" timestamp="1648358970431">
-        <mark key="'" line="1" column="0" />
+      <file name="$USER_HOME$/IdeaProjects/javahelloworld/src/a/main.java" timestamp="1648386858583">
+        <mark key="'" line="3" column="0" />
         <mark key="j" line="2" column="0" />
         <mark key="m" line="4" column="0" />
       </file>
-      <file name="/" timestamp="1648359874573">
+      <file name="/" timestamp="1648386695503">
         <mark key="[" line="0" column="0" />
       </file>
     </filemarks>
@@ -23,6 +26,7 @@
       <jump line="2" column="0" filename="$USER_HOME$/IdeaProjects/javahelloworld/src/a/main.java" />
       <jump line="0" column="0" filename="$USER_HOME$/IdeaProjects/javahelloworld/src/a/main.java" />
       <jump line="1" column="0" filename="$USER_HOME$/IdeaProjects/javahelloworld/src/a/main.java" />
+      <jump line="3" column="0" filename="$USER_HOME$/IdeaProjects/javahelloworld/src/a/main.java" />
     </jumps>
   </component>
   <component name="VimRegisterSettings">
