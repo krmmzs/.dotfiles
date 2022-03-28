@@ -16,7 +16,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="CWM_LOGGING_VERSION" value="1" />
-    <property name="MarketplacePluginsSearchHistory" value="vim" />
+    <property name="MarketplacePluginsSearchHistory" value="/tag:Theme light&#10;/tag:Theme ight&#10;/tag:Theme gru light&#10;/tag:Theme gru&#10;/tag:Theme" />
     <property name="NonModalCommitCustomization.IsApplied" value="true" />
     <property name="PyCharm.InitialConfiguration" value="true" />
     <property name="PyCharm.InitialConfiguration.V2" value="true" />
@@ -44,7 +44,7 @@
   </component>
   <component name="TerminalCommandHistoryManager">
     <command-history-files>
-      <command-history-file filename="pythonProject-history" project-path="$USER_HOME$/PycharmProjects/pythonProject" last-access-time="1648361228828" />
+      <command-history-file filename="pythonProject-history" project-path="$USER_HOME$/PycharmProjects/pythonProject" last-access-time="1648446696216" />
     </command-history-files>
   </component>
 </application>

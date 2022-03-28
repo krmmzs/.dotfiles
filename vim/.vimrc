@@ -9,8 +9,6 @@ if empty(glob(data_dir . '/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-"vim-plug安装插件的命令
-
 call plug#begin('~/.vim/plugged')
 
 " chinese vimdoc
@@ -88,9 +86,6 @@ let g:floaterm_height = 0.8
 " tmuxline in vim, but I don't like it now using LeaderF to replace it
 "Plug 'edkolev/tmuxline.vim'
 
-" snippets
-Plug 'honza/vim-snippets'
-
 " shellcheck
 Plug 'neomake/neomake'
 
@@ -106,7 +101,7 @@ nmap <Leader>gu :diffget //2<CR>
 nmap <Leader>gs :G<CR>
 nmap <Leader>gd :Gvdiff<CR>
 
-" 文件浏览器 but now I need't it
+" 文件浏览器
 Plug 'preservim/nerdtree'
 "Just one NERDTree, always and ever. It will always look the same in all tabs, including expanded/collapsed nodes, scroll position etc.
 " When you close a file, the tab closes with it. No NERDTree hanging open.
@@ -149,12 +144,11 @@ Plug 'sgur/vim-textobj-parameter' "函数参数
 Plug 'octol/vim-cpp-enhanced-highlight'
 
 " vim python
-"add PEP 8 check
-Plug 'nvie/vim-flake8'
-autocmd FileType python map <buffer> <Leader>pc :call flake8#Flake8()<CR>
 "yapf for python
-noremap <Leader>pf :0,$!yapf<CR>
+"noremap <Leader>pf :0,$!yapf<CR>
 Plug 'vim-python/python-syntax'
+Plug 'psf/black', { 'branch': 'stable' }
+autocmd BufWritePre *.py execute ':Black'
 
 " https://wakatime.com/
 Plug 'wakatime/vim-wakatime'
@@ -445,10 +439,10 @@ set t_Co=256
 "alacritty true Support \"True" (24-bit color)
 " https://github.com/alacritty/alacritty/issues/109#issuecomment-859990495
 "" using gruvbox
-colorscheme gruvbox
-set background=dark
-highlight ColorColumn ctermbg=0 guibg=lightgrey
-let g:airline_theme='hybrid'
+"colorscheme gruvbox
+"set background=dark
+"highlight ColorColumn ctermbg=0 guibg=lightgrey
+"let g:airline_theme='hybrid'
 "if you want 256 ture color: uncomment them, but I think it is better in 256 false color is better, hhh
 "if exists('+termguicolors')
   "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
@@ -457,10 +451,10 @@ let g:airline_theme='hybrid'
 "endif
 
 "using space_vim_theme
-"set background=light
-"colorscheme space_vim_theme
-"highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
-"let g:airline_theme='papercolor'
+set background=light
+colorscheme space_vim_theme
+highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
+let g:airline_theme='papercolor'
 
 "highlight Cursor guifg=white guibg=black
 "highlight iCursor guifg=white guibg=steelblue

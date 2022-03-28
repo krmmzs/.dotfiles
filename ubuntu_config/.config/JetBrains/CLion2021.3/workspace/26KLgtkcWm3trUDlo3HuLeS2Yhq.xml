@@ -11,8 +11,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lecture6-templates-code/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6227">
-              <caret line="237" column="22" selection-start-line="237" selection-start-column="22" selection-end-line="237" selection-end-column="22" />
+            <state relative-caret-position="314">
+              <caret line="253" column="53" selection-start-line="253" selection-start-column="53" selection-end-line="253" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -24,7 +24,7 @@
       <summary usageCount="1" lastUsed="1647167646738" />
     </fileType>
     <fileType name="ObjectiveC">
-      <summary usageCount="7" lastUsed="1647167868808" />
+      <summary usageCount="9" lastUsed="1648450397644" />
     </fileType>
   </component>
   <component name="IdeDocumentHistory">
@@ -62,7 +62,7 @@
     </panes>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="405000" />
+    <option name="totallyTimeSpent" value="514000" />
   </component>
   <component name="ToolWindowManager">
     <layout>
@@ -94,8 +94,8 @@
       <window_info anchor="right" id="make" order="1" show_stripe_button="false" side_tool="true" />
     </layout>
     <recentWindows>
-      <value>CMake</value>
       <value>Project</value>
+      <value>CMake</value>
       <value>Messages</value>
     </recentWindows>
   </component>
@@ -116,10 +116,10 @@
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state x="628" y="195" width="654" height="743" key="FileChooserDialogImpl/0.34.1920.1046@0.34.1920.1046" timestamp="1647167877735" />
-    <state x="211" y="34" width="1488" height="1046" key="SettingsEditor" timestamp="1647167601936">
+    <state x="185" y="34" width="1488" height="1046" key="SettingsEditor" timestamp="1648450453908">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state x="211" y="34" width="1488" height="1046" key="SettingsEditor/0.34.1920.1046@0.34.1920.1046" timestamp="1647167601936" />
+    <state x="185" y="34" width="1488" height="1046" key="SettingsEditor/0.34.1920.1046@0.34.1920.1046" timestamp="1648450453908" />
     <state x="455" y="242" key="run.anything.popup" timestamp="1647167753972">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
@@ -136,8 +136,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lecture6-templates-code/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6227">
-          <caret line="237" column="22" selection-start-line="237" selection-start-column="22" selection-end-line="237" selection-end-column="22" />
+        <state relative-caret-position="314">
+          <caret line="253" column="53" selection-start-line="253" selection-start-column="53" selection-end-line="253" selection-end-column="53" />
         </state>
       </provider>
     </entry>

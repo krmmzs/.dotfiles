@@ -9,11 +9,8 @@
   <component name="VimMarksSettings">
     <globalmarks />
     <filemarks>
-      <file name="$USER_HOME$/MyGit/CS106L/CS106L-201920-master/lecture6-templates-code/main.cpp" timestamp="1647167793890">
-        <mark key="[" line="218" column="17" />
-        <mark key="]" line="218" column="18" />
-        <mark key="^" line="218" column="18" />
-        <mark key="." line="218" column="17" />
+      <file name="/" timestamp="1648450423271">
+        <mark key="[" line="0" column="0" />
       </file>
     </filemarks>
     <jumps />
