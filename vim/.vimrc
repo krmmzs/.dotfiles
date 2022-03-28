@@ -1,6 +1,29 @@
 let mapleader = ","
 nnoremap ,, ,
 
+
+"Mode Settings
+
+if !has('nvim')
+    let &t_SI.="\e[5 q" "SI = INSERT mode
+    let &t_SR.="\e[4 q" "SR = REPLACE mode
+    let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
+endif
+
+"Cursor settings:
+
+"  1 -> blinking block
+"  2 -> solid block
+"  3 -> blinking underscore
+"  4 -> solid underscore
+"  5 -> blinking vertical bar
+"  6 -> solid vertical bar
+
+"let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+"let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+"let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+
 "如果没有安装就自动安装vim-plug插件
 "Automatic installation
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
@@ -270,6 +293,13 @@ Plug 'kshenoy/vim-signature'
 Plug 'mhinz/vim-startify' "启动屏幕
 Plug 'ryanoasis/vim-devicons' "icons for them
 
+"""""""""""""""""""""""""
+" nvim plug
+if has('nvim')
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-treesitter/playground'
+endif
+
 call plug#end()
 
 " map command to hotkey
@@ -296,17 +326,12 @@ endif
 
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
-set nocompatible
+if !has('nvim')
+    set nocompatible
+endif
 
 " allow backspacing over everything in insert mode
 set backspace=indent,eol,start
-
-" for gvim backup
-if has("vms")
-  set nobackup		" do not keep a backup file, use versions instead
-else
-  set backup		" keep a backup file
-endif
 
 "打开文件时恢复光标位置
 autocmd BufReadPost *
@@ -573,6 +598,7 @@ set expandtab " tab原本的制表符改成空格
 set wildmenu
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""'
+" coc config
 " Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
 " delays and poor user experience.
 set updatetime=300
@@ -719,3 +745,13 @@ nnoremap <silent><nowait> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent><nowait> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list.
 nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" nevim config
+
+"if has('nvim')
+    "tnoremap <Esc> <C-\><Cn>
+"endif
+"if !has('nvim')
+    "set ttymouse=xterm2
+"endif
