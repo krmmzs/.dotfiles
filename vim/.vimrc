@@ -146,8 +146,13 @@ Plug 'easymotion/vim-easymotion'
 nmap <Leader>m <Plug>(easymotion-s2)
 
 " Surround.vim is all about "surroundings": parentheses, brackets, quotes
-Plug 'tpope/vim-surround'
+"Plug 'tpope/vim-surround'
 "Plug 'davidhalter/jedi-vim'
+Plug 'machakann/vim-sandwich'
+             "|<----ib,is---->|
+"{surrounding}{surrounded text}{surrounding}
+"|<-----------------ab,as----------------->|
+
 
 " Capture the map by
 "Plug 'tpope/vim-repeat'
