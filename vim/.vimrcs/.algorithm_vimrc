@@ -5,15 +5,6 @@ set timeoutlen=1000   " default value
 set ttimeout          " for key codes
 set ttimeoutlen=10    " unnoticeable small value
 
-call plug#begin('~/.vim/plugged')
-
-" Auto Pairs
-Plug 'jiangmiao/auto-pairs'
-
-Plug 'voldikss/vim-floaterm'
-
-call plug#end()
-
 set nocompatible
 
 set enc=utf-8
@@ -26,7 +17,7 @@ set writebackup
 set history=100
 
 "在状态栏显示正在输入的命令
-"设置使用 c/c++ 语言的自动缩进方式 
+"设置使用 c/c++ 语言的自动缩进方式
 set cindent
 set autoindent
 set smartindent
@@ -55,41 +46,16 @@ set hlsearch
 " 启用鼠标
 set mouse=a
 
-"
-":inoremap ( ()<ESC>i
-
-":inoremap ) <c-r>=ClosePair(')')<CR>
-
-":inoremap { {}<ESC>i
-"输入大括号后马上按回车
 :inoremap {<CR> {<CR>}<ESC>O
 
-":inoremap } <c-r>=ClosePair('}')<CR>
-"
-":inoremap [ []<ESC>i
+inoremap (  ()<esc>i
+inoremap [  []<esc>i
+inoremap "  ""<esc>i
+inoremap '  ''<esc>i
+inoremap {<CR> {<CR>}<ESC>O
 
-":inoremap ] <c-r>=ClosePair(']')<CR>
-"
-":inoremap < <><ESC>i
 
-":inoremap > <c-r>=ClosePair('>')<CR>
-
-":inoremap " ""<ESC>i
-
-":inoremap ' ''<ESC>i
-"
-":inoremap ` ``<ESC>i
-
-":inoremap * **<ESC>i
-
-"function ClosePair(char)
-"    if getline('.')[col('.') - 1] == a:char
-"        return "\<Right>"
-"    else
-"        return a:char
-"    endif
-"endif
-"endfunction
-
+"""""""""""""""""""""""""""""""""""""
+" not
 inoremap <Leader>p <ESC>"+p
 vnoremap <Leader>y "+y
