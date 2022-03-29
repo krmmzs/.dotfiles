@@ -154,7 +154,6 @@ alias dir="nautilus"
 alias alidrive="cd ~/softwares/阿里小白羊版Linux\ v2.9.24/ && ./阿里云盘小白羊版"
 alias vimal="vim -u ~/.vimrcs/.algorithm_vimrc"
 alias vimnp="vim -u ~/.vimrcs/.no_plugins_vimrc"
-alias vimcm="vim -u ~/.vimrcs/.competition_vimrc"
 alias mv="mv -i"  # add attention
 alias cp="cp -i"  # add attention
 alias ls="exa" # replace ls to exa but with command ls
