@@ -1,0 +1,39 @@
+let mapleader = ","
+
+set timeout           " for mappings
+set timeoutlen=1000   " default value
+set ttimeout          " for key codes
+set ttimeoutlen=10    " unnoticeable small value
+
+set nocompatible
+
+set cindent
+set autoindent
+set smartindent
+set shiftwidth=4
+
+set ts=4
+set expandtab
+
+syntax enable
+syntax on
+
+set backspace=indent,eol,start
+
+set nu
+set relativenumber
+
+set nobackup
+set noswapfile
+
+set mouse=a
+set enc=utf-8
+
+inoremap (  ()<esc>i
+inoremap [  []<esc>i
+inoremap "  ""<esc>i
+inoremap '  ''<esc>i
+inoremap {<CR> {<CR>}<ESC>O
+
+set cursorline
+highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE

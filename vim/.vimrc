@@ -92,6 +92,10 @@ Plug 'vim-airline/vim-airline-themes'
 "let g:airline_theme='light'
 let g:airline#extensions#tabline#enabled = 1 "Automatically displays all buffers when there's only one tab open
 
+"上述命令会使状态栏显示文件路径、模式、文件类型、文件编码、所在行数与列数，
+"以及光标所在处是文件的百分之多少。配合 vim-airline 插件使用效果更佳。
+set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ [%{(&fenc==\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}]\ %c:%l/%L%)
+
 "Smarter tab line
 "let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#left_alt_sep = '|'
@@ -168,6 +172,10 @@ Plug 'sgur/vim-textobj-parameter' "函数参数
 "i, 和 a, ：参数对象，写代码一半在修改，现在可以用 di, 或 ci, 一次性删除/改写当前参数
 "ii 和 ai ：缩进对象，同一个缩进层次的代码，可以用 vii 选中，dii / cii 删除或改写
 
+" Rainbow Parentheses Improved
+Plug 'luochen1990/rainbow'
+nnoremap <Leader>rr :RainbowToggle<CR>
+
 " vim cpp
 Plug 'octol/vim-cpp-enhanced-highlight'
 
@@ -221,13 +229,14 @@ noremap <Leader>vf :Vista finder fzf<CR>
 Plug 'Yggdroot/LeaderF', { 'do': ':LeaderfInstallCExtension' }
 Plug 'tamago324/LeaderF-filer'
 Plug 'Yggdroot/LeaderF-marks'
+nnoremap <C-h> :LeaderfSelf<CR>
 nnoremap <C-f> :LeaderfFile<CR>
-nnoremap <Leader>ff :LeaderfFunction!<CR>
-nnoremap <Leader>fh :LeaderfSelf<CR>
-nnoremap <Leader>fr :LeaderfRgInteractive<CR>
-nnoremap <Leader>ft :LeaderfRgRecall<CR>
+nnoremap <Leader>ft :LeaderfBufTag<CR>
+nnoremap <Leader>ff :LeaderfFunction<CR>
 nnoremap <Leader>fm :LeaderfMarks<CR>
-nnoremap <Leader>fd :Leaderf filer<CR>
+nnoremap <Leader>fr :LeaderfRgInteractive<CR>
+nnoremap <Leader>fe :LeaderfRgRecall<CR>
+"nnoremap <Leader>fd :Leaderf filer<CR> "using <C-f> to call filer
 "and type "!" to fuzzy serach, and type "Tab" to return back
 "To enable popup mode
 let g:Lf_WindowPosition = 'popup'
@@ -336,6 +345,7 @@ if !has('nvim')
 endif
 
 " allow backspacing over everything in insert mode
+" 默认情况下换行符是不可被删除的，除非使用 dd 命令或者 J 命令才可做到。如下配置可以解除这种限制
 set backspace=indent,eol,start
 
 "打开文件时恢复光标位置
@@ -396,6 +406,9 @@ set showmatch
 set matchtime=5
 "在状态栏显示正在输入的命令
 set showcmd
+
+" 移至当前文件所在目录
+set autochdir 
 
 "set foldmethod=manual
 "默认情况下不折叠
@@ -469,10 +482,10 @@ set t_Co=256
 "alacritty true Support \"True" (24-bit color)
 " https://github.com/alacritty/alacritty/issues/109#issuecomment-859990495
 "" using gruvbox
-"colorscheme gruvbox
-"set background=dark
-"highlight ColorColumn ctermbg=0 guibg=lightgrey
-"let g:airline_theme='hybrid'
+colorscheme gruvbox
+set background=dark
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+let g:airline_theme='hybrid'
 "if you want 256 ture color: uncomment them, but I think it is better in 256 false color is better, hhh
 "if exists('+termguicolors')
   "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
@@ -481,10 +494,10 @@ set t_Co=256
 "endif
 
 "using space_vim_theme
-set background=light
-colorscheme space_vim_theme
-highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
-let g:airline_theme='papercolor'
+"set background=light
+"colorscheme space_vim_theme
+"highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
+"let g:airline_theme='papercolor'
 
 "highlight Cursor guifg=white guibg=black
 "highlight iCursor guifg=white guibg=steelblue
@@ -497,7 +510,6 @@ let g:airline_theme='papercolor'
 " Highlight the symbol and its references when holding the cursor.
 "autocmd CursorHold * silent call CocActionAsync('highlight')
 
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -600,7 +612,9 @@ set ts=4
 set expandtab " tab原本的制表符改成空格
 
 " 命令行按 tab 补全时，显示一个候选菜单
+" 同时如果安装了oh-my-zsh，会支持zsh
 set wildmenu
+set wildmode=full
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""'
 " coc config
@@ -727,11 +741,11 @@ nmap <leader>rn <Plug>(coc-rename)
 "
 "" Add `:OR` command for organize imports of the current buffer.
 "command! -nargs=0 OR   :call     CocActionAsync('runCommand', 'editor.action.organizeImport')
-"
-"" Add (Neo)Vim's native statusline support.
-"" NOTE: Please see `:h coc-status` for integrations with external plugins that
-"" provide custom statusline: lightline.vim, vim-airline.
-"set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
+
+" NOTE: Please see `:h coc-status` for integrations with external plugins that
+" Add (Neo)Vim's native statusline support.
+" provide custom statusline: lightline.vim, vim-airline.
+set statusline^=%{coc#status()}%{get(b:,'coc_current_function','')}
 
 " Mappings for CoCList
 " Show all diagnostics.
