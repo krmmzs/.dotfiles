@@ -21,7 +21,7 @@
     <property name="KEYMAP" value="theme" />
     <property name="MarketplacePluginsSearchHistory" value="/tag:Theme Light&#10;/tag:Theme Ligh&#10;/tag:Theme LI&#10;/tag:Theme&#10;/tag:Theme gru" />
     <property name="SettingsSearchHistory" value="theme" />
-    <property name="appcds.runOnSecondStart" value="IU-213.7172.25-a01a36ba2cdb295ecea5c1833aae21476a15691a9334c0edd94f1a8ff9f5d5af" />
+    <property name="appcds.runOnSecondStart" value="IU-213.7172.25-286399a8fc591a8c4b7c8de21af78ef79ab818df058cd12485e08f555727923c" />
     <property name="bundled.plugins.list.saved.version" value="IU-213.7172.25" />
     <property name="defaultJdkConfigured" value="true" />
     <property name="eclipse.projects.detected" value="" />

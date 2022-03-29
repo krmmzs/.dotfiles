@@ -10,7 +10,7 @@
       <i c="5" l="1648388713992" />
     </e>
     <e n="EditorEnter">
-      <i c="6" l="1648358967782" />
+      <i c="7" l="1648463905955" />
     </e>
     <e n="NewClass">
       <i c="1" l="1648357633812" />
@@ -19,10 +19,10 @@
       <i c="1" l="1648357629777" />
     </e>
     <e n="SaveAll">
-      <i c="5" l="1648386862637" />
+      <i c="9" l="1648463908492" />
     </e>
     <e n="SettingsEntryPoint">
-      <i c="4" l="1648388705928" />
+      <i c="7" l="1648463882293" />
     </e>
     <e n="ShowSettings">
       <i c="12" l="1648386802153" />
@@ -37,10 +37,10 @@
       <i c="2" l="1648388709535" />
     </e>
     <e n="com.intellij.ide.actions.QuickChangeLookAndFeel$LafChangeAction">
-      <i c="1" l="1648386845290" />
+      <i c="2" l="1648463885999" />
     </e>
     <e n="com.intellij.ide.actions.SettingsEntryPointAction$1">
-      <i c="3" l="1648388707059" />
+      <i c="4" l="1648463883737" />
     </e>
     <e n="com.intellij.ide.plugins.PluginManagerConfigurable$3">
       <i c="3" l="1648357784725" />
@@ -51,11 +51,14 @@
     <e n="com.intellij.notification.NotificationAction$Simple">
       <i c="1" l="1648358628471" />
     </e>
+    <e n="com.intellij.openapi.actionSystem.EmptyAction$MyDelegatingAction">
+      <i c="1" l="1648463906651" />
+    </e>
     <e n="com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenComponentFactory$3">
       <i c="1" l="1648357594657" />
     </e>
     <e n="com.maddyhome.idea.vim.ui.ex.ExShortcutKeyAction">
-      <i c="5" l="1648386862631" />
+      <i c="9" l="1648463908487" />
     </e>
   </component>
 </application>

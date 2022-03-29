@@ -12,10 +12,14 @@
   <component name="VimMarksSettings">
     <globalmarks />
     <filemarks>
-      <file name="$USER_HOME$/IdeaProjects/javahelloworld/src/a/main.java" timestamp="1648386858583">
-        <mark key="'" line="3" column="0" />
+      <file name="$USER_HOME$/IdeaProjects/javahelloworld/src/a/main.java" timestamp="1648463906655">
+        <mark key="'" line="4" column="0" />
         <mark key="j" line="2" column="0" />
+        <mark key="[" line="2" column="19" />
         <mark key="m" line="4" column="0" />
+        <mark key="]" line="3" column="4" />
+        <mark key="." line="3" column="3" />
+        <mark key="^" line="3" column="4" />
       </file>
       <file name="/" timestamp="1648386695503">
         <mark key="[" line="0" column="0" />
@@ -33,6 +37,9 @@
     <registers>
       <register name=":" type="4">
         <text encoding="base64">dw==</text>
+      </register>
+      <register name="." type="4">
+        <text encoding="base64" />
       </register>
     </registers>
   </component>

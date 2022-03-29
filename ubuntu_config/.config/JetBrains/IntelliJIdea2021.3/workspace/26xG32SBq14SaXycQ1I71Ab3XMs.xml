@@ -11,8 +11,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/a/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="128">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+            <state relative-caret-position="96">
+              <caret line="3" selection-start-line="3" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -21,7 +21,7 @@
   </component>
   <component name="FileTypeUsageLocalSummary">
     <fileType name="JAVA">
-      <summary usageCount="9" lastUsed="1648388696995" />
+      <summary usageCount="10" lastUsed="1648463876437" />
     </fileType>
   </component>
   <component name="IdeDocumentHistory">
@@ -66,7 +66,7 @@
     </panes>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1646000" />
+    <option name="totallyTimeSpent" value="1676000" />
   </component>
   <component name="ToolWindowManager">
     <layout>
@@ -116,8 +116,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/a/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="128">
-          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        <state relative-caret-position="96">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
         </state>
       </provider>
     </entry>

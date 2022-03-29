@@ -754,9 +754,9 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nevim config
 
-"if has('nvim')
-    "tnoremap <Esc> <C-\><Cn>
-"endif
-"if !has('nvim')
-    "set ttymouse=xterm2
-"endif
+if has('nvim')
+    tnoremap <Esc> <C-\><Cn>
+endif
+if !has('nvim')
+    set ttymouse=xterm2
+endif
