@@ -19,9 +19,10 @@
     <property name="CWM_LOGGING_VERSION" value="1" />
     <property name="InstalledPluginsSearchHistory" value="vim&#10;vi" />
     <property name="KEYMAP" value="theme" />
-    <property name="MarketplacePluginsSearchHistory" value="/tag:Theme Light&#10;/tag:Theme Ligh&#10;/tag:Theme LI&#10;/tag:Theme&#10;/tag:Theme gru" />
+    <property name="MarketplacePluginsSearchHistory" value="vim&#10;neovim&#10;neo&#10;/tag:Theme Light&#10;/tag:Theme Ligh" />
+    <property name="PluginConfigurable.selectionTab" value="1" />
     <property name="SettingsSearchHistory" value="theme" />
-    <property name="appcds.runOnSecondStart" value="IU-213.7172.25-286399a8fc591a8c4b7c8de21af78ef79ab818df058cd12485e08f555727923c" />
+    <property name="appcds.runOnSecondStart" value="IU-213.7172.25-af7e5a242c49993d5705bf3dc28b6a95251789838cc679e7763ed83081c6d042" />
     <property name="bundled.plugins.list.saved.version" value="IU-213.7172.25" />
     <property name="defaultJdkConfigured" value="true" />
     <property name="eclipse.projects.detected" value="" />

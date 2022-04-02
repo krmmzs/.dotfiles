@@ -1844,6 +1844,7 @@
       "event_data" : {
         "count" : [ "{regexp#integer}" ],
         "enabled" : [ "{enum#boolean}" ],
+        "fs_monitor" : [ "{enum:NONE|BUILTIN|EXTERNAL_FS_MONITOR}" ],
         "is_worktree_used" : [ "{enum#boolean}" ],
         "local_branches" : [ "{regexp#integer}" ],
         "multiple_root" : [ "{enum#boolean}" ],
@@ -2190,7 +2191,7 @@
       },
       "enums" : {
         "__event_id" : [ "enabled.language", "native.language", "rule", "strategy", "checkingContext" ],
-        "__value" : [ "en", "ru", "fr", "de", "pl", "it", "zh", "ja", "uk", "el", "ro", "es", "pt", "sk", "fa", "nl" ]
+        "__value" : [ "en", "ru", "fr", "de", "pl", "it", "zh", "ja", "uk", "el", "ro", "es", "pt", "sk", "fa", "nl", "km", "ast", "be", "sv", "gl", "eo", "ta", "unknown", "br", "ar", "tl", "sl", "ga", "da", "ca" ]
       }
     }
   }, {
@@ -4602,7 +4603,8 @@
       "event_id" : [ "{enum:python_package_installed}" ],
       "event_data" : {
         "executionType" : [ "{enum#executionType}" ],
-        "interpreterType" : [ "{enum#interpreterType}" ],
+        "interpreterType" : [ "{enum#interpreterType}", "{enum:poetry}" ],
+        "lang" : [ "{util#lang}" ],
         "package" : [ "{enum#__package}" ],
         "package_version" : [ "{regexp#version}" ],
         "python_implementation" : [ "{enum:PyPy|Jython|Python}" ],
@@ -4624,7 +4626,8 @@
       "event_id" : [ "{enum:django_used|flask_used|app_engine_used|template_engine}" ],
       "event_data" : {
         "executionType" : [ "{enum#__executionType}" ],
-        "interpreterType" : [ "{enum:pipenv|condavenv|virtualenv|regular}" ],
+        "interpreterType" : [ "{enum:pipenv|condavenv|virtualenv|regular}", "{enum:poetry}" ],
+        "lang" : [ "{util#lang}" ],
         "py_template_language" : [ "{enum#__py_template_language}" ],
         "python_implementation" : [ "{enum:PyPy|Jython|Python}" ],
         "python_version" : [ "{regexp#integer}", "{regexp#version}" ]
@@ -4644,7 +4647,8 @@
       "event_id" : [ "{enum:matplotlib_in_toolwindow_used|sci_view_used|data_view_toolwindow_used}" ],
       "event_data" : {
         "executionType" : [ "{enum#__executionType}" ],
-        "interpreterType" : [ "{enum:pipenv|condavenv|virtualenv|regular}" ],
+        "interpreterType" : [ "{enum:pipenv|condavenv|virtualenv|regular}", "{enum:poetry}" ],
+        "lang" : [ "{util#lang}" ],
         "python_implementation" : [ "{enum:PyPy|Jython|Python}" ],
         "python_version" : [ "{regexp#integer}", "{regexp#version}" ]
       },
@@ -4719,6 +4723,7 @@
       "event_data" : {
         "executionType" : [ "{enum#__executionType}" ],
         "interpreterType" : [ "{enum:pipenv|condavenv|virtualenv|regular}", "{enum:poetry}" ],
+        "lang" : [ "{util#lang}" ],
         "python_implementation" : [ "{enum:PyPy|Jython|Python}" ],
         "python_version" : [ "{regexp#integer}", "{regexp#version}" ]
       },
@@ -5641,6 +5646,27 @@
       },
       "enums" : {
         "__event_id" : [ "bootstrap", "splash", "appInit", "totalDuration", "projectFrameVisible", "splashShown" ]
+      }
+    }
+  }, {
+    "id" : "stash.interactions",
+    "builds" : [ ],
+    "versions" : [ {
+      "from" : "4"
+    } ],
+    "rules" : {
+      "event_id" : [ "{enum#__event_id}" ],
+      "event_data" : {
+        "create_branch" : [ "{enum#boolean}" ],
+        "duration_ms" : [ "{regexp#integer}" ],
+        "ide_activity_id" : [ "{regexp#integer}" ],
+        "keep_index" : [ "{enum#boolean}" ],
+        "message_entered" : [ "{enum#boolean}" ],
+        "pop_stash" : [ "{enum#boolean}" ],
+        "reinstate_index" : [ "{enum#boolean}" ]
+      },
+      "enums" : {
+        "__event_id" : [ "stash.pop.started", "stash.push.dialog", "stash.pop.dialog", "stash.push.finished", "stash.pop.finished", "stash.push.started" ]
       }
     }
   }, {
@@ -6792,5 +6818,5 @@
       "version" : "Unknown|unknown.format|unknown|UNKNOWN|((\\d+\\.?)*\\d+)"
     }
   },
-  "version" : "2445"
+  "version" : "2463"
 }

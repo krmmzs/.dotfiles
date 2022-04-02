@@ -127,6 +127,8 @@ nmap <Leader>gh :diffget //3<CR>
 nmap <Leader>gu :diffget //2<CR>
 nmap <Leader>gs :G<CR>
 nmap <Leader>gd :Gvdiff<CR>
+nmap <Leader>gb :Git blame<CR>
+nmap <Leader>gl :Git log --all --graph --decorate<CR>
 
 " 文件浏览器
 Plug 'preservim/nerdtree'
@@ -209,6 +211,7 @@ nnoremap <Leader>il :IndentLinesToggle<CR>
 "Plug 'scrooloose/syntastic'
 
 "write web better
+Plug 'ap/vim-css-color' "show color
 Plug 'mattn/emmet-vim'
 Plug 'othree/xml.vim'
 " post install (yarn install | npm install) then load plugin only for editing supported files
@@ -297,6 +300,7 @@ let g:vista_executive_for = {
       "\ 'haskell': 'hasktags -x -o - -c',
       "\ 'cpp': 'ctags -R --c++-kinds=+plxcdefgmnstuv --fields=+liaS --extra=+q',
       "\ }
+
 let g:vista#renderer#enable_icon = 1
 
 
@@ -312,6 +316,9 @@ Plug 'ryanoasis/vim-devicons' "icons for them
 if has('nvim')
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/playground'
+    " for JetBrains IDE
+    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'beeender/Comrade'
 endif
 
 call plug#end()
@@ -408,7 +415,7 @@ set matchtime=5
 set showcmd
 
 " 移至当前文件所在目录
-set autochdir 
+set autochdir
 
 "set foldmethod=manual
 "默认情况下不折叠
@@ -482,10 +489,10 @@ set t_Co=256
 "alacritty true Support \"True" (24-bit color)
 " https://github.com/alacritty/alacritty/issues/109#issuecomment-859990495
 "" using gruvbox
-colorscheme gruvbox
-set background=dark
-highlight ColorColumn ctermbg=0 guibg=lightgrey
-let g:airline_theme='hybrid'
+"colorscheme gruvbox
+"set background=dark
+"highlight ColorColumn ctermbg=0 guibg=lightgrey
+"let g:airline_theme='hybrid'
 "if you want 256 ture color: uncomment them, but I think it is better in 256 false color is better, hhh
 "if exists('+termguicolors')
   "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
@@ -494,10 +501,10 @@ let g:airline_theme='hybrid'
 "endif
 
 "using space_vim_theme
-"set background=light
-"colorscheme space_vim_theme
-"highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
-"let g:airline_theme='papercolor'
+set background=light
+colorscheme space_vim_theme
+highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
+let g:airline_theme='papercolor'
 
 "highlight Cursor guifg=white guibg=black
 "highlight iCursor guifg=white guibg=steelblue
@@ -518,6 +525,9 @@ let g:airline_theme='hybrid'
 "set guifont=Consolas:h10
  set guifont=Monaco\ Nerd\ Font\ 12 " vim in linux
 "set guifont=Monacot\ 12
+
+"markdown code highlight
+"let g:markdown_fenced_languages = ['html','python','c++','vim','java']
 
 "mymap
 "open terminal to solve small project in vim now pwd

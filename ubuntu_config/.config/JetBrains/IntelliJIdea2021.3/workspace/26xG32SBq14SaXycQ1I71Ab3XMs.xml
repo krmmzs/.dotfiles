@@ -11,8 +11,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/a/main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="128">
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -21,7 +21,7 @@
   </component>
   <component name="FileTypeUsageLocalSummary">
     <fileType name="JAVA">
-      <summary usageCount="10" lastUsed="1648463876437" />
+      <summary usageCount="14" lastUsed="1648831138271" />
     </fileType>
   </component>
   <component name="IdeDocumentHistory">
@@ -66,7 +66,7 @@
     </panes>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1676000" />
+    <option name="totallyTimeSpent" value="2952000" />
   </component>
   <component name="ToolWindowManager">
     <layout>
@@ -108,16 +108,16 @@
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state x="1029" y="240" width="623" height="745" key="#HTTP_Proxy/0.34.1920.1046@0.34.1920.1046" timestamp="1648357787281" />
-    <state x="255" y="106" width="1273" height="924" key="SettingsEditor" timestamp="1648388728335">
+    <state x="255" y="106" width="1273" height="924" key="SettingsEditor" timestamp="1648831127670">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state x="255" y="106" width="1273" height="924" key="SettingsEditor/0.34.1920.1046@0.34.1920.1046" timestamp="1648388728335" />
+    <state x="255" y="106" width="1273" height="924" key="SettingsEditor/0.34.1920.1046@0.34.1920.1046" timestamp="1648831127670" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/a/main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="128">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
         </state>
       </provider>
     </entry>

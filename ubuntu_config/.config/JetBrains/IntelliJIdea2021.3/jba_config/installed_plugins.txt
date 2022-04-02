@@ -5,3 +5,4 @@ AceJump
 org.jetbrains.IdeaVim-EasyMotion
 com.vincentp.gruvbox-theme
 com.jetbrains.CyanTheme
+beeender.ComradeNeovim

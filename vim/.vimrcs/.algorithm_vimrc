@@ -46,12 +46,6 @@ set hlsearch
 " 启用鼠标
 set mouse=a
 
-:inoremap {<CR> {<CR>}<ESC>O
-
-inoremap (  ()<esc>i
-inoremap [  []<esc>i
-inoremap "  ""<esc>i
-inoremap '  ''<esc>i
 inoremap {<CR> {<CR>}<ESC>O
 
 

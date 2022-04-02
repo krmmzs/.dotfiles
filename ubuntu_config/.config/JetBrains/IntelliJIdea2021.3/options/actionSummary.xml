@@ -12,6 +12,9 @@
     <e n="EditorEnter">
       <i c="7" l="1648463905955" />
     </e>
+    <e n="EditorPaste">
+      <i c="1" l="1648829762622" />
+    </e>
     <e n="NewClass">
       <i c="1" l="1648357633812" />
     </e>
@@ -25,7 +28,7 @@
       <i c="7" l="1648463882293" />
     </e>
     <e n="ShowSettings">
-      <i c="12" l="1648386802153" />
+      <i c="15" l="1648831114478" />
     </e>
     <e n="WelcomeScreen.CreateNewProject">
       <i c="1" l="1648357606904" />
