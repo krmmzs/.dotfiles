@@ -183,7 +183,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 
 " vim python
 "yapf for python
-"noremap <Leader>pf :0,$!yapf<CR>
+"noremap <Leader>pf :1,$!yapf<CR>
 Plug 'vim-python/python-syntax'
 Plug 'psf/black', { 'branch': 'stable' }
 autocmd BufWritePre *.py execute ':Black'
@@ -314,10 +314,11 @@ Plug 'ryanoasis/vim-devicons' "icons for them
 """""""""""""""""""""""""
 " nvim plug
 if has('nvim')
-    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    Plug 'nvim-treesitter/playground'
+    "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    "Plug 'nvim-treesitter/playground'
+
     " for JetBrains IDE
-    Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    " and use coc-comrade
     Plug 'beeender/Comrade'
 endif
 
@@ -349,6 +350,7 @@ endif
 " This must be first, because it changes other options as a side effect.
 if !has('nvim')
     set nocompatible
+    tnoremap <Leader><Esc> <C-\><C-n> " exit nvim_terminal
 endif
 
 " allow backspacing over everything in insert mode

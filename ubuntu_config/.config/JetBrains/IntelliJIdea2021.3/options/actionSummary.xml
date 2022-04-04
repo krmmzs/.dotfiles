@@ -1,19 +1,40 @@
 <application>
   <component name="ActionsLocalSummary">
+    <e n="$SelectAll">
+      <i c="1" l="1648915464643" />
+    </e>
     <e n="Back">
       <i c="9" l="1648386734382" />
     </e>
     <e n="CWMHostShowPopupAction">
       <i c="1" l="1648358939693" />
     </e>
+    <e n="ComradeNeovim.AutoConnect">
+      <i c="2" l="1648915906329" />
+    </e>
     <e n="EditorBackSpace">
-      <i c="5" l="1648388713992" />
+      <i c="50" l="1648915558559" />
+    </e>
+    <e n="EditorChooseLookupItemReplace">
+      <i c="3" l="1648917586320" />
     </e>
     <e n="EditorEnter">
-      <i c="7" l="1648463905955" />
+      <i c="11" l="1648917581179" />
+    </e>
+    <e n="EditorEscape">
+      <i c="7" l="1648917587279" />
     </e>
     <e n="EditorPaste">
-      <i c="1" l="1648829762622" />
+      <i c="2" l="1648912048779" />
+    </e>
+    <e n="EditorTab">
+      <i c="4" l="1648912462245" />
+    </e>
+    <e n="EditorTabsEntryPoint">
+      <i c="5" l="1648883774593" />
+    </e>
+    <e n="ExportToHTML">
+      <i c="1" l="1648883752490" />
     </e>
     <e n="NewClass">
       <i c="1" l="1648357633812" />
@@ -25,10 +46,10 @@
       <i c="9" l="1648463908492" />
     </e>
     <e n="SettingsEntryPoint">
-      <i c="7" l="1648463882293" />
+      <i c="9" l="1648911771830" />
     </e>
     <e n="ShowSettings">
-      <i c="15" l="1648831114478" />
+      <i c="18" l="1648912045155" />
     </e>
     <e n="WelcomeScreen.CreateNewProject">
       <i c="1" l="1648357606904" />
@@ -40,10 +61,10 @@
       <i c="2" l="1648388709535" />
     </e>
     <e n="com.intellij.ide.actions.QuickChangeLookAndFeel$LafChangeAction">
-      <i c="2" l="1648463885999" />
+      <i c="4" l="1648911774907" />
     </e>
     <e n="com.intellij.ide.actions.SettingsEntryPointAction$1">
-      <i c="4" l="1648463883737" />
+      <i c="6" l="1648911773274" />
     </e>
     <e n="com.intellij.ide.plugins.PluginManagerConfigurable$3">
       <i c="3" l="1648357784725" />
@@ -57,11 +78,20 @@
     <e n="com.intellij.openapi.actionSystem.EmptyAction$MyDelegatingAction">
       <i c="1" l="1648463906651" />
     </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="2" l="1648915702776" />
+    </e>
     <e n="com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenComponentFactory$3">
       <i c="1" l="1648357594657" />
     </e>
+    <e n="com.intellij.space.actions.SpaceMainToolBarAction">
+      <i c="1" l="1648883775098" />
+    </e>
     <e n="com.maddyhome.idea.vim.ui.ex.ExShortcutKeyAction">
       <i c="9" l="1648463908487" />
+    </e>
+    <e n="org.beeender.comradeneovim.NvimToggleAllAction">
+      <i c="5" l="1648915893209" />
     </e>
   </component>
 </application>
