@@ -26,7 +26,7 @@
   </component>
   <component name="FileTypeUsageLocalSummary">
     <fileType name="JAVA">
-      <summary usageCount="22" lastUsed="1648917523403" />
+      <summary usageCount="26" lastUsed="1649560648576" />
     </fileType>
   </component>
   <component name="IdeDocumentHistory">
@@ -72,11 +72,11 @@
     </panes>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8246000" />
+    <option name="totallyTimeSpent" value="8322000" />
   </component>
   <component name="ToolWindowManager">
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.39635417" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19609375" />
       <window_info id="Structure" order="1" side_tool="true" />
       <window_info id="Bookmarks" order="2" side_tool="true" />
       <window_info id="Commit" order="3" />
@@ -119,10 +119,10 @@
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state x="0" y="223" width="1150" height="705" key="IDE.errors.dialog/0.34.1920.1046@0.34.1920.1046" timestamp="1648915804162" />
-    <state x="375" y="106" width="1273" height="924" key="SettingsEditor" timestamp="1648912050674">
+    <state x="267" y="110" width="1273" height="924" key="SettingsEditor" timestamp="1649560703520">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state x="375" y="106" width="1273" height="924" key="SettingsEditor/0.34.1920.1046@0.34.1920.1046" timestamp="1648912050674" />
+    <state x="267" y="110" width="1273" height="924" key="SettingsEditor/0.34.1920.1046@0.34.1920.1046" timestamp="1649560703520" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/a/main.java">

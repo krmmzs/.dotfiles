@@ -11,7 +11,7 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="181">
+            <state relative-caret-position="319">
               <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
             </state>
           </provider>
@@ -21,7 +21,7 @@
   </component>
   <component name="FileTypeUsageLocalSummary">
     <fileType name="Python">
-      <summary usageCount="7" lastUsed="1648446695239" />
+      <summary usageCount="9" lastUsed="1649560781121" />
     </fileType>
     <fileType name="textmate">
       <summary usageCount="1" lastUsed="1648042244687" />
@@ -62,7 +62,7 @@
     </option>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2468000" />
+    <option name="totallyTimeSpent" value="2518000" />
   </component>
   <component name="ToolWindowManager">
     <layout>
@@ -94,7 +94,7 @@
       <window_info anchor="right" id="Space Automation" order="0" />
       <window_info anchor="right" id="Database" order="1" />
       <window_info anchor="right" id="SciView" order="2" />
-      <window_info anchor="right" id="documentation.v2" order="7" side_tool="true" />
+      <window_info anchor="right" id="documentation.v2" order="3" side_tool="true" />
     </layout>
     <recentWindows>
       <value>Terminal</value>
@@ -119,10 +119,10 @@
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
     <state width="1344" height="278" key="GridCell.Tab.0.right/0.34.1920.1046@0.34.1920.1046" timestamp="1648042161329" />
-    <state x="345" y="82" width="1273" height="924" key="SettingsEditor" timestamp="1648446725143">
+    <state x="345" y="82" width="1273" height="924" key="SettingsEditor" timestamp="1649560776234">
       <screen x="0" y="34" width="1920" height="1046" />
     </state>
-    <state x="345" y="82" width="1273" height="924" key="SettingsEditor/0.34.1920.1046@0.34.1920.1046" timestamp="1648446725143" />
+    <state x="345" y="82" width="1273" height="924" key="SettingsEditor/0.34.1920.1046@0.34.1920.1046" timestamp="1649560776234" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$USER_HOME$/.ideavimrc">
@@ -134,7 +134,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="181">
+        <state relative-caret-position="319">
           <caret line="11" column="56" selection-start-line="11" selection-start-column="56" selection-end-line="11" selection-end-column="56" />
         </state>
       </provider>

@@ -16,7 +16,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="CWM_LOGGING_VERSION" value="1" />
-    <property name="MarketplacePluginsSearchHistory" value="/tag:Theme light&#10;/tag:Theme ight&#10;/tag:Theme gru light&#10;/tag:Theme gru&#10;/tag:Theme" />
+    <property name="MarketplacePluginsSearchHistory" value="waka&#10;wakato&#10;/tag:Theme light&#10;/tag:Theme ight&#10;/tag:Theme gru light" />
     <property name="NonModalCommitCustomization.IsApplied" value="true" />
     <property name="PyCharm.InitialConfiguration" value="true" />
     <property name="PyCharm.InitialConfiguration.V2" value="true" />
@@ -25,12 +25,12 @@
     <property name="PyCharm.InitialConfiguration.V5" value="true" />
     <property name="PyCharm.InitialConfiguration.V6" value="true" />
     <property name="PyCharm.InitialConfiguration.V7" value="true" />
-    <property name="appcds.runOnSecondStart" value="PY-213.7172.26-75c4cdc072345f75b86aa312e2329751ec094b3de12889fa072fc05370fe4ca5" />
+    <property name="appcds.runOnSecondStart" value="PY-213.7172.26-8b7e6663e7b623aec67063056b31292e17da8b266699950c619ac6849c04979c" />
     <property name="ask.about.ctrl.y.shortcut.v2" value="true" />
     <property name="bundled.plugins.list.saved.version" value="PY-213.7172.26" />
     <property name="evlsprt3.213" value="7" />
     <property name="experimentalFeature.terminal.shell.command.handling" value="false" />
-    <property name="file.gist.reindex.count" value="9" />
+    <property name="file.gist.reindex.count" value="11" />
     <property name="fileTypeChangedCounter" value="2" />
     <property name="fileTypeDetectors" value="com.intellij.database.vfs.DbStorageFileType$Detector:com.intellij.docker.dockerFile.DockerFileTypeDetector:com.intellij.ide.scratch.ScratchFileServiceImpl$Detector:com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector:org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector" />
     <property name="got.it.tooltip.cwm.invitation.notification" value="1" />
@@ -44,7 +44,7 @@
   </component>
   <component name="TerminalCommandHistoryManager">
     <command-history-files>
-      <command-history-file filename="pythonProject-history" project-path="$USER_HOME$/PycharmProjects/pythonProject" last-access-time="1648446696216" />
+      <command-history-file filename="pythonProject-history" project-path="$USER_HOME$/PycharmProjects/pythonProject" last-access-time="1649560782084" />
     </command-history-files>
   </component>
 </application>

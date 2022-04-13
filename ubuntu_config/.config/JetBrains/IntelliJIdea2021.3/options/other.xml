@@ -17,12 +17,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="CWM_LOGGING_VERSION" value="1" />
-    <property name="InstalledPluginsSearchHistory" value="ComradeNeovim&#10;vim&#10;vi" />
+    <property name="InstalledPluginsSearchHistory" value="wakatime&#10;wakati&#10;wakat&#10;waka&#10;wa" />
     <property name="KEYMAP" value="theme" />
-    <property name="MarketplacePluginsSearchHistory" value="vim&#10;neovim&#10;neo&#10;/tag:Theme Light&#10;/tag:Theme Ligh" />
+    <property name="MarketplacePluginsSearchHistory" value="wakatime&#10;vim&#10;neovim&#10;neo&#10;/tag:Theme Light" />
     <property name="PluginConfigurable.selectionTab" value="1" />
     <property name="SettingsSearchHistory" value="theme" />
-    <property name="appcds.runOnSecondStart" value="IU-213.7172.25-af7e5a242c49993d5705bf3dc28b6a95251789838cc679e7763ed83081c6d042" />
+    <property name="appcds.runOnSecondStart" value="IU-213.7172.25-3c8a1ad157570f7392b23491064ecf087b6dfda482eda3da0dcd208fb8344391" />
     <property name="bundled.plugins.list.saved.version" value="IU-213.7172.25" />
     <property name="defaultJdkConfigured" value="true" />
     <property name="eclipse.projects.detected" value="" />
@@ -34,7 +34,6 @@
     <property name="got.it.tooltip.reader.mode.got.it" value="1" />
     <property name="gotit.previous.run" value="IU-213.7172.25" />
     <property name="ide.memory.adjusted" value="true" />
-    <property name="ide.updates.old.dirs.scan.scheduled" value="1648962423520" />
     <property name="ide.updates.whats.new.shown.for" value="213" />
     <property name="ideavim.statistics.timestamp" value="1648359851016" />
     <property name="input.method.disabler.muted" value="true" />
@@ -42,7 +41,7 @@
     <property name="jdk.selected.JAVA_MODULE" value="17" />
     <property name="packagesearch.endpoint.url.fulltext" value="https://package-search.services.jetbrains.com/api/search/idea/fulltext" />
     <property name="packagesearch.endpoint.url.suggest" value="https://package-search.services.jetbrains.com/api/search/idea/suggest" />
-    <property name="packagesearch.status.updated.ts" value="1648357620926" />
+    <property name="packagesearch.status.updated.ts" value="1649560619250" />
     <property name="project.wizard.group" value="JAVA_MODULE" />
     <property name="registry.to.advanced.settings.migration.build" value="IU-213.7172.25" />
     <property name="tasks.pass.word.conversion.enforced" value="true" />

@@ -1,3 +1,8 @@
+|count|pyright
+ord|ord|pyright
+list|list|pyright
+def|default|coc-browser
+iost|iostream>|languageserver.ccls
 banzi|banzi|snippets
 sto|stopship|coc-comrade completion source
 so|stopship|coc-comrade completion source
@@ -28,7 +33,6 @@ typing|typing|pyright
 s|split|pyright
 add|add_ellpsis|pyright
 join|join|pyright
-iost|iostream>|languageserver.ccls
 em|empty|languageserver.ccls
 e|empty|languageserver.ccls
 pop|pop_front|languageserver.ccls
