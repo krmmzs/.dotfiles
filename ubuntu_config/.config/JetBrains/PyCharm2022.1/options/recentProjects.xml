@@ -1,0 +1,33 @@
+<application>
+  <component name="RecentProjectsManager">
+    <option name="additionalInfo">
+      <map>
+        <entry key="$USER_HOME$/PycharmProjects/pythonProject">
+          <value>
+            <RecentProjectMetaInfo frameTitle="pythonProject – main.py" projectWorkspaceId="26mqRwZVIqqrhrnJDY8Zx8CvDNm">
+              <option name="activationTimestamp" value="1651021400811" />
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-213.7172.26" />
+              <option name="buildTimestamp" value="1647403458412" />
+              <frame x="0" y="34" width="1920" height="1046" extendedState="6" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1648039105034" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+        <entry key="$USER_HOME$/MyGit/Python/oop/tut">
+          <value>
+            <RecentProjectMetaInfo opened="true" projectWorkspaceId="28MLFEZha2fNTo6KkklRgVddtB8">
+              <option name="binFolder" value="$APPLICATION_HOME_DIR$/bin" />
+              <option name="build" value="PY-221.5080.212" />
+              <option name="buildTimestamp" value="1649764363345" />
+              <option name="productionCode" value="PY" />
+              <option name="projectOpenTimestamp" value="1651021401126" />
+            </RecentProjectMetaInfo>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="lastProjectLocation" value="$USER_HOME$/PycharmProjects" />
+  </component>
+</application>

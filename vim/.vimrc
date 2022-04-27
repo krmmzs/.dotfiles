@@ -242,7 +242,7 @@ nnoremap <Leader>fe :LeaderfRgRecall<CR>
 "nnoremap <Leader>fd :Leaderf filer<CR> "using <C-f> to call filer
 "and type "!" to fuzzy serach, and type "Tab" to return back
 "To enable popup mode
-let g:Lf_WindowPosition = 'popup'
+"let g:Lf_WindowPosition = 'popup'
 let g:Lf_PreviewInPopup = 1
 "  leaderf 会自动从项目根目录(用.git来定位root)往下搜索文件(如果有.git)
 let g:Lf_WorkingDirectoryMode = 'a'
@@ -311,6 +311,9 @@ Plug 'kshenoy/vim-signature'
 Plug 'mhinz/vim-startify' "启动屏幕
 Plug 'ryanoasis/vim-devicons' "icons for them
 
+" auto pair
+Plug 'jiangmiao/auto-pairs' "better than cocexention"
+
 """""""""""""""""""""""""
 " nvim plug
 if has('nvim')
@@ -320,6 +323,7 @@ if has('nvim')
     " for JetBrains IDE
     " and use coc-comrade
     Plug 'beeender/Comrade'
+
 endif
 
 call plug#end()
@@ -349,8 +353,6 @@ endif
 " Use Vim settings, rather then Vi settings (much better!).
 " This must be first, because it changes other options as a side effect.
 if !has('nvim')
-    set nocompatible
-    tnoremap <Leader><Esc> <C-\><C-n> " exit nvim_terminal
 endif
 
 " allow backspacing over everything in insert mode
@@ -377,7 +379,7 @@ syntax on
 set timeout           " for mappings
 set timeoutlen=1000   " default value
 set ttimeout          " for key codes
-set ttimeoutlen=10    " unnoticeable small value
+set ttimeoutlen=100    " unnoticeable small value
 
 "显示行号
 set nu
@@ -563,7 +565,7 @@ noremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 " run python3 in vim
 map <Leader>8 :w<CR>:! clear; python3 %<CR>
 
-"backto
+"back to
 noremap <Leader>w <C-W>w
 
 " ======= 引号 && 括号自动匹配 ======= "

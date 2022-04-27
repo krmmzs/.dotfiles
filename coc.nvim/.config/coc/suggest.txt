@@ -1,8 +1,26 @@
+prime|prime_factors|pyright
+prime|prime_factors|around
+def|deff|snippets
+divi|divide_exact|pyright
+i|items|pyright
+algo|algorithm>|languageserver.ccls
+url|url|snippets
+sle|sleep_for|languageserver.ccls
+this_|this_thread|languageserver.ccls
+greet|greet|languageserver.ccls
+Le|Lecture|languageserver.ccls
+algor|algorithm>|languageserver.ccls
+iost|iostream>|languageserver.ccls
+iostrea|iostream>|languageserver.ccls
+vec|vector>|languageserver.ccls
+ios|iostream>|languageserver.ccls
+re|re|pyright
+clo|close|pyright
+open|open|pyright
 |count|pyright
 ord|ord|pyright
 list|list|pyright
 def|default|coc-browser
-iost|iostream>|languageserver.ccls
 banzi|banzi|snippets
 sto|stopship|coc-comrade completion source
 so|stopship|coc-comrade completion source
@@ -37,7 +55,6 @@ em|empty|languageserver.ccls
 e|empty|languageserver.ccls
 pop|pop_front|languageserver.ccls
 str|struct|languageserver.ccls
-algo|algorithm>|languageserver.ccls
 in|insert|languageserver.ccls
 link|link|languageserver.ccls
 be|begin|languageserver.ccls
@@ -57,7 +74,6 @@ hea|head|snippets
 empty|empty|languageserver.ccls
 end|end_page|languageserver.ccls
 append|append|pyright
-vec|vector>|languageserver.ccls
 in|int8_t|languageserver.ccls
 |sicp.pdf|file
 vimrcs|vimrcs|around
@@ -195,7 +211,6 @@ about|about.html|html
 About|About|around
 L|LSP|around
 Plug|Plug|around
-url|url|snippets
 sour|source|snippets
 audio|audio|snippets
 |91320374.jpg|html
@@ -272,7 +287,6 @@ inclu|include|languageserver.ccls
 ss|sstream>|languageserver.ccls
 it|itera|snippets
 log|log_self|around
-iostrea|iostream>|languageserver.ccls
 include|include_next|languageserver.ccls
 M|MyGit|file
 |'|file
