@@ -1,3 +1,20 @@
+get|get|pyright
+key|keys|pyright
+showI|showInfo|pyright
+items|items|pyright
+set|setGrade|around
+setGrade|setGrade|coc-browser
+setGr|setGrade|pyright
+|perimeter|pyright
+psv|psvm|coc-comrade completion source
+ps|psvm|coc-comrade completion source
+sout|sout|snippets
+name|name|pyright
+na|_name|pyright
+pro|property|pyright
+def|defm|snippets
+quant|quantity|pyright
+is_inte|is_integer|pyright
 prime|prime_factors|pyright
 prime|prime_factors|around
 def|deff|snippets

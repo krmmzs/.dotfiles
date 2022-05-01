@@ -109,3 +109,5 @@ export LD_LIBRARY_PATH=/usr/local/lib/:${LD_LIBRARY_PATH}
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "$HOME/.cargo/env"
+
+export REPO_DIR=/home/mouzaisi/MyGit/cs61b_git/cs61b_sp21

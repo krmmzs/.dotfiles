@@ -1,0 +1,134 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="lectureCode-sp21" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1" />
+  </component>
+  <component name="FileTypeUsageLocalSummary">
+    <fileType name="IDEA_MODULE">
+      <summary usageCount="2" lastUsed="1651239554494" />
+    </fileType>
+    <fileType name="JAVA">
+      <summary usageCount="1" lastUsed="1651239348251" />
+    </fileType>
+    <fileType name="textmate">
+      <summary usageCount="1" lastUsed="1651239573961" />
+    </fileType>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="lectureCode-sp21" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Scratches and Consoles" type="b85a3e1f:ScratchTreeStructureProvider$MyProjectNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="490000" />
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info id="Pull Requests" />
+      <window_info id="Bookmarks" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2502604" />
+      <window_info id="Learn" order="2" />
+      <window_info id="Structure" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Problems View" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Style Checker" order="8" />
+      <window_info anchor="bottom" id="Endpoints" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Services" order="10" />
+      <window_info anchor="bottom" id="Profiler" order="11" />
+      <window_info anchor="bottom" id="Build" order="12" visible="true" weight="0.33049148" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Notifications" side_tool="true" weight="0.32994792" />
+    </layout>
+    <recentWindows>
+      <value>Project</value>
+      <value>Notifications</value>
+      <value>Build</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="315" y="34" width="1280" height="1046" key="#Project_Structure" timestamp="1651239548107">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="315" y="34" width="1280" height="1046" key="#Project_Structure/0.34.1920.1046@0.34.1920.1046" timestamp="1651239548107" />
+    <state x="433" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1651239838237">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="433" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.34.1920.1046@0.34.1920.1046" timestamp="1651239838237" />
+    <state x="673" y="258" width="530" height="617" key="FileChooserDialogImpl" timestamp="1651239686216">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="673" y="258" width="530" height="617" key="FileChooserDialogImpl/0.34.1920.1046@0.34.1920.1046" timestamp="1651239686216" />
+    <state x="385" y="227" width="1139" height="697" key="IDE.errors.dialog" timestamp="1651239359365">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="385" y="227" width="1139" height="697" key="IDE.errors.dialog/0.34.1920.1046@0.34.1920.1046" timestamp="1651239359365" />
+    <state x="560" y="230" width="800" height="673" key="new project wizard" timestamp="1651239817754">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="560" y="230" width="800" height="673" key="new project wizard/0.34.1920.1046@0.34.1920.1046" timestamp="1651239817754" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/exercises/exercises.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lec2_intro2/DogProblem.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lec1_intro1/hello.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lectureCode-sp21.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI" />
+      <state key="GlobalLibrariesConfigurable.UI" />
+      <state key="JdkListConfigurable.UI" />
+      <state key="ModuleStructureConfigurable.UI" />
+      <state key="ProjectLibrariesConfigurable.UI" />
+    </states>
+  </component>
+</project>

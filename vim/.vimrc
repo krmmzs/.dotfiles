@@ -24,13 +24,13 @@ endif
 "let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 
 
-"如果没有安装就自动安装vim-plug插件
-"Automatic installation
+"vim-plug Automatic installation
 let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
 if empty(glob(data_dir . '/autoload/plug.vim'))
   silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
+
 
 call plug#begin('~/.vim/plugged')
 
@@ -44,6 +44,8 @@ nnoremap <Leader><space> :FixWhitespace<CR>
 "LSP
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'wellle/tmux-complete.vim'
+nnoremap <Leader>cd :CocDisable<CR>
+nnoremap <Leader>ce :CocEnable<CR>
 
 "异步编译运行
 Plug 'skywind3000/asyncrun.vim'
@@ -149,7 +151,8 @@ Plug 'preservim/nerdcommenter'
 " move in vim
 " 使用 mm 启用
 Plug 'easymotion/vim-easymotion'
-nmap <Leader>m <Plug>(easymotion-s2)
+nmap <Leader>m <Plug>(easymotion-s)
+"nmap <Leader>m <Plug>(easymotion-s2) " 2 characters
 
 " Surround.vim is all about "surroundings": parentheses, brackets, quotes
 "Plug 'tpope/vim-surround'
@@ -176,6 +179,7 @@ Plug 'sgur/vim-textobj-parameter' "函数参数
 
 " Rainbow Parentheses Improved
 Plug 'luochen1990/rainbow'
+let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
 nnoremap <Leader>rr :RainbowToggle<CR>
 
 " vim cpp
@@ -239,6 +243,7 @@ nnoremap <Leader>ff :LeaderfFunction<CR>
 nnoremap <Leader>fm :LeaderfMarks<CR>
 nnoremap <Leader>fr :LeaderfRgInteractive<CR>
 nnoremap <Leader>fe :LeaderfRgRecall<CR>
+nnoremap <Leader>fb :LeaderfBffer<CR>
 "nnoremap <Leader>fd :Leaderf filer<CR> "using <C-f> to call filer
 "and type "!" to fuzzy serach, and type "Tab" to return back
 "To enable popup mode
@@ -246,6 +251,7 @@ nnoremap <Leader>fe :LeaderfRgRecall<CR>
 let g:Lf_PreviewInPopup = 1
 "  leaderf 会自动从项目根目录(用.git来定位root)往下搜索文件(如果有.git)
 let g:Lf_WorkingDirectoryMode = 'a'
+let g:Lf_RootMarkers = ['.git', '.hg', '.svn', '.root']
 
 " FZF Vim integration
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -314,15 +320,24 @@ Plug 'ryanoasis/vim-devicons' "icons for them
 " auto pair
 Plug 'jiangmiao/auto-pairs' "better than cocexention"
 
-"""""""""""""""""""""""""
-" nvim plug
+""""""""""""""""""""""""""""""""""""""
+" nvim and vim difference plug
 if has('nvim')
     "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     "Plug 'nvim-treesitter/playground'
 
+    " Install deoplete for code completion. Because my coc-comrade is error
+    " now
+    "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+
     " for JetBrains IDE
     " and use coc-comrade
     Plug 'beeender/Comrade'
+
+    " config
+    "let g:deoplete#enable_at_startup = 1
+else
+
 
 endif
 
@@ -365,7 +380,7 @@ autocmd BufReadPost *
     \   exe "normal! g`\"" |
     \ endif
 
-set history=100 "keep 50 lines of command line history
+set history=100 "keep 100 lines of command line history
 set ruler " show the cursor position all the time
 set showcmd " display incomplete commands
 set incsearch " do incremental searching
@@ -565,8 +580,15 @@ noremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 " run python3 in vim
 map <Leader>8 :w<CR>:! clear; python3 %<CR>
 
+" run javac in vim
+map <Leader>7 :w<CR>:! ; javac %<CR>
+
 "back to
 noremap <Leader>w <C-W>w
+
+" change 同行{到下一行
+noremap <Leader>{ :%s/ {/\r{/g<CR> gg=G
+
 
 " ======= 引号 && 括号自动匹配 ======= "
 "
@@ -783,7 +805,8 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 " nevim config
 
 if has('nvim')
-    tnoremap <Esc> <C-\><Cn>
+    "To map <Esc> to exit terminal-mode:
+    :tnoremap <Esc> <C-\><C-n>
 endif
 if !has('nvim')
     set ttymouse=xterm2
