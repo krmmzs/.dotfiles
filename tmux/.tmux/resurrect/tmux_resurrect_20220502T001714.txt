@@ -1,0 +1,50 @@
+pane	CS106L	0	1	:*	0	:/home/mouzaisi/MyGit/Plan-book-list/2大二下	1	zsh	:
+pane	CS61A	0	1	:*Z	0	:/home/mouzaisi/MyGit/CS61A/demo/L4_Higher-Order_Functions	1	nvim	:nvim square_root.py
+pane	CS61A	0	1	:*Z	1	:/home/mouzaisi/MyGit/CS61A/demo/L4_Higher-Order_Functions	0	zsh	:
+pane	CS61B	0	1	:*	0	:/home/mouzaisi/MyGit/CS61B	1	zsh	:
+pane	CSNet	0	1	:*	0	:/home/mouzaisi	1	zsh	:
+pane	OS	0	1	:*	0	:/home/mouzaisi/MyGit/OS	1	zsh	:
+pane	RGP	0	1	:*	0	:/home/mouzaisi/MyGit	1	zsh	:
+pane	SICP	0	1	:*	0	:/home/mouzaisi/MyGit/SICP	1	zsh	:
+pane	SICP	0	1	:*	1	:/home/mouzaisi/MyGit/SICP/booklab/1.x	0	zsh	:
+pane	Vim	0	1	:*	0	:/home/mouzaisi/MyGit/Algorithm/C++/Notes/string	0	zsh	:
+pane	Vim	0	1	:*	1	:/home/mouzaisi/MyGit/Algorithm/C++/Notes/string	1	zsh	:
+pane	algorithm	0	1	:*	0	:/home/mouzaisi/MyGit/Leetcode/questionBank/1-100/code	1	zsh	:
+pane	autojs	0	1	:*	0	:/home/mouzaisi	1	zsh	:
+pane	clash	0	1	:*	0	:/home/mouzaisi/softwares/clash1.9.0	1	./clash	:./clash -d .
+pane	django	0	1	:*	0	:/home/mouzaisi	1	zsh	:
+pane	django	0	1	:*	1	:/home/mouzaisi	0	zsh	:
+pane	leetcode	0	1	:*	0	:/home/mouzaisi/MyGit/Leetcode	1	zsh	:
+pane	leetcode	0	1	:*	1	:/home/mouzaisi/MyGit/Leetcode	0	zsh	:
+pane	python	0	1	:*	0	:/home/mouzaisi/MyGit/Python/oop/school	1	zsh	:
+pane	python	0	1	:*	1	:/home/mouzaisi/MyGit/Python/oop/school	0	zsh	:
+pane	record	0	1	:*	0	:/home/mouzaisi/MyGit/Plan-book-list/2大二下	1	zsh	:
+pane	software	0	1	:*	0	:/home/mouzaisi/softwares/阿里小白羊版Linux\ v2.9.24	1	zsh	:
+pane	ssh	0	1	:*	0	:/home/mouzaisi	0	zsh	:
+pane	ssh	0	1	:*	1	:/home/mouzaisi	1	zsh	:
+pane	web	0	1	:*	0	:/home/mouzaisi/MyGit/WEB	1	zsh	:
+pane	web	0	1	:*	1	:/home/mouzaisi/MyGit/WEB	0	zsh	:
+pane	web	0	1	:*	2	:/home/mouzaisi/MyGit/WEB/practice	0	zsh	:
+pane	web	0	1	:*	3	:/home/mouzaisi/MyGit/WEB/practice	0	zsh	:
+pane	wechatminiapps	0	1	:*	0	:/usr/local	0	zsh	:
+pane	wechatminiapps	0	1	:*	1	:/home/mouzaisi/softwares	1	zsh	:
+window	CS106L	0	:python3.8	1	:*	be5e,80x46,0,0,1	off
+window	CS61A	0	:nvim	1	:*Z	869c,80x46,0,0[80x23,0,0,37,80x22,0,24,41]	:
+window	CS61B	0	:zsh	1	:*	be60,80x46,0,0,3	:
+window	CSNet	0	:zsh	1	:*	be61,80x46,0,0,4	:
+window	OS	0	:zsh	1	:*	be62,80x46,0,0,5	:
+window	RGP	0	:zsh	1	:*	be63,80x46,0,0,6	:
+window	SICP	0	:zsh	1	:*	7561,80x46,0,0{37x46,0,0,7,42x46,38,0,8}	:
+window	Vim	0	:zsh	1	:*	85e9,80x46,0,0[80x23,0,0,9,80x22,0,24,10]	:
+window	algorithm	0	:zsh	1	:*	5f60,80x46,0,0,11	:
+window	autojs	0	:zsh	1	:*	5f61,80x46,0,0,12	:
+window	clash	0	:./clash	1	:*	5f62,80x46,0,0,13	:
+window	django	0	:zsh	1	:*	b315,80x46,0,0[80x22,0,0,14,80x23,0,23,15]	:
+window	leetcode	0	:python3.8	1	:*	c69a,80x46,0,0[80x23,0,0,16,80x22,0,24,17]	off
+window	python	0	:zsh	1	:*	c69f,80x46,0,0[80x23,0,0,18,80x22,0,24,19]	:
+window	record	0	:python3.8	1	:*	df5f,80x46,0,0,20	off
+window	software	0	:zsh	1	:*	df60,80x46,0,0,21	:
+window	ssh	0	:zsh	1	:*	f311,80x46,0,0[80x22,0,0,22,80x23,0,23,23]	:
+window	web	0	:zsh	1	:*	6ac3,80x46,0,0[80x23,0,0{71x23,0,0,24,8x23,72,0,25},80x11,0,24,26,80x10,0,36,27]	:
+window	wechatminiapps	0	:zsh	1	:*	06a1,80x46,0,0[80x23,0,0,28,80x22,0,24,29]	:
+state	CS61A	CS61B
