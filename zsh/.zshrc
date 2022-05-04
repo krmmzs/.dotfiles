@@ -162,6 +162,7 @@ alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {
 alias bd=". bd -si"
 
 alias pyinit="cp ~/MyGit/project_init/python/init/* ."
+alias cppinit="cp ~/MyGit/project_init/cpp/init/* ."
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
