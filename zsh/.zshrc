@@ -161,6 +161,8 @@ alias lss="ls"
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'" # 用bat来做fzf的预览器, need to install bat firstly
 alias bd=". bd -si"
 
+alias pyinit="cp ~/MyGit/project_init/python/init/* ."
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
