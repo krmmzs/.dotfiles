@@ -65,7 +65,7 @@ cursor:
     #background: '#f2f2f2'
     #text: '#403f53'
 
-# Colors (by myself)
+# Colors (qaq)
 colors:
   bright:
     red: '#c82829'
@@ -92,6 +92,7 @@ colors:
   selection:
     background: '#f2f2f2'
     text: '#403f53'
+
 font:
   # Normal (roman) font face
   normal:

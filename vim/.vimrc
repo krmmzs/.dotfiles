@@ -48,15 +48,17 @@ nnoremap <Leader>cd :CocDisable<CR>
 nnoremap <Leader>ce :CocEnable<CR>
 
 "异步编译运行
-Plug 'skywind3000/asyncrun.vim'
+"Plug 'skywind3000/asyncrun.vim'
 " 自动打开 quickfix window ，高度为 6
-let g:asyncrun_open = 6
+"let g:asyncrun_open = 6
 " 任务结束时候响铃提醒
-let g:asyncrun_bell = 1
+"let g:asyncrun_bell = 1
 " 设置 <Leader>0 打开/关闭 Quickfix 窗口
-nnoremap <Leader>0 :call asyncrun#quickfix_toggle(6)<cr>
+"nnoremap <Leader>0 :call asyncrun#quickfix_toggle(6)<cr>
 " 在vim里编译当前文件(c++)
-nnoremap <silent> <Leader>9 :AsyncRun g++ -Wall -O2 "$(VIM_FILEPATH)" -o "$(VIM_FILEDIR)/$(VIM_FILENOEXT)" <cr>
+"nnoremap <silent> <Leader>9 :AsyncRun g++ -Wall -O2 "$(VIM_FILEPATH)" -o "$(VIM_FILEDIR)/$(VIM_FILENOEXT)" <cr>
+
+" using vimux now(in my .vim/plugin)
 
 "coc-snippets
 " Use <C-l> for trigger snippet expand.
@@ -153,6 +155,13 @@ Plug 'preservim/nerdcommenter'
 Plug 'easymotion/vim-easymotion'
 nmap <Leader>m <Plug>(easymotion-s)
 "nmap <Leader>m <Plug>(easymotion-s2) " 2 characters
+nmap <Leader><Leader>l <Plug>(easymotion-lineforward)
+nmap <Leader><Leader>j <Plug>(easymotion-j)
+nmap <Leader><Leader>k <Plug>(easymotion-k)
+nmap <Leader><Leader>h <Plug>(easymotion-linebackward)
+let g:EasyMotion_startofline = 0 " keep cursor column when JK moti
+" Move to line
+"nmap <Leader><Leader>l <Plug>(easymotion-bd-jk)
 
 " Surround.vim is all about "surroundings": parentheses, brackets, quotes
 "Plug 'tpope/vim-surround'
@@ -188,7 +197,7 @@ Plug 'octol/vim-cpp-enhanced-highlight'
 " vim python
 "yapf for python
 "noremap <Leader>pf :1,$!yapf<CR>
-Plug 'vim-python/python-syntax'
+Plug 'vim-python/python-syntax' " syntax for python
 Plug 'psf/black', { 'branch': 'stable' }
 autocmd BufWritePre *.py execute ':Black'
 
@@ -243,7 +252,7 @@ nnoremap <Leader>ff :LeaderfFunction<CR>
 nnoremap <Leader>fm :LeaderfMarks<CR>
 nnoremap <Leader>fr :LeaderfRgInteractive<CR>
 nnoremap <Leader>fe :LeaderfRgRecall<CR>
-nnoremap <Leader>fb :LeaderfBffer<CR>
+nnoremap <Leader>fb :LeaderfBuffer<CR>
 "nnoremap <Leader>fd :Leaderf filer<CR> "using <C-f> to call filer
 "and type "!" to fuzzy serach, and type "Tab" to return back
 "To enable popup mode
@@ -354,6 +363,9 @@ inoremap <Leader>p <ESC>"+p
 vnoremap <Leader>y "+y
 map <Leader>1 :set relativenumber!<CR>
 
+" vimux
+nnoremap <Leader>t :VimuxRunCommand("ls")<CR>
+
 
 "buffer
 "nnoremap <Leader>bn :bn<CR>
@@ -407,7 +419,12 @@ set cursorline
 "set nowrap
 
 "修改默认注释颜色
-"hi Comment ctermfg=DarkCyan
+hi Comment ctermfg=DarkCyan
+
+" Disable inserting comment leader after hitting o or O or <Enter>
+set formatoptions-=o
+set formatoptions-=r
+
 "启用鼠标可以在buffer的任何地方使用鼠标（类似office中在工作区双击鼠标定位）
 set mouse=a
 set selection=exclusive
@@ -508,10 +525,10 @@ set t_Co=256
 "alacritty true Support \"True" (24-bit color)
 " https://github.com/alacritty/alacritty/issues/109#issuecomment-859990495
 "" using gruvbox
-"colorscheme gruvbox
-"set background=dark
-"highlight ColorColumn ctermbg=0 guibg=lightgrey
-"let g:airline_theme='hybrid'
+colorscheme gruvbox
+set background=dark
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+let g:airline_theme='hybrid'
 "if you want 256 ture color: uncomment them, but I think it is better in 256 false color is better, hhh
 "if exists('+termguicolors')
   "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
@@ -520,10 +537,10 @@ set t_Co=256
 "endif
 
 "using space_vim_theme
-set background=light
-colorscheme space_vim_theme
-highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
-let g:airline_theme='papercolor'
+"set background=light
+"colorscheme space_vim_theme
+"highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
+"let g:airline_theme='papercolor'
 
 "highlight Cursor guifg=white guibg=black
 "highlight iCursor guifg=white guibg=steelblue
@@ -665,6 +682,25 @@ set shortmess+=c
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
 inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ CheckBackspace() ? "\<TAB>" :
+      \ coc#refresh()
+inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+
+function! CheckBackspace() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+" Make <CR> auto-select the first completion item and notify coc.nvim to
+" format on enter, <cr> could be remapped by other vim plugin
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
+
+" Use tab for trigger completion with characters ahead and navigate.
+" NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
+" other plugin before putting this into your config.
+inoremap <silent><expr> <TAB>
             \ pumvisible() ? "\<C-n>" :
             \ <SID>check_back_space() ? "\<TAB>" :
             \ coc#refresh()
@@ -681,11 +717,6 @@ if has('nvim')
 else
     inoremap <silent><expr> <c-@> coc#refresh()
 endif
-
-"" Make <CR> auto-select the first completion item and notify coc.nvim to
-"" format on enter, <cr> could be remapped by other vim plugin
-"inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
-"                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all diagnostics of current buffer in location list.
@@ -714,6 +745,9 @@ function! s:show_documentation()
     endif
 endfunction
 
+" Highlight the symbol and its references when holding the cursor.
+" I love it !!!
+autocmd CursorHold * silent call CocActionAsync('highlight')
 
 " Symbol renaming.
 nmap <leader>rn <Plug>(coc-rename)
@@ -742,9 +776,10 @@ nmap <leader>rn <Plug>(coc-rename)
 "
 "" Run the Code Lens action on the current line.
 "nmap <leader>cl  <Plug>(coc-codelens-action)
-"
-"" Map function and class text objects
-"" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
+
+" Map function and class text objects
+" NOTE: Requires 'textDocument.documentSymbol' support from the language server.
+" but I'am using plugin for my textobj
 "xmap if <Plug>(coc-funcobj-i)
 "omap if <Plug>(coc-funcobj-i)
 "xmap af <Plug>(coc-funcobj-a)
@@ -753,7 +788,7 @@ nmap <leader>rn <Plug>(coc-rename)
 "omap ic <Plug>(coc-classobj-i)
 "xmap ac <Plug>(coc-classobj-a)
 "omap ac <Plug>(coc-classobj-a)
-"
+
 "" Remap <C-f> and <C-b> for scroll float windows/popups.
 "if has('nvim-0.4.0') || has('patch-8.2.0750')
 "  nnoremap <silent><nowait><expr> <C-f> coc#float#has_scroll() ? coc#float#scroll(1) : "\<C-f>"
@@ -807,6 +842,7 @@ nnoremap <silent><nowait> <space>p  :<C-u>CocListResume<CR>
 if has('nvim')
     "To map <Esc> to exit terminal-mode:
     :tnoremap <Esc> <C-\><C-n>
+    set clipboard+=unnamedplus
 endif
 if !has('nvim')
     set ttymouse=xterm2

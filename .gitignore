@@ -1,3 +1,7 @@
 *.swp
 coc.nvim/.config/coc/extensions/coc-browser-data/
 tmux/.tmux/resurrect/
+coc.nvim/.config/coc/extensions/coc-java-data/
+coc.nvim/.config/coc/extensions/node_modules/
+coc.nvim/.config/JetBrains/
+ubuntu_config/.config/JetBrains
