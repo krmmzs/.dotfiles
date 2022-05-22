@@ -1,0 +1,466 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="proj0" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game2048/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="128">
+              <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game2048/Tile.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="224">
+              <caret line="7" selection-start-line="7" selection-end-line="7" />
+              <folding>
+                <element signature="e#534#535#0" expanded="true" />
+                <element signature="e#560#561#0" expanded="true" />
+                <element signature="e#625#626#0" expanded="true" />
+                <element signature="e#651#652#0" expanded="true" />
+                <element signature="e#737#738#0" expanded="true" />
+                <element signature="e#765#766#0" expanded="true" />
+                <element signature="e#889#890#0" expanded="true" />
+                <element signature="e#938#939#0" expanded="true" />
+                <element signature="e#1065#1066#0" expanded="true" />
+                <element signature="e#1113#1114#0" expanded="true" />
+                <element signature="e#2023#2024#0" expanded="true" />
+                <element signature="e#2097#2098#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game2048/Side.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="448">
+              <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game2048/Model.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-192">
+              <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1710#1711#0" expanded="true" />
+                <element signature="e#1753#1754#0" expanded="true" />
+                <element signature="e#1908#1909#0" expanded="true" />
+                <element signature="e#1943#1944#0" expanded="true" />
+                <element signature="e#2318#2319#0" expanded="true" />
+                <element signature="e#2346#2347#0" expanded="true" />
+                <element signature="e#2454#2455#0" expanded="true" />
+                <element signature="e#2485#2486#0" expanded="true" />
+                <element signature="e#5702#5703#0" expanded="true" />
+                <element signature="e#5749#5750#0" expanded="true" />
+                <element signature="e#5849#5850#0" expanded="true" />
+                <element signature="e#5916#5917#0" expanded="true" />
+                <element signature="e#9584#9585#0" expanded="true" />
+                <element signature="e#9628#9629#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game2048/TestAtLeastOneMoveExists.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1952">
+              <caret line="63" selection-start-line="63" selection-end-line="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/game2048/TestMaxTileExists.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="512">
+              <caret line="90" column="4" selection-start-line="85" selection-end-line="91" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game2048/TestEmptySpace.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1600">
+              <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game2048/Board.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="576">
+              <caret line="23" selection-start-line="23" selection-end-line="23" />
+              <folding>
+                <element signature="e#667#668#0" expanded="true" />
+                <element signature="e#702#703#0" expanded="true" />
+                <element signature="e#1597#1598#0" expanded="true" />
+                <element signature="e#1633#1634#0" expanded="true" />
+                <element signature="e#1722#1723#0" expanded="true" />
+                <element signature="e#1757#1758#0" expanded="true" />
+                <element signature="e#2232#2233#0" expanded="true" />
+                <element signature="e#2287#2288#0" expanded="true" />
+                <element signature="e#2556#2557#0" expanded="true" />
+                <element signature="e#2600#2601#0" expanded="true" />
+                <element signature="e#4362#4363#0" expanded="true" />
+                <element signature="e#4403#4404#0" expanded="true" />
+                <element signature="e#4688#4689#0" expanded="true" />
+                <element signature="e#4723#4724#0" expanded="true" />
+                <element signature="e#4773#4774#0" expanded="true" />
+                <element signature="e#4817#4818#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/game2048/TestUpOnly.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="256">
+              <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTypeUsageLocalSummary">
+    <fileType name="JAVA">
+      <summary usageCount="45" lastUsed="1652338020290" />
+    </fileType>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/game2048/Side.java" />
+      <option value="$PROJECT_DIR$/game2048/Board.java" />
+      <option value="$PROJECT_DIR$/game2048/Main.java" />
+      <option value="$PROJECT_DIR$/game2048/Model.java" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="proj0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj0" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="proj0" type="b2602c69:ProjectViewProjectNode" />
+              <item name="proj0" type="462c0819:PsiDirectoryNode" />
+              <item name="game2048" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="RunConfigurationStartHistory">
+    <history>
+      <element setting="Application.Main" executorId="Run" />
+      <element setting="JUnit.TestUpOnly" executorId="Run" />
+      <element setting="JUnit.TestModel" executorId="Run" />
+      <element setting="JUnit.TestMaxTileExists" executorId="Run" />
+      <element setting="JUnit.TestEmptySpace" executorId="Run" />
+      <element setting="JUnit.TestAtLeastOneMoveExists" executorId="Run" />
+      <element setting="Application.Main" executorId="Debug" />
+    </history>
+  </component>
+  <component name="TestHistory">
+    <history-entry file="TestMaxTileExists - 2022.05.08 at 21h 04m 21s.xml">
+      <configuration name="TestMaxTileExists" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestAtLeastOneMoveExists - 2022.05.08 at 21h 04m 34s.xml">
+      <configuration name="TestAtLeastOneMoveExists" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestAtLeastOneMoveExists - 2022.05.09 at 11h 18m 01s.xml">
+      <configuration name="TestAtLeastOneMoveExists" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestAtLeastOneMoveExists - 2022.05.09 at 12h 03m 24s.xml">
+      <configuration name="TestAtLeastOneMoveExists" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestUpOnly - 2022.05.09 at 15h 35m 06s.xml">
+      <configuration name="TestUpOnly" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestAtLeastOneMoveExists - 2022.05.09 at 15h 36m 03s.xml">
+      <configuration name="TestAtLeastOneMoveExists" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestEmptySpace - 2022.05.09 at 15h 36m 08s.xml">
+      <configuration name="TestEmptySpace" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestMaxTileExists - 2022.05.09 at 15h 36m 11s.xml">
+      <configuration name="TestMaxTileExists" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestModel - 2022.05.09 at 15h 36m 15s.xml">
+      <configuration name="TestModel" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="TestUpOnly - 2022.05.09 at 15h 36m 23s.xml">
+      <configuration name="TestUpOnly" configurationId="JUnit" />
+    </history-entry>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="13882000" />
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info id="Bookmarks" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.16901042" />
+      <window_info id="Learn" order="2" />
+      <window_info id="Structure" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2983952" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3996991" />
+      <window_info anchor="bottom" id="TODO" order="4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Problems View" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Style Checker" order="8" />
+      <window_info anchor="bottom" id="Endpoints" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Services" order="10" />
+      <window_info anchor="bottom" id="Profiler" order="11" />
+      <window_info anchor="bottom" id="Build" order="12" weight="0.33049148" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Notifications" side_tool="true" />
+    </layout>
+    <recentWindows>
+      <value>Project</value>
+      <value>Run</value>
+      <value>Debug</value>
+      <value>Build</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1920" height="262" key="GridCell.Tab.0.bottom" timestamp="1652084289819">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state width="1920" height="262" key="GridCell.Tab.0.bottom/0.34.1920.1046@0.34.1920.1046" timestamp="1652084289819" />
+    <state width="1920" height="262" key="GridCell.Tab.0.center" timestamp="1652084289819">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state width="1920" height="262" key="GridCell.Tab.0.center/0.34.1920.1046@0.34.1920.1046" timestamp="1652084289819" />
+    <state width="1920" height="262" key="GridCell.Tab.0.left" timestamp="1652084289819">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state width="1920" height="262" key="GridCell.Tab.0.left/0.34.1920.1046@0.34.1920.1046" timestamp="1652084289819" />
+    <state width="1920" height="262" key="GridCell.Tab.0.right" timestamp="1652084289819">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state width="1920" height="262" key="GridCell.Tab.0.right/0.34.1920.1046@0.34.1920.1046" timestamp="1652084289819" />
+    <state width="1920" height="363" key="GridCell.Tab.1.bottom" timestamp="1652015404232">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state width="1920" height="363" key="GridCell.Tab.1.bottom/0.34.1920.1046@0.34.1920.1046" timestamp="1652015404232" />
+    <state width="1920" height="363" key="GridCell.Tab.1.center" timestamp="1652015404232">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state width="1920" height="363" key="GridCell.Tab.1.center/0.34.1920.1046@0.34.1920.1046" timestamp="1652015404232" />
+    <state width="1920" height="363" key="GridCell.Tab.1.left" timestamp="1652015404232">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state width="1920" height="363" key="GridCell.Tab.1.left/0.34.1920.1046@0.34.1920.1046" timestamp="1652015404232" />
+    <state width="1920" height="363" key="GridCell.Tab.1.right" timestamp="1652015404232">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state width="1920" height="363" key="GridCell.Tab.1.right/0.34.1920.1046@0.34.1920.1046" timestamp="1652015404232" />
+    <state width="1920" height="363" key="GridCell.Tab.2.bottom" timestamp="1652015404232">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state width="1920" height="363" key="GridCell.Tab.2.bottom/0.34.1920.1046@0.34.1920.1046" timestamp="1652015404232" />
+    <state width="1920" height="363" key="GridCell.Tab.2.center" timestamp="1652015404232">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state width="1920" height="363" key="GridCell.Tab.2.center/0.34.1920.1046@0.34.1920.1046" timestamp="1652015404232" />
+    <state width="1920" height="363" key="GridCell.Tab.2.left" timestamp="1652015404232">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state width="1920" height="363" key="GridCell.Tab.2.left/0.34.1920.1046@0.34.1920.1046" timestamp="1652015404232" />
+    <state width="1920" height="363" key="GridCell.Tab.2.right" timestamp="1652015404232">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state width="1920" height="363" key="GridCell.Tab.2.right/0.34.1920.1046@0.34.1920.1046" timestamp="1652015404232" />
+    <state x="315" y="34" width="1280" height="1046" key="SettingsEditor" timestamp="1652189966973">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="315" y="34" width="1280" height="1046" key="SettingsEditor/0.34.1920.1046@0.34.1920.1046" timestamp="1652189966973" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/game2048/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="128">
+          <caret line="6" column="36" selection-start-line="6" selection-start-column="36" selection-end-line="6" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game2048/Tile.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="7" selection-start-line="7" selection-end-line="7" />
+          <folding>
+            <element signature="e#534#535#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#625#626#0" expanded="true" />
+            <element signature="e#651#652#0" expanded="true" />
+            <element signature="e#737#738#0" expanded="true" />
+            <element signature="e#765#766#0" expanded="true" />
+            <element signature="e#889#890#0" expanded="true" />
+            <element signature="e#938#939#0" expanded="true" />
+            <element signature="e#1065#1066#0" expanded="true" />
+            <element signature="e#1113#1114#0" expanded="true" />
+            <element signature="e#2023#2024#0" expanded="true" />
+            <element signature="e#2097#2098#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game2048/Side.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="448">
+          <caret line="14" column="44" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game2048/Model.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-192">
+          <caret line="33" column="28" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1710#1711#0" expanded="true" />
+            <element signature="e#1753#1754#0" expanded="true" />
+            <element signature="e#1908#1909#0" expanded="true" />
+            <element signature="e#1943#1944#0" expanded="true" />
+            <element signature="e#2318#2319#0" expanded="true" />
+            <element signature="e#2346#2347#0" expanded="true" />
+            <element signature="e#2454#2455#0" expanded="true" />
+            <element signature="e#2485#2486#0" expanded="true" />
+            <element signature="e#5702#5703#0" expanded="true" />
+            <element signature="e#5749#5750#0" expanded="true" />
+            <element signature="e#5849#5850#0" expanded="true" />
+            <element signature="e#5916#5917#0" expanded="true" />
+            <element signature="e#9584#9585#0" expanded="true" />
+            <element signature="e#9628#9629#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game2048/TestAtLeastOneMoveExists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1952">
+          <caret line="63" selection-start-line="63" selection-end-line="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game2048/TestEmptySpace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1600">
+          <caret line="52" column="28" selection-start-line="52" selection-start-column="28" selection-end-line="52" selection-end-column="28" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game2048/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="23" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="e#667#668#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#1597#1598#0" expanded="true" />
+            <element signature="e#1633#1634#0" expanded="true" />
+            <element signature="e#1722#1723#0" expanded="true" />
+            <element signature="e#1757#1758#0" expanded="true" />
+            <element signature="e#2232#2233#0" expanded="true" />
+            <element signature="e#2287#2288#0" expanded="true" />
+            <element signature="e#2556#2557#0" expanded="true" />
+            <element signature="e#2600#2601#0" expanded="true" />
+            <element signature="e#4362#4363#0" expanded="true" />
+            <element signature="e#4403#4404#0" expanded="true" />
+            <element signature="e#4688#4689#0" expanded="true" />
+            <element signature="e#4723#4724#0" expanded="true" />
+            <element signature="e#4773#4774#0" expanded="true" />
+            <element signature="e#4817#4818#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game2048/TestUpOnly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/game2048/TestMaxTileExists.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="512">
+          <caret line="90" column="4" selection-start-line="85" selection-end-line="91" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI" />
+      <state key="GlobalLibrariesConfigurable.UI" />
+      <state key="JdkListConfigurable.UI" />
+      <state key="ModuleStructureConfigurable.UI" />
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>javalib</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

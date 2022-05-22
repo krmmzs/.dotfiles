@@ -1,0 +1,2 @@
+com.intellij.zh
+com.github.tuchg.nonasciicodecompletionhelper

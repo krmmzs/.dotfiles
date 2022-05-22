@@ -1,0 +1,79 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="CWMHostShowPopupAction">
+      <i c="2" l="1648042172903" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="13" l="1651021442958" />
+    </e>
+    <e n="EditorEnter">
+      <i c="1" l="1648042016889" />
+    </e>
+    <e n="OpenFile">
+      <i c="1" l="1651021370478" />
+    </e>
+    <e n="RestartIde">
+      <i c="1" l="1648042160438" />
+    </e>
+    <e n="Run">
+      <i c="1" l="1648042032875" />
+    </e>
+    <e n="SaveAll">
+      <i c="10" l="1651021462007" />
+    </e>
+    <e n="SettingsEntryPoint">
+      <i c="6" l="1648446737658" />
+    </e>
+    <e n="ShowSettings">
+      <i c="7" l="1651021332818" />
+    </e>
+    <e n="com.intellij.execution.actions.RunConfigurationsComboBoxAction$SelectConfigAction">
+      <i c="1" l="1648042025637" />
+    </e>
+    <e n="com.intellij.ide.actions.QuickChangeLookAndFeel$1">
+      <i c="1" l="1648446702063" />
+    </e>
+    <e n="com.intellij.ide.actions.QuickChangeLookAndFeel$LafChangeAction">
+      <i c="2" l="1648446742531" />
+    </e>
+    <e n="com.intellij.ide.actions.SettingsEntryPointAction$1">
+      <i c="5" l="1648446739131" />
+    </e>
+    <e n="com.intellij.notification.NotificationAction$Simple">
+      <i c="1" l="1651021409639" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.EmptyAction$MyDelegatingAction">
+      <i c="8" l="1651021447399" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="1" l="1648042256046" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.ToolWindowHeader$HideAction">
+      <i c="2" l="1648042199461" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.ToolWindowHeader$ShowOptionsAction">
+      <i c="1" l="1648042222102" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.welcomeScreen.ActionGroupPanelWrapper$5">
+      <i c="1" l="1648039079561" />
+    </e>
+    <e n="com.intellij.space.actions.SpaceMainToolBarAction">
+      <i c="1" l="1648042173972" />
+    </e>
+    <e n="com.intellij.space.vcs.actions.SpaceMainToolBarAction">
+      <i c="1" l="1651021295198" />
+    </e>
+    <e n="com.intellij.xdebugger.impl.breakpoints.RemoveBreakpointGutterIconAction">
+      <i c="1" l="1648042027671" />
+    </e>
+    <e n="com.maddyhome.idea.vim.group.NotificationService$OpenIdeaVimRcAction">
+      <i c="1" l="1648042244492" />
+    </e>
+    <e n="com.maddyhome.idea.vim.ui.ShortcutConflictsSettings">
+      <i c="1" l="1648042232823" />
+    </e>
+    <e n="com.maddyhome.idea.vim.ui.ex.ExShortcutKeyAction">
+      <i c="11" l="1651021462003" />
+    </e>
+  </component>
+</application>

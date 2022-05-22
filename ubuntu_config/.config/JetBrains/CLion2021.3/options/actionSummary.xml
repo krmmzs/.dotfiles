@@ -1,0 +1,73 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Delete">
+      <i c="1" l="1647167849989" />
+    </e>
+    <e n="BuildProject">
+      <i c="1" l="1647167738515" />
+    </e>
+    <e n="CMake.CreateLists">
+      <i c="2" l="1647167640664" />
+    </e>
+    <e n="CreateDesktopEntry">
+      <i c="1" l="1645962494189" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="12" l="1648450445765" />
+    </e>
+    <e n="EditorEnter">
+      <i c="1" l="1647167792415" />
+    </e>
+    <e n="RunAnything">
+      <i c="1" l="1647167752739" />
+    </e>
+    <e n="SaveAll">
+      <i c="1" l="1647167794979" />
+    </e>
+    <e n="SettingsEntryPoint">
+      <i c="3" l="1648450454916" />
+    </e>
+    <e n="ShowSettings">
+      <i c="4" l="1648450422960" />
+    </e>
+    <e n="WelcomeScreen.OpenDirectoryProject">
+      <i c="1" l="1647167411320" />
+    </e>
+    <e n="com.intellij.ide.actions.QuickChangeLookAndFeel$1">
+      <i c="1" l="1648450437403" />
+    </e>
+    <e n="com.intellij.ide.actions.QuickChangeLookAndFeel$LafChangeAction">
+      <i c="1" l="1648450458368" />
+    </e>
+    <e n="com.intellij.ide.actions.SettingsEntryPointAction$1">
+      <i c="3" l="1648450455996" />
+    </e>
+    <e n="com.intellij.notification.NotificationAction$Simple">
+      <i c="3" l="1647167706270" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.EmptyAction$MyDelegatingAction">
+      <i c="5" l="1647167793877" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="3" l="1647167726479" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="1" l="1647167753965" />
+    </e>
+    <e n="com.intellij.openapi.ui.impl.DialogWrapperPeerImpl$AnCancelAction">
+      <i c="1" l="1648450433374" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenComponentFactory$3">
+      <i c="3" l="1645962790328" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenComponentFactory$4">
+      <i c="1" l="1645962519128" />
+    </e>
+    <e n="com.maddyhome.idea.vim.ui.ex.ExShortcutKeyAction">
+      <i c="1" l="1647167794684" />
+    </e>
+    <e n="editRunConfigurations">
+      <i c="1" l="1647167887980" />
+    </e>
+  </component>
+</application>

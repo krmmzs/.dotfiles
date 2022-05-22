@@ -1,0 +1,9 @@
+IdeaVIM
+com.intellij.zh
+AceJump
+org.jetbrains.IdeaVim-EasyMotion
+com.vincentp.gruvbox-theme
+com.jetbrains.CyanTheme
+beeender.ComradeNeovim
+com.wakatime.intellij.plugin
+com.github.tuchg.nonasciicodecompletionhelper

@@ -1,0 +1,283 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Copy">
+      <i c="7" l="1651992613472" />
+    </e>
+    <e n="$Cut">
+      <i c="1" l="1651309664787" />
+    </e>
+    <e n="$Delete">
+      <i c="3" l="1651309667745" />
+    </e>
+    <e n="$Paste">
+      <i c="2" l="1651295935785" />
+    </e>
+    <e n="$SelectAll">
+      <i c="1" l="1648915464643" />
+    </e>
+    <e n="$Undo">
+      <i c="4" l="1651992466627" />
+    </e>
+    <e n="61B.CheckStyle">
+      <i c="4" l="1651989756585" />
+    </e>
+    <e n="61B.SettingsAction">
+      <i c="1" l="1651298313764" />
+    </e>
+    <e n="ActivateBookmarksToolWindow">
+      <i c="1" l="1651307697310" />
+    </e>
+    <e n="ActivateBuildToolWindow">
+      <i c="1" l="1651992866835" />
+    </e>
+    <e n="ActivateFindToolWindow">
+      <i c="1" l="1651307702670" />
+    </e>
+    <e n="ActivateProjectToolWindow">
+      <i c="3" l="1651992860273" />
+    </e>
+    <e n="ActivateRunToolWindow">
+      <i c="1" l="1651307711027" />
+    </e>
+    <e n="ActivateVersionControlToolWindow">
+      <i c="1" l="1651307720818" />
+    </e>
+    <e n="Annotate">
+      <i c="4" l="1651995872209" />
+    </e>
+    <e n="Back">
+      <i c="9" l="1648386734382" />
+    </e>
+    <e n="CWMHostShowPopupAction">
+      <i c="1" l="1648358939693" />
+    </e>
+    <e n="ChooseDebugConfiguration">
+      <i c="4" l="1651326562651" />
+    </e>
+    <e n="ChooseRunConfiguration">
+      <i c="18" l="1651326448055" />
+    </e>
+    <e n="CompileDirty">
+      <i c="45" l="1651326440516" />
+    </e>
+    <e n="ComradeNeovim.AutoConnect">
+      <i c="6" l="1652006738847" />
+    </e>
+    <e n="CreateLauncherScript">
+      <i c="2" l="1651215733726" />
+    </e>
+    <e n="DebugClass">
+      <i c="1" l="1652015396399" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="218" l="1651992607240" />
+    </e>
+    <e n="EditorChooseLookupItem">
+      <i c="4" l="1651304070118" />
+    </e>
+    <e n="EditorChooseLookupItemReplace">
+      <i c="14" l="1651326020340" />
+    </e>
+    <e n="EditorCopy">
+      <i c="2" l="1651161060481" />
+    </e>
+    <e n="EditorDown">
+      <i c="14" l="1651304069477" />
+    </e>
+    <e n="EditorEnter">
+      <i c="32" l="1651326096214" />
+    </e>
+    <e n="EditorEscape">
+      <i c="7" l="1648917587279" />
+    </e>
+    <e n="EditorPaste">
+      <i c="9" l="1651992607798" />
+    </e>
+    <e n="EditorRight">
+      <i c="1" l="1651162728247" />
+    </e>
+    <e n="EditorTab">
+      <i c="10" l="1651326019436" />
+    </e>
+    <e n="EditorTabsEntryPoint">
+      <i c="10" l="1651307581394" />
+    </e>
+    <e n="ExportToHTML">
+      <i c="1" l="1648883752490" />
+    </e>
+    <e n="HideAllWindows">
+      <i c="4" l="1651299818853" />
+    </e>
+    <e n="ImportSettings">
+      <i c="1" l="1651162392597" />
+    </e>
+    <e n="InsertLiveTemplate">
+      <i c="9" l="1651304052542" />
+    </e>
+    <e n="JavaVisualizer.ZoomInAction">
+      <i c="6" l="1651298487660" />
+    </e>
+    <e n="JavaVisualizer.ZoomOutAction">
+      <i c="4" l="1651298486716" />
+    </e>
+    <e n="NewClass">
+      <i c="2" l="1651162723474" />
+    </e>
+    <e n="NewDir">
+      <i c="1" l="1648357629777" />
+    </e>
+    <e n="NewFile">
+      <i c="1" l="1651295910898" />
+    </e>
+    <e n="NewProject">
+      <i c="6" l="1651325767287" />
+    </e>
+    <e n="OpenFile">
+      <i c="22" l="1651992480140" />
+    </e>
+    <e n="Rerun">
+      <i c="14" l="1652015052769" />
+    </e>
+    <e n="Run">
+      <i c="32" l="1651326446339" />
+    </e>
+    <e n="RunClass">
+      <i c="28" l="1652084512760" />
+    </e>
+    <e n="SaveAll">
+      <i c="73" l="1651989753811" />
+    </e>
+    <e n="SettingsEntryPoint">
+      <i c="32" l="1651307668304" />
+    </e>
+    <e n="ShowProjectStructureSettings">
+      <i c="4" l="1651997083142" />
+    </e>
+    <e n="ShowSettings">
+      <i c="24" l="1652189809490" />
+    </e>
+    <e n="StepInto">
+      <i c="120" l="1651326639883" />
+    </e>
+    <e n="Stop">
+      <i c="1" l="1651304476303" />
+    </e>
+    <e n="ToggleLineBreakpoint">
+      <i c="10" l="1652008534465" />
+    </e>
+    <e n="ViewBreakpoints">
+      <i c="1" l="1651304498018" />
+    </e>
+    <e n="ViewInplaceComments">
+      <i c="2" l="1651992856902" />
+    </e>
+    <e n="ViewToolBar">
+      <i c="2" l="1651992834228" />
+    </e>
+    <e n="ViewToolButtons">
+      <i c="2" l="1651992846673" />
+    </e>
+    <e n="WelcomeScreen.CreateNewProject">
+      <i c="1" l="1648357606904" />
+    </e>
+    <e n="WelcomeScreen.OpenProject">
+      <i c="1" l="1648357598905" />
+    </e>
+    <e n="com.intellij.cloudConfig.CloudConfigSyncPluginsAction">
+      <i c="1" l="1651307415814" />
+    </e>
+    <e n="com.intellij.cloudConfig.CloudConfigSyncPluginsSilentlyAction">
+      <i c="101" l="1651307439195" />
+    </e>
+    <e n="com.intellij.cloudConfig.CloudConfigSyncSettingsAction">
+      <i c="2" l="1651307439787" />
+    </e>
+    <e n="com.intellij.diagnostic.IdeMessagePanel$4">
+      <i c="2" l="1651239357142" />
+    </e>
+    <e n="com.intellij.execution.lineMarker.LineMarkerActionWrapper">
+      <i c="7" l="1651989481250" />
+    </e>
+    <e n="com.intellij.ide.ReopenProjectAction">
+      <i c="2" l="1651295957628" />
+    </e>
+    <e n="com.intellij.ide.actions.QuickChangeLookAndFeel$1">
+      <i c="4" l="1651208593802" />
+    </e>
+    <e n="com.intellij.ide.actions.QuickChangeLookAndFeel$LafChangeAction">
+      <i c="9" l="1651287663592" />
+    </e>
+    <e n="com.intellij.ide.actions.SettingsEntryPointAction$1">
+      <i c="24" l="1651307669263" />
+    </e>
+    <e n="com.intellij.ide.actions.ShowPluginsWithSearchOptionAction">
+      <i c="1" l="1651307245907" />
+    </e>
+    <e n="com.intellij.ide.plugins.PluginManagerConfigurable$3">
+      <i c="3" l="1648357784725" />
+    </e>
+    <e n="com.intellij.ide.plugins.newui.ListPluginComponent$ButtonAnAction">
+      <i c="1" l="1651307596139" />
+    </e>
+    <e n="com.intellij.ide.plugins.newui.TabbedPaneHeaderComponent$3">
+      <i c="7" l="1648358081817" />
+    </e>
+    <e n="com.intellij.notification.NotificationAction$Simple">
+      <i c="12" l="1651300742536" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.EmptyAction$MyDelegatingAction">
+      <i c="285" l="1651992674365" />
+    </e>
+    <e n="com.intellij.openapi.editor.impl.EditorMarkupModelImpl$MarkupModelDelegateAction">
+      <i c="1" l="1651307229378" />
+    </e>
+    <e n="com.intellij.openapi.editor.impl.EditorMarkupModelImpl$StatusAction">
+      <i c="1" l="1651305086495" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="20" l="1651992830905" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="1" l="1651307456392" />
+    </e>
+    <e n="com.intellij.openapi.ui.impl.DialogWrapperPeerImpl$AnCancelAction">
+      <i c="5" l="1651304499042" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenComponentFactory$3">
+      <i c="1" l="1648357594657" />
+    </e>
+    <e n="com.intellij.space.actions.SpaceMainToolBarAction">
+      <i c="1" l="1648883775098" />
+    </e>
+    <e n="com.intellij.space.vcs.actions.SpaceMainToolBarAction">
+      <i c="2" l="1651162479380" />
+    </e>
+    <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
+      <i c="17" l="1651992810424" />
+    </e>
+    <e n="com.intellij.ui.CommonActionsPanel$AddButton">
+      <i c="3" l="1651239835593" />
+    </e>
+    <e n="com.intellij.ui.dsl.builder.impl.SegmentedButtonAction">
+      <i c="4" l="1651325823404" />
+    </e>
+    <e n="com.intellij.xdebugger.impl.actions.EditBreakpointAction$ContextAction">
+      <i c="1" l="1651298385387" />
+    </e>
+    <e n="com.intellij.xdebugger.impl.breakpoints.RemoveBreakpointGutterIconAction">
+      <i c="8" l="1652008535565" />
+    </e>
+    <e n="com.maddyhome.idea.vim.ui.ex.ExShortcutKeyAction">
+      <i c="79" l="1651989753805" />
+    </e>
+    <e n="editRunConfigurations">
+      <i c="6" l="1651293475717" />
+    </e>
+    <e n="org.beeender.comradeneovim.NvimInstanceAction">
+      <i c="13" l="1651995769806" />
+    </e>
+    <e n="org.beeender.comradeneovim.NvimToggleAllAction">
+      <i c="18" l="1651328801497" />
+    </e>
+  </component>
+</application>

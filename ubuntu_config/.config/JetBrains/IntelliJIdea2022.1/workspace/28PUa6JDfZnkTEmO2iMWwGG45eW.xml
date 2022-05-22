@@ -1,0 +1,150 @@
+<project version="4">
+  <component name="BookmarksManager">
+    <option name="groups">
+      <GroupState>
+        <option name="name" value="demo" />
+      </GroupState>
+    </option>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="-1" />
+  </component>
+  <component name="FileTypeUsageLocalSummary">
+    <fileType name="JAVA">
+      <summary usageCount="10" lastUsed="1651295917720" />
+    </fileType>
+  </component>
+  <component name="IdeDocumentHistory">
+    <changedPaths>
+      <option value="$PROJECT_DIR$/firstdemo.java" />
+      <option value="$PROJECT_DIR$/HelloWorld.java" />
+      <option value="$PROJECT_DIR$/Testing/Sort.java" />
+      <option value="$PROJECT_DIR$/Testing/Testsort.java" />
+      <option value="$PROJECT_DIR$/Testing/TestSort.java" />
+    </changedPaths>
+  </component>
+  <component name="IgnoredFileRootStore">
+    <option name="generatedRoots">
+      <set>
+        <option value="$PROJECT_DIR$/.idea" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1" />
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="demo" type="b2602c69:ProjectViewProjectNode" />
+              <item name="demo" type="462c0819:PsiDirectoryNode" />
+              <item name="Testing" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6223000" />
+  </component>
+  <component name="ToolWindowManager">
+    <layout>
+      <window_info id="Bookmarks" order="0" side_tool="true" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.45078126" />
+      <window_info id="Learn" order="2" />
+      <window_info id="Structure" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="4" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Problems View" order="6" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
+      <window_info anchor="bottom" id="Endpoints" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Services" order="9" />
+      <window_info anchor="bottom" id="Profiler" order="10" />
+      <window_info anchor="bottom" id="Style Checker" order="11" />
+      <window_info anchor="bottom" id="Build" order="12" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="Notifications" side_tool="true" />
+    </layout>
+    <recentWindows>
+      <value>Project</value>
+    </recentWindows>
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="315" y="34" width="1280" height="1046" key="#Project_Structure" timestamp="1651162475731">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="315" y="34" width="1280" height="1046" key="#Project_Structure/0.34.1920.1046@0.34.1920.1046" timestamp="1651162475731" />
+    <state x="433" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1651161747077">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="433" y="212" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.34.1920.1046@0.34.1920.1046" timestamp="1651161747077" />
+    <state x="601" y="399" width="708" height="335" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog" timestamp="1651162453428">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="601" y="399" width="708" height="335" key="#com.intellij.ide.actions.ChooseComponentsToExportDialog/0.34.1920.1046@0.34.1920.1046" timestamp="1651162453428" />
+    <state x="532" y="239" width="845" height="655" key="FileChooserDialogImpl" timestamp="1651239532411">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="532" y="239" width="845" height="655" key="FileChooserDialogImpl/0.34.1920.1046@0.34.1920.1046" timestamp="1651239532411" />
+    <state x="362" y="104" width="1196" height="924" key="SettingsEditor" timestamp="1651161506432">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="362" y="104" width="1196" height="924" key="SettingsEditor/0.34.1920.1046@0.34.1920.1046" timestamp="1651161506432" />
+    <state x="560" y="230" width="800" height="673" key="new project wizard" timestamp="1651295892220">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="560" y="230" width="800" height="673" key="new project wizard/0.34.1920.1046@0.34.1920.1046" timestamp="1651295892220" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/firstdemo.java" />
+    <entry file="file://$PROJECT_DIR$/HelloWorld.java" />
+    <entry file="file://$PROJECT_DIR$/Testing/Testsort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="384">
+          <caret line="11" column="29" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
+          <folding>
+            <element signature="e#462#463#0" expanded="true" />
+            <element signature="e#488#489#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/TestSort.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Testing/Sort.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI" />
+      <state key="GlobalLibrariesConfigurable.UI" />
+      <state key="JdkListConfigurable.UI" />
+      <state key="ModuleStructureConfigurable.UI" />
+      <state key="ProjectLibrariesConfigurable.UI" />
+    </states>
+  </component>
+</project>

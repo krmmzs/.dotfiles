@@ -1,0 +1,88 @@
+<application>
+  <component name="ActionsLocalSummary">
+    <e n="$Delete">
+      <i c="1" l="1647167849989" />
+    </e>
+    <e n="BuildProject">
+      <i c="1" l="1647167738515" />
+    </e>
+    <e n="CMake.CreateLists">
+      <i c="2" l="1647167640664" />
+    </e>
+    <e n="ComradeNeovim.AutoConnect">
+      <i c="1" l="1652189941911" />
+    </e>
+    <e n="CreateDesktopEntry">
+      <i c="1" l="1645962494189" />
+    </e>
+    <e n="EditorBackSpace">
+      <i c="19" l="1652189839456" />
+    </e>
+    <e n="EditorEnter">
+      <i c="1" l="1647167792415" />
+    </e>
+    <e n="EditorTabsEntryPoint">
+      <i c="2" l="1652189666483" />
+    </e>
+    <e n="GotoDeclaration">
+      <i c="3" l="1652189871797" />
+    </e>
+    <e n="RunAnything">
+      <i c="1" l="1647167752739" />
+    </e>
+    <e n="SaveAll">
+      <i c="1" l="1647167794979" />
+    </e>
+    <e n="SettingsEntryPoint">
+      <i c="7" l="1652189669331" />
+    </e>
+    <e n="ShowSettings">
+      <i c="7" l="1652189828363" />
+    </e>
+    <e n="WelcomeScreen.OpenDirectoryProject">
+      <i c="1" l="1647167411320" />
+    </e>
+    <e n="com.intellij.ide.actions.QuickChangeLookAndFeel$1">
+      <i c="1" l="1648450437403" />
+    </e>
+    <e n="com.intellij.ide.actions.QuickChangeLookAndFeel$LafChangeAction">
+      <i c="2" l="1652189593417" />
+    </e>
+    <e n="com.intellij.ide.actions.SettingsEntryPointAction$1">
+      <i c="6" l="1652189623023" />
+    </e>
+    <e n="com.intellij.notification.NotificationAction$Simple">
+      <i c="3" l="1647167706270" />
+    </e>
+    <e n="com.intellij.openapi.actionSystem.EmptyAction$MyDelegatingAction">
+      <i c="11" l="1652189652593" />
+    </e>
+    <e n="com.intellij.openapi.fileEditor.impl.tabActions.CloseTab">
+      <i c="3" l="1647167726479" />
+    </e>
+    <e n="com.intellij.openapi.project.DumbAwareAction$SimpleDumbAwareAction">
+      <i c="1" l="1647167753965" />
+    </e>
+    <e n="com.intellij.openapi.ui.impl.DialogWrapperPeerImpl$AnCancelAction">
+      <i c="1" l="1648450433374" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenComponentFactory$3">
+      <i c="3" l="1645962790328" />
+    </e>
+    <e n="com.intellij.openapi.wm.impl.welcomeScreen.WelcomeScreenComponentFactory$4">
+      <i c="1" l="1645962519128" />
+    </e>
+    <e n="com.intellij.toolWindow.ToolWindowHeader$HideAction">
+      <i c="2" l="1652189658208" />
+    </e>
+    <e n="com.maddyhome.idea.vim.ui.ex.ExShortcutKeyAction">
+      <i c="1" l="1647167794684" />
+    </e>
+    <e n="editRunConfigurations">
+      <i c="1" l="1647167887980" />
+    </e>
+    <e n="org.beeender.comradeneovim.NvimToggleAllAction">
+      <i c="1" l="1652189943805" />
+    </e>
+  </component>
+</application>

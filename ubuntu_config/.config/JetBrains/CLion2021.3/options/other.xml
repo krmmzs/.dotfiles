@@ -1,0 +1,41 @@
+<application>
+  <component name="DynamicPluginEnabler">
+    <trackers>
+      <map>
+        <entry key="26KLgtkcWm3trUDlo3HuLeS2Yhq">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+      </map>
+    </trackers>
+  </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontScale" value="1.25" />
+    <option name="fontSize" value="20" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="CWM_LOGGING_VERSION" value="1" />
+    <property name="InstalledPluginsSearchHistory" value="vim&#10;vi" />
+    <property name="MarketplacePluginsSearchHistory" value="/tag:Theme gru&#10;/tag:Theme g&#10;/tag:Theme li&#10;/tag:Theme lig&#10;/tag:Theme light" />
+    <property name="NonModalCommitCustomization.IsApplied" value="true" />
+    <property name="appcds.runOnSecondStart" value="CL-213.7172.20-dc6f97f69378ff6a2b3cdb84c58c51c67c2170ee852b73f7474a849e86e993e6" />
+    <property name="ask.about.ctrl.y.shortcut.v2" value="true" />
+    <property name="bundled.plugins.list.saved.version" value="CL-213.7172.20" />
+    <property name="clion.initialConfigPerformed" value="true" />
+    <property name="evlsprt3.213" value="4" />
+    <property name="file.chooser.recent.files" value="$USER_HOME$/MyGit/CS106L/CS106L-201920-master" />
+    <property name="file.gist.reindex.count" value="18" />
+    <property name="fileTypeChangedCounter" value="1" />
+    <property name="fileTypeDetectors" value="com.intellij.database.vfs.DbStorageFileType$Detector:com.intellij.docker.dockerFile.DockerFileTypeDetector:com.intellij.ide.scratch.ScratchFileServiceImpl$Detector:com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector:com.jetbrains.cidr.lang.OCHeaderFileTypeDetector:org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector" />
+    <property name="got.it.tooltip.cwm.invitation.notification" value="1" />
+    <property name="gotit.previous.run" value="CL-213.6777.58" />
+    <property name="ide.updates.whats.new.shown.for" value="213" />
+    <property name="ideavim.statistics.timestamp" value="1648450345244" />
+    <property name="input.method.disabler.muted" value="true" />
+    <property name="last_opened_file_path" value="$USER_HOME$/MyGit/CS106L/CS106L-201920-master" />
+    <property name="registry.to.advanced.settings.migration.build" value="CL-213.7172.20" />
+    <property name="tasks.pass.word.conversion.enforced" value="true" />
+    <property name="ts.lib.d.ts.version" value="4.5.4" />
+  </component>
+</application>

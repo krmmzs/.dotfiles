@@ -1,0 +1,27 @@
+<application>
+  <component name="DimensionService">
+    <size key="CreateCMakeListWizard.topPanel.0.0.1920.1080@144dpi" width="960" height="630" />
+    <size key="CreateCMakeListWizard.bottomPanel.0.0.1920.1080@144dpi" width="960" height="270" />
+  </component>
+  <component name="WindowManager">
+    <frame x="0" y="34" width="1920" height="1046" extendedState="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Inspection" order="4" weight="0.4" />
+    </layout>
+  </component>
+  <component name="WindowStateApplicationService">
+    <state x="558" y="156" width="654" height="743" key="FileChooserDialogImpl" timestamp="1647167442140">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="558" y="156" width="654" height="743" key="FileChooserDialogImpl/0.34.1920.1046" timestamp="1647167442140" />
+    <state x="960" y="532" width="1200" height="900" key="WELCOME_SCREEN" timestamp="1647167408033">
+      <screen x="0" y="34" width="1920" height="1046" />
+    </state>
+    <state x="960" y="532" width="1200" height="900" key="WELCOME_SCREEN/0.34.1920.1046" timestamp="1647167408033" />
+  </component>
+</application>

@@ -1,0 +1,96 @@
+<application>
+  <component name="DynamicPluginEnabler">
+    <trackers>
+      <map>
+        <entry key="26mqRwZVIqqrhrnJDY8Zx8CvDNm">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+        <entry key="28MLFEZha2fNTo6KkklRgVddtB8">
+          <value>
+            <ProjectPluginTracker />
+          </value>
+        </entry>
+      </map>
+    </trackers>
+  </component>
+  <component name="NotRoamableUiSettings">
+    <option name="fontScale" value="1.25" />
+    <option name="fontSize" value="18.0" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="CWM_LOGGING_VERSION" value="1" />
+    <property name="MarketplacePluginsSearchHistory" value="waka&#10;wakato&#10;/tag:Theme light&#10;/tag:Theme ight&#10;/tag:Theme gru light" />
+    <property name="NonModalCommitCustomization.IsApplied" value="true" />
+    <property name="PyCharm.InitialConfiguration" value="true" />
+    <property name="PyCharm.InitialConfiguration.V2" value="true" />
+    <property name="PyCharm.InitialConfiguration.V3" value="true" />
+    <property name="PyCharm.InitialConfiguration.V4" value="true" />
+    <property name="PyCharm.InitialConfiguration.V5" value="true" />
+    <property name="PyCharm.InitialConfiguration.V6" value="true" />
+    <property name="PyCharm.InitialConfiguration.V7" value="true" />
+    <property name="appcds.runOnSecondStart" value="PY-213.7172.26-8b7e6663e7b623aec67063056b31292e17da8b266699950c619ac6849c04979c" />
+    <property name="ask.about.ctrl.y.shortcut.v2" value="true" />
+    <property name="bundled.plugins.list.saved.version" value="PY-213.7172.26" />
+    <property name="evlsprt3.213" value="7" />
+    <property name="experimentalFeature.terminal.shell.command.handling" value="false" />
+    <property name="file.gist.reindex.count" value="11" />
+    <property name="fileTypeChangedCounter" value="2" />
+    <property name="fileTypeDetectors" value="com.intellij.database.vfs.DbStorageFileType$Detector:com.intellij.docker.dockerFile.DockerFileTypeDetector:com.intellij.ide.scratch.ScratchFileServiceImpl$Detector:com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector:org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector" />
+    <property name="got.it.tooltip.cwm.invitation.notification" value="1" />
+    <property name="gotit.previous.run" value="PY-213.7172.26" />
+    <property name="ide.memory.adjusted" value="true" />
+    <property name="ideavim.statistics.timestamp" value="1648042033104" />
+    <property name="input.method.disabler.muted" value="true" />
+    <property name="registry.to.advanced.settings.migration.build" value="PY-213.7172.26" />
+    <property name="tasks.pass.word.conversion.enforced" value="true" />
+    <property name="ts.lib.d.ts.version" value="4.5.4" />
+  </component>
+  <component name="PropertyService"><![CDATA[{
+  "keyToString": {
+    "CWM_LOGGING_VERSION": "1",
+    "PluginConfigurable.selectionTab": "1",
+    "PyCharm.InitialConfiguration": "true",
+    "PyCharm.InitialConfiguration.V2": "true",
+    "PyCharm.InitialConfiguration.V3": "true",
+    "PyCharm.InitialConfiguration.V4": "true",
+    "PyCharm.InitialConfiguration.V5": "true",
+    "PyCharm.InitialConfiguration.V6": "true",
+    "PyCharm.InitialConfiguration.V7": "true",
+    "RunOnceActivity.se.text.search": "true",
+    "SettingsSearchHistory": "theme",
+    "appcds.runOnSecondStart": "PY-221.5080.212-b6c803f97dc966dd917084d957bd8e116473ce900520d1258b6536befdb9078c",
+    "bundled.plugins.list.saved.version": "PY-221.5080.212",
+    "experimentalFeature.terminal.shell.command.handling": "false",
+    "file.gist.reindex.count": "9",
+    "fileTypeChangedCounter": "2",
+    "got.it.tooltip.cwm.invitation.notification": "1",
+    "gotit.previous.run": "PY-221.5080.212",
+    "ide.memory.adjusted": "true",
+    "ide.updates.old.dirs.scan.scheduled": "1651626077592",
+    "ideavim.statistics.timestamp": "1651021415761",
+    "input.method.disabler.muted": "true",
+    "registry.to.advanced.settings.migration.build": "PY-221.5080.212",
+    "tasks.pass.word.conversion.enforced": "true",
+    "ts.lib.d.ts.version": "4.5.4"
+  },
+  "keyToStringList": {
+    "file.chooser.recent.files": [
+      "/home/mouzaisi/MyGit/Python/oop/tut"
+    ],
+    "fileTypeDetectors": [
+      "com.intellij.ide.scratch.ScratchFileServiceImpl$Detector",
+      "com.intellij.javascript.debugger.sourcemap.SourceMapFileType$MyFileTypeDetector",
+      "com.intellij.database.vfs.DbStorageFileType$Detector",
+      "com.intellij.docker.dockerFile.DockerFileTypeDetector",
+      "org.jetbrains.plugins.textmate.TextMateFileType$TextMateFileDetector"
+    ]
+  }
+}]]></component>
+  <component name="TerminalCommandHistoryManager">
+    <command-history-files>
+      <command-history-file filename="pythonProject-history" project-path="$USER_HOME$/PycharmProjects/pythonProject" last-access-time="1651021366945" />
+    </command-history-files>
+  </component>
+</application>
