@@ -3,6 +3,12 @@
   "extension": {
     "coc-comrade": {
       "disabled": true
+    },
+    "coc-snippets": {
+      "disabled": false
+    },
+    "coc-pyright": {
+      "disabled": false
     }
   }
 }

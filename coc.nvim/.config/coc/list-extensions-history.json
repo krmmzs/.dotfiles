@@ -1,5 +1,15 @@
 {
   "L2hvbWUvbW91emFpc2kvTXlHaXQvdmltL2NvYy5udmlt": [
     "jjjj"
+  ],
+  "L2hvbWUvbW91emFpc2kvLmRvdGZpbGVzL3ZpbS8udmltcmNz": [
+    "                                                      25                                                                                                                                                              24 # Set personal aliases, overriding those provided by oh-my-zsh libs,                                                                                         23ins, and themes. Aliases can be placed here, though oh-m22 # users are encouraged to define aliases within the ZSH_CUSTll list of active aliases, run `alias`.                                    20 #                                                                                                                18 # Example aliases                                         =\"mate ~/.zshrc\"                                               hmyzsh=\"mate ~/.oh-my                      15 alias gl=\"git log --all --grlias gcp=\"git add . && gi                      13 alias gcf=\"git cat-file "
+  ],
+  "L2hvbWUvbW91emFpc2kvTXlHaXQvQ1M2MUEvUHJvamVjdC9zcDIyL2FudHM=": [
+    "py",
+    "comkkj"
+  ],
+  "L2hvbWUvbW91emFpc2kvTXlHaXQvQWxnb3JpdGhtL3NjaG9vbC81LjMw": [
+    ":q"
   ]
 }

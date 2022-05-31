@@ -21,6 +21,21 @@
             "initializationOptions": {
                 "buildDirectory": "build"
             }
+        },
+        "pylance": {
+            "enable": true,
+            "filetypes": ["python"],
+            "module": "~/.vscode/extensions/ms-python.vscode-pylance-2022.5.3/dist/server.bundle.js",
+            "initializationOptions": {},
+            "settings": {
+                "python.analysis.typeCheckingMode": "basic",
+                "python.analysis.diagnosticMode": "openFilesOnly",
+                "python.analysis.stubPath": "./typings",
+                "python.analysis.autoSearchPaths": true,
+                "python.analysis.extraPaths": [],
+                "python.analysis.diagnosticSeverityOverrides": {},
+                "python.analysis.useLibraryCodeForTypes": true
+            }
         }
     },
 
