@@ -2,6 +2,9 @@ let mapleader = ","
 nnoremap ,, ,
 
 
+set nocompatible
+
+
 "Mode Settings
 
 if !has('nvim')
@@ -33,9 +36,6 @@ endif
 
 
 call plug#begin('~/.vim/plugged')
-
-" chinese vimdoc
-Plug 'yianwillis/vimcdoc'
 
 " withespace delete
 Plug 'bronson/vim-trailing-whitespace'
@@ -364,7 +364,7 @@ vnoremap <Leader>y "+y
 map <Leader>1 :set relativenumber!<CR>
 
 " vimux
-nnoremap <Leader>t :VimuxRunCommand("ls")<CR>
+nnoremap <Leader>t :VimuxRunCommand("")
 
 
 "buffer
@@ -391,6 +391,11 @@ autocmd BufReadPost *
     \ if line("'\"") > 1 && line("'\"") <= line("$") |
     \   exe "normal! g`\"" |
     \ endif
+
+" tell it to use an undo file
+set undofile
+" set a directory to store the undo history
+set undodir=/home/mouzaisi/.vimundo/
 
 set history=100 "keep 100 lines of command line history
 set ruler " show the cursor position all the time
@@ -525,10 +530,10 @@ set t_Co=256
 "alacritty true Support \"True" (24-bit color)
 " https://github.com/alacritty/alacritty/issues/109#issuecomment-859990495
 "" using gruvbox
-colorscheme gruvbox
-set background=dark
-highlight ColorColumn ctermbg=0 guibg=lightgrey
-let g:airline_theme='hybrid'
+"colorscheme gruvbox
+"set background=dark
+"highlight ColorColumn ctermbg=0 guibg=lightgrey
+"let g:airline_theme='hybrid'
 "if you want 256 ture color: uncomment them, but I think it is better in 256 false color is better, hhh
 "if exists('+termguicolors')
   "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
@@ -537,10 +542,10 @@ let g:airline_theme='hybrid'
 "endif
 
 "using space_vim_theme
-"set background=light
-"colorscheme space_vim_theme
-"highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
-"let g:airline_theme='papercolor'
+set background=light
+colorscheme space_vim_theme
+highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
+let g:airline_theme='papercolor'
 
 "highlight Cursor guifg=white guibg=black
 "highlight iCursor guifg=white guibg=steelblue
@@ -678,19 +683,21 @@ set updatetime=300
 " Don't pass messages to |ins-completion-menu|.
 set shortmess+=c
 
+" But it will conflict with vim-snippet when I want to complete instead jump
+" to next position
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? "\<C-n>" :
-      \ CheckBackspace() ? "\<TAB>" :
-      \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"inoremap <silent><expr> <TAB>
+      "\ pumvisible() ? "\<C-n>" :
+      "\ CheckBackspace() ? "\<TAB>" :
+      "\ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-function! CheckBackspace() abort
-  let col = col('.') - 1
-  return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+"function! CheckBackspace() abort
+  "let col = col('.') - 1
+  "return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
 
 " Make <CR> auto-select the first completion item and notify coc.nvim to
 " format on enter, <cr> could be remapped by other vim plugin

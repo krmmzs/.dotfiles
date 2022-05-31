@@ -1,0 +1,102 @@
+"GLOBAL CONFIG:
+
+let mapleader = ","
+nnoremap ,, ,
+
+set nocompatible
+
+" enable syntax and plugins (for netrw)
+syntax enable
+syntax on	" start highlighting, use 'background' to set colors
+filetype plugin on
+
+" allow backspacing over everything in insert mode
+" 默认情况下换行符是不可被删除的，除非使用 dd 命令或者 J 命令才可做到。如下配置可以解除这种限制
+set backspace=indent,eol,start
+
+"solve在终端中按 ESC 后有延时
+set timeout           " for mappings
+set timeoutlen=1000   " default value
+set ttimeout          " for key codes
+set ttimeoutlen=100    " unnoticeable small value
+
+"have problem
+"colorscheme gruvbox
+"set background=dark
+"highlight ColorColumn ctermbg=0 guibg=lightgrey
+
+"CURSOR:
+
+"Mode Settings
+
+if !has('nvim')
+    let &t_SI.="\e[5 q" "SI = INSERT mode
+    let &t_SR.="\e[4 q" "SR = REPLACE mode
+    let &t_EI.="\e[1 q" "EI = NORMAL mode (ELSE)
+endif
+
+"Cursor settings:
+
+"  1 -> blinking block
+"  2 -> solid block
+"  3 -> blinking underscore
+"  4 -> solid underscore
+"  5 -> blinking vertical bar
+"  6 -> solid vertical bar
+
+"let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+"let &t_SR = "\<Esc>]50;CursorShape=2\x7"
+"let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+
+"打开文件时恢复光标位置
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+
+
+"FEATURES WITHOUT PLUGIN:
+
+"FINDING FILES:
+
+" Search down into subfolders
+" Provides tab-completion for all file-related tasks
+set path+=**
+
+" Display all matching files when we tab complete
+set wildmenu
+
+" NOW WE CAN:
+" - Hit tab to :find by partial match
+" - Use * to make it fuzzy
+
+" THINGS TO CONSIDER:
+" - :b lets you autocomplete any open buffer
+
+
+" TAG JUMPING:
+
+" Create the `tags` file (may need to install ctags first)
+command! MakeTags !ctags -R .
+
+" NOW WE CAN:
+" - Use ^] to jump to tag under cursor
+" - Use g^] for ambiguous tags
+" - Use ^t to jump back up the tag stack
+
+" THINGS TO CONSIDER:
+" - This doesn't help if you want a visual list of tags
+
+
+" AUTOCOMPLETE:
+
+" The good stuff is documented in |ins-completion|
+
+" HIGHLIGHTS:
+" - ^x^n for JUST this file
+" - ^x^f for filenames (works with our path trick!)
+" - ^x^] for tags only
+" - ^n for anything specified by the 'complete' option
+
+" NOW WE CAN:
+" - Use ^n and ^p to go back and forth in the suggestion list

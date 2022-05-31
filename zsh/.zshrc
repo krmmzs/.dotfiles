@@ -154,6 +154,7 @@ alias dir="nautilus"
 alias alidrive="cd ~/softwares/阿里小白羊版Linux\ v2.9.24/ && ./阿里云盘小白羊版"
 alias vimal="vim -u ~/.vimrcs/.algorithm_vimrc"
 alias vimnp="vim -u ~/.vimrcs/.no_plugins_vimrc"
+alias mvim="vim -u ~/.vimrcs/.mvimrc"
 alias mv="mv -i"  # add attention
 alias cp="cp -i"  # add attention
 alias ls="exa" # replace ls to exa but with command ls
@@ -161,8 +162,8 @@ alias lss="ls"
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'" # 用bat来做fzf的预览器, need to install bat firstly
 alias bd=". bd -si"
 
-alias pyinit="cp ~/MyGit/project_init/python/init/* ."
-alias cppinit="cp ~/MyGit/project_init/cpp/init/* ."
+alias pyinit="cp ~/MyGit/project_init/python/init/* . && vim .root"
+alias cppinit="cp ~/MyGit/project_init/cpp/init/* . && vim .root"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
