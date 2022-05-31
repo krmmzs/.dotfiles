@@ -1,2 +1,0 @@
-IdeaVIM
-org.jetbrains.IdeaVim-EasyMotion

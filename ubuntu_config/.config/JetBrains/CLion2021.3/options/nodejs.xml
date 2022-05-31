@@ -1,7 +1,0 @@
-<application>
-  <component name="NodeJsLocalInterpreterManager">
-    <local-interpreter path="/bin/node" />
-    <local-interpreter path="/usr/bin/node" />
-    <local-interpreter path="/usr/local/bin/node" />
-  </component>
-</application>
