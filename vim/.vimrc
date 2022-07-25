@@ -187,17 +187,21 @@ Plug 'sgur/vim-textobj-parameter' "函数参数
 "ii 和 ai ：缩进对象，同一个缩进层次的代码，可以用 vii 选中，dii / cii 删除或改写
 
 " Rainbow Parentheses Improved
-Plug 'luochen1990/rainbow'
-let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
-nnoremap <Leader>rr :RainbowToggle<CR>
+"Plug 'luochen1990/rainbow'
+"let g:rainbow_active = 1 "set to 0 if you want to enable it later via :RainbowToggle
+"nnoremap <Leader>rr :RainbowToggle<CR>
 
 " vim cpp
+if !has('nvim')
 Plug 'octol/vim-cpp-enhanced-highlight'
+endif
 
 " vim python
 "yapf for python
 "noremap <Leader>pf :1,$!yapf<CR>
+if !has('nvim')
 Plug 'vim-python/python-syntax' " syntax for python
+endif
 Plug 'psf/black', { 'branch': 'stable' }
 autocmd BufWritePre *.py execute ':Black'
 
@@ -226,6 +230,7 @@ nnoremap <Leader>il :IndentLinesToggle<CR>
 "write web better
 Plug 'ap/vim-css-color' "show color
 Plug 'mattn/emmet-vim'
+let g:user_emmet_leader_key = '<C-l>'
 Plug 'othree/xml.vim'
 " post install (yarn install | npm install) then load plugin only for editing supported files
 Plug 'prettier/vim-prettier', {
@@ -332,8 +337,9 @@ Plug 'jiangmiao/auto-pairs' "better than cocexention"
 """"""""""""""""""""""""""""""""""""""
 " nvim and vim difference plug
 if has('nvim')
-    "Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-    "Plug 'nvim-treesitter/playground'
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-treesitter/playground'
+    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
 
     " Install deoplete for code completion. Because my coc-comrade is error
     " now
@@ -341,7 +347,7 @@ if has('nvim')
 
     " for JetBrains IDE
     " and use coc-comrade
-    Plug 'beeender/Comrade'
+    "Plug 'beeender/Comrade'
 
     " config
     "let g:deoplete#enable_at_startup = 1
@@ -362,6 +368,7 @@ nnoremap <Leader>nf ::NERDTreeTabsFind <CR>
 inoremap <Leader>p <ESC>"+p
 vnoremap <Leader>y "+y
 map <Leader>1 :set relativenumber!<CR>
+nnoremap <Leader><Leader>l :TSBufToggle highlight<CR>
 
 " vimux
 nnoremap <Leader>t :VimuxRunCommand("")
@@ -395,7 +402,9 @@ autocmd BufReadPost *
 " tell it to use an undo file
 set undofile
 " set a directory to store the undo history
-set undodir=/home/mouzaisi/.vimundo/
+if !has('nvim')
+set undodir=/home/mouzaisi/.vimundofile/
+endif
 
 set history=100 "keep 100 lines of command line history
 set ruler " show the cursor position all the time
@@ -534,16 +543,16 @@ set t_Co=256
 "set background=dark
 "highlight ColorColumn ctermbg=0 guibg=lightgrey
 "let g:airline_theme='hybrid'
-"if you want 256 ture color: uncomment them, but I think it is better in 256 false color is better, hhh
 "if exists('+termguicolors')
   "let &t_8f="\<Esc>[38;2;%lu;%lu;%lum"
   "let &t_8b="\<Esc>[48;2;%lu;%lu;%lum"
   "set termguicolors
 "endif
+"if you want 256 ture color: uncomment them, but I think it is better in 256 false color is better, hhh
 
 "using space_vim_theme
-set background=light
 colorscheme space_vim_theme
+set background=light
 highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
 let g:airline_theme='papercolor'
 
@@ -604,9 +613,6 @@ map <Leader>8 :w<CR>:! clear; python3 %<CR>
 
 " run javac in vim
 map <Leader>7 :w<CR>:! ; javac %<CR>
-
-"back to
-noremap <Leader>w <C-W>w
 
 " change 同行{到下一行
 noremap <Leader>{ :%s/ {/\r{/g<CR> gg=G
@@ -704,19 +710,20 @@ set shortmess+=c
 inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+" FUCK: will conflict with vim-snippets jump next
 " Use tab for trigger completion with characters ahead and navigate.
 " NOTE: Use command ':verbose imap <tab>' to make sure tab is not mapped by
 " other plugin before putting this into your config.
-inoremap <silent><expr> <TAB>
-            \ pumvisible() ? "\<C-n>" :
-            \ <SID>check_back_space() ? "\<TAB>" :
-            \ coc#refresh()
-inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
+"inoremap <silent><expr> <TAB>
+            "\ pumvisible() ? "\<C-n>" :
+            "\ <SID>check_back_space() ? "\<TAB>" :
+            "\ coc#refresh()
+"inoremap <expr><S-TAB> pumvisible() ? "\<C-p>" : "\<C-h>"
 
-function! s:check_back_space() abort
-    let col = col('.') - 1
-    return !col || getline('.')[col - 1]  =~# '\s'
-endfunction
+"function! s:check_back_space() abort
+    "let col = col('.') - 1
+    "return !col || getline('.')[col - 1]  =~# '\s'
+"endfunction
 
 " Use <c-space> to trigger completion.
 if has('nvim')
@@ -850,6 +857,7 @@ if has('nvim')
     "To map <Esc> to exit terminal-mode:
     :tnoremap <Esc> <C-\><C-n>
     set clipboard+=unnamedplus
+    set viminfo='100,n$HOME/.vim/files/info/viminfo
 endif
 if !has('nvim')
     set ttymouse=xterm2

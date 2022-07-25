@@ -9,6 +9,9 @@
     },
     "coc-pyright": {
       "disabled": false
+    },
+    "coc-java": {
+      "disabled": false
     }
   }
 }
