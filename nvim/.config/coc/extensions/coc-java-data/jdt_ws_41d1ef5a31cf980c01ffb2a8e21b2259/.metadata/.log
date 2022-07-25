@@ -1,0 +1,108 @@
+!SESSION 2022-05-09 16:08:58.553 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.3
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/mouzaisi/.dotfiles/coc.nvim/.config/coc/extensions/coc-java-data/jdt_ws_41d1ef5a31cf980c01ffb2a8e21b2259
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:00.246
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:00.349
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:00.376
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:00.383
+!MESSAGE Initializing Java Language Server 0.57.0.202006172108
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:00.399
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:00.399
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.provideSemanticTokens, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.project.getSemanticTokensLegend, java.project.getSettings, java.project.updateSourceAttachment, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:00.424
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:00.439
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:00.537
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:01.153
+!MESSAGE Workspace initialized in 749ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:01.225
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:01.232
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:01.247
+!MESSAGE >> New configuration: {java={enabled=true, jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=warning}}, configuration={checkProjectSettingsExclusions=true, updateBuildConfiguration=interactive, runtimes=[]}, trace={server=off}, import={gradle={enabled=true, wrapper={enabled=true}, offline={enabled=false}}, maven={enabled=true}, exclusions=[**/node_modules/**, **/.metadata/**, **/archetype-resources/**, **/META-INF/maven/**]}, maven={updateSnapshots=false, downloadSources=false}, referencesCodeLens={enabled=false}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true, comments={enabled=true}, onType={enabled=true, fixComment={enabled=true}}}, saveActions={organizeImports=false}, project={referencedLibraries=[lib/**/*.jar], resourceFilters=[node_modules, .git]}, autobuild={enabled=true}, maxConcurrentBuilds=1.0, completion={maxResults=0.0, enabled=true, overwrite=true, guessMethodArguments=false, favoriteStaticMembers=[org.junit.Assert.*, org.junit.Assume.*, org.junit.jupiter.api.Assertions.*, org.junit.jupiter.api.Assumptions.*, org.junit.jupiter.api.DynamicContainer.*, org.junit.jupiter.api.DynamicTest.*, org.mockito.Mockito.*, org.mockito.ArgumentMatchers.*, org.mockito.Answers.*], filteredTypes=[java.awt.*, com.sun.*], importOrder=[java, javax, com, org]}, progressReports={enabled=true}, foldingRange={enabled=true}, codeGeneration={hashCodeEquals={useJava7Objects=false, useInstanceof=false}, useBlocks=false, generateComments=false, toString={template=${object.className} [${member.name()}=${member.value}, ${otherMembers}], codeStyle=STRING_CONCATENATION, skipNullValues=false, listArrayContents=true, limitElements=0.0}}, selectionRange={enabled=true}, sources={organizeImports={starThreshold=99.0, staticStarThreshold=99.0}}, templates={fileHeader=[], typeComment=[]}, references={includeAccessors=true}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:01.251
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:01.385
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:01.386
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:01.388
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:01.389
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:01.408
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:01.877
+!MESSAGE Reconciled 0. Took 8 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:02.696
+!MESSAGE begin problem for /Model.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:02.697
+!MESSAGE The method setChanged() from the type Observable is deprecated is of type UsingDeprecatedMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:02.698
+!MESSAGE The method setChanged() from the type Observable is deprecated is of type UsingDeprecatedMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:02.698
+!MESSAGE The method setChanged() from the type Observable is deprecated is of type UsingDeprecatedMethod
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:02.699
+!MESSAGE TODO: YOUR NAME HERE is of type Task
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:02.699
+!MESSAGE TODO: Modify this.board (and perhaps this.score) to account is of type Task
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:02.699
+!MESSAGE 6 problems reported for /Model.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:02.703
+!MESSAGE Validated 1. Took 376 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:15.586
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:16.066
+!MESSAGE Reconciled 0. Took 25 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:16.147
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:16.305
+!MESSAGE >> document/didChange
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:16.718
+!MESSAGE Reconciled 0. Took 9 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-05-09 16:09:17.227
+!MESSAGE >> document/didClose

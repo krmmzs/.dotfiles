@@ -1,0 +1,81 @@
+!SESSION 2022-07-16 01:39:11.566 -----------------------------------------------
+eclipse.buildId=unknown
+java.version=17.0.3
+java.vendor=Private Build
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/mouzaisi/.dotfiles/coc.nvim/.config/coc/extensions/coc-java-data/jdt_ws_218f8a80832f0aaabc73c8c6054734cc
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:12.568
+!MESSAGE class org.eclipse.jdt.ls.core.internal.JavaLanguageServerPlugin is started
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:12.646
+!MESSAGE Main thread is waiting
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:12.661
+!MESSAGE >> initialize
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:12.664
+!MESSAGE Initializing Java Language Server 0.57.0.202006172108
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:12.672
+!MESSAGE Static Commands: []
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:12.673
+!MESSAGE Non-Static Commands: [java.edit.organizeImports, java.project.refreshDiagnostics, java.project.import, java.project.removeFromSourcePath, java.project.listSourcePaths, java.project.provideSemanticTokens, java.project.getAll, java.project.isTestFile, java.project.getClasspaths, java.project.getSemanticTokensLegend, java.project.getSettings, java.project.updateSourceAttachment, java.project.resolveSourceAttachment, java.project.addToSourcePath]
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:12.682
+!MESSAGE >> initialized
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:12.697
+!MESSAGE Creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:12.741
+!MESSAGE Finished creating the Java project jdt.ls-java-project
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:13.067
+!MESSAGE Workspace initialized in 393ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:13.183
+!MESSAGE >> initialization job finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:13.188
+!MESSAGE >> workspace/didChangeConfiguration
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:13.197
+!MESSAGE >> New configuration: {java={enabled=true, jdt={ls={vmargs=-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication}}, errors={incompleteClasspath={severity=warning}}, configuration={checkProjectSettingsExclusions=true, updateBuildConfiguration=interactive, runtimes=[]}, trace={server=off}, import={gradle={enabled=true, wrapper={enabled=true}, offline={enabled=false}}, maven={enabled=true}, exclusions=[**/node_modules/**, **/.metadata/**, **/archetype-resources/**, **/META-INF/maven/**]}, maven={updateSnapshots=false, downloadSources=false}, referencesCodeLens={enabled=false}, signatureHelp={enabled=false}, implementationsCodeLens={enabled=false}, format={enabled=true, comments={enabled=true}, onType={enabled=true, fixComment={enabled=true}}}, saveActions={organizeImports=false}, project={referencedLibraries=[lib/**/*.jar], resourceFilters=[node_modules, .git]}, autobuild={enabled=true}, maxConcurrentBuilds=1.0, completion={maxResults=0.0, enabled=true, overwrite=true, guessMethodArguments=false, favoriteStaticMembers=[org.junit.Assert.*, org.junit.Assume.*, org.junit.jupiter.api.Assertions.*, org.junit.jupiter.api.Assumptions.*, org.junit.jupiter.api.DynamicContainer.*, org.junit.jupiter.api.DynamicTest.*, org.mockito.Mockito.*, org.mockito.ArgumentMatchers.*, org.mockito.Answers.*], filteredTypes=[java.awt.*, com.sun.*], importOrder=[java, javax, com, org]}, progressReports={enabled=true}, foldingRange={enabled=true}, codeGeneration={hashCodeEquals={useJava7Objects=false, useInstanceof=false}, useBlocks=false, generateComments=false, toString={template=${object.className} [${member.name()}=${member.value}, ${otherMembers}], codeStyle=STRING_CONCATENATION, skipNullValues=false, listArrayContents=true, limitElements=0.0}}, selectionRange={enabled=true}, sources={organizeImports={starThreshold=99.0, staticStarThreshold=99.0}}, templates={fileHeader=[], typeComment=[]}, references={includeAccessors=true}}}
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:13.197
+!MESSAGE >> document/didOpen
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:13.279
+!MESSAGE >> build jobs finished
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:13.280
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:13.281
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:13.282
+!MESSAGE >> watchers registered
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:13.674
+!MESSAGE Reconciled 0. Took 2 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:13.792
+!MESSAGE begin problem for /TimeAList.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:13.792
+!MESSAGE 1 problems reported for /TimeAList.java
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:13.794
+!MESSAGE Validated 1. Took 112 ms
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:13.855
+!MESSAGE >> registerFeature 'workspace/didChangeWatchedFiles'
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:14.008
+!MESSAGE >> document/didClose
+
+!ENTRY org.eclipse.jdt.ls.core 1 0 2022-07-16 01:39:14.011
+!MESSAGE Clearing problems for /TimeAList.java

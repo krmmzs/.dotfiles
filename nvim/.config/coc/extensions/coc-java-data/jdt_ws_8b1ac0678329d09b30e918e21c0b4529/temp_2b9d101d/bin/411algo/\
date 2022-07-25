@@ -1,0 +1,107 @@
+// 多次bfs即可， 先从人到钥匙， 然后从钥匙到出口，两次bfs
+//#include<bits/stdc++.h>
+#include <cstdio>
+#include <iostream>
+#include <cstring>
+#include <algorithm>
+//#include <vector>
+#include <queue>
+//#include <cmath>
+//#include <unordered_map>
+//#include <unordered_set>
+//#include <map>
+//#include <set>
+//#include <sstream>
+//#include <pair>
+//#include <stack>
+//#include <climits>
+
+using namespace std;
+
+#define x first
+#define y second
+
+typedef long long LL;
+typedef pair<int, int> PII;
+typedef pair<double, double> PDD;
+typedef unsigned long long ULL;
+
+const int INF = 0x3f3f3f3f;
+
+const int N = 510;
+
+char g[N][N];
+int n, m;
+int res = 0;
+bool st[N][N];
+int dist[N][N];
+
+PII bg, key, ed;
+
+int dx[4] = {-1, 0, 1, 0}, dy[4] = {0, 1, 0, -1};
+
+int bfs(int x, int y, int tt)
+{
+    memset(st, 0, sizeof st);
+    memset(dist, -1, sizeof dist);
+
+    queue<PII> q;
+    q.push({x, y});
+    dist[x][y] = 0;
+
+    while (q.size())
+    {
+        PII t = q.front();
+        q.pop();
+
+        for (int i = 0; i < 4; i ++)
+        {
+            int a = t.x + dx[i], b = t.y + dy[i];
+            if (a <= 0 || a > n || b <= 0 || b > m || g[a][b] == '#' || st[a][b]) continue;
+
+            dist[a][b] = dist[t.x][t.y] + 1;
+            q.push({a, b});
+            st[a][b] = true;
+            if (g[a][b] == 'K' && tt == 1)
+            {
+                key.x = a, key.y = b;
+                return dist[a][b];
+            }
+
+            if (g[a][b] == 'E' && tt == 2)
+            {
+                return dist[a][b];
+            }
+        }
+    }
+
+    return -1;
+}
+
+int main(void)
+{
+    int T;
+    cin >> T;
+    while (T --)
+    {
+        cin >> n >> m;
+        for (int i = 1; i <= n; i ++)
+            for (int j = 1; j <= m; j ++)
+            {
+                cin >> g[i][j];
+                if (g[i][j] == 'P')
+                    bg = {i, j};
+                if (g[i][j] == 'E')
+                    ed = {i, j};
+            }
+
+        int t = bfs(bg.x, bg.y, 1);
+        res += t;
+
+        t = bfs(key.x, key.y, 2);
+        res += t;
+        cout << res << endl;
+    }
+
+    return 0;
+}
