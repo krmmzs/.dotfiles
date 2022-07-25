@@ -74,6 +74,11 @@ _G.packer_plugins = {
     path = "/home/mouzaisi/.local/share/nvim/site/pack/packer/start/packer.nvim",
     url = "https://github.com/wbthomason/packer.nvim"
   },
+  ["space-vim-theme"] = {
+    loaded = true,
+    path = "/home/mouzaisi/.local/share/nvim/site/pack/packer/start/space-vim-theme",
+    url = "https://github.com/liuchengxu/space-vim-theme"
+  },
   ["tokyonight.nvim"] = {
     loaded = true,
     path = "/home/mouzaisi/.local/share/nvim/site/pack/packer/start/tokyonight.nvim",
