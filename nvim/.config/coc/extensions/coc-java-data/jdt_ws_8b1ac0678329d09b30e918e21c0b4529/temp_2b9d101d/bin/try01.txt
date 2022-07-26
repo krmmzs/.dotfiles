@@ -1,4 +1,0 @@
-.rw-rw-r--  585 mouzaisi 14 Feb 21:37 gmon.out
-.rw-rw-r--  871 mouzaisi  8 Mar 20:22 luogu.cpp
-.rw-rw-r-- 1.3k mouzaisi  8 Mar 19:17 luogu.md
-.rw-rw-r--    0 mouzaisi 22 Mar 14:23 try01.txt

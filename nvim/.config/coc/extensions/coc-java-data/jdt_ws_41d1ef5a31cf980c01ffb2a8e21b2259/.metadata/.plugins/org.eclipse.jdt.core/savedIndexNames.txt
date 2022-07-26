@@ -1,3 +1,0 @@
-INDEX VERSION 1.131+/home/mouzaisi/.dotfiles/coc.nvim/.config/coc/extensions/coc-java-data/jdt_ws_41d1ef5a31cf980c01ffb2a8e21b2259/.metadata/.plugins/org.eclipse.jdt.core
-3842426239.index
-2949097923.index

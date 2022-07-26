@@ -69,7 +69,7 @@ keymap("n", "<leader><Space>", ":FixWhitespace<CR>", opts)
 -- coc Listextend --
 
 -- Use <C-l> for trigger snippet expand.
-keymap("i", "<C-l>", "<Plug>(coc-snippets-expand)", opts)
+-- keymap("i", "<C-l>", "<Plug>(coc-snippets-expand)", opts)
 
 -- Use <C-j> for select text for visual placeholder of snippet.
-keymap("i", "<C-j>", "<Plug>(coc-snippets-select)", opts)
+-- keymap("i", "<C-j>", "<Plug>(coc-snippets-select)", opts)
