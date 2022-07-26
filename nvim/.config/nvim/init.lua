@@ -1,5 +1,7 @@
 require("theprimeagen")
 
 vim.o.termguicolors = true
-vim.cmd'colorscheme tokyonight'
--- vim.cmd'colorscheme space-vim-theme'
+-- vim.opt.background = "dark"
+-- vim.cmd'colorscheme tokyonight'
+vim.opt.background = "light"
+vim.cmd'colorscheme space_vim_theme'
