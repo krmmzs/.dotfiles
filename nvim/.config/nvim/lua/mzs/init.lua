@@ -1,0 +1,5 @@
+require("mzs.set")
+require("mzs.keymaps")
+require("mzs.remap")
+require("mzs.plugins")
+require('mzs.plugin-config/nvim-treesitter')
