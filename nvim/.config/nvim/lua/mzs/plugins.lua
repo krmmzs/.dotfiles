@@ -58,7 +58,7 @@ return packer.startup(function(use)
     use 'bronson/vim-trailing-whitespace'
     use {
         'nvim-treesitter/nvim-treesitter',
-        run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
+        run = ":TSUpdate"
     }
     use { 'nvim-treesitter/playground' }
     use { 'nvim-treesitter/nvim-treesitter-textobjects' }
@@ -78,7 +78,7 @@ return packer.startup(function(use)
     use {'easymotion/vim-easymotion'}
     use {'psf/black'}
     use { 'Yggdroot/indentLine' }
-    use { 'ap/vim-css-color' } -- show css color
+    --use { 'ap/vim-css-color' } -- show css color
     use { 'mattn/emmet-vim' }
     use { 'othree/xml.vim' }
     use {

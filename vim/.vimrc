@@ -228,7 +228,6 @@ nnoremap <Leader>il :IndentLinesToggle<CR>
 "Plug 'scrooloose/syntastic'
 
 "write web better
-Plug 'ap/vim-css-color' "show color
 Plug 'mattn/emmet-vim'
 let g:user_emmet_leader_key = '<C-l>'
 Plug 'othree/xml.vim'
