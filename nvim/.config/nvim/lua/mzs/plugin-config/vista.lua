@@ -14,6 +14,10 @@ function! NearestMethodOrFunction() abort
 endfunction
 ]]
 
+vim.cmd[[
+set statusline+=%{NearestMethodOrFunction()}
+]]
+
 
 -- By default vista.vim never run if you don't call it explicitly.
 

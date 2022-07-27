@@ -74,8 +74,8 @@ keymap("v", "p", '"_dP', opts)
 -- Plugins --
 
 -- neoclide/coc.nvim
-keymap("n", "<leader>cd", ":CocDisable<CR>", opts)
-keymap("n", "<leader>ce", ":CocEnable<CR>", opts)
+--keymap("n", "<leader>cd", ":CocDisable<CR>", opts)
+--keymap("n", "<leader>ce", ":CocEnable<CR>", opts)
 
 -- honza/vim-snippets
 
