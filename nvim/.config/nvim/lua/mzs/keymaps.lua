@@ -6,8 +6,22 @@ local term_opts = { silent = true }
 local keymap = vim.api.nvim_set_keymap
 
 -- Others
-keymap("n", "qq", "<Nop>", opts)
 keymap("n", "Q", "<Nop>", opts)
+
+keymap("n", "<leader>1", ":set relativenumber!<CR>", opts)
+
+-- nmap <Leader>m <Plug>(easymotion-s)
+keymap("n", "<leader>m", "<Plug>(easymotion-s)", opts)
+-- "nmap <Leader>m <Plug>(easymotion-s2) " 2 characters
+keymap("n", "<leader><leader>l", "<Plug>(easymotion-lineforward)", opts)
+keymap("n", "<leader><leader>j", "<Plug>(easymotion-j)", opts)
+keymap("n", "<leader><leader>k", "<Plug>(easymotion-k)", opts)
+keymap("n", "<leader><leader>h", "<Plug>(easymotion-linebackward)", opts)
+
+-- Plug Yggdroot/indentLine
+-- :IndentLinesToggle toggles lines on and off.
+keymap("n", "<leader>il", ":IndentLinesToggle<CR>", opts)
+
 
 -- Modes
 --   normal_mode = "n",
@@ -63,8 +77,28 @@ keymap("v", "p", '"_dP', opts)
 keymap("n", "<leader>cd", ":CocDisable<CR>", opts)
 keymap("n", "<leader>ce", ":CocEnable<CR>", opts)
 
+-- honza/vim-snippets
+
 -- bronson/vim-trailing-whitespace
 keymap("n", "<leader><Space>", ":FixWhitespace<CR>", opts)
+
+-- undotree
+keymap("n", "<leader>u", ":UndotreeToggle<CR>", opts)
+
+-- Git
+keymap("n", "<Leader>gh", ":diffget //3<CR>", opts)
+keymap("n", "<Leader>gu", ":diffget //2<CR>", opts)
+keymap("n", "<Leader>gs", ":G<CR>", opts)
+keymap("n", "<Leader>gd", "Gvdiff<CR>", opts)
+keymap("n", "<Leader>gb", "Git blame<CR>", opts)
+keymap("n", "<Leader>gl", "Git log --all --graph --decorate<CR>", opts)
+
+-- Plug preservim/nerdtree
+keymap("n", "<Leader>no", ":NERDTreeFocus<CR>", opts)
+-- nnoremap <Leader>nt :NERDTreeToggle<CR>
+keymap("n", "<Leader>nt", ":NERDTreeTabsToggle<CR>", opts)
+-- nnoremap <Leader>nf :NERDTreeFind<CR>
+keymap("n", "<Leader>nf", ":NERDTreeTabsFind<CR>", opts)
 
 -- coc Listextend --
 
@@ -73,3 +107,7 @@ keymap("n", "<leader><Space>", ":FixWhitespace<CR>", opts)
 
 -- Use <C-j> for select text for visual placeholder of snippet.
 -- keymap("i", "<C-j>", "<Plug>(coc-snippets-select)", opts)
+
+
+
+

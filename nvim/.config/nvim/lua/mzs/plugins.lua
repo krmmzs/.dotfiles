@@ -42,21 +42,17 @@ packer.init {
 
 
 
-
-
-
-
-
-
-
 -- Install your plugins here
 return packer.startup(function(use)
     -- My plugins here
     use "wbthomason/packer.nvim" -- Have packer manage itself
     use 'wakatime/vim-wakatime'
     use 'folke/tokyonight.nvim'
+    use 'morhetz/gruvbox'
+    use 'luisiacc/gruvbox-baby'
     use 'liuchengxu/space-vim-theme'
     use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
+    use 'honza/vim-snippets'
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
     use 'bronson/vim-trailing-whitespace'
@@ -64,7 +60,35 @@ return packer.startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     }
-
+    use {'vim-airline/vim-airline'}
+    use {'vim-airline/vim-airline-themes'}
+    use {'neomake/neomake'}
+    use {'mbbill/undotree'}
+    -- Git
+    use {'tpope/vim-fugitive'}
+    use {'airblade/vim-gitgutter'}
+    use {'junegunn/gv.vim'}
+    use {'preservim/nerdtree'}
+    use {'jistr/vim-nerdtree-tabs'}
+    use {'Xuyuanp/nerdtree-git-plugin'} -- A plugin of NERDTree showing git status flags.
+    use {'preservim/nerdcommenter'}
+    use {'tiagofumo/vim-nerdtree-syntax-highlight'} --add highlight
+    use {'easymotion/vim-easymotion'}
+    use {'psf/black'}
+    use { 'Yggdroot/indentLine' }
+    use { 'ap/vim-css-color' } -- show css color
+    use { 'mattn/emmet-vim' }
+    use { 'othree/xml.vim' }
+    use {
+        'prettier/vim-prettier',
+        run = 'yarn install --frozen-lockfile --production',
+        ft = {'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'}
+    }
+    use { 'ludovicchabant/vim-gutentags' } -- build ctags auto and silent
+    use { 'liuchengxu/vista.vim' } -- replace tagbar which could support LSP
+    use { 'Yggdroot/LeaderF', run = ':LeaderfInstallCExtension' }
+    use { 'tamago324/LeaderF-filer' }
+    use { 'Yggdroot/LeaderF-marks' }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

@@ -44,3 +44,11 @@ vim.opt.softtabstop = 4
 vim.opt.guifont = "monospace:h17"               -- the font used in graphical neovim applications
 
 vim.opt.shortmess:append "c"
+
+-- tags
+-- find ctags, functions and files in vim
+vim.opt.tags = "./.tags;,.tags"
+
+vim.cmd[[
+set statusline+=%{NearestMethodOrFunction()}
+]]
