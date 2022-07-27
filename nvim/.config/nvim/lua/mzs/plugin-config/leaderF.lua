@@ -5,12 +5,12 @@ local keymap = vim.api.nvim_set_keymap
 
 keymap("n", "<C-h>", ":LeaderfSelf<CR>", opts)
 keymap("n", "<C-f>", ":LeaderfFile<CR>", opts)
-keymap("n", "<leaderf>ft", ":LeaderfBufTag<CR>", opts)
-keymap("n", "<leaderf>ff", ":LeaderfFunction<CR>", opts)
-keymap("n", "<leaderf>fm", ":LeaderfMarks<CR>", opts)
-keymap("n", "<leaderf>fr", ":LeaderfRgInteractive<CR>", opts)
-keymap("n", "<leaderf>fe", ":LeaderfRgRecall<CR>", opts)
-keymap("n", "<leaderf>fb", ":LeaderfBuffer<CR>", opts)
+keymap("n", "<leader>ft", ":LeaderfBufTag<CR>", opts)
+keymap("n", "<leader>ff", ":LeaderfFunction<CR>", opts)
+keymap("n", "<leader>fm", ":LeaderfMarks<CR>", opts)
+keymap("n", "<leader>fr", ":LeaderfRgInteractive<CR>", opts)
+keymap("n", "<leader>fe", ":LeaderfRgRecall<CR>", opts)
+keymap("n", "<leader>fb", ":LeaderfBuffer<CR>", opts)
 
 -- nnoremap <Leader>fd :Leaderf filer<CR> "using <C-f> to call filer
 -- and type "!" to fuzzy serach, and type "Tab" to return back
