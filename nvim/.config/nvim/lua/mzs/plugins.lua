@@ -60,6 +60,8 @@ return packer.startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     }
+    use { 'nvim-treesitter/playground' }
+    use { 'nvim-treesitter/nvim-treesitter-textobjects' }
     use {'vim-airline/vim-airline'}
     use {'vim-airline/vim-airline-themes'}
     use {'neomake/neomake'}
@@ -89,6 +91,10 @@ return packer.startup(function(use)
     use { 'Yggdroot/LeaderF', run = ':LeaderfInstallCExtension' }
     use { 'tamago324/LeaderF-filer' }
     use { 'Yggdroot/LeaderF-marks' }
+    use { 'kshenoy/vim-signature' } -- vim marks
+    use { 'mhinz/vim-startify' } -- vim look
+    use { 'ryanoasis/vim-devicons' } -- icons for them
+    use { 'jiangmiao/auto-pairs' } -- better than cocexention
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

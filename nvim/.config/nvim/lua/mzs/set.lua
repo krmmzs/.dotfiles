@@ -20,7 +20,10 @@ vim.opt.splitright = true                       -- force all vertical splits to 
 -- vim.opt.termguicolors = true                    -- set term gui colors (most terminals support this)
 vim.opt.timeoutlen = 1000                       -- time to wait for a mapped sequence to complete (in milliseconds)
 vim.opt.undofile = true                         -- enable persistent undo
-vim.opt.undodir = os.getenv("HOME") .. "/.vim/undodir"
+vim.opt.undodir = os.getenv("HOME") .. "/.vimundofile"
+vim.cmd[[
+    set viminfo='100,n$HOME/.vim/files/info/viminfo
+]]
 vim.opt.updatetime = 300                        -- faster completion (4000ms default)
 vim.opt.writebackup = false                     -- if a file is being edited by another program (or was written to file while editing with another program), it is not allowed to be edited
 
@@ -51,4 +54,13 @@ vim.opt.tags = "./.tags;,.tags"
 
 vim.cmd[[
 set statusline+=%{NearestMethodOrFunction()}
+]]
+
+
+vim.cmd[[
+"打开文件时恢复光标位置
+autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
 ]]
