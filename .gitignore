@@ -3,3 +3,6 @@ nvim/.config/coc/extensions/coc-browser-data/
 tmux/.tmux/resurrect/
 nvim/.config/coc/extensions/coc-java-data/
 nvim/.config/coc/extensions/node_modules/
+tags/*
+tags.lock
+tags.temp
