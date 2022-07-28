@@ -3,6 +3,7 @@ require("mzs.keymaps")
 require("mzs.remap")
 require("mzs.colorscheme")
 require("mzs.lsp")
+
 require("mzs.plugins")
 require("mzs.plugin-config/cmp")
 require("mzs.plugin-config/easy-motion")

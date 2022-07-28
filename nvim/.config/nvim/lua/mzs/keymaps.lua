@@ -5,22 +5,34 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
--- Others
-keymap("n", "Q", "<Nop>", opts)
+local function nkeymap(key, map)
+    keymap('n', key, map, opts)
+end
 
-keymap("n", "<leader>1", ":set relativenumber!<CR>", opts)
+local function vkeymap(key, map)
+    keymap('v', key, map, opts)
+end
+
+local function ikeymap(key, map)
+    keymap('i', key, map, opts)
+end
+
+-- Others
+nkeymap("Q", "<Nop>")
+
+nkeymap("<leader>1", ":set relativenumber!<CR>")
 
 -- nmap <Leader>m <Plug>(easymotion-s)
-keymap("n", "<leader>m", "<Plug>(easymotion-s)", opts)
+nkeymap("<leader>m", "<Plug>(easymotion-s)")
 -- "nmap <Leader>m <Plug>(easymotion-s2) " 2 characters
-keymap("n", "<leader><leader>l", "<Plug>(easymotion-lineforward)", opts)
-keymap("n", "<leader><leader>j", "<Plug>(easymotion-j)", opts)
-keymap("n", "<leader><leader>k", "<Plug>(easymotion-k)", opts)
-keymap("n", "<leader><leader>h", "<Plug>(easymotion-linebackward)", opts)
+nkeymap("<leader><leader>l", "<Plug>(easymotion-lineforward)")
+nkeymap("<leader><leader>j", "<Plug>(easymotion-j)")
+nkeymap("<leader><leader>k", "<Plug>(easymotion-k)")
+nkeymap("<leader><leader>h", "<Plug>(easymotion-linebackward)")
 
 -- Plug Yggdroot/indentLine
 -- :IndentLinesToggle toggles lines on and off.
-keymap("n", "<leader>il", ":IndentLinesToggle<CR>", opts)
+nkeymap("<leader>il", ":IndentLinesToggle<CR>")
 
 
 -- Modes
@@ -38,29 +50,29 @@ keymap("n", "<leader>il", ":IndentLinesToggle<CR>", opts)
 -- keymap("n", "<C-k>", "<C-w>k", opts)
 -- keymap("n", "<C-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":Lex 35<cr>", opts)
+nkeymap("<leader>e", ":Lex 35<cr>")
 
 -- Resize with arrows
-keymap("n", "<C-Up>", ":resize +2<CR>", opts)
-keymap("n", "<C-Down>", ":resize -2<CR>", opts)
-keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
-keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
+nkeymap("<C-Up>", ":resize +2<CR>")
+nkeymap("<C-Down>", ":resize -2<CR>")
+nkeymap("<C-Left>", ":vertical resize -2<CR>")
+nkeymap("<C-Right>", ":vertical resize +2<CR>")
 
 -- Navigate buffers
-keymap("n", "<S-l>", ":bnext<CR>", opts)
-keymap("n", "<S-h>", ":bprevious<CR>", opts)
+nkeymap("<S-l>", ":bnext<CR>")
+nkeymap("<S-h>", ":bprevious<CR>")
 
 -- Insert --
 
 -- Visual --
-    -- Stay in indent mode
-    keymap("v", "<", "<gv", opts)
-    keymap("v", ">", ">gv", opts)
+-- Stay in indent mode
+vkeymap("<", "<gv")
+vkeymap(">", ">gv")
 
 -- Move text up and down
-keymap("v", "J", ":m .+1<CR>==gv", opts)
-keymap("v", "K", ":m .-2<CR>==gv", opts)
-keymap("v", "p", '"_dP', opts)
+vkeymap("J", ":m .+1<CR>==gv")
+vkeymap("K", ":m .-2<CR>==gv")
+vkeymap("p", '"_dP')
 
 -- Terminal --
 -- Better terminal navigation
@@ -80,34 +92,30 @@ keymap("v", "p", '"_dP', opts)
 -- honza/vim-snippets
 
 -- bronson/vim-trailing-whitespace
-keymap("n", "<leader><Space>", ":FixWhitespace<CR>", opts)
+nkeymap("<leader><Space>", ":FixWhitespace<CR>")
 
 -- undotree
-keymap("n", "<leader>u", ":UndotreeToggle<CR>", opts)
+nkeymap("<leader>u", ":UndotreeToggle<CR>")
 
 -- Git
-keymap("n", "<Leader>gh", ":diffget //3<CR>", opts)
-keymap("n", "<Leader>gu", ":diffget //2<CR>", opts)
-keymap("n", "<Leader>gs", ":G<CR>", opts)
-keymap("n", "<Leader>gd", "Gvdiff<CR>", opts)
-keymap("n", "<Leader>gb", "Git blame<CR>", opts)
-keymap("n", "<Leader>gl", "Git log --all --graph --decorate<CR>", opts)
+nkeymap("<Leader>gh", ":diffget //3<CR>")
+nkeymap("<Leader>gu", ":diffget //2<CR>")
+nkeymap("<Leader>gs", ":G<CR>")
+nkeymap("<Leader>gd", "Gvdiff<CR>")
+nkeymap("<Leader>gb", "Git blame<CR>")
+nkeymap("<Leader>gl", "Git log --all --graph --decorate<CR>")
 
 -- Plug preservim/nerdtree
-keymap("n", "<Leader>no", ":NERDTreeFocus<CR>", opts)
+nkeymap("<Leader>no", ":NERDTreeFocus<CR>")
 -- nnoremap <Leader>nt :NERDTreeToggle<CR>
-keymap("n", "<Leader>nt", ":NERDTreeTabsToggle<CR>", opts)
+nkeymap("<Leader>nt", ":NERDTreeTabsToggle<CR>")
 -- nnoremap <Leader>nf :NERDTreeFind<CR>
-keymap("n", "<Leader>nf", ":NERDTreeTabsFind<CR>", opts)
+nkeymap("<Leader>nf", ":NERDTreeTabsFind<CR>")
 
 -- coc Listextend --
 
 -- Use <C-l> for trigger snippet expand.
--- keymap("i", "<C-l>", "<Plug>(coc-snippets-expand)", opts)
+-- ikeymap("<C-l>", "<Plug>(coc-snippets-expand)")
 
 -- Use <C-j> for select text for visual placeholder of snippet.
--- keymap("i", "<C-j>", "<Plug>(coc-snippets-select)", opts)
-
-
-
-
+-- ikeymap("<C-j>", "<Plug>(coc-snippets-select)")
