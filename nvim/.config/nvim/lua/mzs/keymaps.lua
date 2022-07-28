@@ -66,8 +66,8 @@ nkeymap("<S-h>", ":bprevious<CR>")
 
 -- Visual --
 -- Stay in indent mode
-vkeymap("<", "<gv")
-vkeymap(">", ">gv")
+--vkeymap("<", "<gv")
+--vkeymap(">", ">gv")
 
 -- Move text up and down
 vkeymap("J", ":m .+1<CR>==gv")

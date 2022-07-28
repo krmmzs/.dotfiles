@@ -8,8 +8,25 @@ end
 lsp_installer.on_server_ready(function(server)
     local opts = {}
     if server.name == "sumneko_lua" then
-        local sumneko_opts = require("mzs.lsp.settings.sumneko_lua")
-        opts = vim.tbl_deep_extend("force", sumneko_opts, opts)
+        opts = {
+            settings = {
+                Lua = {
+                    diagnostics = {
+                        globals = { 'vim', 'use' }
+                    },
+                    workspace = {
+                    -- Make the server aware of Neovim runtime files
+                    library = {[vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true}
+                    }
+                }
+            }
+        }
+    end
+
+    if server.name == "jsonls" then
+    end
+
+    if server.name == "pyright" then
     end
 
 

@@ -11,7 +11,7 @@ nnoremap("<leader>pv", "<cmd>Ex<CR>")
 
 -- Y as same meran like D and C
 -- nnoremap("Y", "y$")
- 
+
 -- moving text
 -- vnoremap("J" ":m '>+1<CR>gv=gv")
 -- vnoremap("K" ":m '<-2<CR>gv=gv")
