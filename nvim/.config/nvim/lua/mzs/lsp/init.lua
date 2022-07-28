@@ -4,4 +4,5 @@ if not status_ok then
 end
 
 require("mzs.lsp.lsp-installer")
-require("mzs.lsp.keymaps")
+require("mzs.lsp.handlers").setup()
+--require("mzs.lsp.keymaps") -- move to handlers
