@@ -63,6 +63,7 @@ local function lsp_highlight_document(client)
             desc = "Clear All the References",
         })
 
+        -- old vertion
         --vim.api.nvim_exec([[
             --augroup lsp_document_highlight
             --autocmd! * <buffer>
