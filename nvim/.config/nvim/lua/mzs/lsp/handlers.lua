@@ -15,7 +15,7 @@ M.setup = function()
 
     local config = {
         -- disable virtual text
-        virtual_text = false -- Disable virtual_text since it's redundant due to lsp_lines.
+        virtual_text = true -- Disable virtual_text since it's redundant due to lsp_lines.
         ,
         -- show signs
         signs = {

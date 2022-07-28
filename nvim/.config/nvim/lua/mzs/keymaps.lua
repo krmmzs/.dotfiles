@@ -101,9 +101,9 @@ nkeymap("<leader>u", ":UndotreeToggle<CR>")
 nkeymap("<Leader>gh", ":diffget //3<CR>")
 nkeymap("<Leader>gu", ":diffget //2<CR>")
 nkeymap("<Leader>gs", ":G<CR>")
-nkeymap("<Leader>gd", "Gvdiff<CR>")
-nkeymap("<Leader>gb", "Git blame<CR>")
-nkeymap("<Leader>gl", "Git log --all --graph --decorate<CR>")
+nkeymap("<Leader>gd", ":Gvdiff<CR>")
+nkeymap("<Leader>gb", ":Git blame<CR>")
+nkeymap("<Leader>gl", ":Git log --all --graph --decorate<CR>")
 
 -- Plug preservim/nerdtree
 nkeymap("<Leader>no", ":NERDTreeFocus<CR>")
