@@ -122,7 +122,6 @@ return packer.startup(function(use)
     use {"williamboman/nvim-lsp-installer"} -- simple to use language server installer
 
     -- Virtual Text
-    use {"lukas-reineke/indent-blankline.nvim"} -- for Indent Blankline
     use {'kevinhwang91/nvim-hlslens'} -- helps you better glance at matched information
     use {"APZelos/blamer.nvim"} -- show git blame
 
