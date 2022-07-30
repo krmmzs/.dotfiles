@@ -6,3 +6,4 @@ nvim/.config/coc/extensions/node_modules/
 tags/
 tags.lock
 tags.temp
+tags
