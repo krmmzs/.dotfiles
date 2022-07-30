@@ -101,7 +101,6 @@ let g:airline#extensions#tabline#enabled = 1 "Automatically displays all buffers
 set statusline=\ %<%F[%1*%M%*%n%R%H]%=\ %y\ %0(%{&fileformat}\ [%{(&fenc==\"\"?&enc:&fenc).(&bomb?\",BOM\":\"\")}]\ %c:%l/%L%)
 
 "Smarter tab line
-"let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 
 " vim Floaterm
