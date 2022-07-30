@@ -20,8 +20,10 @@ local function ikeymap(key, map)
     keymap('i', key, map, opts)
 end
 
+-- mapping see https://github.com/kyazdani42/nvim-tree.lua/blob/master/doc/nvim-tree-lua.txt#L1077
+
 nkeymap("<Leader>nt", ":NvimTreeToggle<CR>")
-nkeymap("<Leader>nf", ":NvimTreeFindFile")
+nkeymap("<Leader>nf", ":NvimTreeFindFile<CR>")
 
 -- see https://github.com/numToStr/Comment.nvim#configuration-optional
 require('Comment').setup()

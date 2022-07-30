@@ -22,4 +22,4 @@ require("mzs.plugin-config.airline")
 require("mzs.plugin-config.goto-preview")
 require("mzs.plugin-config.Comment")
 require("mzs.plugin-config.nvim-tree")
-
+require("mzs.plugin-config.lualine")

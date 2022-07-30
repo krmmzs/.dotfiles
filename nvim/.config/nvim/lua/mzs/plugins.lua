@@ -1,6 +1,5 @@
 local fn = vim.fn
 
-
 -- Automatically install packer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
@@ -42,6 +41,14 @@ packer.init {
 
 
 
+
+
+
+
+
+
+
+
 -- Install your plugins here
 return packer.startup(function(use)
     use "wbthomason/packer.nvim" -- Have packer manage itself
@@ -66,10 +73,14 @@ return packer.startup(function(use)
     }
     use { 'nvim-treesitter/playground' }
     use { 'nvim-treesitter/nvim-treesitter-textobjects' }
-    use {'vim-airline/vim-airline'}
-    use {'vim-airline/vim-airline-themes'}
+    -- use {'vim-airline/vim-airline'}
+    -- use {'vim-airline/vim-airline-themes'}
     use {'neomake/neomake'}
     use {'mbbill/undotree'}
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 
     -- Git
     use {'tpope/vim-fugitive'}
@@ -176,6 +187,29 @@ return packer.startup(function(use)
     -- startup time
     use {'dstein64/vim-startuptime'} -- A Vim plugin for profiling Vim's startup
     use {'lewis6991/impatient.nvim'} -- Speed up loading Lua modules in Neovim to improve startup time.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins

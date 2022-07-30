@@ -19,6 +19,11 @@ local function ikeymap(key, map)
     keymap('i', key, map, opts)
 end
 
+local status_ok, goto_preview = pcall(require, "goto-preview")
+if not status_ok then
+	return
+end
+
 nkeymap("gpd", "<cmd>lua require('goto-preview').goto_preview_definition()<CR>")
 nkeymap("gpt", "<cmd>lua require('goto-preview').goto_preview_type_definition()<CR>")
 nkeymap("gpi", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>")
@@ -26,7 +31,8 @@ nkeymap("gP", "<cmd>lua require('goto-preview').close_all_win()<CR>")
 -- Only set if you have telescope installed
 -- nkeymap("gpr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>")
 
-require('goto-preview').setup {
+
+goto_preview.setup {
   width = 120; -- Width of the floating window
   height = 15; -- Height of the floating window
   border = {"↖", "─" ,"┐", "│", "┘", "─", "└", "│"}; -- Border characters of the floating window

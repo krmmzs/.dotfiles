@@ -11,7 +11,7 @@ keymap("n", "<leader>fm", ":LeaderfMarks<CR>", opts)
 keymap("n", "<leader>fr", ":LeaderfRgInteractive<CR>", opts)
 keymap("n", "<leader>fe", ":LeaderfRgRecall<CR>", opts)
 keymap("n", "<leader>fb", ":LeaderfBuffer<CR>", opts)
-keymap("n", "<leader>fj", ":LeaderfMru<CR>", opts)
+keymap("n", "<C-p>", ":LeaderfMru<CR>", opts)
 
 -- nnoremap <Leader>fd :Leaderf filer<CR> "using <C-f> to call filer
 -- and type "!" to fuzzy serach, and type "Tab" to return back

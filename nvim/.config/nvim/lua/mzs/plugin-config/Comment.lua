@@ -1,5 +1,3 @@
--- using config https://github.com/rmagatti/goto-preview
-
 local opts = { noremap = true, silent = true }
 
 local term_opts = { silent = true }
