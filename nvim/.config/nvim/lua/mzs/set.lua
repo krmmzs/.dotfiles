@@ -4,8 +4,8 @@ local options = {
     backup = false,                          -- creates a backup file
     swapfile = false,                        -- creates a swapfile
 
-    --clipboard = "unnamedplus",               -- allows neovim to access the system clipboard
-    clipboard = "unnamed",               -- allows neovim to access the system clipboard
+    --clipboard = "unnamedplus",             -- allows neovim to access the system clipboard but no terminal
+    clipboard = "unnamed",                   -- allows neovim to paste things to termianl(use "+y to paste to others)
     cmdheight = 2,                           -- more space in the neovim command line for displaying messages
     conceallevel = 0,                        -- so that `` is visible in markdown files
     fileencoding = "utf-8",                  -- the encoding written to a file

@@ -97,7 +97,7 @@ return packer.startup(function(use)
     use { 'tamago324/LeaderF-filer' }
     use { 'Yggdroot/LeaderF-marks' }
     use { 'kshenoy/vim-signature' } -- vim marks
-    use { 'mhinz/vim-startify' } -- vim look
+    --use { 'mhinz/vim-startify' } -- vim look
     use { 'ryanoasis/vim-devicons' } -- icons for them
     use { 'jiangmiao/auto-pairs' } -- better than cocexention
     use({

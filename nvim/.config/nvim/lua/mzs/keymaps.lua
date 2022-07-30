@@ -30,10 +30,19 @@ nkeymap("<leader><leader>j", "<Plug>(easymotion-j)")
 nkeymap("<leader><leader>k", "<Plug>(easymotion-k)")
 nkeymap("<leader><leader>h", "<Plug>(easymotion-linebackward)")
 
--- Plug Yggdroot/indentLine
--- :IndentLinesToggle toggles lines on and off.
-nkeymap("<leader>il", ":IndentLinesToggle<CR>")
+-- copy and paste
+vkeymap('<leader>y', '"+y')
 
+-- Keeping it contered
+nkeymap("n", "nzz")
+nkeymap("N", "Nzz")
+nkeymap("J", "mzsJ'z")
+
+-- Jumplist mutations, solve jump list could save <number>j or <number>k
+vim.cmd[[
+noremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
+noremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+]]
 
 -- Modes
 --   normal_mode = "n",
@@ -119,3 +128,8 @@ nkeymap("<Leader>nf", ":NERDTreeTabsFind<CR>")
 
 -- Use <C-j> for select text for visual placeholder of snippet.
 -- ikeymap("<C-j>", "<Plug>(coc-snippets-select)")
+
+
+-- Plug Yggdroot/indentLine
+-- :IndentLinesToggle toggles lines on and off.
+nkeymap("<leader>il", ":IndentLinesToggle<CR>")
