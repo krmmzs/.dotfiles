@@ -19,3 +19,7 @@ require("mzs.plugin-config.nvim-hlslens")
 require("mzs.plugin-config.blamer")
 require("mzs.plugin-config.lsp_lines")
 require("mzs.plugin-config.airline")
+require("mzs.plugin-config.goto-preview")
+require("mzs.plugin-config.Comment")
+require("mzs.plugin-config.nvim-tree")
+

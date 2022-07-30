@@ -44,6 +44,14 @@ noremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
 noremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
 ]]
 
+-- source: https://vim.fandom.com/wiki/Set_working_directory_to_the_current_file
+-- change the directory only for the current window
+-- (each window has a local current directory that can be
+-- different from Vim's global current directory):
+--nkeymap("\\\\", ":lcd %:p:h<CR>")
+-- global
+nkeymap("\\\\", ":cd %:p:h<CR>")
+
 -- Modes
 --   normal_mode = "n",
 --   insert_mode = "i",
@@ -114,21 +122,8 @@ nkeymap("<Leader>gd", ":Gvdiff<CR>")
 nkeymap("<Leader>gb", ":Git blame<CR>")
 nkeymap("<Leader>gl", ":Git log --all --graph --decorate<CR>")
 
--- Plug preservim/nerdtree
-nkeymap("<Leader>no", ":NERDTreeFocus<CR>")
--- nnoremap <Leader>nt :NERDTreeToggle<CR>
-nkeymap("<Leader>nt", ":NERDTreeTabsToggle<CR>")
--- nnoremap <Leader>nf :NERDTreeFind<CR>
-nkeymap("<Leader>nf", ":NERDTreeTabsFind<CR>")
 
 -- coc Listextend --
-
--- Use <C-l> for trigger snippet expand.
--- ikeymap("<C-l>", "<Plug>(coc-snippets-expand)")
-
--- Use <C-j> for select text for visual placeholder of snippet.
--- ikeymap("<C-j>", "<Plug>(coc-snippets-select)")
-
 
 -- Plug Yggdroot/indentLine
 -- :IndentLinesToggle toggles lines on and off.
