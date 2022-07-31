@@ -3,8 +3,6 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
-local configs = require("nvim-treesitter.configs")
-
 local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
     return

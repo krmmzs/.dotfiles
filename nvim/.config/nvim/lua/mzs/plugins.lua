@@ -131,10 +131,11 @@ return packer.startup(function(use)
     use { 'tamago324/LeaderF-filer' }
     use { 'Yggdroot/LeaderF-marks' }
 
-    -- looks
+    -- UI
     use { 'kshenoy/vim-signature' } -- vim marks
     --use { 'mhinz/vim-startify' } -- vim look
     use { 'ryanoasis/vim-devicons' } -- icons for them
+    use { 'glepnir/dashboard-nvim' } -- dashboard
 
     -- code
     use {
