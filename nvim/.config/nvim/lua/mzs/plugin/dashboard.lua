@@ -15,13 +15,50 @@ local function ikeymap(key, map)
     keymap('i', key, map, opts)
 end
 
--- local status_ok, configs = pcall(require, "dashboard")
--- if not status_ok then
---      return
--- end
+local home = os.getenv('HOME')
+local status_ok, db = pcall(require, "dashboard")
+if not status_ok then
+     return
+end
 
 
-vim.g.dashboard_custom_header = {
+-- db.preview_command = 'ueberzug'
+db.preview_file_path = home .. '/.config/nvim/static/01.png'
+db.preview_file_height = 27
+db.preview_file_width = 48
+
+
+db.custom_center = {
+    {icon = ' ',
+        desc = ' Recently latest session                  ',
+        shortcut = 'SPC s l',
+        action ='SessionLoad'},
+    {icon = '  ',
+        desc = 'Recently opened files                   ',
+        action =  'DashboardFindHistory',
+        shortcut = 'SPC f h'},
+    {icon = '  ',
+        desc = 'Find  File                              ',
+        action = 'Telescope find_files find_command=rg,--hidden,--files',
+        shortcut = 'SPC f f'},
+    {icon = '  ',
+        desc ='File Browser                            ',
+        action =  'Telescope file_browser',
+        shortcut = 'SPC f b'},
+    {icon = '  ',
+        desc = 'Find  word                              ',
+        action = 'Telescope live_grep',
+        shortcut = 'SPC f w'},
+    {icon = '  ',
+        desc = 'Open Personal dotfiles                  ',
+        action = 'Telescope dotfiles path=' .. home ..'/.dotfiles',
+        shortcut = 'SPC f d'},
+}
+
+
+db.custom_header = {
+        [[]],
+        [[]],
         [[⣿⣯⣿⣟⣟⡼⣿⡼⡿⣷⣿⣿⣿⠽⡟⢋⣿⣿⠘⣼⣷⡟⠻⡿⣷⡼⣝⡿⡾⣿]],
         [[⣿⣿⣿⣿⢁⣵⡇⡟⠀⣿⣿⣿⠇⠀⡇⣴⣿⣿⣧⣿⣿⡇⠀⢣⣿⣷⣀⡏⢻⣿]],
         [[⣿⣿⠿⣿⣿⣿⠷⠁⠀⠛⠛⠋⠀⠂⠹⠿⠿⠿⠿⠿⠉⠁⠀⠘⠛⠛⠛⠃⢸⣯]],
@@ -37,4 +74,10 @@ vim.g.dashboard_custom_header = {
         [[⣿⣿⣿⣿⣦⡔⠀⠀⠀⠀⠀⠀⢻⣿⡿⣿⣿⢽⣿⠀⠀⠀⠀⠀⠀⠀⣠⣾⣿⣿]],
         [[⣿⣿⣿⣿⣿⣿⣶⣤⣀⠀⠀⠀⠘⠛⢅⣙⣙⠿⠉⠀⠀⠀⢀⣠⣴⣿⣿⣿⣿⣿]],
         [[⣿⣿⣿⣿⣿⣿⣿⣿⣿⣿⣶⣤⣄⣅⠀⠓⠀⠀⣀⣠⣴⣺⣿⣿⣿⣿⣿⣿⣿⣿]],
-    }
+        [[]],
+        [[]],
+        [[]],
+}
+
+
+vim.g.custom_footer = {'Love kurumi!!!'}
