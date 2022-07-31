@@ -5,5 +5,3 @@ end
 
 require("mzs.lsp.lsp-installer")
 require("mzs.lsp.handlers").setup()
-
---require("mzs.lsp.keymaps") -- move to handlers
