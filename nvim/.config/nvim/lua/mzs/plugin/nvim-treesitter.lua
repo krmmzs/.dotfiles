@@ -3,6 +3,16 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
+local function nkeymap(key, map)
+    keymap('n', key, map, opts)
+end
+local function vkeymap(key, map)
+    keymap('v', key, map, opts)
+end
+local function ikeymap(key, map)
+    keymap('i', key, map, opts)
+end
+
 local status_ok, configs = pcall(require, "nvim-treesitter.configs")
 if not status_ok then
     return
@@ -39,7 +49,44 @@ configs.setup {
         -- Instead of true it can also be a list of languages
         additional_vim_regex_highlighting = false,
     },
-    indent = { enable = true, disable = { "" } },
+    indent = { enable = true, disable = { "yaml" } },
+
+    -- see https://github.com/p00f/nvim-ts-rainbow#installation-and-setup
+    rainbow = {
+        enable = true,
+        disable = { "cpp" }, -- list of languages you want to disable the plugin for
+        extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
+        max_file_lines = nil, -- Do not enable for files with more than n lines, int
+        -- colors = {}, -- table of hex strings
+        -- termcolors = {} -- table of colour name strings
+    },
+
+    -- see https://github.com/nvim-treesitter/playground#setup
+    playground = {
+        enable = true,
+        disable = {},
+        updatetime = 25, -- Debounced time for highlighting nodes in the playground from source code
+        persist_queries = false, -- Whether the query persists across vim sessions
+        keybindings = {
+            toggle_query_editor = 'o',
+            toggle_hl_groups = 'i',
+            toggle_injected_languages = 't',
+            toggle_anonymous_nodes = 'a',
+            toggle_language_display = 'I',
+            focus_language = 'f',
+            unfocus_language = 'F',
+            update = 'R',
+            goto_node = '<cr>',
+            show_help = '?',
+        },
+    },
+
+    -- see https://github.com/JoosepAlviste/nvim-ts-context-commentstring#getting-started
+    -- This plugin adds to that by correctly setting the commentstring setting
+    context_commentstring = {
+        enable = true,
+        enable_autocmd = false, -- see https://github.com/JoosepAlviste/nvim-ts-context-commentstring#behavior
+    },
 }
 
 -- 开启 Folding
@@ -48,4 +95,4 @@ vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 -- 默认不要折叠
 -- https://stackoverflow.com/questions/8316139/how-to-set-the-default-to-unfolded-when-you-open-a-file
 vim.wo.foldlevel = 99
-keymap("n", "<Leader><Leader>l", ":TSBufToggle highlight<CR>", opts)
+nkeymap("<Leader><Leader>l", ":TSBufToggle highlight<CR>")

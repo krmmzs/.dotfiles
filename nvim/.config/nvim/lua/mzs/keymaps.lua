@@ -114,15 +114,6 @@ nkeymap("<leader><Space>", ":FixWhitespace<CR>")
 -- undotree
 nkeymap("<leader>u", ":UndotreeToggle<CR>")
 
--- Git
-nkeymap("<Leader>gh", ":diffget //3<CR>")
-nkeymap("<Leader>gu", ":diffget //2<CR>")
-nkeymap("<Leader>gs", ":G<CR>")
-nkeymap("<Leader>gd", ":Gvdiff<CR>")
-nkeymap("<Leader>gb", ":Git blame<CR>")
-nkeymap("<Leader>gl", ":Git log --all --graph --decorate<CR>")
-
-
 -- coc Listextend --
 
 -- Plug Yggdroot/indentLine

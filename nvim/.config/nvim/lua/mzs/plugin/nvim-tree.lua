@@ -25,9 +25,6 @@ end
 nkeymap("<Leader>nt", ":NvimTreeToggle<CR>")
 nkeymap("<Leader>nf", ":NvimTreeFindFile<CR>")
 
--- see https://github.com/numToStr/Comment.nvim#configuration-optional
-require('Comment').setup()
-
 -- empty setup using defaults
 require("nvim-tree").setup()
 

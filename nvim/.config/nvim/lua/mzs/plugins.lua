@@ -56,7 +56,16 @@ return packer.startup(function(use)
     use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
 
     use 'wakatime/vim-wakatime'
-    use 'bronson/vim-trailing-whitespace'
+
+    -- UI
+    use { 'kshenoy/vim-signature' } -- vim marks
+    --use { 'mhinz/vim-startify' } -- vim look
+    use { 'ryanoasis/vim-devicons' } -- icons for them
+    use { 'glepnir/dashboard-nvim' } -- dashboard
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+    }
 
     -- colorscheme
     use 'folke/tokyonight.nvim'
@@ -72,25 +81,23 @@ return packer.startup(function(use)
         run = ":TSUpdate"
     }
     use { 'nvim-treesitter/playground' }
+    use { "p00f/nvim-ts-rainbow" }
     use { 'nvim-treesitter/nvim-treesitter-textobjects' }
-    -- use {'vim-airline/vim-airline'}
-    -- use {'vim-airline/vim-airline-themes'}
+    use { 'JoosepAlviste/nvim-ts-context-commentstring' }
+
     use {'neomake/neomake'}
     use {'mbbill/undotree'}
-    use {
-        'nvim-lualine/lualine.nvim',
-        requires = { 'kyazdani42/nvim-web-devicons', opt = true }
-    }
 
     -- Git
     use {'tpope/vim-fugitive'}
-    use {'airblade/vim-gitgutter'}
+    -- use {'airblade/vim-gitgutter'}
     use {'junegunn/gv.vim'}
     -- Vim's diff mode is pretty good, but there is no convenient
     -- way to quickly bring up all modified files in a diffsplit.
     -- This plugin aims to provide a simple, unified, single tabpage
     -- interface that lets you easily review all changed files for any git rev.
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
+    use {"lewis6991/gitsigns.nvim"}
 
     -- Nerdtree
     -- use {'preservim/nerdtree'}
@@ -127,23 +134,21 @@ return packer.startup(function(use)
     use { 'liuchengxu/vista.vim' } -- replace tagbar which could support LSP
 
     -- fzf
-    use { 'Yggdroot/LeaderF', run = ':LeaderfInstallCExtension' }
-    use { 'tamago324/LeaderF-filer' }
-    use { 'Yggdroot/LeaderF-marks' }
+    -- use { 'Yggdroot/LeaderF', run = ':LeaderfInstallCExtension' }
+    -- use { 'tamago324/LeaderF-filer' }
+    -- use { 'Yggdroot/LeaderF-marks' }
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.0',
+        -- or                            , branch = '0.1.x',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
+    use 'nvim-telescope/telescope-media-files.nvim'
+    use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
 
-    -- UI
-    use { 'kshenoy/vim-signature' } -- vim marks
-    --use { 'mhinz/vim-startify' } -- vim look
-    use { 'ryanoasis/vim-devicons' } -- icons for them
-    use { 'glepnir/dashboard-nvim' } -- dashboard
 
     -- code
-    use {
-        "windwp/nvim-autopairs",
-        config = function() require("nvim-autopairs").setup {}
-        end
-    }
-    use {'numToStr/Comment.nvim'}
+    use { "windwp/nvim-autopairs" }
+    use { 'numToStr/Comment.nvim' }
 
     -- diagnostics
     use({
@@ -183,7 +188,7 @@ return packer.startup(function(use)
 
     -- Virtual Text
     use {'kevinhwang91/nvim-hlslens'} -- helps you better glance at matched information
-    use {"APZelos/blamer.nvim"} -- show git blame
+    -- use {"APZelos/blamer.nvim"} -- show git blame
 
     -- startup time
     use {'dstein64/vim-startuptime'} -- A Vim plugin for profiling Vim's startup
