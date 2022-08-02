@@ -169,6 +169,13 @@ alias lst="ls --tree"
 alias pyinit="cp ~/MyGit/project_init/python/init/* . && vim .root"
 alias cppinit="cp ~/MyGit/project_init/cpp/init/* . && vim .root"
 
+# alacritty themes alias
+LIGHT_COLOR='dark.yml'
+DARK_COLOR='light.yml'
+alias dark='alacritty-colorscheme apply $LIGHT_COLOR'
+alias light='alacritty-colorscheme apply $DARK_COLOR'
+alias toggle="alacritty-colorscheme toggle $LIGHT_COLOR $DARK_COLOR"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
