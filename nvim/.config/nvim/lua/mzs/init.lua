@@ -28,3 +28,4 @@ require("mzs.plugin.diffview")
 require("mzs.plugin.gitsigns")
 -- require("mzs.plugin.impatient") -- require in nvim/init.lua
 require("mzs.plugin.trouble")
+require("mzs.plugin.project")
