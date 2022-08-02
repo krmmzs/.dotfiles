@@ -21,9 +21,28 @@ if not status_ok then
      return
 end
 
+require("lfs")
+local path ="/home/mouzaisi/.config/nvim/static"
+
+local function get_file()
+    local x = {}
+    local idx = 0
+    for file in lfs.dir(path) do
+        if file ~= "." and file ~= ".." then
+            x[idx] = file
+            idx = idx + 1
+        end
+    end
+    math.randomseed(os.time())
+    local index = math.random(0, idx - 1)
+    return x[index]
+end
+
+local target = get_file()
+
 
 db.preview_command = 'ueberzug'
-db.preview_file_path = home .. '/.config/nvim/static/01.png'
+db.preview_file_path = home .. '/.config/nvim/static/' .. target
 db.preview_file_height = 27
 db.preview_file_width = 48
 
