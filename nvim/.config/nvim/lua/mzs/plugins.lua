@@ -90,6 +90,7 @@ return packer.startup(function(use)
 
     -- Git
     use {'tpope/vim-fugitive'}
+    use {'tpope/vim-rhubarb'}
     -- use {'airblade/vim-gitgutter'}
     use {'junegunn/gv.vim'}
     -- Vim's diff mode is pretty good, but there is no convenient
@@ -144,7 +145,8 @@ return packer.startup(function(use)
     }
     use 'nvim-telescope/telescope-media-files.nvim'
     use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
-
+    use { "kkharji/sqlite.lua" }
+    use {"nvim-telescope/telescope-frecency.nvim"}
 
     -- code
     use { "windwp/nvim-autopairs" }

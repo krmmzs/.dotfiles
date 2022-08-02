@@ -24,9 +24,11 @@ end
 nkeymap("<C-f>", "<cmd>lua require('telescope.builtin').find_files()<cr>")
 nkeymap("<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 nkeymap("<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
-nkeymap("<leader>fh", "<cmd>lua require('telescope.builtin').help_tags()<cr>")
 nkeymap("<C-p>", "<cmd>lua require('telescope.builtin').oldfiles()<cr>")
 nkeymap("<C-h>", ":<cmd>Telescope<CR>")
+
+-- frecency
+nkeymap("<leader>fr", "<cmd>lua require('telescope').extensions.frecency.frecency()<CR>")
 
 
 telescope.setup {
@@ -142,3 +144,7 @@ telescope.load_extension('fzf')
 
 -- see https://github.com/nvim-telescope/telescope-media-files.nvim
 telescope.load_extension('media_files')
+
+-- Using an implementation of Mozilla's Frecency algorithm (used in Firefox's address bar)
+-- , files edited frecently are given higher precedence in the list index.
+telescope.load_extension('frecency')
