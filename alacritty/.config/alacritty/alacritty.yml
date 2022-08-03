@@ -66,66 +66,65 @@ cursor:
     #text: '#403f53'
 
 # Colors (qaq)
-# colors:
-#   primary:
-#     background: '#ffffff'
-#     foreground: '#403f53'
-#
-#
-#   normal:
-#     red: '#c82829'
-#     orange: '#f5871f'
-#     yellow: '#eab700'
-#     green: '#718c00'
-#     aqua: '#3e999f'
-#     blue: '#4271ae'
-#     purple: '#8959a8'
-#
-#   bright:
-#     red: '#c82829'
-#     orange: '#f5871f'
-#     yellow: '#eab700'
-#     green: '#719c00'
-#     aqua: '#3e999f'
-#     blue: '#4271ae'
-#     purple: '#8959a8'
-#   selection:
-#     background: '#f2f2f2'
-#     text: '#403f53'
+colors:
+  primary:
+    background: '#ffffff'
+    foreground: '#403f53'
+
+
+  normal:
+    red: '#c82829'
+    orange: '#f5871f'
+    yellow: '#eab700'
+    green: '#718c00'
+    aqua: '#3e999f'
+    blue: '#4271ae'
+    purple: '#8959a8'
+
+  bright:
+    red: '#c82829'
+    orange: '#f5871f'
+    yellow: '#eab700'
+    green: '#719c00'
+    aqua: '#3e999f'
+    blue: '#4271ae'
+    purple: '#8959a8'
+  selection:
+    background: '#f2f2f2'
+    text: '#403f53'
   #cursor:
     #cursor: '#403f53'
     #text: '#fbfbfb'
 
 # Colors tokey
-colors:
   # Tokyo Night theme, based on both:
   #   https://github.com/ghifarit53/tokyonight-vim
   #   https://github.com/enkia/tokyo-night-vscode-theme
-  primary:
-    background: '0x1a1b26'
-    foreground: '0xa9b1d6'
-
-  # Normal colors
-  normal:
-    black:   '0x32344a'
-    red:     '0xf7768e'
-    green:   '0x9ece6a'
-    yellow:  '0xe0af68'
-    blue:    '0x7aa2f7'
-    magenta: '0xad8ee6'
-    cyan:    '0x449dab'
-    white:   '0x787c99'
-
-  # Bright colors
-  bright:
-    black:   '0x444b6a'
-    red:     '0xff7a93'
-    green:   '0xb9f27c'
-    yellow:  '0xff9e64'
-    blue:    '0x7da6ff'
-    magenta: '0xbb9af7'
-    cyan:    '0x0db9d7'
-    white:   '0xacb0d0'
+    # Default colors
+# colors:
+#   primary:
+#     background: '0x24283b'
+#     foreground: '0xa9b1d6'
+#
+#     normal:
+#       black:   '0x32344a'
+#       red:     '0xf7768e'
+#       green:   '0x9ece6a'
+#       yellow:  '0xe0af68'
+#       blue:    '0x7aa2f7'
+#       magenta: '0xad8ee6'
+#       cyan:    '0x449dab'
+#       white:   '0x9699a8'
+#
+#     bright:
+#       black:   '0x444b6a'
+#       red:     '0xff7a93'
+#       green:   '0xb9f27c'
+#       yellow:  '0xff9e64'
+#       blue:    '0x7da6ff'
+#       magenta: '0xbb9af7'
+#       cyan:    '0x0db9d7'
+#       white:   '0xacb0d0'
 
 font:
   # Normal (roman) font face

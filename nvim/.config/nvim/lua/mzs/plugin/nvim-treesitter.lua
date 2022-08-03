@@ -53,7 +53,7 @@ configs.setup {
 
     -- see https://github.com/p00f/nvim-ts-rainbow#installation-and-setup
     rainbow = {
-        enable = true,
+        enable = false,
         disable = { "cpp" }, -- list of languages you want to disable the plugin for
         extended_mode = true, -- Also highlight non-bracket delimiters like html tags, boolean or table: lang -> boolean
         max_file_lines = nil, -- Do not enable for files with more than n lines, int

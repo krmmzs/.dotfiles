@@ -135,9 +135,9 @@ return packer.startup(function(use)
     use { 'liuchengxu/vista.vim' } -- replace tagbar which could support LSP
 
     -- fzf
-    -- use { 'Yggdroot/LeaderF', run = ':LeaderfInstallCExtension' }
-    -- use { 'tamago324/LeaderF-filer' }
-    -- use { 'Yggdroot/LeaderF-marks' }
+    use { 'Yggdroot/LeaderF', run = ':LeaderfInstallCExtension' }
+    use { 'tamago324/LeaderF-filer' }
+    use { 'Yggdroot/LeaderF-marks' }
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.0',
         -- or                            , branch = '0.1.x',

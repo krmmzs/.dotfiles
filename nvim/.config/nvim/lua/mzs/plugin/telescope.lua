@@ -24,7 +24,9 @@ end
 nkeymap("<C-f>", "<cmd>lua require('telescope.builtin').find_files()<cr>")
 nkeymap("<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 nkeymap("<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
-nkeymap("<C-p>", "<cmd>lua require('telescope.builtin').oldfiles()<cr>")
+-- see https://www.reddit.com/r/neovim/comments/oli7fb/permanent_recent_files_using_telescope/
+-- only keeps track of the opened files in the current session. 
+-- nkeymap("<C-p>", "<cmd>lua require('telescope.builtin').oldfiles()<cr>")
 nkeymap("<C-h>", ":<cmd>Telescope<CR>")
 
 -- frecency
