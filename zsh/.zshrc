@@ -107,7 +107,7 @@ source $ZSH/oh-my-zsh.sh
 bindkey -v
 
 # let editor is vim default
-export EDITOR=vim
+export EDITOR=nvim
 
 # zsh-history-substring-search
 # source ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
@@ -152,12 +152,12 @@ alias ins="cd ~/softwares/ins && ./clash -d ."
 alias free="cd ~/softwares/free && ./clash -d ."
 alias white="cd ~/softwares/white && ./clash -d ."
 alias cman="man -M /usr/share/man/zh_CN"
-alias csen="vim ~/MyGit/English/CS_English.md"
+alias csen="$EDITOR ~/MyGit/English/CS_English.md"
 alias dir="nautilus"
 alias alidrive="cd ~/softwares/阿里小白羊版Linux\ v2.9.24/ && ./阿里云盘小白羊版"
-alias vimal="vim -u ~/.vimrcs/.algorithm_vimrc"
-alias vimnp="vim -u ~/.vimrcs/.no_plugins_vimrc"
-alias mvim="vim -u ~/.vimrcs/.mvimrc"
+alias vimal="$EDITOR -u ~/.vimrcs/.algorithm_vimrc"
+alias vimnp="$EDITOR -u ~/.vimrcs/.no_plugins_vimrc"
+alias mvim="$EDITOR -u ~/.vimrcs/.mvimrc"
 alias mv="mv -i"  # add attention
 alias cp="cp -i"  # add attention
 alias ls="exa" # replace ls to exa but with command ls
@@ -166,8 +166,8 @@ alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {
 alias bd=". bd -si"
 alias lst="ls --tree"
 
-alias pyinit="cp ~/MyGit/project_init/python/init/* . && vim .root"
-alias cppinit="cp ~/MyGit/project_init/cpp/init/* . && vim .root"
+alias pyinit="cp ~/MyGit/project_init/python/init/* . && $EDITOR .root"
+alias cppinit="cp ~/MyGit/project_init/cpp/init/* . && $EDITOR .root"
 
 # alacritty themes alias
 LIGHT_COLOR='dark.yml'
