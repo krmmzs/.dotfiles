@@ -30,6 +30,9 @@ nkeymap("<leader><leader>j", "<Plug>(easymotion-j)")
 nkeymap("<leader><leader>k", "<Plug>(easymotion-k)")
 nkeymap("<leader><leader>h", "<Plug>(easymotion-linebackward)")
 
+-- quick :q
+nkeymap("<c-q>", ":q<CR>")
+
 -- copy and paste
 vkeymap('<leader>y', '"+y')
 

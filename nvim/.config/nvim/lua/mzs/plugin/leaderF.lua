@@ -3,9 +3,9 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
--- keymap("n", "<C-h>", ":LeaderfSelf<CR>", opts)
+keymap("n", "<c-h>", ":LeaderfSelf<CR>", opts)
 -- keymap("n", "<C-f>", ":LeaderfFile<CR>", opts)
-keymap("n", "<leader>ft", ":LeaderfBufTag<CR>", opts)
+keymap("n", "<c-t>", ":LeaderfBufTag<CR>", opts)
 keymap("n", "<leader>ff", ":LeaderfFunction<CR>", opts)
 -- keymap("n", "<leader>fm", ":LeaderfMarks<CR>", opts)
 -- keymap("n", "<leader>fr", ":LeaderfRgInteractive<CR>", opts)

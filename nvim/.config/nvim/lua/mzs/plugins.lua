@@ -66,6 +66,7 @@ return packer.startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+    use {'wellle/context.vim'}
 
     -- colorscheme
     use 'folke/tokyonight.nvim'
@@ -73,8 +74,9 @@ return packer.startup(function(use)
     use 'luisiacc/gruvbox-baby'
     use 'liuchengxu/space-vim-theme'
 
-    --use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
-    --use 'honza/vim-snippets'
+    -- use native lsp now
+    -- use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
+    -- use 'honza/vim-snippets'
 
     use {
         'nvim-treesitter/nvim-treesitter',

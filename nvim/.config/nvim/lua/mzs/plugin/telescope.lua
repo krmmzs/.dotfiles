@@ -14,6 +14,11 @@ end
 
 
 local actions = require "telescope.actions"
+local pickers = require("telescope.pickers")
+local finders = require("telescope.finders")
+local previewers = require("telescope.previewers")
+local action_state = require("telescope.actions.state")
+local conf = require("telescope.config").values
 
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
@@ -27,10 +32,13 @@ nkeymap("<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
 -- see https://www.reddit.com/r/neovim/comments/oli7fb/permanent_recent_files_using_telescope/
 -- only keeps track of the opened files in the current session. 
 -- nkeymap("<C-p>", "<cmd>lua require('telescope.builtin').oldfiles()<cr>")
-nkeymap("<C-h>", ":<cmd>Telescope<CR>")
+nkeymap("<leader>fh", ":<cmd>Telescope<CR>")
 
 -- frecency
 nkeymap("<leader>fr", "<cmd>lua require('telescope').extensions.frecency.frecency()<CR>")
+
+-- lsp
+nkeymap("<leader>ft", "<cmd>Telescope lsp_document_symbols<cr>")
 
 
 telescope.setup {
@@ -117,13 +125,13 @@ telescope.setup {
     },
     extensions = {
         -- see https://github.com/nvim-telescope/telescope-fzf-native.nvim#telescope-setup-and-configuration
-        -- fzf = {
-        --     fuzzy = true,                    -- false will only do exact matching
-        --     override_generic_sorter = true,  -- override the generic sorter
-        --     override_file_sorter = true,     -- override the file sorter
-        --     case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-        --     -- the default case_mode is "smart_case"
-        -- },
+        fzf = {
+            fuzzy = true,                    -- false will only do exact matching
+            override_generic_sorter = true,  -- override the generic sorter
+            override_file_sorter = true,     -- override the file sorter
+            case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
+                                             -- the default case_mode is "smart_case"
+        },
 
         media_files = {
             -- filetypes whitelist
@@ -137,7 +145,37 @@ telescope.setup {
         -- }
         -- please take a look at the readme of the extension you want to configure
     },
+
+    -- builtin configs
+    builtin = {
+        git_branches = {
+
+        }
+    },
 }
+
+-- other config
+-- see https://github.com/ThePrimeagen/.dotfiles/blob/master/nvim/.config/nvim/lua/theprimeagen/telescope.lua#L39
+local M = {}
+
+
+M.git_branches = function()
+	require("telescope.builtin").git_branches({
+		attach_mappings = function(_, map)
+			map("i", "<c-d>", actions.git_delete_branch)
+			map("n", "<c-d>", actions.git_delete_branch)
+			return true
+		end,
+	})
+end
+
+M.search_dotfiles = function()
+	require("telescope.builtin").find_files({
+		prompt_title = "< VimRC >",
+		cwd = vim.env.DOTFILES,
+		hidden = true,
+	})
+end
 
 -- see https://github.com/nvim-telescope/telescope-fzf-native.nvim#telescope-setup-and-configuration
 -- To get fzf loaded and working with telescope, you need to call
@@ -150,3 +188,5 @@ telescope.load_extension('media_files')
 -- Using an implementation of Mozilla's Frecency algorithm (used in Firefox's address bar)
 -- , files edited frecently are given higher precedence in the list index.
 telescope.load_extension('frecency')
+
+return M

@@ -7,8 +7,8 @@ highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NO
 " colorscheme tokyonight
 " set background=dark
 
-"colorscheme gruvbox
-"set background=dark
+" colorscheme gruvbox
+" set background=dark
 ]]
 
 vim.g.tokyonight_transparent_sidebar = true
