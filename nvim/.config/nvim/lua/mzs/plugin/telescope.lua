@@ -158,6 +158,11 @@ telescope.setup {
 -- see https://github.com/ThePrimeagen/.dotfiles/blob/master/nvim/.config/nvim/lua/theprimeagen/telescope.lua#L39
 local M = {}
 
+-- M.find_files = function ()
+--     require("telescope.builtin").find_files({
+--
+--     })
+-- end
 
 M.git_branches = function()
 	require("telescope.builtin").git_branches({
@@ -166,14 +171,6 @@ M.git_branches = function()
 			map("n", "<c-d>", actions.git_delete_branch)
 			return true
 		end,
-	})
-end
-
-M.search_dotfiles = function()
-	require("telescope.builtin").find_files({
-		prompt_title = "< VimRC >",
-		cwd = vim.env.DOTFILES,
-		hidden = true,
 	})
 end
 
@@ -188,5 +185,11 @@ telescope.load_extension('media_files')
 -- Using an implementation of Mozilla's Frecency algorithm (used in Firefox's address bar)
 -- , files edited frecently are given higher precedence in the list index.
 telescope.load_extension('frecency')
+
+-- https://github.com/nvim-telescope/telescope.nvim/issues/592#issuecomment-789069837
+-- found a plugin airblade/vim-rooter, It can find project root according to the file I set
+-- vim.cmd[[
+--     nnoremap <expr> sp ':Telescope find_files cwd='.FindRootDirectory().'/<cr>'
+-- ]]
 
 return M

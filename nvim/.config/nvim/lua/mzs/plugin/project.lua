@@ -30,6 +30,7 @@ configs.setup ({
     ---@usage set to true to disable setting the current-woriking directory
     --- Manual mode doesn't automatically change your root directory, so you have
     --- the option to manually do so using `:ProjectRoot` command.
+    -- I wan't Automagically cd to project directory using nvim lsp...
     manual_mode = false,
 
     ---@usage Methods of detecting the root directory
@@ -41,7 +42,7 @@ configs.setup ({
     detection_methods = { "pattern" },
 
     ---@usage patterns used to detect root dir, when **"pattern"** is in detection_methods
-    patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json" },
+    patterns = { ".git", "_darcs", ".hg", ".bzr", ".svn", "Makefile", "package.json", ".root" },
 
     ---@ Show hidden files in telescope when searching for files in a project
     show_hidden = false,

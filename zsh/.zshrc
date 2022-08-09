@@ -139,18 +139,22 @@ export LANG=en_US.UTF-8
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# git alias
 alias gl="git log --all --graph --decorate"
-alias gcp="git add . && git commit && git push"
 alias gcf="git cat-file -p"
 alias git="LANG=en_GB git" # using English message
 alias gs="git status"
 alias ga="git add"
 alias gcm="git commit -m"
+
+# clash alias
 alias prpr="cd ~/softwares/prpr && ./clash -d ."
 alias igg="cd ~/softwares/igg && ./clash -d ."
 alias ins="cd ~/softwares/ins && ./clash -d ."
 alias free="cd ~/softwares/free && ./clash -d ."
 alias white="cd ~/softwares/white && ./clash -d ."
+
 alias cman="man -M /usr/share/man/zh_CN"
 alias csen="$EDITOR ~/MyGit/English/CS_English.md"
 alias dir="nautilus"

@@ -17,4 +17,4 @@ end
 
 vim.g.context_presenter = 'nvim-float' -- This variable can be used to control how the context is presented. 
 
-vim.g.context_filetype_blacklist = {}
+vim.g.context_filetype_blacklist = {"html"}

@@ -3,6 +3,16 @@
   --virtual_text = false,
 --})
 
+
+local status_ok, configs = pcall(require, "lsp_lines")
+if not status_ok then
+    return
+end
+
+configs.setup ({
+
+})
+
 local opts = { noremap = true, silent = true }
 
 -- default

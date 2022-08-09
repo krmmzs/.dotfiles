@@ -21,9 +21,15 @@ require("mzs.plugin.context")
 require("mzs.plugin.cmp")
 require("mzs.plugin.lsp_lines")
 
+-- treesitter
+require("mzs.plugin.nvim-treesitter")
+require("mzs.plugin.treesitter-context")
+
+-- project
+-- require("mzs.plugin.vim-rooter") -- replace by pulugin:project.nvim
+
 require("mzs.plugin.easy-motion")
 require("mzs.plugin.black")
-require("mzs.plugin.nvim-treesitter")
 require("mzs.plugin.indentLine")
 require("mzs.plugin.emmet")
 require("mzs.plugin.vim-prettier")

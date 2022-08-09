@@ -66,7 +66,6 @@ return packer.startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
-    use {'wellle/context.vim'}
 
     -- colorscheme
     use 'folke/tokyonight.nvim'
@@ -86,6 +85,7 @@ return packer.startup(function(use)
     use { "p00f/nvim-ts-rainbow" }
     use { 'nvim-treesitter/nvim-treesitter-textobjects' }
     use { 'JoosepAlviste/nvim-ts-context-commentstring' }
+    use { 'nvim-treesitter/nvim-treesitter-context' }
 
     use {'neomake/neomake'}
     use {'mbbill/undotree'}
@@ -157,21 +157,11 @@ return packer.startup(function(use)
 
     -- diagnostics
     use({
-        "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
-        config = function()
-            require("lsp_lines").setup()
-        end,
+      "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
     })
     use {
         "folke/trouble.nvim",
         requires = "kyazdani42/nvim-web-devicons",
-        config = function()
-            require("trouble").setup {
-                -- your configuration comes here
-                -- or leave it empty to use the default settings
-                -- refer to the configuration section below
-            }
-        end
     }
 
     -- cmp plugins
@@ -198,6 +188,9 @@ return packer.startup(function(use)
     -- startup time
     use {'dstein64/vim-startuptime'} -- A Vim plugin for profiling Vim's startup
     use {'lewis6991/impatient.nvim'} -- Speed up loading Lua modules in Neovim to improve startup time.
+
+    -- project
+    -- use { 'airblade/vim-rooter' }
 
 
 
