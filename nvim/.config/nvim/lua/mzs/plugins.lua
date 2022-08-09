@@ -66,6 +66,7 @@ return packer.startup(function(use)
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
+    use { 'kkharji/lspsaga.nvim' }  -- nightly
 
     -- colorscheme
     use 'folke/tokyonight.nvim'
@@ -157,7 +158,7 @@ return packer.startup(function(use)
 
     -- diagnostics
     use({
-      "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
+        "https://git.sr.ht/~whynothugo/lsp_lines.nvim",
     })
     use {
         "folke/trouble.nvim",
@@ -191,7 +192,14 @@ return packer.startup(function(use)
 
     -- project
     -- use { 'airblade/vim-rooter' }
+    use { "williamboman/mason.nvim" }
+    use {
+        "folke/todo-comments.nvim",
+        requires = "nvim-lua/plenary.nvim",
+    }
 
+    -- web
+    use { 'windwp/nvim-ts-autotag' }
 
 
 

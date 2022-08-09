@@ -34,12 +34,14 @@ nkeymap("<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
 -- nkeymap("<C-p>", "<cmd>lua require('telescope.builtin').oldfiles()<cr>")
 nkeymap("<leader>fh", ":<cmd>Telescope<CR>")
 
--- frecency
-nkeymap("<leader>fr", "<cmd>lua require('telescope').extensions.frecency.frecency()<CR>")
-
 -- lsp
 nkeymap("<leader>ft", "<cmd>Telescope lsp_document_symbols<cr>")
 
+-- frecency
+nkeymap("<leader>fr", "<cmd>lua require('telescope').extensions.frecency.frecency()<CR>")
+
+-- TODO
+nkeymap("<leader>fd", ":TodoTelescope<cr>")
 
 telescope.setup {
     defaults = {
@@ -138,7 +140,8 @@ telescope.setup {
             -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
             filetypes = {"png", "webp", "jpg", "jpeg"},
             find_cmd = "rg" -- find command (defaults to `fd`)
-        }
+        },
+
         -- Your extension configuration goes here:
         -- extension_name = {
         --   extension_config_key = value,
@@ -165,13 +168,13 @@ local M = {}
 -- end
 
 M.git_branches = function()
-	require("telescope.builtin").git_branches({
-		attach_mappings = function(_, map)
-			map("i", "<c-d>", actions.git_delete_branch)
-			map("n", "<c-d>", actions.git_delete_branch)
-			return true
-		end,
-	})
+    require("telescope.builtin").git_branches({
+        attach_mappings = function(_, map)
+            map("i", "<c-d>", actions.git_delete_branch)
+            map("n", "<c-d>", actions.git_delete_branch)
+            return true
+        end,
+    })
 end
 
 -- see https://github.com/nvim-telescope/telescope-fzf-native.nvim#telescope-setup-and-configuration

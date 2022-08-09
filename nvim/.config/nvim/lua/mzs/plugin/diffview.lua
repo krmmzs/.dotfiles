@@ -1,8 +1,31 @@
+local opts = { noremap = true, silent = true }
+local term_opts = { silent = true }
+-- Shorten function name
+local keymap = vim.api.nvim_set_keymap
+
+local function nkeymap(key, map)
+    keymap('n', key, map, opts)
+end
+local function vkeymap(key, map)
+    keymap('v', key, map, opts)
+end
+local function ikeymap(key, map)
+    keymap('i', key, map, opts)
+end
+
+local status_ok, configs = pcall(require, "diffview")
+if not status_ok then
+    return
+end
+
 -- Example config with default values
 local actions = require("diffview.actions")
 
+nkeymap('<leader>do', '<cmd>DiffviewOpen<cr>')
+nkeymap('<leader>dc', '<cmd>DiffviewClose<cr>')
+
 -- see https://github.com/sindrets/diffview.nvim#configuration
-require("diffview").setup({
+configs.setup({
   diff_binaries = false,    -- Show diffs for binaries
   enhanced_diff_hl = false, -- See ':h diffview-config-enhanced_diff_hl'
   git_cmd = { "git" },      -- The git executable followed by default args.

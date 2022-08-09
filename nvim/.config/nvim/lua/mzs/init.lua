@@ -16,6 +16,7 @@ require("mzs.plugin.leaderF")
 -- UI
 require("mzs.plugin.dashboard")
 require("mzs.plugin.context")
+require("mzs.plugin.lspsaga")
 
 -- LSP
 require("mzs.plugin.cmp")
@@ -27,6 +28,10 @@ require("mzs.plugin.treesitter-context")
 
 -- project
 -- require("mzs.plugin.vim-rooter") -- replace by pulugin:project.nvim
+require("mzs.plugin.mason")
+require("mzs.plugin.todo-comments")
+
+-- web
 
 require("mzs.plugin.easy-motion")
 require("mzs.plugin.black")

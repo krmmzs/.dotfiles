@@ -87,6 +87,13 @@ configs.setup {
         enable = true,
         enable_autocmd = false, -- see https://github.com/JoosepAlviste/nvim-ts-context-commentstring#behavior
     },
+
+    -- see https://github.com/windwp/nvim-ts-autotag
+    -- autotag
+    autotag = {
+        enable = true,
+        -- filetypes = { "html" , "xml" },
+    },
 }
 
 -- 开启 Folding
