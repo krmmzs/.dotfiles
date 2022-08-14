@@ -17,26 +17,27 @@ local opts = { noremap = true, silent = true }
 
 -- default
 vim.diagnostic.config({
-  virtual_lines = false,
+    virtual_lines = false,
+    virtual_text = false,
 })
 
 vim.keymap.set(
     "n",
-    "<leader>1l",
+    "<leader>2l",
     ":lua vim.diagnostic.config({virtual_text = true, virtual_lines = false})<CR>",
     opts
 )
 
 vim.keymap.set(
     "n",
-    "<leader>2l",
+    "<leader>3l",
     ":lua vim.diagnostic.config({virtual_text = false, virtual_lines = true})<CR>",
     opts
 )
 
 vim.keymap.set(
     "n",
-    "<leader>3l",
+    "<leader>4l",
     ":lua vim.diagnostic.config({virtual_text = false, virtual_lines = false})<CR>",
     opts
 )

@@ -1,0 +1,15 @@
+[user]
+	; email = mouzaisibyl@gmail.com\n
+	; name = mouzaisi
+    email = belliyan250@gmail.com\n
+    name = krmmzs
+[core]
+	editor = nvim
+[init]
+	defaultBranch = master
+[http "https://github.com"]
+	proxy = socks5://127.0.0.1:7891
+	proxy = https://127.0.0.1:7890
+	proxy = http://127.0.0.1:7890
+[push]
+	autoSetupRemote = true ; https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushautoSetupRemote

@@ -27,6 +27,9 @@ end
 
 
 nkeymap("<C-f>", "<cmd>lua require('telescope.builtin').find_files()<cr>")
+nkeymap("<leader>f1", "<cmd>lua require('telescope.builtin').find_files({hidden=true})<cr>")
+nkeymap("<leader>f2", "<cmd>lua require('telescope.builtin').find_files({no_ignore=true})<cr>")
+nkeymap("<leader>f3", "<cmd>lua require('telescope.builtin').find_files({hidden=true, no_ignore=true})<cr>")
 nkeymap("<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 nkeymap("<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
 -- see https://www.reddit.com/r/neovim/comments/oli7fb/permanent_recent_files_using_telescope/
