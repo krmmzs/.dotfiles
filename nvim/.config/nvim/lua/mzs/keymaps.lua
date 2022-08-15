@@ -112,7 +112,7 @@ vkeymap("p", '"_dP')
 -- honza/vim-snippets
 
 -- bronson/vim-trailing-whitespace
-nkeymap("<leader><Space>", ":FixWhitespace<CR>")
+-- nkeymap("<leader><Space>", ":FixWhitespace<CR>")
 
 -- undotree
 nkeymap("<leader>u", ":UndotreeToggle<CR>")

@@ -11,10 +11,16 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$PATH:~/go/bin:
 export PATH=$PATH:~/.cargo:
 source $HOME/.cargo/env
+export VENV_PATH=/pyenv
 
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+# proxy
+
+export https_proxy='http://127.0.0.1:7890'
+export http_proxy='http://127.0.0.1:7890'
+export all_proxy='socks5://127.0.0.1:7891'
 # Color matching compatible with TMUX
 
 #in my y7000p with ubuntu, It is not need it to add it
@@ -96,7 +102,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting git-open wakatime)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting git-open wakatime poetry)
 
 # This list is incomplete as there are too many frameworks / plugin managers to list them all here.
 
@@ -155,6 +161,12 @@ alias ins="cd ~/softwares/ins && ./clash -d ."
 alias free="cd ~/softwares/free && ./clash -d ."
 alias white="cd ~/softwares/white && ./clash -d ."
 
+# fzf
+alias v="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim"
+
+# applications
+alias tgif='cd ~/softwares/gif2tgsticker/ && poetry run python3 gif2tgsticker.py'
+
 alias cman="man -M /usr/share/man/zh_CN"
 alias csen="$EDITOR ~/MyGit/English/CS_English.md"
 alias dir="nautilus"
@@ -162,6 +174,7 @@ alias alidrive="cd ~/softwares/阿里小白羊版Linux\ v2.9.24/ && ./阿里云�
 alias vimal="$EDITOR -u ~/.vimrcs/.algorithm_vimrc"
 alias vimnp="$EDITOR -u ~/.vimrcs/.no_plugins_vimrc"
 alias mvim="$EDITOR -u ~/.vimrcs/.mvimrc"
+alias nvimn="nvim -u NONE"
 alias mv="mv -i"  # add attention
 alias cp="cp -i"  # add attention
 alias ls="exa" # replace ls to exa but with command ls
@@ -180,6 +193,9 @@ alias dark='alacritty-colorscheme apply $LIGHT_COLOR'
 alias light='alacritty-colorscheme apply $DARK_COLOR'
 alias toggle="alacritty-colorscheme toggle $LIGHT_COLOR $DARK_COLOR"
 
+# config script
+alias config='cd /home/$USER/scripts && ./config.sh'
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
@@ -187,3 +203,8 @@ alias toggle="alacritty-colorscheme toggle $LIGHT_COLOR $DARK_COLOR"
 
 eval $(thefuck --alias)
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+export PATH="$HOME/.poetry/bin:$PATH"

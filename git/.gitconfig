@@ -13,3 +13,7 @@
 	proxy = http://127.0.0.1:7890
 [push]
 	autoSetupRemote = true ; https://git-scm.com/docs/git-config#Documentation/git-config.txt-pushautoSetupRemote
+[http]
+	proxy = 127.0.0.1:7890
+[https]
+	proxy = 127.0.0.1:7890

@@ -61,7 +61,7 @@ return packer.startup(function(use)
     use { 'kshenoy/vim-signature' } -- vim marks
     --use { 'mhinz/vim-startify' } -- vim look
     use { 'ryanoasis/vim-devicons' } -- icons for them
-    use { 'glepnir/dashboard-nvim' } -- dashboard
+    -- use { 'glepnir/dashboard-nvim' } -- dashboard
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -197,6 +197,7 @@ return packer.startup(function(use)
         "folke/todo-comments.nvim",
         requires = "nvim-lua/plenary.nvim",
     }
+    use { 'tpope/vim-obsession' }
 
     -- web
     use { 'windwp/nvim-ts-autotag' }
