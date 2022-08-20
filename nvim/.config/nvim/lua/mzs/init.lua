@@ -38,7 +38,7 @@ require("mzs.plugin.black")
 require("mzs.plugin.indentLine")
 require("mzs.plugin.emmet")
 require("mzs.plugin.vim-prettier")
-require("mzs.plugin.vista")
+--[[ require("mzs.plugin.vista") ]]
 require("mzs.plugin.vim-gutentags")
 require("mzs.plugin.nvim-hlslens")
 require("mzs.plugin.goto-preview")

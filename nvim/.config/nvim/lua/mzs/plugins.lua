@@ -61,7 +61,7 @@ return packer.startup(function(use)
     use { 'kshenoy/vim-signature' } -- vim marks
     --use { 'mhinz/vim-startify' } -- vim look
     use { 'ryanoasis/vim-devicons' } -- icons for them
-    -- use { 'glepnir/dashboard-nvim' } -- dashboard
+    use { 'glepnir/dashboard-nvim' } -- dashboard
     use {
         'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
@@ -135,7 +135,7 @@ return packer.startup(function(use)
 
     -- tags
     use { 'ludovicchabant/vim-gutentags' } -- build ctags auto and silent
-    use { 'liuchengxu/vista.vim' } -- replace tagbar which could support LSP
+    --[[ use { 'liuchengxu/vista.vim' } -- replace tagbar which could support LSP ]]
 
     -- fzf
     use { 'Yggdroot/LeaderF', run = ':LeaderfInstallCExtension' }
@@ -188,7 +188,7 @@ return packer.startup(function(use)
 
     -- startup time
     use {'dstein64/vim-startuptime'} -- A Vim plugin for profiling Vim's startup
-    use {'lewis6991/impatient.nvim'} -- Speed up loading Lua modules in Neovim to improve startup time.
+    --[[ use {'lewis6991/impatient.nvim'} -- Speed up loading Lua modules in Neovim to improve startup time. ]]
 
     -- project
     -- use { 'airblade/vim-rooter' }

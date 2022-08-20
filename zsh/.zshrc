@@ -196,6 +196,8 @@ alias toggle="alacritty-colorscheme toggle $LIGHT_COLOR $DARK_COLOR"
 # config script
 alias config='cd /home/$USER/scripts && ./config.sh'
 
+alias todo='cd ~/MyGit/TODO && nvim .'
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.

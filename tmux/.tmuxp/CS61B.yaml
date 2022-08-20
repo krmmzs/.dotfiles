@@ -1,0 +1,23 @@
+session_name: CS61B
+windows:
+- focus: 'true'
+  layout: 45c2,160x51,0,0[160x25,0,0{80x25,0,0,2,40x25,81,0,3,38x25,122,0,4},160x25,0,26{80x25,0,26,5,79x25,81,26,6}]
+  options: {}
+  panes:
+  - shell_command:
+    - cd /home/mouzaisi/MyGit/Gitlet/gitlet
+    - nvim
+  - shell_command:
+    - cd /home/mouzaisi/MyGit/Gitlet/gitlet
+    - nvim
+  - shell_command:
+    - cd /home/mouzaisi/MyGit/CS61B/project
+    - nvim
+  - focus: 'true'
+    shell_command:
+    - cd /home/mouzaisi/MyGit/Gitlet/gitlet
+    - nvim
+  - shell_command:
+    - cd /home/mouzaisi/clone/vvwantspeed/cs61b-sp21/proj2/gitlet2
+    - nvim
+  window_name: python3.8

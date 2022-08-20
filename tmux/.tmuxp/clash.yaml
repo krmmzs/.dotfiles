@@ -1,0 +1,10 @@
+session_name: clash
+windows:
+- focus: 'true'
+  layout: d92f,160x51,0,0,20
+  options: {}
+  panes:
+  - focus: 'true'
+    shell_command: ./clash
+  start_directory: /home/mouzaisi/softwares/prpr
+  window_name: ./clash

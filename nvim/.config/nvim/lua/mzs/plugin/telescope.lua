@@ -38,7 +38,7 @@ nkeymap("<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
 nkeymap("<leader>fh", ":<cmd>Telescope<CR>")
 
 -- lsp
-nkeymap("<leader>ft", "<cmd>Telescope lsp_document_symbols<cr>")
+nkeymap("<leader>ff", "<cmd>Telescope lsp_document_symbols<cr>")
 
 -- frecency
 nkeymap("<leader>fr", "<cmd>lua require('telescope').extensions.frecency.frecency()<CR>")
