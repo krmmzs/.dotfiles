@@ -163,6 +163,7 @@ alias white="cd ~/softwares/white && ./clash -d ."
 
 # fzf
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim"
+alias cbr='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" | xargs git checkout'
 
 # applications
 alias tgif='cd ~/softwares/gif2tgsticker/ && poetry run python3 gif2tgsticker.py'

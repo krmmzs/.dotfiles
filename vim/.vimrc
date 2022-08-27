@@ -1,5 +1,6 @@
 let mapleader = ","
 nnoremap ,, ,
+nnoremap <C-q> :q<CR>
 
 
 set nocompatible
