@@ -147,12 +147,20 @@ export LANG=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # git alias
+alias cbr='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" | xargs git checkout'
+alias gs="git status"
+alias ga="git add"
 alias gl="git log --all --graph --decorate"
 alias gcf="git cat-file -p"
 alias git="LANG=en_GB git" # using English message
 alias gs="git status"
-alias ga="git add"
 alias gcm="git commit -m"
+alias gcma="git commit --amend"
+alias gcl="git clone"
+alias gch="git checkout"
+alias gp="git push"
+alias gpl="git pull"
+alias gm="git merge"
 
 # clash alias
 alias prpr="cd ~/softwares/prpr && ./clash -d ."
@@ -163,7 +171,6 @@ alias white="cd ~/softwares/white && ./clash -d ."
 
 # fzf
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim"
-alias cbr='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" | xargs git checkout'
 
 # applications
 alias tgif='cd ~/softwares/gif2tgsticker/ && poetry run python3 gif2tgsticker.py'
@@ -177,9 +184,9 @@ alias vimnp="$EDITOR -u ~/.vimrcs/.no_plugins_vimrc"
 alias mvim="$EDITOR -u ~/.vimrcs/.mvimrc"
 alias nvimn="nvim -u NONE"
 alias mv="mv -i"  # add attention
+alias rm="rm -i"  # add attention
 alias cp="cp -i"  # add attention
 alias ls="exa" # replace ls to exa but with command ls
-alias lss="ls"
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'" # 用bat来做fzf的预览器, need to install bat firstly
 alias bd=". bd -si"
 alias lst="ls --tree"

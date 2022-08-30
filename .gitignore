@@ -8,3 +8,4 @@ tags.lock
 tags.temp
 tags
 nvim/.config/nvim/static
+.root

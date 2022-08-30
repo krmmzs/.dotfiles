@@ -17,6 +17,7 @@ require("mzs.plugin.leaderF")
 require("mzs.plugin.dashboard")
 require("mzs.plugin.context")
 require("mzs.plugin.lspsaga")
+require("mzs.plugin.bufferline")
 
 -- LSP
 require("mzs.plugin.cmp")
@@ -38,7 +39,7 @@ require("mzs.plugin.black")
 require("mzs.plugin.indentLine")
 require("mzs.plugin.emmet")
 require("mzs.plugin.vim-prettier")
---[[ require("mzs.plugin.vista") ]]
+require("mzs.plugin.vista")
 require("mzs.plugin.vim-gutentags")
 require("mzs.plugin.nvim-hlslens")
 require("mzs.plugin.goto-preview")

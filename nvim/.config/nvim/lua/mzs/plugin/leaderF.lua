@@ -3,7 +3,7 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
-keymap("n", "<c-h>", ":LeaderfSelf<CR>", opts)
+keymap("n", "<leader>h", ":LeaderfSelf<CR>", opts)
 -- keymap("n", "<C-f>", ":LeaderfFile<CR>", opts)
 keymap("n", "<c-t>", ":LeaderfBufTag<CR>", opts)
 --[[ keymap("n", "<leader>ff", ":LeaderfFunction<CR>", opts) -- is replaced by Telescope.lsp_document_symbols, it can distinguish constrctor and method ]]

@@ -67,6 +67,8 @@ return packer.startup(function(use)
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
     use { 'kkharji/lspsaga.nvim' }  -- nightly
+    use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
+    use {'moll/vim-bbye'}
 
     -- colorscheme
     use 'folke/tokyonight.nvim'
@@ -130,12 +132,12 @@ return packer.startup(function(use)
 
     use { 'Yggdroot/indentLine' }
     --use { 'ap/vim-css-color' } -- show css color will have error when open .java with treesitter
-    use { 'mattn/emmet-vim' }
+    --[[ use { 'mattn/emmet-vim' } ]]
     use { 'othree/xml.vim' }
 
     -- tags
     use { 'ludovicchabant/vim-gutentags' } -- build ctags auto and silent
-    --[[ use { 'liuchengxu/vista.vim' } -- replace tagbar which could support LSP ]]
+    use { 'liuchengxu/vista.vim' } -- replace tagbar which could support LSP
 
     -- fzf
     use { 'Yggdroot/LeaderF', run = ':LeaderfInstallCExtension' }
