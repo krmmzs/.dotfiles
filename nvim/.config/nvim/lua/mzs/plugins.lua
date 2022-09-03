@@ -119,7 +119,10 @@ return packer.startup(function(use)
     }
 
     -- Move
-    use {'easymotion/vim-easymotion'}
+    use { -- replace easy-motion(deal with bad buffer show)
+      'phaazon/hop.nvim',
+      branch = 'v2', -- optional but strongly recommended
+    }
 
 
     -- Format
@@ -157,6 +160,7 @@ return packer.startup(function(use)
     -- code
     use { "windwp/nvim-autopairs" }
     use { 'numToStr/Comment.nvim' }
+    use { 'tpope/vim-surround' }
 
     -- diagnostics
     use({
@@ -183,6 +187,7 @@ return packer.startup(function(use)
     use {
         'rmagatti/goto-preview'
     }
+    use { 'jose-elias-alvarez/null-ls.nvim' } -- for formatters nad linter
 
     -- Virtual Text
     use {'kevinhwang91/nvim-hlslens'} -- helps you better glance at matched information

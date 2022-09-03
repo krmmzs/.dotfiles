@@ -22,13 +22,6 @@ nkeymap("Q", "<Nop>")
 
 nkeymap("<leader>1", ":set relativenumber!<CR>")
 
--- nmap <Leader>m <Plug>(easymotion-s)
-nkeymap("<leader>m", "<Plug>(easymotion-s)")
--- "nmap <Leader>m <Plug>(easymotion-s2) " 2 characters
-nkeymap("<leader><leader>l", "<Plug>(easymotion-lineforward)")
-nkeymap("<leader><leader>j", "<Plug>(easymotion-j)")
-nkeymap("<leader><leader>k", "<Plug>(easymotion-k)")
-nkeymap("<leader><leader>h", "<Plug>(easymotion-linebackward)")
 
 -- quick :q
 nkeymap("<c-q>", ":q<CR>")
@@ -124,6 +117,6 @@ nkeymap("<leader>u", ":UndotreeToggle<CR>")
 nkeymap("<leader>il", ":IndentLinesToggle<CR>")
 
 nkeymap("<c-h>", "<c-w>h")
-nkeymap("<c-j", "<c-w>j")
+nkeymap("<c-j>", "<c-w>j")
 nkeymap("<c-k>", "<c-w>k")
 nkeymap("<c-l>", "<c-w>l")
