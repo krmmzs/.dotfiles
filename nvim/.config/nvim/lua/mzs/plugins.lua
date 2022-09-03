@@ -126,7 +126,7 @@ return packer.startup(function(use)
 
 
     -- Format
-    use {'psf/black'}
+    --[[ use {'psf/black'} ]]
     use {
         'prettier/vim-prettier',
         run = 'yarn install --frozen-lockfile --production',

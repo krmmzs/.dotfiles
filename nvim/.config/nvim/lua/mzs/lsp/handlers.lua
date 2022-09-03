@@ -15,8 +15,7 @@ M.setup = function()
 
     local config = {
         -- disable virtual text
-        virtual_text = true
-        ,
+        virtual_text = true,
         -- show signs
         signs = {
             active = signs,
@@ -35,7 +34,6 @@ M.setup = function()
     }
     vim.diagnostic.config(config)
 
-
     vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
         border = "rounded",
     })
@@ -49,7 +47,7 @@ local function lsp_highlight_document(client, bufnr)
     -- Set autocommands conditional on server_capabilities
     if client.server_capabilities.documentHighlightProvider then
         vim.api.nvim_create_augroup("lsp_document_highlight", { clear = true })
-        vim.api.nvim_clear_autocmds { buffer = bufnr, group = "lsp_document_highlight" }
+        vim.api.nvim_clear_autocmds({ buffer = bufnr, group = "lsp_document_highlight" })
         vim.api.nvim_create_autocmd("CursorHold", {
             callback = vim.lsp.buf.document_highlight,
             buffer = bufnr,
@@ -99,24 +97,39 @@ local function lsp_keymaps(bufnr)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", "<cmd>Lspsaga show_line_diagnostics<cr>", opts)
 
     -- vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", '<cmd>Lspsaga diagnostic_jump_prev<cr>', opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", "<cmd>Lspsaga diagnostic_jump_prev<cr>", opts)
 
     -- vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>lua vim.diagnostic.goto_next({ border = "rounded" })<CR>', opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", '<cmd>Lspsaga diagnostic_jump_next<cr>', opts)
+    vim.api.nvim_buf_set_keymap(bufnr, "n", "]d", "<cmd>Lspsaga diagnostic_jump_next<cr>", opts)
 
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<space>q", "<cmd>lua vim.diagnostic.setloclist()<CR>", opts)
 
     -- add
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-u>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>", opts)
-    vim.api.nvim_buf_set_keymap(bufnr, "n", "<C-d>", "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>", opts)
+    vim.api.nvim_buf_set_keymap(
+        bufnr,
+        "n",
+        "<C-u>",
+        "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(-1, '<c-u>')<cr>",
+        opts
+    )
+    vim.api.nvim_buf_set_keymap(
+        bufnr,
+        "n",
+        "<C-d>",
+        "<cmd>lua require('lspsaga.action').smart_scroll_with_saga(1, '<c-d>')<cr>",
+        opts
+    )
 
-    vim.cmd [[ command! Format execute 'lua vim.lsp.buf.formatting()' ]]
+    vim.cmd([[ command! Format execute 'lua vim.lsp.buf.format({async = true })' ]])
 end
 
+-- client is LSP client, buffer?
 M.on_attach = function(client, bufnr)
+    -- when edit js file, closing tsserver to better use null-ls's formatting config.
     if client.name == "tsserver" then
         client.server_capabilities.document_formatting = false
     end
+
     lsp_keymaps(bufnr)
     lsp_highlight_document(client, bufnr)
 end

@@ -19,6 +19,8 @@ if not status_ok then
     return
 end
 
+nkeymap("<leader>fm", ":Format<CR>")
+
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/formatting
 local formatting = null_ls.builtins.formatting
 -- https://github.com/jose-elias-alvarez/null-ls.nvim/tree/main/lua/null-ls/builtins/diagnostics
