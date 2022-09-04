@@ -120,3 +120,18 @@ nkeymap("<c-h>", "<c-w>h")
 nkeymap("<c-j>", "<c-w>j")
 nkeymap("<c-k>", "<c-w>k")
 nkeymap("<c-l>", "<c-w>l")
+
+-- See https://www.reddit.com/r/neovim/comments/ro6oye/open_link_from_neovim/
+-- Becase gx is a netrw's functionality, using nvim-tree will cover this feature(QAQ).
+-- But this solution still can't open local file in my computer(ubuntu20.04).
+-- map helper
+local function map(mode, lhs, rhs, opts)
+    local options = { noremap = true }
+    if opts then
+        options = vim.tbl_extend("force", options, opts)
+    end
+    vim.api.nvim_set_keymap(mode, lhs, rhs, options)
+end
+
+-- better gx mapping
+map("n", "gx", '<Cmd>call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>', {})
