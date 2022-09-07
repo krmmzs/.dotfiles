@@ -29,6 +29,7 @@ require("mzs.plugin.cmp")
 require("mzs.plugin.lsp_lines")
 require("mzs.lsp.null-ls")
 require("mzs.plugin.goto-preview") -- well preview window for gd and more...
+require("mzs.plugin.LuaSnip")
 
 -- treesitter
 require("mzs.plugin.nvim-treesitter")

@@ -12,11 +12,11 @@ end
 -- (eg. rafamadriz/friendly-snippets) simply install the plugin and then add.
 require("luasnip/loaders/from_vscode").lazy_load()
 
-local has_words_before = function()
-    -- Function unpack was moved into the table library and therefore must be called as table.unpack.
-    local line, col = table.unpack(vim.api.nvim_win_get_cursor(0))
-    return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-end
+-- local has_words_before = function()
+--     -- Function unpack was moved into the table library and therefore must be called as table.unpack.
+--     local line, col = table.unpack(vim.api.nvim_win_get_cursor(0))
+--     return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+-- end
 
 local check_backspace = function()
     local col = vim.fn.col "." - 1
@@ -72,7 +72,9 @@ cmp.setup {
         },
         -- Accept currently selected item. If none selected, `select` first item.
         -- Set `select` to `false` to only confirm explicitly selected items.
+        --[[ ["<C-j>"] = cmp.mapping.confirm { select = true }, ]]
         ["<C-j>"] = cmp.mapping.confirm { select = true },
+        --[[ ["<CR>"] = cmp.mapping.confirm { select = true }, ]]
         ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
@@ -80,8 +82,8 @@ cmp.setup {
                 luasnip.expand()
             elseif luasnip.expand_or_jumpable() then
                 luasnip.expand_or_jump()
-            elseif has_words_before() then
-                cmp.complete()
+            -- elseif has_words_before() then
+            --     cmp.complete()
             elseif check_backspace() then
                 fallback()
             else
@@ -112,7 +114,7 @@ cmp.setup {
             -- vim_item.kind = string.format('%s %s', kind_icons[vim_item.kind], vim_item.kind) -- This concatonates the icons with the name of the item kind
             vim_item.menu = ({
                 nvim_lsp = "[LSP]",
-                luasnip = "[Snippet]",
+                luasnip = "[LuaSnip]",
                 buffer = "[Buffer]",
                 path = "[Path]",
                 -- cmdline = "[Cmd]",
@@ -121,8 +123,8 @@ cmp.setup {
         end,
     },
     sources = {
-        { name = "nvim_lsp"}, -- from nvim_lsp.
         { name = "luasnip" }, -- from a code snippets.
+        { name = "nvim_lsp"}, -- from nvim_lsp.
         { name = "buffer" },
         { name = "path" },
         -- { name = "cmdline" },
@@ -132,10 +134,13 @@ cmp.setup {
         select = false,
     },
     window = {
+        completion = cmp.config.window.bordered(),
         documentation = cmp.config.window.bordered{ "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
     },
     experimental = {
-        ghost_text = false, -- it annoys me...
-        native_menu = false,
+        ghost_text = true, -- it annoys me...
+        view = {
+            entries = 'native'
+        }
     },
 }
