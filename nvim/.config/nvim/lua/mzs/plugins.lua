@@ -126,12 +126,12 @@ return packer.startup(function(use)
 
 
     -- Format
-    --[[ use {'psf/black'} ]]
+    use {'psf/black'}
     use {
         'prettier/vim-prettier',
         run = 'yarn install --frozen-lockfile --production',
         ft = {'javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'svelte', 'yaml', 'html'}
-    }
+    } -- <Leader>p or :Prettier
 
     use { 'Yggdroot/indentLine' }
     --use { 'ap/vim-css-color' } -- show css color will have error when open .java with treesitter
@@ -187,7 +187,7 @@ return packer.startup(function(use)
     use {
         'rmagatti/goto-preview'
     }
-    use { 'jose-elias-alvarez/null-ls.nvim' } -- for formatters nad linter
+    use { 'jose-elias-alvarez/null-ls.nvim' } -- for formatters and linter
 
     -- Virtual Text
     use {'kevinhwang91/nvim-hlslens'} -- helps you better glance at matched information
@@ -208,6 +208,15 @@ return packer.startup(function(use)
 
     -- web
     use { 'windwp/nvim-ts-autotag' }
+
+    -- data science
+    use { 'goerz/jupytext.vim' }
+
+    -- markdown
+    use({
+        "iamcco/markdown-preview.nvim",
+        run = function() vim.fn["mkdp#util#install"]() end,
+    })
 
 
 

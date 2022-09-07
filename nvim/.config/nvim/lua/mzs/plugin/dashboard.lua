@@ -22,7 +22,8 @@ if not status_ok then
 end
 
 require("lfs")
-local path ="/home/mouzaisi/.config/nvim/static"
+--[[ local path ="/home/mouzaisi/.config/nvim/static" ]]
+local path ="/home/mouzaisi/.config/nvim/static/gif"
 
 local function get_file()
     local x = {}
@@ -41,8 +42,16 @@ end
 local target = get_file()
 
 
-db.preview_command = 'ueberzug'
-db.preview_file_path = home .. '/.config/nvim/static/' .. target
+-- static picture
+--[[ db.preview_command = 'ueberzug' ]]
+--[[ db.preview_file_path = home .. '/.config/nvim/static/' .. target ]]
+
+-- gif
+db.preview_command = 'chafa -c 256 --fg-only --symbols braille'
+--[[ db.preview_command = 'chafa -c 256 --symbols braille' ]]
+db.preview_file_path = home .. '/.config/nvim/static/gif/' .. target
+
+-- size
 db.preview_file_height = 27
 db.preview_file_width = 48
 

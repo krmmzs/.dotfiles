@@ -111,8 +111,8 @@ cmp.setup {
     end,
   },
   sources = {
-    { name = "nvim_lsp"},
-    { name = "luasnip" },
+    { name = "nvim_lsp"}, -- from nvim_lsp.
+    { name = "luasnip" }, -- from a code snippets.
     { name = "buffer" },
     { name = "path" },
     -- { name = "cmdline" },

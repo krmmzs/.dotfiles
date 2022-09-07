@@ -47,7 +47,7 @@ require("mzs.plugin.emmet")
 require("mzs.plugin.hop")
 
 -- formatting
--- require("mzs.plugin.black") -- for python , replaced by null-ls.nvim
+require("mzs.plugin.black") -- for python
 require("mzs.plugin.vim-prettier") -- for web(js...)
 require("mzs.plugin.comment")
 
@@ -55,6 +55,9 @@ require("mzs.plugin.comment")
 require("mzs.plugin.diffview")
 require("mzs.plugin.gitsigns")
 require("mzs.plugin.vim-gutentags")
+
+-- markdown
+require("mzs.plugin.markdown-preview")
 
 
 require("mzs.plugin.nvim-hlslens")
