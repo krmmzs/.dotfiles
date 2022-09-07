@@ -192,8 +192,11 @@ alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {
 alias bd=". bd -si"
 alias lst="ls --tree"
 
-alias pyinit="cp ~/MyGit/project_init/python/init/* . && $EDITOR .root"
-alias cppinit="cp ~/MyGit/project_init/cpp/init/* . && $EDITOR .root"
+# apt
+alias apti="sudo apt-get install"
+
+alias pyinit="cp ~/MyGit/project_init/python/init/* . && touch .root"
+alias cppinit="cp ~/MyGit/project_init/cpp/init/.* . && touch .root"
 
 # alacritty themes alias
 LIGHT_COLOR='dark.yml'
