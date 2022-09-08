@@ -117,15 +117,18 @@ cmp.setup {
                 luasnip = "[LuaSnip]",
                 buffer = "[Buffer]",
                 path = "[Path]",
+                cmp_tabnine = "[TN]",
                 -- cmdline = "[Cmd]",
             })[entry.source.name]
             return vim_item
         end,
     },
+    -- this order is the completion show priority.
     sources = {
+        { name = "buffer" },
         { name = "luasnip" }, -- from a code snippets.
         { name = "nvim_lsp"}, -- from nvim_lsp.
-        { name = "buffer" },
+        { name = 'cmp_tabnine' },
         { name = "path" },
         -- { name = "cmdline" },
     },

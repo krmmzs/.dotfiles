@@ -5,7 +5,11 @@ vim.cmd[[
 " highlight CursorLine   cterm=NONE ctermbg=white ctermfg=NONE guibg=NONE guifg=NONE
 
 colorscheme tokyonight
-set background=dark
+set background=dark " for leaderF and more other plugins.
+
+" colorscheme tokyonight-day
+" set background=light " for leaderF and more other plugins.
+
 
 " colorscheme gruvbox
 " set background=dark

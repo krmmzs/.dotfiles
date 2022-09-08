@@ -25,11 +25,12 @@ require("mzs.plugin.nvim-tree")
 require("mzs.plugin.indentLine")
 
 -- LSP
-require("mzs.plugin.cmp")
 require("mzs.plugin.lsp_lines")
 require("mzs.lsp.null-ls")
 require("mzs.plugin.goto-preview") -- well preview window for gd and more...
+require("mzs.plugin.cmp")
 require("mzs.plugin.LuaSnip")
+require("mzs.plugin.tabnine")
 
 -- treesitter
 require("mzs.plugin.nvim-treesitter")
@@ -64,3 +65,9 @@ require("mzs.plugin.markdown-preview")
 require("mzs.plugin.nvim-hlslens")
 -- require("mzs.plugin.impatient") -- required in nvim/init.lua
 require("mzs.plugin.trouble")
+
+-- terminal
+require("mzs.plugin.toggleterm")
+
+-- keymaps
+require("mzs.plugin.which-key")
