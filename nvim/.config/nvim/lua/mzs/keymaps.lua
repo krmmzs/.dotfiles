@@ -17,6 +17,10 @@ local function ikeymap(key, map)
     keymap('i', key, map, opts)
 end
 
+local function ckeymap(key, map)
+    keymap('c', key, map, opts)
+end
+
 -- Others
 nkeymap("Q", "<Nop>")
 
@@ -135,3 +139,30 @@ end
 
 -- better gx mapping
 map("n", "gx", '<Cmd>call jobstart(["xdg-open", expand("<cfile>")], {"detach": v:true})<CR>', {})
+
+-- Saner command-line history
+-- see https://github.com/mhinz/vim-galore#saner-command-line-history
+ckeymap("<c-n>", "<down>")
+ckeymap("<c-p", "<up>")
+
+-- Quickly add empty lines
+-- Now 5[<space> inserts 5 blank lines above the current line.
+vim.cmd[[
+nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
+nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
+]]
+
+-- Reload a file on saving
+-- see https://github.com/mhinz/vim-galore#reload-a-file-on-saving
+vim.cmd[[
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+" autocmd BufWritePost ~/.Xdefaults call system('xrdb ~/.Xdefaults')
+]]
+
+-- Smarter cursorline
+-- I love the cursorline, but I only want to use it in the current window and not when being in insert mode:
+vim.cmd[[
+autocmd InsertLeave,WinEnter * set cursorline
+autocmd InsertEnter,WinLeave * set nocursorline
+]]
+

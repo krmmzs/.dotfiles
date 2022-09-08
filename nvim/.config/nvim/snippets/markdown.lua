@@ -79,8 +79,19 @@ local code = s("code", fmt([[
         i(2, "")
     }))
 
+table.insert(snippets, code)
+
+
+local url = s("url", fmt([[
+[{}]({})
+]], {
+        i(1, "text"),
+        i(2, "url")
+    }))
+
+table.insert(snippets, url)
+
 -- End Refactoring --
 
-table.insert(snippets, code)
 
 return snippets, autosnippets
