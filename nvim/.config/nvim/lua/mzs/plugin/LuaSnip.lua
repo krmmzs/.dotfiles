@@ -50,18 +50,18 @@ end, { silent = true })
 -- 	end
 -- end, { silent = true })
 
-vim.keymap.set({ "i", "s" }, "<S-j>", function()
+vim.keymap.set({ "i", "s" }, "<a-j>", function()
 	if ls.jumpable(1) then
 		ls.jump(1)
 	end
 end, { silent = true })
-vim.keymap.set({ "i", "s" }, "<S-k>", function()
+vim.keymap.set({ "i", "s" }, "<a-k>", function()
 	if ls.jumpable(-1) then
 		ls.jump(-1)
 	end
 end, { silent = true })
 
-vim.keymap.set({ "i", "s" }, "<S-l>", function()
+vim.keymap.set({ "i", "s" }, "<a-l>", function()
 	if ls.choice_active() then
 		ls.change_choice(1)
 	else
@@ -71,7 +71,7 @@ vim.keymap.set({ "i", "s" }, "<S-l>", function()
 		print(time)
 	end
 end)
-vim.keymap.set({ "i", "s" }, "<S-h>", function()
+vim.keymap.set({ "i", "s" }, "<a-h>", function()
 	if ls.choice_active() then
 		ls.change_choice(-1)
 	end

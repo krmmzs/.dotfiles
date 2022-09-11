@@ -147,7 +147,7 @@ export LANG=en_US.UTF-8
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # git alias
-alias cbr='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always" | xargs git checkout'
+alias cbr='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always | delta" | xargs git checkout'
 alias gs="git status"
 alias ga="git add"
 alias gl="git log --all --graph --decorate"
@@ -170,8 +170,8 @@ alias ins="cd ~/softwares/ins && ./clash -d ."
 alias free="cd ~/softwares/free && ./clash -d ."
 alias white="cd ~/softwares/white && ./clash -d ."
 
-# fzf
-alias v="fd --type f --hidden --exclude .git | fzf-tmux -p --reverse | xargs nvim"
+# fzf find files
+alias v="fd --type f --hidden --exclude .git | fzf-tmux -p 70% --reverse | xargs nvim"
 
 # applications
 alias tgif='cd ~/softwares/gif2tgsticker/ && poetry run python3 gif2tgsticker.py'
@@ -238,3 +238,32 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+
+# JINA_CLI_BEGIN
+
+## autocomplete
+if [[ ! -o interactive ]]; then
+    return
+fi
+
+compctl -K _jina jina
+
+_jina() {
+  local words completions
+  read -cA words
+
+  if [ "${#words}" -eq 2 ]; then
+    completions="$(jina commands)"
+  else
+    completions="$(jina completions ${words[2,-2]})"
+  fi
+
+  reply=(${(ps:\n:)completions})
+}
+
+# session-wise fix
+ulimit -n 4096
+export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
+
+# JINA_CLI_END
