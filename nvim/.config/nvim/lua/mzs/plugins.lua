@@ -54,6 +54,8 @@ return packer.startup(function(use)
     use "wbthomason/packer.nvim" -- Have packer manage itself
     use "nvim-lua/popup.nvim" -- An implementation of the Popup API from vim in Neovim
     use "nvim-lua/plenary.nvim" -- Useful lua functions used ny lots of plugins
+    use 'kyazdani42/nvim-web-devicons'
+
 
     use 'wakatime/vim-wakatime'
 
@@ -69,6 +71,7 @@ return packer.startup(function(use)
     use { 'kkharji/lspsaga.nvim' }  -- nightly
     use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
     use {'moll/vim-bbye'}
+    use {'xiyaowong/nvim-transparent'}
 
     -- colorscheme
     use 'folke/tokyonight.nvim'
@@ -188,7 +191,11 @@ return packer.startup(function(use)
     use {
         'rmagatti/goto-preview'
     }
-    use { 'jose-elias-alvarez/null-ls.nvim' } -- for formatters and linter
+    --have bug and I can't debug... 2022.9.14
+    --[[ use({ ]]
+    --[[     "jose-elias-alvarez/null-ls.nvim", ]]
+    --[[     requires = { "nvim-lua/plenary.nvim" }, ]]
+    --[[ }) ]]
 
     -- Virtual Text
     use {'kevinhwang91/nvim-hlslens'} -- helps you better glance at matched information
@@ -211,6 +218,7 @@ return packer.startup(function(use)
     use { 'windwp/nvim-ts-autotag' }
 
     -- data science
+    use { 'dccsillag/magma-nvim', run = ':UpdateRemotePlugins' }
     use { 'goerz/jupytext.vim' }
 
     -- markdown

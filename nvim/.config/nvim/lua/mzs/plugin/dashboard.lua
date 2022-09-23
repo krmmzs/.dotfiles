@@ -57,29 +57,26 @@ db.preview_file_width = 48
 
 
 db.custom_center = {
-    {icon = ' ',
-        desc = ' Recently latest session                  ',
+    {icon = '  ',
+        desc = 'History                                 ',
         shortcut = 'SPC s l',
-        action ='SessionLoad'},
-    {icon = '  ',
-        desc = 'Recently opened files                   ',
-        action =  'DashboardFindHistory',
-        shortcut = 'SPC f h'},
+        action ='LeaderfMru'},
+    {icon = '  ',
+        desc = 'Projects                                ',
+        shortcut = 'SPC f p',
+        action ='Telescope projects'},
     {icon = '  ',
         desc = 'Find  File                              ',
         action = 'Telescope find_files find_command=rg,--hidden,--files',
         shortcut = 'SPC f f'},
-    {icon = '  ',
-        desc ='File Browser                            ',
-        action =  'Telescope file_browser',
-        shortcut = 'SPC f b'},
     {icon = '  ',
         desc = 'Find  word                              ',
         action = 'Telescope live_grep',
         shortcut = 'SPC f w'},
     {icon = '  ',
         desc = 'Open Personal dotfiles                  ',
-        action = 'Telescope dotfiles path=' .. home ..'/.dotfiles',
+        --[[ action = 'Telescope dotfiles path=' .. home ..'/.dotfiles', ]]
+        action = 'edit ~/.dotfiles/nvim/.config/nvim/init.lua',
         shortcut = 'SPC f d'},
 }
 

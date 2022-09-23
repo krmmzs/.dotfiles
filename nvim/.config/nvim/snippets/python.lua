@@ -73,6 +73,12 @@ end --}}}
 local python3 = s("python3", { t"#!/usr/bin python3"})
 table.insert(snippets, python3)
 
+
+local jupyter = s("ne", {
+    t"# %%"
+})
+table.insert(snippets, jupyter)
+
 -- End Refactoring --
 
 return snippets, autosnippets

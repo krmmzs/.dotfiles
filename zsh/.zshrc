@@ -179,7 +179,7 @@ alias tgif='cd ~/softwares/gif2tgsticker/ && poetry run python3 gif2tgsticker.py
 alias cman="man -M /usr/share/man/zh_CN"
 alias csen="$EDITOR ~/MyGit/English/CS_English.md"
 alias dir="nautilus"
-alias alidrive="cd ~/softwares/阿里小白羊版Linux\ v2.9.24/ && ./阿里云盘小白羊版"
+alias alidrive="cd ~/softwares/阿里小白羊版Linux\ v2.12.14/ && ./阿里云盘小白羊版"
 alias vimal="$EDITOR -u ~/.vimrcs/.algorithm_vimrc"
 alias vimnp="$EDITOR -u ~/.vimrcs/.no_plugins_vimrc"
 alias mvim="$EDITOR -u ~/.vimrcs/.mvimrc"
@@ -187,7 +187,7 @@ alias nvimn="nvim -u NONE"
 alias mv="mv -i"  # add attention
 alias rm="rm -i"  # add attention
 alias cp="cp -i"  # add attention
-alias ls="exa" # replace ls to exa but with command ls
+alias ls="exa --icons" # replace ls to exa but with command ls
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'" # 用bat来做fzf的预览器, need to install bat firstly
 alias bd=". bd -si"
 alias lst="ls --tree"
@@ -209,6 +209,15 @@ alias toggle="alacritty-colorscheme toggle $LIGHT_COLOR $DARK_COLOR"
 alias config='cd /home/$USER/scripts && ./config.sh'
 
 alias todo='cd ~/MyGit/TODO && nvim .'
+
+# softwares quick command
+alias voice="pavucontrol"
+
+# quick cheat
+alias cheat="j cheat && git open && cd -"
+
+# scripts
+alias ocr='python3 ~/scripts/Extract_Text_from_Image.py'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

@@ -3,7 +3,9 @@ if not snip_status_ok then
     return
 end
 
--- require("luasnip.loaders.from_vscode").lazy_load() have configged in cmp-nvim
+--[[ require("luasnip.loaders.from_vscode").lazy_load() -- have configged in cmp-nvim ]]
+
+-- My added snippets
 require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets/" })
 
 require("luasnip").config.setup({ store_selection_keys = "<A-p>" })
@@ -13,7 +15,7 @@ vim.cmd([[command! LuaSnipEdit :lua require("luasnip.loaders.from_lua").edit_sni
 -- Virtual Text{{{
 local types = require("luasnip.util.types")
 ls.config.set_config({
-	history = true, --keep around last snippet local to jump back
+	history = false, -- keep around last snippet local to jump back
 	updateevents = "TextChanged,TextChangedI", --update changes as you type
 	enable_autosnippets = true,
 	ext_opts = {

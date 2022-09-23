@@ -3,6 +3,7 @@ require("mzs.keymaps")
 require("mzs.remap")
 require("mzs.colorscheme")
 require("mzs.lsp")
+require("mzs.plugin.nvim-web-devicons")
 
 require("mzs.plugins")
 
@@ -23,10 +24,11 @@ require("mzs.plugin.lualine")
 require("mzs.plugin.nvim-autopairs")
 require("mzs.plugin.nvim-tree")
 require("mzs.plugin.indentLine")
+require("mzs.plugin.nvim-transparent")
 
 -- LSP
 require("mzs.plugin.lsp_lines")
-require("mzs.lsp.null-ls")
+--[[ require("mzs.lsp.null-ls") ]]
 require("mzs.plugin.goto-preview") -- well preview window for gd and more...
 require("mzs.plugin.cmp")
 require("mzs.plugin.LuaSnip")
@@ -71,3 +73,7 @@ require("mzs.plugin.toggleterm")
 
 -- keymaps
 require("mzs.plugin.which-key")
+
+-- data-scient
+require("mzs.plugin.magma-nvim")
+require("mzs.plugin.jupytext")

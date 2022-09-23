@@ -1,6 +1,6 @@
 local nnoremap = require("mzs.keymap").nnoremap
 
-nnoremap("<leader>pv", "<cmd>Ex<CR>")
+--[[ nnoremap("<leader>pv", "<cmd>Ex<CR>") ]]
 -- nnoremap("\\", "cd %:h<CR> :terminal<CR>")
 
 -- inoremap(",", ",<c-g>u")

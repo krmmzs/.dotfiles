@@ -26,9 +26,14 @@ lsp_installer.on_server_ready(function(server)
         opts = vim.tbl_deep_extend("force", pyright_opts, opts)
     end
 
-    --[[ if server.name == "jdtls" then ]]
-    --[[]]
-    --[[ end ]]
+    if server.name == "ccls" then
+        local ccls_opts = require("mzs.lsp.settings.ccls")
+        opts = vim.tbl_deep_extend("force", ccls_opts, opts)
+    end
+
+    if server.name == "jdtls" then
+
+    end
 
 
     -- This setup() function is exactly the same as lspconfig's setup function.

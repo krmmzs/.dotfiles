@@ -75,12 +75,11 @@ local code = s("code", fmt([[
 {}
 ```
 ]], {
-        i(1, "language"),
+        i(1, ""),
         i(2, "")
     }))
 
 table.insert(snippets, code)
-
 
 local url = s("url", fmt([[
 [{}]({})
@@ -88,8 +87,25 @@ local url = s("url", fmt([[
         i(1, "text"),
         i(2, "url")
     }))
-
 table.insert(snippets, url)
+
+local img = s("img", fmt([[
+<img src="{}" alt="{}" style="zoom:{}%;" />
+]], {
+        i(1, ""),
+        i(2, ""),
+        i(3, "")
+    }))
+
+table.insert(snippets, img)
+
+local todo = s("todo", fmt([[
+TODO: {}
+]], {
+        i(1, ""),
+    }))
+
+table.insert(snippets, todo)
 
 -- End Refactoring --
 

@@ -21,6 +21,10 @@ local function ckeymap(key, map)
     keymap('c', key, map, opts)
 end
 
+local function xkeymap(key, map)
+    keymap('x', key, map, opts)
+end
+
 -- Others
 nkeymap("Q", "<Nop>")
 
@@ -33,6 +37,9 @@ nkeymap("<c-q>", ":q<CR>")
 -- copy and paste
 vkeymap('<leader>y', '"+y')
 
+-- greatest remap ever
+xkeymap('<leader>p', "\"_dP")
+
 -- Keeping it contered
 nkeymap("n", "nzz")
 nkeymap("N", "Nzz")
@@ -40,8 +47,8 @@ nkeymap("J", "mzsJ'z")
 
 -- Jumplist mutations, solve jump list could save <number>j or <number>k
 vim.cmd[[
-noremap <expr> k (v:count > 5 ? "m'" . v:count : "") . 'k'
-noremap <expr> j (v:count > 5 ? "m'" . v:count : "") . 'j'
+noremap <expr> k (v:count > 1 ? "m'" . v:count : "") . 'k'
+noremap <expr> j (v:count > 1 ? "m'" . v:count : "") . 'j'
 ]]
 
 -- source: https://vim.fandom.com/wiki/Set_working_directory_to_the_current_file

@@ -46,6 +46,9 @@ nkeymap("<leader>fr", "<cmd>lua require('telescope').extensions.frecency.frecenc
 -- TODO
 nkeymap("<leader>fd", ":TodoTelescope<cr>")
 
+-- history command
+nkeymap("<leader>fn", "<cmd> Telescope command_history<CR>")
+
 telescope.setup {
     defaults = {
 

@@ -19,6 +19,9 @@ case $1 in
     vim)
         $EDITOR /home/$USER/.vimrc
         ;;
+    snippets)
+        $EDITOR /home/$USER/.config/nvim/snippets/
+        ;;
         
     *)
       {

@@ -28,5 +28,5 @@ vim.api.nvim_set_keymap('', 't', "<cmd>lua require'hop'.hint_char1({ direction =
 vim.api.nvim_set_keymap('', 'T', "<cmd>lua require'hop'.hint_char1({ direction = require'hop.hint'.HintDirection.BEFORE_CURSOR, current_line_only = true, hint_offset = 1 })<cr>", {})
 
 nkeymap("<leader>m", ":HopChar1<CR>")
-nkeymap("<leader>j", ":HopLineStart<CR>")
+nkeymap("<leader>k", ":HopLineStart<CR>")
 nkeymap("<leader>/", ":HopPattern<CR>")
