@@ -30,9 +30,9 @@ cursor:
 
 # -------------------------------------------------------
 
-# window:
-#   opacity: 0.5
-  # decorations: none # get rid of the title bar
+window:
+  opacity: 0.6
+#   decorations: none
 
 colors:
   primary:
