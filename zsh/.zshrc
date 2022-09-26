@@ -102,7 +102,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git zsh-autosuggestions zsh-syntax-highlighting git-open wakatime poetry)
+plugins=(git zsh-autosuggestions zsh-syntax-highlighting git-open zsh-wakatime poetry)
 
 # This list is incomplete as there are too many frameworks / plugin managers to list them all here.
 
@@ -164,11 +164,11 @@ alias gm="git merge"
 alias gb="git branch"
 
 # clash alias
-alias prpr="cd ~/softwares/prpr && ./clash -d ."
-alias igg="cd ~/softwares/igg && ./clash -d ."
-alias ins="cd ~/softwares/ins && ./clash -d ."
-alias free="cd ~/softwares/free && ./clash -d ."
-alias white="cd ~/softwares/white && ./clash -d ."
+alias prpr="cd ~/git/sciNet/prpr && ./clash -d ."
+alias igg="cd ~/git/sciNet/igg && ./clash -d ."
+alias ins="cd ~/git/sciNet/ins && ./clash -d ."
+alias free="cd ~/git/sciNet/free && ./clash -d ."
+alias white="cd ~/git/sciNet/white && ./clash -d ."
 
 # fzf find files
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -p 70% --reverse | xargs nvim"
@@ -228,7 +228,7 @@ eval $(thefuck --alias)
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# eval "$(pyenv init -)"
 
 export PATH="$HOME/.poetry/bin:$PATH"
 
