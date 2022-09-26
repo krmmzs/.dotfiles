@@ -34,11 +34,12 @@ nkeymap("<leader>1", ":set relativenumber!<CR>")
 -- quick :q
 nkeymap("<c-q>", ":q<CR>")
 
--- copy and paste
+-- copy and paste in clipboard
 vkeymap('<leader>y', '"+y')
+nkeymap('<leader>p', '"+p')
 
 -- greatest remap ever
-xkeymap('<leader>p', "\"_dP")
+--[[ xkeymap('<leader>p', "\"_dP") ]]
 
 -- Keeping it contered
 nkeymap("n", "nzz")
@@ -74,6 +75,7 @@ nkeymap("\\\\", ":cd %:p:h<CR>")
 -- keymap("n", "<C-k>", "<C-w>k", opts)
 -- keymap("n", "<C-l>", "<C-w>l", opts)
 
+-- files navigation
 nkeymap("<leader>e", ":Lex 35<cr>")
 
 -- Resize with arrows
@@ -165,11 +167,3 @@ vim.cmd[[
 autocmd BufWritePost $MYVIMRC source $MYVIMRC
 " autocmd BufWritePost ~/.Xdefaults call system('xrdb ~/.Xdefaults')
 ]]
-
--- Smarter cursorline
--- I love the cursorline, but I only want to use it in the current window and not when being in insert mode:
-vim.cmd[[
-autocmd InsertLeave,WinEnter * set cursorline
-autocmd InsertEnter,WinLeave * set nocursorline
-]]
-

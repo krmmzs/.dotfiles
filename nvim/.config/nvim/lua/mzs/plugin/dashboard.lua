@@ -21,6 +21,7 @@ if not status_ok then
      return
 end
 
+-- need lua module
 require("lfs")
 --[[ local path ="/home/mouzaisi/.config/nvim/static" ]]
 local path ="/home/mouzaisi/.config/nvim/static/gif"

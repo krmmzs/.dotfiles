@@ -19,7 +19,7 @@ require("mzs.plugin.dashboard")
 require("mzs.plugin.context")
 require("mzs.plugin.lspsaga")
 require("mzs.plugin.bufferline")
-require("mzs.plugin.vista")
+--[[ require("mzs.plugin.vista") ]] -- replace by symbols-outline(using nvim-lsp)
 require("mzs.plugin.lualine")
 require("mzs.plugin.nvim-autopairs")
 require("mzs.plugin.nvim-tree")
@@ -33,6 +33,7 @@ require("mzs.plugin.goto-preview") -- well preview window for gd and more...
 require("mzs.plugin.cmp")
 require("mzs.plugin.LuaSnip")
 require("mzs.plugin.tabnine")
+require("mzs.plugin.symbols-outline") -- tarbar with lsp
 
 -- treesitter
 require("mzs.plugin.nvim-treesitter")
@@ -58,6 +59,11 @@ require("mzs.plugin.comment")
 -- git
 require("mzs.plugin.diffview")
 require("mzs.plugin.gitsigns")
+
+
+-- ctags
+-- skywind3000
+-- https://www.zhihu.com/question/47691414/answer/373700711
 require("mzs.plugin.vim-gutentags")
 
 -- markdown
@@ -76,4 +82,4 @@ require("mzs.plugin.which-key")
 
 -- data-scient
 require("mzs.plugin.magma-nvim")
-require("mzs.plugin.jupytext")
+require("mzs.plugin.jupytext") -- need jupyter firstly

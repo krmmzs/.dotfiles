@@ -143,7 +143,8 @@ return packer.startup(function(use)
 
     -- tags
     use { 'ludovicchabant/vim-gutentags' } -- build ctags auto and silent
-    use { 'liuchengxu/vista.vim' } -- replace tagbar which could support LSP
+    use 'simrat39/symbols-outline.nvim' -- replace vista.vim
+    --[[ use { 'liuchengxu/vista.vim' } -- replace tagbar which could support LSP ]]
 
     -- fzf
     use { 'Yggdroot/LeaderF', run = ':LeaderfInstallCExtension' }

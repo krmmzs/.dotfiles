@@ -4,7 +4,7 @@ local options = {
     backup = false,                          -- creates a backup file
     swapfile = false,                        -- creates a swapfile
 
-    --clipboard = "unnamedplus",             -- allows neovim to access the system clipboard but no terminal
+    --[[ clipboard = "unnamedplus",             -- allows neovim to access the system clipboard but no terminal ]]
     clipboard = "unnamed",                   -- allows neovim to paste things to termianl(use "+y to paste to others)
     cmdheight = 2,                           -- more space in the neovim command line for displaying messages
     conceallevel = 0,                        -- so that `` is visible in markdown files
@@ -64,4 +64,11 @@ vim.cmd[[
 
 vim.cmd[[
     autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g`\"" | endif
+]]
+
+-- Smarter cursorline
+-- I love the cursorline, but I only want to use it in the current window and not when being in insert mode:
+vim.cmd[[
+autocmd InsertLeave,WinEnter * set cursorline
+autocmd InsertEnter,WinLeave * set nocursorline
 ]]

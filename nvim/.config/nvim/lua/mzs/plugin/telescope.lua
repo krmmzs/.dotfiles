@@ -191,6 +191,7 @@ telescope.load_extension('fzf')
 -- see https://github.com/nvim-telescope/telescope-media-files.nvim
 telescope.load_extension('media_files')
 
+-- need sqlite3
 -- Using an implementation of Mozilla's Frecency algorithm (used in Firefox's address bar)
 -- , files edited frecently are given higher precedence in the list index.
 telescope.load_extension('frecency')

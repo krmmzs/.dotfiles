@@ -3,7 +3,6 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 
-
 vim.cmd[[
 " gutentags 搜索工程目录的标志，碰到这些文件/目录名就停止向上一级目录递归
 let g:gutentags_project_root = ['.root', '.svn', '.git', '.hg', '.project']
@@ -17,12 +16,11 @@ let g:gutentags_cache_dir = s:vim_tags
 
 " 配置 ctags 的参数
 let g:gutentags_ctags_extra_args = ['--fields=+niazS', '--extra=+q']
-let g:gutentags_ctags_extra_args += ['--c++-kinds=+pxl']
-let g:gutentags_ctags_extra_args += ['--c-kinds=+pxl']
-let g:gutentags_ctags_extra_args += ['--output-format=e-ctags']
+let g:gutentags_ctags_extra_args += ['--c++-kinds=+px']
+let g:gutentags_ctags_extra_args += ['--c-kinds=+px']
 
 " 检测 ~/.cache/tags 不存在就新建
-"if !isdirectory(s:vim_tags)
-   "silent! call mkdir(s:vim_tags, 'p')
-"endif
+if !isdirectory(s:vim_tags)
+   silent! call mkdir(s:vim_tags, 'p')
+endif
 ]]
