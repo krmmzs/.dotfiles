@@ -164,11 +164,11 @@ alias gm="git merge"
 alias gb="git branch"
 
 # clash alias
-alias prpr="cd ~/git/sciNet/prpr && ./clash -d ."
-alias igg="cd ~/git/sciNet/igg && ./clash -d ."
-alias ins="cd ~/git/sciNet/ins && ./clash -d ."
-alias free="cd ~/git/sciNet/free && ./clash -d ."
-alias white="cd ~/git/sciNet/white && ./clash -d ."
+alias prpr="cd ~/MyGit/sciNet/prpr && ./clash -d ."
+alias igg="cd ~/MyGit/sciNet/igg && ./clash -d ."
+alias ins="cd ~/MyGit/sciNet/ins && ./clash -d ."
+alias free="cd ~/MyGit/sciNet/free && ./clash -d ."
+alias white="cd ~/MyGit/sciNet/white && ./clash -d ."
 
 # fzf find files
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -p 70% --reverse | xargs nvim"
@@ -214,10 +214,13 @@ alias todo='cd ~/MyGit/TODO && nvim .'
 alias voice="pavucontrol"
 
 # quick cheat
-alias cheat="j cheat && git open && cd -"
+alias cheat="cd ~/MyGit/awesome-cheatsheets && git open && cd -"
 
 # scripts
 alias ocr='python3 ~/scripts/Extract_Text_from_Image.py'
+
+# apt script
+alias aptremove='bash ~/scripts/aptclean.sh'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -231,23 +234,6 @@ command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 export PATH="$HOME/.poetry/bin:$PATH"
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/mouzaisi/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/mouzaisi/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/mouzaisi/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/mouzaisi/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-
 
 # JINA_CLI_BEGIN
 
@@ -284,3 +270,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+export XMODIFIERS=@im=fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
