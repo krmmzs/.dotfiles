@@ -3,12 +3,12 @@
 # for examples
 
 # javajdk
-export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
-export PATH=$JAVA_HOME/bin:$PATH
-export CLASSPATH=.:$JAVA_HOME/lib
+# export JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64
+# export PATH=$JAVA_HOME/bin:$PATH
+# export CLASSPATH=.:$JAVA_HOME/lib
 
 #让tmux适配vim的颜色
-export TERM=screen-256color-bce
+# export TERM=screen-256color-bce
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -110,8 +110,6 @@ export LD_LIBRARY_PATH=/usr/local/lib/:${LD_LIBRARY_PATH}
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 . "$HOME/.cargo/env"
 
-export REPO_DIR=/home/mouzaisi/MyGit/cs61b_git/cs61b_sp21
-
 
 # JINA_CLI_BEGIN
 
@@ -143,3 +141,6 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export http_proxy="http://127.0.0.1:7890"
+export https_proxy="https://127.0.0.1:7890"

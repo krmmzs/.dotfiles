@@ -103,9 +103,24 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 
-# attention: zsh-syntax-highlighting should be the end of lists.
-plugins=(git zsh-autosuggestions git-open gitignore zsh-wakatime poetry docker cp safe-paste command-not-found zsh-syntax-highlighting)
+# attention: zsh-syntax-highlighting should be the end of lists
+plugins=(
+    git
+    zsh-autosuggestions
+    git-open
+    zsh-wakatime
+    poetry
+    docker
+    cp
+    safe-paste
+    per-directory-history
+    command-not-found
+    zsh-syntax-highlighting
+)
 
+# per-directory-history conifg.
+# using ctrl-h to toggle history environment.
+bindkey "^h" per-directory-history-toggle-history
 
 # This list is incomplete as there are too many frameworks / plugin managers to list them all here.
 
@@ -149,11 +164,6 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# git
-
-# gi for command line to create .gitignore
-function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
-
 # git alias
 alias cbr='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always | delta" | xargs git checkout'
 alias gs="git status"
@@ -170,12 +180,6 @@ alias gp="git push"
 alias gpl="git pull"
 alias gm="git merge"
 alias gb="git branch"
-
-# tmux alias
-alias tl="tmux list-sessions"
-alias tkss="tmux kill-session -t"
-alias ta="tmux attach -t"
-alias ts="tmux new -s"
 
 # clash alias
 alias prpr="cd ~/MyGit/sciNet/prpr && ./clash -d ."
