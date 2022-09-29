@@ -10,3 +10,4 @@ tags
 nvim/.config/nvim/static
 .root
 tmux/.tmux/plugins/tmux-fzf
+vim/.vim/plugged/*
