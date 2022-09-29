@@ -2,10 +2,10 @@ require("mzs.set")
 require("mzs.keymaps")
 require("mzs.remap")
 require("mzs.colorscheme")
+require("mzs.plugins")
 require("mzs.lsp")
 require("mzs.plugin.nvim-web-devicons")
 
-require("mzs.plugins")
 
 -- plugins Configs
 

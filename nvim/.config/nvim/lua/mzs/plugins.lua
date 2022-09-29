@@ -184,7 +184,7 @@ return packer.startup(function(use)
     use {"hrsh7th/cmp-nvim-lsp"}
     use({"L3MON4D3/LuaSnip", tag = "v<CurrentMajor>.*"}) --snippet engine
     use {"rafamadriz/friendly-snippets"} -- a bunch of snippets to usempletions
-    use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+ 	use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
 
     -- LSP
     use {"neovim/nvim-lspconfig"} -- enable LSP

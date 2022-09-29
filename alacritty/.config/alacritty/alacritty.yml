@@ -32,7 +32,7 @@ cursor:
 
 window:
   opacity: 0.7
-  decorations: none
+# decorations: none
 
 colors:
   primary:

@@ -18,9 +18,9 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # proxy
 
-export http_proxy='http://127.0.0.1:7890'
-export https_proxy='https://127.0.0.1:7890'
-export all_proxy='socks5://127.0.0.1:7891'
+# export http_proxy='http://127.0.0.1:7890'
+# export https_proxy='https://127.0.0.1:7890'
+# export all_proxy='socks5://127.0.0.1:7891'
 # Color matching compatible with TMUX
 
 #in my y7000p with ubuntu, It is not need it to add it
@@ -104,7 +104,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 
 # attention: zsh-syntax-highlighting should be the end of lists.
-plugins=(git zsh-autosuggestions git-open gitignore zsh-wakatime poetry docker cp safe-paste command-not-found zsh-syntax-highlighting)
+plugins=(git zsh-autosuggestions git-open gitignore wakatime poetry docker cp safe-paste command-not-found zsh-syntax-highlighting)
 
 
 # This list is incomplete as there are too many frameworks / plugin managers to list them all here.
@@ -174,8 +174,8 @@ alias gb="git branch"
 # tmux alias
 alias tl="tmux list-sessions"
 alias tkss="tmux kill-session -t"
-alias ta="tmux attach -t"
-alias ts="tmux new -s"
+alias ta="tmux a"
+alias tn="tmux new -s"
 
 # clash alias
 alias prpr="cd ~/MyGit/sciNet/prpr && ./clash -d ."
@@ -242,7 +242,6 @@ alias aptremove='bash ~/scripts/aptclean.sh'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 eval $(thefuck --alias)
-fpath+=${ZDOTDIR:-~}/.zsh_functions
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
@@ -282,7 +281,6 @@ export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-fpath+=${ZDOTDIR:-~}/.zsh_functions
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
 export XMODIFIERS=@im=fcitx
