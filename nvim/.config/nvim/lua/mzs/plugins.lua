@@ -62,7 +62,7 @@ return packer.startup(function(use)
     -- UI
     use { 'kshenoy/vim-signature' } -- vim marks
     --use { 'mhinz/vim-startify' } -- vim look
-    use { 'ryanoasis/vim-devicons' } -- icons for them
+    --[[ use { 'ryanoasis/vim-devicons' } -- icons for them ]]
     use { 'glepnir/dashboard-nvim' } -- dashboard
     use {
         'nvim-lualine/lualine.nvim',
@@ -228,11 +228,15 @@ return packer.startup(function(use)
         run = function() vim.fn["mkdp#util#install"]() end,
     })
 
+
     -- terminal
     use {"akinsho/toggleterm.nvim", tag = '*'}
 
     -- which key
     --[[ use {"folke/which-key.nvim"} ]]
+
+    -- cheat.sh
+    use {"https://github.com/dbeniamine/cheat.sh-vim"}
 
 
 

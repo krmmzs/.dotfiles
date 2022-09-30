@@ -178,8 +178,8 @@ alias ta="tmux a"
 alias tn="tmux new -s"
 
 # clash alias
-alias prpr="cd ~/MyGit/sciNet/prpr && ./clash -d ."
-alias igg="cd ~/MyGit/sciNet/igg && ./clash -d ."
+alias prpr="cd ~/MyGit/sciNet/prpr && xdg-open https://clash.razord.top/ && ./clash -d ."
+alias igg="cd ~/MyGit/sciNet/igg && xdg-open https://clash.razord.top/ && ./clash -d ."
 alias ins="cd ~/MyGit/sciNet/ins && ./clash -d ."
 alias free="cd ~/MyGit/sciNet/free && ./clash -d ."
 alias white="cd ~/MyGit/sciNet/white && ./clash -d ."
@@ -201,7 +201,7 @@ alias nvimn="nvim -u NONE"
 alias mv="mv -i"  # add attention
 alias rm="rm -i"  # add attention
 alias cp="cp -i"  # add attention
-alias ls="exa --icons" # replace ls to exa but with command ls
+# alias ls="exa --icons" # replace ls to exa but with command ls
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'" # 用bat来做fzf的预览器, need to install bat firstly
 alias bd=". bd -si"
 alias lst="ls --tree"
@@ -283,6 +283,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fpath+=${ZDOTDIR:-~}/.zsh_functions
 
+# ubuntu22.04 fcitx5 config
 export XMODIFIERS=@im=fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
+
+# cheat.sh
+# https://github.com/chubin/cheat.sh#zsh-tab-completion
+fpath=(~/.zsh.d/ $fpath)

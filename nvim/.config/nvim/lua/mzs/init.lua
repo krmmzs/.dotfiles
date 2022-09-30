@@ -83,3 +83,6 @@ require("mzs.plugin.which-key")
 -- data-scient
 require("mzs.plugin.magma-nvim")
 require("mzs.plugin.jupytext") -- need jupyter firstly
+
+-- cheat.sh
+require("mzs.plugin.cheat-sh")
