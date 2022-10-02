@@ -238,6 +238,11 @@ return packer.startup(function(use)
     -- cheat.sh
     use {"https://github.com/dbeniamine/cheat.sh-vim"}
 
+    -- letcode
+    --[[ use {'ianding1/leetcode.vim'}  ]]
+
+    -- translate
+    use {'uga-rosa/translate.nvim'}
 
 
 

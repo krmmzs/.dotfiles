@@ -7,6 +7,7 @@ fi
 
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/.local/bin:$PATH
 
 export PATH=$PATH:~/go/bin:
 export PATH=$PATH:~/.cargo:
@@ -201,7 +202,7 @@ alias nvimn="nvim -u NONE"
 alias mv="mv -i"  # add attention
 alias rm="rm -i"  # add attention
 alias cp="cp -i"  # add attention
-# alias ls="exa --icons" # replace ls to exa but with command ls
+alias ls="exa --icons" # replace ls to exa but with command ls
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'" # 用bat来做fzf的预览器, need to install bat firstly
 alias bd=". bd -si"
 alias lst="ls --tree"

@@ -35,8 +35,8 @@ nkeymap("<leader>1", ":set relativenumber!<CR>")
 nkeymap("<c-q>", ":q<CR>")
 
 -- copy and paste in clipboard
---[[ vkeymap('<leader>y', '"+y') ]]
---[[ nkeymap('<leader>p', '"+p') ]]
+vkeymap('<leader>y', '"+y')
+nkeymap('<leader>p', '"+p')
 
 -- greatest remap ever
 --[[ xkeymap('<leader>p', "\"_dP") ]]

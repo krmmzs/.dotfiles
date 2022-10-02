@@ -86,3 +86,9 @@ require("mzs.plugin.jupytext") -- need jupyter firstly
 
 -- cheat.sh
 require("mzs.plugin.cheat-sh")
+
+-- leatcode
+require("mzs.plugin.leetcode")
+
+-- translate
+require("mzs.plugin.translate")
