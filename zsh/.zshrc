@@ -19,9 +19,9 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # proxy
 
-# export http_proxy='http://127.0.0.1:7890'
-# export https_proxy='https://127.0.0.1:7890'
-# export all_proxy='socks5://127.0.0.1:7891'
+export HTTP_PROXY='127.0.0.1:7890'
+export HTTPS_PROXY='127.0.0.1:7890'
+export NO_PROXY=localhost,127.0.0.1,::1
 # Color matching compatible with TMUX
 
 #in my y7000p with ubuntu, It is not need it to add it
@@ -268,7 +268,8 @@ _jina() {
     completions="$(jina completions ${words[2,-2]})"
   fi
 
-  reply=(${(ps:\n:)completions})
+  reply=(${(ps:
+:)completions})
 }
 
 # session-wise fix
@@ -276,6 +277,7 @@ ulimit -n 4096
 export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES
 
 # JINA_CLI_END
+
 
 # nvm
 # see https://github.com/nvm-sh/nvm#installing-and-updating
@@ -292,3 +294,11 @@ export QT_IM_MODULE=fcitx
 # cheat.sh
 # https://github.com/chubin/cheat.sh#zsh-tab-completion
 fpath=(~/.zsh.d/ $fpath)
+
+# zsh-completions
+# https://github.com/zsh-users/zsh-completions/tree/57330ba11b1d10ba6abba35c2d79973834fb65a6#oh-my-zsh
+fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+
+# github cli completion
+autoload -U compinit
+compinit -i
