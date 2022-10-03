@@ -105,7 +105,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 
 # attention: zsh-syntax-highlighting should be the end of lists.
-plugins=(git zsh-autosuggestions git-open gitignore wakatime poetry docker cp safe-paste command-not-found zsh-syntax-highlighting)
+plugins=(zsh-autosuggestions git-open gitignore wakatime poetry docker cp safe-paste command-not-found zsh-syntax-highlighting)
 
 
 # This list is incomplete as there are too many frameworks / plugin managers to list them all here.
@@ -155,11 +155,15 @@ export LANG=en_US.UTF-8
 # gi for command line to create .gitignore
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
 
-# git alias
+# Git alias
+# More in https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
+# But don't use directly this plugin.
 alias cbr='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always | delta" | xargs git checkout'
 alias gs="git status"
 alias ga="git add"
-alias gl="git log --all --graph --decorate"
+# alias gl="git log --all --graph --decorate"
+# alias gl="git log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
+function gl() {git log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'}
 alias gcf="git cat-file -p"
 alias git="LANG=en_GB git" # using English message
 alias gs="git status"
@@ -221,7 +225,7 @@ alias light='alacritty-colorscheme apply $DARK_COLOR'
 alias toggle="alacritty-colorscheme toggle $LIGHT_COLOR $DARK_COLOR"
 
 # config script
-alias config='cd /home/$USER/scripts && ./config.sh'
+alias config='cd /home/$USER/scripts/myscripts && ./config.sh'
 
 alias todo='cd ~/MyGit/TODO && nvim .'
 
