@@ -25,10 +25,12 @@ require("mzs.plugin.nvim-autopairs")
 require("mzs.plugin.nvim-tree")
 require("mzs.plugin.indentLine")
 require("mzs.plugin.nvim-transparent")
+--[[ require("mzs.plugin.noice") ]]
+require("mzs.plugin.notify")
 
 -- LSP
 require("mzs.plugin.lsp_lines")
---[[ require("mzs.lsp.null-ls") ]]
+require("mzs.lsp.null-ls")
 require("mzs.plugin.goto-preview") -- well preview window for gd and more...
 require("mzs.plugin.cmp")
 require("mzs.plugin.LuaSnip")

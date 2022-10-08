@@ -123,6 +123,9 @@ vkeymap("p", '"_dP')
 -- undotree
 nkeymap("<leader>u", ":UndotreeToggle<CR>")
 
+-- vim-bbye
+nkeymap("<leader>df", ":Bdelete<CR>") -- quick Bdelete current file
+
 -- coc Listextend --
 
 -- Plug Yggdroot/indentLine

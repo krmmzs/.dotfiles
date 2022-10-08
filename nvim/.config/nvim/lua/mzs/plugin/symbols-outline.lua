@@ -13,7 +13,7 @@ local function ikeymap(key, map)
     keymap('i', key, map, opts)
 end
 
-nkeymap("<leader>vv", "<cmd>SymbolsOutline<CR>")
+nkeymap("<leader>v", "<cmd>SymbolsOutline<CR>")
 
 local status_ok, configs = pcall(require, "symbols-outline")
 if not status_ok then

@@ -70,8 +70,22 @@ return packer.startup(function(use)
     }
     use { 'kkharji/lspsaga.nvim' }  -- nightly
     use {'akinsho/bufferline.nvim', tag = "v2.*", requires = 'kyazdani42/nvim-web-devicons'}
-    use {'moll/vim-bbye'}
+    use {'moll/vim-bbye'} -- Bdelete
     use {'xiyaowong/nvim-transparent'}
+    -- notify UI
+    --[[ use({ ]]
+    --[[     "folke/noice.nvim", ]]
+    --[[     -- event = "VimEnter", ]]
+    --[[     -- config = function() ]]
+    --[[     --     require("noice").setup() ]]
+    --[[     -- end, ]]
+    --[[     requires = { ]]
+    --[[         -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries ]]
+    --[[         "MunifTanjim/nui.nvim", ]]
+    --[[         "rcarriga/nvim-notify", ]]
+    --[[     } ]]
+    --[[ }) ]]
+    use { 'rcarriga/nvim-notify' }
 
     -- colorscheme
     use 'folke/tokyonight.nvim'
@@ -193,10 +207,10 @@ return packer.startup(function(use)
         'rmagatti/goto-preview'
     }
     --have bug and I can't debug... 2022.9.14
-    --[[ use({ ]]
-    --[[     "jose-elias-alvarez/null-ls.nvim", ]]
-    --[[     requires = { "nvim-lua/plenary.nvim" }, ]]
-    --[[ }) ]]
+    use({
+        "jose-elias-alvarez/null-ls.nvim",
+        requires = { "nvim-lua/plenary.nvim" },
+    })
 
     -- Virtual Text
     use {'kevinhwang91/nvim-hlslens'} -- helps you better glance at matched information
@@ -236,13 +250,14 @@ return packer.startup(function(use)
     --[[ use {"folke/which-key.nvim"} ]]
 
     -- cheat.sh
-    use {"https://github.com/dbeniamine/cheat.sh-vim"}
+    use {"dbeniamine/cheat.sh-vim"}
 
     -- letcode
     --[[ use {'ianding1/leetcode.vim'}  ]]
 
     -- translate
     use {'uga-rosa/translate.nvim'}
+
 
 
 

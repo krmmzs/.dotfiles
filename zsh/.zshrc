@@ -185,9 +185,9 @@ alias tn="tmux new -s"
 # clash alias
 alias prpr="cd ~/MyGit/sciNet/prpr && xdg-open https://clash.razord.top/ && ./clash -d ."
 alias igg="cd ~/MyGit/sciNet/igg && xdg-open https://clash.razord.top/ && ./clash -d ."
-alias ins="cd ~/MyGit/sciNet/ins && ./clash -d ."
-alias free="cd ~/MyGit/sciNet/free && ./clash -d ."
-alias white="cd ~/MyGit/sciNet/white && ./clash -d ."
+alias ins="cd ~/MyGit/sciNet/ins && xdg-open https://clash.razord.top/ && ./clash -d ."
+alias free="cd ~/MyGit/sciNet/free && xdg-open https://clash.razord.top/ && ./clash -d ."
+alias white="cd ~/MyGit/sciNet/white && xdg-open https://clash.razord.top/ && ./clash -d ."
 
 # fzf find files
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -p 70% --reverse | xargs nvim"
@@ -239,7 +239,7 @@ alias cheat="cd ~/MyGit/awesome-cheatsheets && git open && cd -"
 alias ocr='python3 ~/scripts/Extract_Text_from_Image.py'
 
 # apt script
-alias aptremove='bash ~/scripts/aptclean.sh'
+alias aptremove='bash ~/scripts/myscripts/aptclean.sh'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

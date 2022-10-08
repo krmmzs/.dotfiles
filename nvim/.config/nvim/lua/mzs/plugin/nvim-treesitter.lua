@@ -49,7 +49,7 @@ configs.setup {
         -- Instead of true it can also be a list of languages
         additional_vim_regex_highlighting = false,
     },
-    indent = { enable = true, disable = { "yaml" } },
+    indent = { enable = true, disable = { "yaml", "python" } },
 
     -- see https://github.com/p00f/nvim-ts-rainbow#installation-and-setup
     rainbow = {

@@ -47,7 +47,16 @@ nkeymap("<leader>fr", "<cmd>lua require('telescope').extensions.frecency.frecenc
 nkeymap("<leader>fd", ":TodoTelescope<cr>")
 
 -- history command
-nkeymap("<leader>fn", "<cmd> Telescope command_history<CR>")
+nkeymap("<leader>fc", "<cmd>Telescope command_history<CR>")
+
+-- jumps list
+nkeymap("<leader>fj", "<cmd>lua require('telescope.builtin').jumplist()<cr>")
+
+-- notify
+nkeymap("<leader>fn", "<cmd>lua require('telescope').extensions.notify.notify()<cr>")
+--[[ nkeymap("<leader>fn", "<cmd>Noice telescope<cr>") -- replaced by noice.nvim ]]
+
+
 
 telescope.setup {
     defaults = {
