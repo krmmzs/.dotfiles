@@ -258,6 +258,8 @@ return packer.startup(function(use)
     -- translate
     use {'uga-rosa/translate.nvim'}
 
+    -- AI
+    use {'github/copilot.vim'}
 
 
 

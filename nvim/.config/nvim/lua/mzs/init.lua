@@ -94,3 +94,6 @@ require("mzs.plugin.leetcode")
 
 -- translate
 require("mzs.plugin.translate")
+
+-- AI
+require("mzs.plugin.copilot")

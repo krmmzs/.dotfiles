@@ -211,6 +211,9 @@ alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {
 alias bd=". bd -si"
 alias lst="ls --tree"
 
+# gcc, g++
+alias gcc11="gcc -std=c11"
+
 # apt
 alias apti="sudo apt-get install"
 
@@ -247,9 +250,11 @@ alias aptremove='bash ~/scripts/myscripts/aptclean.sh'
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 eval $(thefuck --alias)
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+
+export NVM_NODEJS_ORG_MIRROR="http://nodejs.org/dist"
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH="$HOME/.poetry/bin:$PATH"
 
@@ -289,6 +294,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 fpath+=${ZDOTDIR:-~}/.zsh_functions
+
+
+# pyenv
+# see https://github.com/pyenv/pyenv#set-up-your-shell-environment-for-pyenv
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
 
 # ubuntu22.04 fcitx5 config
 export XMODIFIERS=@im=fcitx

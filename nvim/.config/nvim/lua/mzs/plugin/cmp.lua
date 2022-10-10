@@ -141,7 +141,7 @@ cmp.setup {
         documentation = cmp.config.window.bordered{ "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
     },
     experimental = {
-        ghost_text = true, -- it annoys me...
+        ghost_text = false, -- it annoys me... and will cover coplit
         view = {
             entries = 'native'
         }
