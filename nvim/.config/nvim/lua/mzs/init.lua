@@ -97,3 +97,6 @@ require("mzs.plugin.translate")
 
 -- AI
 require("mzs.plugin.copilot")
+
+-- code
+--[[ require("mzs.plugin.sandwich") ]]

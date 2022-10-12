@@ -11,6 +11,8 @@ export PATH=$HOME/.local/bin:$PATH
 
 export PATH=$PATH:~/go/bin:
 export PATH=$PATH:~/.cargo:
+-- add cuda to PATH
+export PATH=$PATH:/usr/local/cuda/bin:
 source $HOME/.cargo/env
 export VENV_PATH=/pyenv
 
@@ -19,8 +21,8 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # proxy
 
-export HTTP_PROXY='127.0.0.1:7890'
-export HTTPS_PROXY='127.0.0.1:7890'
+export HTTP_PROXY=http://'127.0.0.1:7890'
+export HTTPS_PROXY=https://'127.0.0.1:7890'
 export NO_PROXY=localhost,127.0.0.1,::1
 # Color matching compatible with TMUX
 

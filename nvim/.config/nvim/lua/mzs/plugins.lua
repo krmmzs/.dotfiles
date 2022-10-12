@@ -178,7 +178,10 @@ return packer.startup(function(use)
     -- code
     use { "windwp/nvim-autopairs" }
     use { 'numToStr/Comment.nvim' }
+    -- tpope
     use { 'tpope/vim-surround' }
+    use { 'tpope/vim-repeat' }
+    --[[ use { 'machakann/vim-sandwich' } ]]
 
     -- diagnostics
     use({
