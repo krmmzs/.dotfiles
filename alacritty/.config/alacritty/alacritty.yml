@@ -38,8 +38,6 @@ colors:
   primary:
     background: '#ffffff'
     foreground: '#403f53'
-
-
   normal:
     red: '#c82829'
     orange: '#f5871f'
@@ -48,7 +46,6 @@ colors:
     aqua: '#3e999f'
     blue: '#4271ae'
     purple: '#8959a8'
-
   bright:
     red: '#c82829'
     orange: '#f5871f'
@@ -75,14 +72,13 @@ colors:
     # Default colors
 # ----------------------------------------------------------------
 
-# window:
-#   opacity: 0.8
-#
+window:
+  opacity: 0.8
+
 # colors:
 #   primary:
 #     background: '0x24283b'
 #     foreground: '0xa9b1d6'
-#
 #     normal:
 #       black:   '0x32344a'
 #       red:     '0xf7768e'
@@ -92,7 +88,6 @@ colors:
 #       magenta: '0xad8ee6'
 #       cyan:    '0x449dab'
 #       white:   '0x9699a8'
-#
 #     bright:
 #       black:   '0x444b6a'
 #       red:     '0xff7a93'

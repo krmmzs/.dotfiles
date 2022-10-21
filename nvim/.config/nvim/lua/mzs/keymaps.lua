@@ -31,6 +31,10 @@ nkeymap("Q", "<Nop>")
 nkeymap("<leader>1", ":set relativenumber!<CR>")
 
 
+-- quic close highlight search
+nkeymap("<Leader>l", ":noh<CR>")
+
+
 -- quick :q
 nkeymap("<c-q>", ":q<CR>")
 
@@ -125,6 +129,7 @@ nkeymap("<leader>u", ":UndotreeToggle<CR>")
 
 -- vim-bbye
 nkeymap("<leader>df", ":Bdelete<CR>") -- quick Bdelete current file
+
 
 -- coc Listextend --
 

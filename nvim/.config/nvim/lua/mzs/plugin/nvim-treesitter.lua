@@ -22,7 +22,7 @@ require('nvim-treesitter.install').compilers = { "gcc" }
 
 configs.setup {
     -- A list of parser names, or "all"
-    ensure_installed = { "vim", "c", "lua", "cpp", "python", "java", "javascript", "markdown" },
+    ensure_installed = { "vim", "c", "lua", "cpp", "python", "java", "javascript", "markdown"},
 
     -- Install parsers synchronously (only applied to `ensure_installed`)
     sync_install = true,

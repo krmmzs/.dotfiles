@@ -52,8 +52,9 @@ nkeymap("<leader>fc", "<cmd>Telescope command_history<CR>")
 -- jumps list
 nkeymap("<leader>fj", "<cmd>lua require('telescope.builtin').jumplist()<cr>")
 
--- notify
-nkeymap("<leader>fn", "<cmd>lua require('telescope').extensions.notify.notify()<cr>")
+-- notify.nvim
+--[[ nkeymap("<leader>fn", "<cmd>lua require('telescope').extensions.notify.notify()<cr>") ]]
+-- noice.nvim
 --[[ nkeymap("<leader>fn", "<cmd>Noice telescope<cr>") -- replaced by noice.nvim ]]
 
 

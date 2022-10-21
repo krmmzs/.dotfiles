@@ -24,6 +24,7 @@ configs.setup({
     cmdline = {
         view = "cmdline",
 
+        -- I don't like new cmdline now
         --[[ view = "cmdline_popup", -- view for rendering the cmdline. Change to `cmdline` to get a classic cmdline at the bottom ]]
         --[[ opts = { buf_options = { filetype = "vim" } }, -- enable syntax highlighting in the cmdline ]]
         --[[ icons = { ]]

@@ -18,4 +18,5 @@ if not status_ok then
     return
 end
 
+-- noice replace this vim.notify config
 vim.notify = configs

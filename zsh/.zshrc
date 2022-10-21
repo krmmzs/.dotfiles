@@ -11,7 +11,7 @@ export PATH=$HOME/.local/bin:$PATH
 
 export PATH=$PATH:~/go/bin:
 export PATH=$PATH:~/.cargo:
--- add cuda to PATH
+# add cuda to PATH
 export PATH=$PATH:/usr/local/cuda/bin:
 source $HOME/.cargo/env
 export VENV_PATH=/pyenv
@@ -21,8 +21,10 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # proxy
 
-export HTTP_PROXY=http://'127.0.0.1:7890'
-export HTTPS_PROXY=https://'127.0.0.1:7890'
+# export HTTP_PROXY='http://127.0.0.1:7890'
+# export HTTPS_PROXY='https://127.0.0.1:7890'
+export HTTP_PROXY='127.0.0.1:7890'
+export HTTPS_PROXY='127.0.0.1:7890'
 export NO_PROXY=localhost,127.0.0.1,::1
 # Color matching compatible with TMUX
 
@@ -185,11 +187,15 @@ alias ta="tmux a"
 alias tn="tmux new -s"
 
 # clash alias
-alias prpr="cd ~/MyGit/sciNet/prpr && xdg-open https://clash.razord.top/ && ./clash -d ."
-alias igg="cd ~/MyGit/sciNet/igg && xdg-open https://clash.razord.top/ && ./clash -d ."
-alias ins="cd ~/MyGit/sciNet/ins && xdg-open https://clash.razord.top/ && ./clash -d ."
-alias free="cd ~/MyGit/sciNet/free && xdg-open https://clash.razord.top/ && ./clash -d ."
-alias white="cd ~/MyGit/sciNet/white && xdg-open https://clash.razord.top/ && ./clash -d ."
+alias prpr="cd ~/MyGit/sciNet/prpr && ./clash -d ."
+# alias prpr="cd ~/MyGit/sciNet/prpr && xdg-open https://clash.razord.top/ && ./clash -d ."
+alias igg="cd ~/MyGit/sciNet/igg && ./clash -d ."
+# alias igg="cd ~/MyGit/sciNet/igg && xdg-open https://clash.razord.top/ && ./clash -d ."
+alias ins="cd ~/MyGit/sciNet/ins && ./clash -d ."
+# alias ins="cd ~/MyGit/sciNet/ins && xdg-open https://clash.razord.top/ && ./clash -d ."
+alias free="cd ~/MyGit/sciNet/free && ./clash -d ."
+alias white="cd ~/MyGit/sciNet/white && ./clash -d ."
+# alias white="cd ~/MyGit/sciNet/white && xdg-open https://clash.razord.top/ && ./clash -d ."
 
 # fzf find files
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -p 70% --reverse | xargs nvim"
@@ -220,7 +226,7 @@ alias gcc11="gcc -std=c11"
 alias apti="sudo apt-get install"
 
 alias pyinit="cp ~/MyGit/project_init/python/init/* . && touch .root"
-alias cppinit="cp ~/MyGit/project_init/cpp/init/.* . && touch .root"
+alias cppinit="cp ~/MyGit/project_init/cpp/init/* . && touch .root"
 
 # alacritty themes alias
 LIGHT_COLOR='dark.yml'
@@ -245,6 +251,7 @@ alias ocr='python3 ~/scripts/Extract_Text_from_Image.py'
 
 # apt script
 alias aptremove='bash ~/scripts/myscripts/aptclean.sh'
+alias info='bash ~/scripts/myscripts/info.sh'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
@@ -320,3 +327,12 @@ fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
 # github cli completion
 autoload -U compinit
 compinit -i
+
+# neovim version manage bob PATH
+export PATH=/home/$USER/.local/share/neovim/bin:$PATH
+
+# Function to prepend to environmentvariables
+# usage:
+# prepend PATH /opt/myapp/bin
+# prepend LD_LIBRARY_PATH /opt/myapp/lib
+prepend() { [ -d "$2" ] && eval $1=\"$2\$\{$2:+':'\$$1\}\" && export $1 ; }
