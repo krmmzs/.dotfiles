@@ -99,6 +99,11 @@ _G.packer_plugins = {
     path = "/home/mouzaisi/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
   },
+  ["aw-watcher-vim"] = {
+    loaded = true,
+    path = "/home/mouzaisi/.local/share/nvim/site/pack/packer/start/aw-watcher-vim",
+    url = "https://github.com/ActivityWatch/aw-watcher-vim"
+  },
   black = {
     loaded = true,
     path = "/home/mouzaisi/.local/share/nvim/site/pack/packer/start/black",
@@ -183,11 +188,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mouzaisi/.local/share/nvim/site/pack/packer/start/gv.vim",
     url = "https://github.com/junegunn/gv.vim"
-  },
-  ["hop.nvim"] = {
-    loaded = true,
-    path = "/home/mouzaisi/.local/share/nvim/site/pack/packer/start/hop.nvim",
-    url = "https://github.com/phaazon/hop.nvim"
   },
   indentLine = {
     loaded = true,
@@ -463,7 +463,6 @@ vim.cmd [[augroup packer_load_aucmds]]
 vim.cmd [[au!]]
   -- Filetype lazy-loads
 time([[Defining lazy-load filetype autocommands]], true)
-vim.cmd [[au FileType json ++once lua require("packer.load")({'vim-prettier'}, { ft = "json" }, _G.packer_plugins)]]
 vim.cmd [[au FileType javascript ++once lua require("packer.load")({'vim-prettier'}, { ft = "javascript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType typescript ++once lua require("packer.load")({'vim-prettier'}, { ft = "typescript" }, _G.packer_plugins)]]
 vim.cmd [[au FileType css ++once lua require("packer.load")({'vim-prettier'}, { ft = "css" }, _G.packer_plugins)]]
@@ -475,6 +474,7 @@ vim.cmd [[au FileType vue ++once lua require("packer.load")({'vim-prettier'}, { 
 vim.cmd [[au FileType svelte ++once lua require("packer.load")({'vim-prettier'}, { ft = "svelte" }, _G.packer_plugins)]]
 vim.cmd [[au FileType yaml ++once lua require("packer.load")({'vim-prettier'}, { ft = "yaml" }, _G.packer_plugins)]]
 vim.cmd [[au FileType html ++once lua require("packer.load")({'vim-prettier'}, { ft = "html" }, _G.packer_plugins)]]
+vim.cmd [[au FileType json ++once lua require("packer.load")({'vim-prettier'}, { ft = "json" }, _G.packer_plugins)]]
 time([[Defining lazy-load filetype autocommands]], false)
 vim.cmd("augroup END")
 vim.cmd [[augroup filetypedetect]]

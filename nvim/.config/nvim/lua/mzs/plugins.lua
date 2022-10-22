@@ -137,10 +137,10 @@ return packer.startup(function(use)
     }
 
     -- Move
-    use { -- replace easy-motion(deal with bad buffer show)
-        'phaazon/hop.nvim',
-        branch = 'v2', -- optional but strongly recommended
-    }
+    --[[ use { -- replace easy-motion(deal with bad buffer show) ]]
+    --[[     'phaazon/hop.nvim', ]]
+    --[[     branch = 'v2', -- optional but strongly recommended ]]
+    --[[ } ]]
 
 
     -- Format
@@ -265,6 +265,9 @@ return packer.startup(function(use)
 
     -- AI
     use {'github/copilot.vim'}
+
+    -- time recorder
+    use {'ActivityWatch/aw-watcher-vim'}
 
 
 

@@ -102,4 +102,4 @@ vim.wo.foldexpr = 'nvim_treesitter#foldexpr()'
 -- 默认不要折叠
 -- https://stackoverflow.com/questions/8316139/how-to-set-the-default-to-unfolded-when-you-open-a-file
 vim.wo.foldlevel = 99
-nkeymap("<Leader><Leader>l", ":TSBufToggle highlight<CR>")
+--[[ nkeymap("<Leader><Leader>l", ":TSBufToggle highlight<CR>") ]]

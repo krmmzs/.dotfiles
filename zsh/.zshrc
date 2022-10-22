@@ -242,6 +242,10 @@ alias todo='cd ~/MyGit/TODO && nvim .'
 
 # softwares quick command
 alias voice="pavucontrol"
+alias dv='yt-dlp -F'
+alias dvmp4='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]" --merge-output-format mp4'
+alias dvmkv='yt-dlp -f "bestvideo[ext=mkv]+bestaudio[ext=webm]" --merge-output-format mkv'
+
 
 # quick cheat
 alias cheat="cd ~/MyGit/awesome-cheatsheets && git open && cd -"

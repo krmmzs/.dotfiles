@@ -12,7 +12,9 @@ vim.g.copilot_filetypes = {
 
 
 -- from :help copilot
--- use <c-l> to Accept copilot suggestion
+-- see https://www.reddit.com/r/neovim/comments/sk70rk/comment/hvjlohe/?utm_source=share&utm_medium=web2x&context=3
+-- disable default tab and use <c-l> to Accept copilot suggestion
+vim.g.copilot_no_tab_map = true
 vim.cmd[[imap <silent><script><expr> <C-l> copilot#Accept("\<CR>")]]
 -- vim.g.copilot_no_tab_map = true
 -- vim.keymap.set.keymap("i", "<C-a>", ":copilot#Accept('\\<CR>')<CR>", { silent = true })

@@ -24,7 +24,7 @@ require("mzs.plugin.nvim-autopairs")
 require("mzs.plugin.nvim-tree")
 require("mzs.plugin.indentLine")
 require("mzs.plugin.nvim-transparent")
-require("mzs.plugin.noice")
+-- [require("mzs.plugin.noice")
 --[[ require("mzs.plugin.notify") ]]
 
 -- LSP
@@ -50,7 +50,7 @@ require("mzs.plugin.emmet")
 
 -- move
 --[[ require("mzs.plugin.easy-motion") ]]
-require("mzs.plugin.hop")
+--[[ require("mzs.plugin.hop") ]]
 
 -- formatting
 require("mzs.plugin.black") -- for python
