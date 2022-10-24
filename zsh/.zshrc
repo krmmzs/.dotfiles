@@ -213,6 +213,7 @@ alias mvim="$EDITOR -u ~/.vimrcs/.mvimrc"
 alias nvimn="nvim -u NONE"
 alias mv="mv -i"  # add attention
 alias rm="rm -i"  # add attention
+# function rm() { [ -d ~/rbackup ] || mkdir ~/rbackup;/bin/mv -f $@ ~/rbackup; }
 alias cp="cp -i"  # add attention
 alias ls="exa --icons" # replace ls to exa but with command ls
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'" # 用bat来做fzf的预览器, need to install bat firstly
@@ -242,20 +243,22 @@ alias todo='cd ~/MyGit/TODO && nvim .'
 
 # softwares quick command
 alias voice="pavucontrol"
-alias dv='yt-dlp -F'
+alias dvF='yt-dlp -F'
+alias dvf='yt-dlp -f'
 alias dvmp4='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]" --merge-output-format mp4'
 alias dvmkv='yt-dlp -f "bestvideo[ext=mkv]+bestaudio[ext=webm]" --merge-output-format mkv'
 
 
 # quick cheat
-alias cheat="cd ~/MyGit/awesome-cheatsheets && git open && cd -"
+alias cheat="(cd ~/MyGit/awesome-cheatsheets && git open)"
 
 # scripts
 alias ocr='python3 ~/scripts/Extract_Text_from_Image.py'
+alias info='bash ~/scripts/myscripts/info.sh'
+function repeat() { while :; do $@ && return; sleep 3; done } # Linux shell script cookbook 1.15.1
 
 # apt script
 alias aptremove='bash ~/scripts/myscripts/aptclean.sh'
-alias info='bash ~/scripts/myscripts/info.sh'
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
