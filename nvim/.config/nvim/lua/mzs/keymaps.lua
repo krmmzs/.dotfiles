@@ -48,7 +48,7 @@ nkeymap('<leader>p', '"+p')
 -- Keeping it contered
 nkeymap("n", "nzz")
 nkeymap("N", "Nzz")
-nkeymap("J", "mzsJ'z")
+nkeymap("J", "Jzz")
 
 -- Jumplist mutations, solve jump list could save <number>j or <number>k
 vim.cmd[[

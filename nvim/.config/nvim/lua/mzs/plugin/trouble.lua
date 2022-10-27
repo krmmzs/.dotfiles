@@ -24,11 +24,21 @@ if not status_ok then
 end
 
 nkeymap("<leader>xx", "<cmd>TroubleToggle<cr>")
-nkeymap("<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>")
 nkeymap("<leader>xd", "<cmd>TroubleToggle document_diagnostics<cr>")
+nkeymap("<leader>xw", "<cmd>TroubleToggle workspace_diagnostics<cr>")
 nkeymap("<leader>xq", "<cmd>TroubleToggle quickfix<cr>")
 nkeymap("<leader>xl", "<cmd>TroubleToggle loclist<cr>")
 nkeymap("gR", "<cmd>TroubleToggle lsp_references<cr>")
+
+--[[ Modes: ]]
+
+--[[ - document_diagnostics: document diagnostics from the builtin LSP client ]]
+--[[ - workspace_diagnostics: workspace diagnostics from the builtin LSP client ]]
+--[[ - lsp_references: references of the word under the cursor from the builtin LSP client ]]
+--[[ - lsp_definitions: definitions of the word under the cursor from the builtin LSP client ]]
+--[[ - lsp_type_definitions: type definitions of the word under the cursor from the builtin LSP client ]]
+--[[ - quickfix: quickfix items ]]
+--[[ - loclist: items from the window's location list ]]
 
 configs.setup {
     -- your configuration comes here
