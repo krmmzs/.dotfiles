@@ -13,3 +13,4 @@ nvim/.config/nvim/static
 tmux/.tmux/plugins/tmux-fzf
 vim/.vim/plugged/*
 vim/.vim/files/*
+mpv/.config/mpv/watch_later
