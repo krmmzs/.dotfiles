@@ -21,10 +21,10 @@ export ZSH="$HOME/.oh-my-zsh"
 
 # proxy
 
-# export HTTP_PROXY='http://127.0.0.1:7890'
-# export HTTPS_PROXY='https://127.0.0.1:7890'
-export HTTP_PROXY='127.0.0.1:7890'
-export HTTPS_PROXY='127.0.0.1:7890'
+export HTTP_PROXY='http://127.0.0.1:7890'
+export HTTPS_PROXY='https://127.0.0.1:7890'
+# export HTTP_PROXY='127.0.0.1:7890'
+# export HTTPS_PROXY='128.0.0.1:7890'
 export NO_PROXY=localhost,127.0.0.1,::1
 # Color matching compatible with TMUX
 
@@ -109,7 +109,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 
 # attention: zsh-syntax-highlighting should be the end of lists.
-plugins=(zsh-autosuggestions git-open gitignore wakatime poetry docker cp safe-paste command-not-found zsh-syntax-highlighting)
+plugins=(zsh-autosuggestions git-open gitignore wakatime poetry docker cp safe-paste command-not-found zsh-syntax-highlighting fzf-tab)
 
 
 # This list is incomplete as there are too many frameworks / plugin managers to list them all here.
@@ -199,6 +199,8 @@ alias white="cd ~/MyGit/sciNet/white && ./clash -d ."
 
 # fzf find files
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -p 70% --reverse | xargs nvim"
+# fzf with cd
+export FZF_CTRL_T_COMMAND="find . -maxdepth 1 | sed 's/^..//'"
 
 # applications
 alias tgif='cd ~/softwares/gif2tgsticker/ && poetry run python3 gif2tgsticker.py'
@@ -219,6 +221,7 @@ alias ls="exa --icons" # replace ls to exa but with command ls
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'" # 用bat来做fzf的预览器, need to install bat firstly
 alias bd=". bd -si"
 alias lst="ls --tree"
+alias ipy="j ipython && ipython"
 
 # gcc, g++
 alias gcc11="gcc -std=c11"
@@ -242,7 +245,7 @@ alias config='cd /home/$USER/scripts/myscripts && ./config.sh'
 alias todo='cd ~/MyGit/TODO && nvim .'
 
 # softwares quick command
-alias voice="pavucontrol"
+# alias voice="pavucontrol" ubuntu22 can config it in system setting
 alias dvF='yt-dlp -F'
 alias dvf='yt-dlp -f'
 alias dvmp4='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]" --merge-output-format mp4'
@@ -323,6 +326,12 @@ export XMODIFIERS=@im=fcitx
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 
+# fzf-tab config
+zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+
+# completions
+
 # cheat.sh
 # https://github.com/chubin/cheat.sh#zsh-tab-completion
 fpath=(~/.zsh.d/ $fpath)
@@ -330,6 +339,11 @@ fpath=(~/.zsh.d/ $fpath)
 # zsh-completions
 # https://github.com/zsh-users/zsh-completions/tree/57330ba11b1d10ba6abba35c2d79973834fb65a6#oh-my-zsh
 fpath+=${ZSH_CUSTOM:-${ZSH:-~/.oh-my-zsh}/custom}/plugins/zsh-completions/src
+
+# fzf-completions
+fpath=($HOME/.local/share/zsh/completions $fpath)
+compinit -i
+
 
 # github cli completion
 autoload -U compinit
@@ -339,6 +353,7 @@ compinit -i
 export PATH=/home/$USER/.local/share/neovim/bin:$PATH
 
 # Function to prepend to environmentvariables
+# (quick add to PATH)
 # usage:
 # prepend PATH /opt/myapp/bin
 # prepend LD_LIBRARY_PATH /opt/myapp/lib

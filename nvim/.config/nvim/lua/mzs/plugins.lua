@@ -269,6 +269,12 @@ return packer.startup(function(use)
     -- time recorder
     use {'ActivityWatch/aw-watcher-vim'}
 
+    -- selection search
+    use { 'voldikss/vim-browser-search' }
+
+    -- sudo write file
+    use { 'lambdalisue/suda.vim' }
+
 
 
 

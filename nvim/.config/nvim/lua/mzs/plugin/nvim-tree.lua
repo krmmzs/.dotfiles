@@ -90,6 +90,7 @@ nvim_tree.setup ({
                 { key = "v", cb = tree_cb "vsplit" },
             },
         },
+        relativenumber = true, -- add relativenumber
     },
     actions = {
         open_file = {

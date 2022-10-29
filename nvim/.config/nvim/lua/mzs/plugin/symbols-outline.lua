@@ -28,8 +28,8 @@ configs.setup({
   relative_width = true,
   width = 25,
   auto_close = false,
-  show_numbers = false,
-  show_relative_numbers = false,
+  show_numbers = true, -- show numbers beside the list
+  show_relative_numbers = true, -- show relative numbers beside the list, I love it !!!
   show_symbol_details = true,
   preview_bg_highlight = 'Pmenu',
   autofold_depth = nil,
