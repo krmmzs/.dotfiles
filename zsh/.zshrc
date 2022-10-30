@@ -207,7 +207,13 @@ alias tgif='cd ~/softwares/gif2tgsticker/ && poetry run python3 gif2tgsticker.py
 
 alias cman="man -M /usr/share/man/zh_CN"
 alias csen="$EDITOR ~/MyGit/English/CS_English.md"
-alias dir="nautilus"
+# make dir global alais that could be used in subshell(nohup and more)
+alias -g dir="nautilus" # almost replaced by autojump command: jo <dir>
+# nohup quick start
+nh ()
+{
+    nohup "$@" &
+}
 alias alidrive="cd ~/softwares/阿里小白羊版Linux\ v2.12.14/ && ./阿里云盘小白羊版"
 alias vimal="$EDITOR -u ~/.vimrcs/.algorithm_vimrc"
 alias vimnp="$EDITOR -u ~/.vimrcs/.no_plugins_vimrc"
@@ -328,7 +334,17 @@ export QT_IM_MODULE=fcitx
 
 # fzf-tab config
 zstyle ':fzf-tab:*' fzf-command ftb-tmux-popup
+# preview
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'exa -1 --color=always $realpath'
+zstyle ':fzf-tab:complete:cd:*' popup-pad 30 0
+# Minimal size of the popup window. 
+zstyle ':fzf-tab:*' popup-min-size 50 8
+# default color
+# while 
+zstyle ':fzf-tab:*' default-color $'\033[37m'
+# black
+# zstyle ':fzf-tab:*' default-color $'\033[30m'
+
 
 # completions
 
