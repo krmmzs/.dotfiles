@@ -179,6 +179,7 @@ alias gp="git push"
 alias gpl="git pull"
 alias gm="git merge"
 alias gb="git branch"
+alias go="git open"
 
 # tmux alias
 alias tl="tmux list-sessions"
@@ -203,6 +204,7 @@ alias v="fd --type f --hidden --exclude .git | fzf-tmux -p 70% --reverse | xargs
 export FZF_CTRL_T_COMMAND="find . -maxdepth 1 | sed 's/^..//'"
 
 # applications
+# Tool for converting gif to WebM video for Telegram Video Sticker(with ffmpeg)
 alias tgif='cd ~/softwares/gif2tgsticker/ && poetry run python3 gif2tgsticker.py'
 
 alias cman="man -M /usr/share/man/zh_CN"
