@@ -22,9 +22,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # proxy
 
 export HTTP_PROXY='http://127.0.0.1:7890'
-export HTTPS_PROXY='https://127.0.0.1:7890'
-# export HTTP_PROXY='127.0.0.1:7890'
-# export HTTPS_PROXY='128.0.0.1:7890'
+export HTTPS_PROXY='http://127.0.0.1:7890'
 export NO_PROXY=localhost,127.0.0.1,::1
 # Color matching compatible with TMUX
 
@@ -109,8 +107,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 
 # attention: zsh-syntax-highlighting should be the end of lists.
-plugins=(zsh-autosuggestions git-open gitignore wakatime poetry docker cp safe-paste command-not-found zsh-syntax-highlighting fzf-tab)
+plugins=(zsh-autosuggestions git-open fzf-tab gitignore wakatime poetry docker cp safe-paste command-not-found zsh-syntax-highlighting )
 
+# Commands starting with a space will not be recorded in the history file
+# use for commands like: cd, ls, etc and type password
+setopt HIST_IGNORE_SPACE
 
 # This list is incomplete as there are too many frameworks / plugin managers to list them all here.
 
@@ -194,7 +195,7 @@ alias igg="cd ~/MyGit/sciNet/igg && ./clash -d ."
 # alias igg="cd ~/MyGit/sciNet/igg && xdg-open https://clash.razord.top/ && ./clash -d ."
 alias ins="cd ~/MyGit/sciNet/ins && ./clash -d ."
 # alias ins="cd ~/MyGit/sciNet/ins && xdg-open https://clash.razord.top/ && ./clash -d ."
-alias free="cd ~/MyGit/sciNet/free && ./clash -d ."
+alias freefly="cd ~/MyGit/sciNet/free && ./clash -d ."
 alias white="cd ~/MyGit/sciNet/white && ./clash -d ."
 # alias white="cd ~/MyGit/sciNet/white && xdg-open https://clash.razord.top/ && ./clash -d ."
 
@@ -202,6 +203,13 @@ alias white="cd ~/MyGit/sciNet/white && ./clash -d ."
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -p 70% --reverse | xargs nvim"
 # fzf with cd
 export FZF_CTRL_T_COMMAND="find . -maxdepth 1 | sed 's/^..//'"
+# fzf with d command in zsh
+function qd() { cd "$( d | \fzf | sed 's/[0-9]\t*~/\/home\/mouzaisi/g' )" }
+
+# find alias
+alias find1="find . -mtime -1 -type f -print0 | xargs -0 ls -l" # Find all files modified in the last day
+# alias findt="find . -type f -print0 | xargs -0 exa -l -s mod"
+alias findt="find . -type f -mmin -60 -print0 | xargs -0 exa -l -s mod | tail -10"
 
 # applications
 # Tool for converting gif to WebM video for Telegram Video Sticker(with ffmpeg)
@@ -230,13 +238,12 @@ alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {
 alias bd=". bd -si"
 alias lst="ls --tree"
 alias ipy="j ipython && ipython"
+# alias dd="cd $(d | fzf | sed 's/[0-9]\t*~/\/home\/mouzaisi/g')"
 
 # gcc, g++
 alias gcc11="gcc -std=c11"
 
-# apt
-alias apti="sudo apt-get install"
-
+# program init
 alias pyinit="cp ~/MyGit/project_init/python/init/* . && touch .root"
 alias cppinit="cp ~/MyGit/project_init/cpp/init/* . && touch .root"
 
@@ -259,9 +266,14 @@ alias dvf='yt-dlp -f'
 alias dvmp4='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]" --merge-output-format mp4'
 alias dvmkv='yt-dlp -f "bestvideo[ext=mkv]+bestaudio[ext=webm]" --merge-output-format mkv'
 
+# disk
+dfu() { du --max-depth=1 -h | sort -h }
 
 # quick cheat
 alias cheat="(cd ~/MyGit/awesome-cheatsheets && git open)"
+
+# apt
+alias apti="sudo apt-get install"
 
 # scripts
 alias ocr='python3 ~/scripts/Extract_Text_from_Image.py'
@@ -270,6 +282,9 @@ function repeat() { while :; do $@ && return; sleep 3; done } # Linux shell scri
 
 # apt script
 alias aptremove='bash ~/scripts/myscripts/aptclean.sh'
+
+# scripts function
+source ~/scripts/myscripts/dir_stack.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 

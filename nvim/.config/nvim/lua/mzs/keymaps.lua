@@ -38,6 +38,10 @@ nkeymap("<Leader>l", ":noh<CR>")
 -- quick :q
 nkeymap("<c-q>", ":q<CR>")
 
+-- quick copy to outside
+nkeymap("vaey", 'ggVG"+y<c-o>')
+nkeymap("vaep", 'ggVG"+p')
+
 -- copy and paste in clipboard
 vkeymap('<leader>y', '"+y')
 nkeymap('<leader>p', '"+p')
@@ -84,6 +88,11 @@ nkeymap("\\\\", ":cd %:p:h<CR>")
 -- files navigation
 nkeymap("<leader>e", ":Lex 35<cr>")
 
+-- for jupyter notebook
+--[[ nkeymap("<leader><leader>r", "vip<cmd>MagmaEvaluateOperator<CR>") ]]
+--fail....
+
+
 -- Resize with arrows
 nkeymap("<C-Up>", ":resize +2<CR>")
 nkeymap("<C-Down>", ":resize -2<CR>")
@@ -101,10 +110,10 @@ nkeymap("<S-h>", ":bprevious<CR>")
 --vkeymap("<", "<gv")
 --vkeymap(">", ">gv")
 
--- Move text up and down
-vkeymap("J", ":m .+1<CR>==gv")
-vkeymap("K", ":m .-2<CR>==gv")
-vkeymap("p", '"_dP')
+-- Move text up and down -- but I don't use it...
+--[[ vkeymap("J", ":m .+1<CR>==gv") ]]
+--[[ vkeymap("K", ":m .-2<CR>==gv") ]]
+--[[ vkeymap("p", '"_dP') ]] -- will make cmp select mode paste when type p...
 
 -- Terminal --
 -- Better terminal navigation
@@ -131,6 +140,30 @@ nkeymap("<leader>u", ":UndotreeToggle<CR>")
 
 -- vim-bbye
 nkeymap("<leader>df", ":Bdelete<CR>") -- quick Bdelete current file
+
+-- surround
+-- see https://github.com/tpope/vim-surround/blob/f51a26d3710629d031806305b6c8727189cd1935/plugin/surround.vim#L603
+vim.cmd[[
+let g:surround_no_mappings = 1
+nmap ds  <Plug>Dsurround
+nmap cs  <Plug>Csurround
+nmap cS  <Plug>CSurround
+" nmap ys  <Plug>Ysurround
+nmap yS  <Plug>YSurround
+nmap yss <Plug>Yssurround
+nmap ySs <Plug>YSsurround
+nmap ySS <Plug>YSsurround
+xmap S   <Plug>VSurround
+xmap gS  <Plug>VgSurround
+if !exists("g:surround_no_insert_mappings") || ! g:surround_no_insert_mappings
+if !hasmapto("<Plug>Isurround","i") && "" == mapcheck("<C-S>","i")
+imap    <C-S> <Plug>Isurround
+endif
+imap      <C-G>s <Plug>Isurround
+imap      <C-G>S <Plug>ISurround
+endif
+]]
+nkeymap("<leader><leader>s", "<Plug>Ysurroundiw*")
 
 
 -- coc Listextend --

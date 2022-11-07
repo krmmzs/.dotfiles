@@ -70,9 +70,8 @@ end --}}}
 
 -- Start Refactoring --
 
-local python3 = s("python3", { t"#!/usr/bin python3"})
-table.insert(snippets, python3)
-
+local bin = s("bin3", { t"#!/usr/bin python3"})
+table.insert(snippets, bin)
 
 local jupyter = s("ne", {
     t"# %%"

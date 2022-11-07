@@ -275,6 +275,15 @@ return packer.startup(function(use)
     -- sudo write file
     use { 'lambdalisue/suda.vim' }
 
+    -- for browser
+    --[[ use { ]]
+    --[[     'glacambre/firenvim', ]]
+    --[[     run = function() vim.fn['firenvim#install'](0) end  ]]
+    --[[ } ]]
+
+    -- for vim input
+    use { 'rlue/vim-barbaric' }
+
 
 
 
