@@ -27,6 +27,10 @@ require("mzs.plugin.nvim-transparent")
 -- [require("mzs.plugin.noice")
 --[[ require("mzs.plugin.notify") ]]
 
+-- colorscheme
+--[[ require("mzs.plugin.ayu") ]]
+require("mzs.plugin.nightfox")
+
 -- LSP
 require("mzs.plugin.lsp_lines")
 require("mzs.lsp.null-ls")

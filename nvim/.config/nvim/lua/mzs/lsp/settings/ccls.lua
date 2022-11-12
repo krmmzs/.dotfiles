@@ -6,6 +6,7 @@ return {
         };
         clang = {
             excludeArgs = { "-frounding-math"} ;
+            extraArgs = { "-Wall", "-std=c++17", "-g" }; -- support C++17
         };
     }
 }

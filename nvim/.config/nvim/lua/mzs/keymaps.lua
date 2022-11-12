@@ -18,7 +18,7 @@ local function ikeymap(key, map)
 end
 
 local function ckeymap(key, map)
-    keymap('c', key, map, opts)
+    keymap('c', key, map, {})
 end
 
 local function xkeymap(key, map)
@@ -163,7 +163,9 @@ imap      <C-G>s <Plug>Isurround
 imap      <C-G>S <Plug>ISurround
 endif
 ]]
-nkeymap("<leader><leader>s", "<Plug>Ysurroundiw*")
+nkeymap("<leader><leader>1", "<Plug>Ysurroundiw*")
+nkeymap("<leader><leader>2", "<Plug>Ysurroundiw`")
+nkeymap("<leader><leader>3", "<Plug>Ysurroundiw]")
 
 
 -- coc Listextend --
@@ -194,8 +196,9 @@ map("n", "gx", '<Cmd>call jobstart(["xdg-open", expand("<cfile>")], {"detach": v
 
 -- Saner command-line history
 -- see https://github.com/mhinz/vim-galore#saner-command-line-history
+-- and see parctice vim tips 34
 ckeymap("<c-n>", "<down>")
-ckeymap("<c-p", "<up>")
+ckeymap("<c-p>", "<up>")
 
 -- Quickly add empty lines
 -- Now 5[<space> inserts 5 blank lines above the current line.

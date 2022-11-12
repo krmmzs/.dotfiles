@@ -234,6 +234,8 @@ alias rm="rm -i"  # add attention
 # function rm() { [ -d ~/rbackup ] || mkdir ~/rbackup;/bin/mv -f $@ ~/rbackup; }
 alias cp="cp -i"  # add attention
 alias ls="exa --icons" # replace ls to exa but with command ls
+# see bat --list-themes
+export BAT_THEME="Coldark-Cold" # bat theme
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'" # 用bat来做fzf的预览器, need to install bat firstly
 alias bd=". bd -si"
 alias lst="ls --tree"
@@ -241,7 +243,13 @@ alias ipy="j ipython && ipython"
 # alias dd="cd $(d | fzf | sed 's/[0-9]\t*~/\/home\/mouzaisi/g')"
 
 # gcc, g++
-alias gcc11="gcc -std=c11"
+# The -Wall flag is extremely important, and you should always use it.
+# It tells the compiler to give you (almost) all warnings. And you should always listen to the warnings, i.e. correct your source code file es3.C till you got no more warnings.
+# The -g flag is important also, because it asks gcc to put debugging information in the object file and the executable.
+# Then you are able to use a debugger (like gdb) to debug your program.
+
+alias gcc="gcc -Wall -g"
+alias g++="g++ -Wall -g"
 
 # program init
 alias pyinit="cp ~/MyGit/project_init/python/init/* . && touch .root"
@@ -391,3 +399,7 @@ export PATH=/home/$USER/.local/share/neovim/bin:$PATH
 # prepend PATH /opt/myapp/bin
 # prepend LD_LIBRARY_PATH /opt/myapp/lib
 prepend() { [ -d "$2" ] && eval $1=\"$2\$\{$2:+':'\$$1\}\" && export $1 ; }
+
+autoload -Uz compinit
+zstyle ':completion:*' menu select
+fpath+=~/.zfunc

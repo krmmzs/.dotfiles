@@ -84,7 +84,10 @@ end
 lualine.setup {
 options = {
 		icons_enabled = true,
-		theme = "auto",
+        -- https://github.com/nvim-lualine/lualine.nvim/blob/master/THEMES.md#iceberg_light
+		theme = "iceberg_light", -- for tokeyonight light
+        --[[ theme = "papercolor_light", -- for github-nvim-theme light ]]
+
         component_separators = { left = '', right = ''},
         section_separators = { left = '', right = ''},
 		disabled_filetypes = { "dashboard", "NvimTree", "Outline" },

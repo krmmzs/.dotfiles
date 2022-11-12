@@ -93,6 +93,10 @@ return packer.startup(function(use)
     use 'morhetz/gruvbox'
     use 'luisiacc/gruvbox-baby'
     use 'liuchengxu/space-vim-theme'
+    use 'Shatur/neovim-ayu'
+    --[[ use ({ 'projekt0n/github-nvim-theme' }) ]] -- bad support some other plugin like buufflie...
+    use "EdenEast/nightfox.nvim" -- need a time to explote this plugin, but it's cool
+    use { "catppuccin/nvim", as = "catppuccin" }
 
     -- use native lsp now
     -- use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
@@ -282,7 +286,7 @@ return packer.startup(function(use)
     --[[ } ]]
 
     -- for vim input
-    use { 'rlue/vim-barbaric' }
+    --[[ use { 'rlue/vim-barbaric' } ]]
 
 
 
