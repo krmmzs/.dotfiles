@@ -1,3 +1,6 @@
+-- lsp document see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#ccls
+-- options see https://github.com/MaskRay/ccls/wiki/Customization#initialization-options
+-- .ccls examples https://github.com/MaskRay/ccls/wiki/Project-Setup#ccls-examples
 return {
     init_options = {
         compilationDatabaseDirectory = "build";
@@ -6,7 +9,8 @@ return {
         };
         clang = {
             excludeArgs = { "-frounding-math"} ;
-            extraArgs = { "-Wall", "-std=c++17", "-g" }; -- support C++17
+            extraArgs = { "-Wall", "-g" };
         };
-    }
+        single_file_support = true;
+    };
 }

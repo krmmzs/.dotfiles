@@ -110,13 +110,13 @@ font:
     #family: "Monaco"
     style: Regular
 
-  size: 12
+  size: 11
 
   # 字符间距
   #"offset.y" 可以控制行距，"offset.x" 可以改变字符间距。
   offset:
     # x: 1
-    y: 1
+    y: 2
 
 key_bindings:
   - {key: F11, action: ToggleFullscreen}

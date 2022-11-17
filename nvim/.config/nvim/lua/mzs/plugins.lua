@@ -223,7 +223,7 @@ return packer.startup(function(use)
     -- Virtual Text
     -- often not use
     --[[ use {'kevinhwang91/nvim-hlslens'} -- helps you better glance at matched information ]]
-    -- use {"APZelos/blamer.nvim"} -- show git blame
+    -- use {"APZelos/blamer.nvim"} -- show git blame, replaced by gitsigns.nvim
 
     -- startup time
     use {'dstein64/vim-startuptime'} -- A Vim plugin for profiling Vim's startup

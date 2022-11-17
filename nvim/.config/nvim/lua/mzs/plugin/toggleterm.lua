@@ -89,5 +89,5 @@ function _IPYTHON_TOGGLE()
 end
 
 nkeymap("<leader>th", "<cmd>lua _HTOP_TOGGLE()<CR>")
-nkeymap("<leader>td", "<cmd>lua _NCDU_TOGGLE()<CR>")
+--[[ nkeymap("<leader>td", "<cmd>lua _NCDU_TOGGLE()<CR>") -- this map is conflict with gitsigns.nvim ]]
 nkeymap("<leader>t1", "<cmd>ToggleTerm direction=horizontal size=12<CR>")

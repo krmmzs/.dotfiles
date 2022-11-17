@@ -55,6 +55,8 @@ nkeymap("N", "Nzz")
 nkeymap("J", "Jzz")
 nkeymap("<c-o>", "<c-o>zz")
 nkeymap("<c-i>", "<c-i>zz")
+nkeymap("<c-d>", "<c-d>zz")
+nkeymap("<c-u>", "<c-u>zz")
 
 -- Jumplist mutations, solve jump list could save <number>j or <number>k
 vim.cmd[[
@@ -97,11 +99,18 @@ nkeymap("<leader>e", ":Lex 35<cr>")
 nkeymap("<C-Up>", ":resize +2<CR>")
 nkeymap("<C-Down>", ":resize -2<CR>")
 nkeymap("<C-Left>", ":vertical resize -2<CR>")
+
+
+
 nkeymap("<C-Right>", ":vertical resize +2<CR>")
 
 -- Navigate buffers
-nkeymap("<S-l>", ":bnext<CR>")
-nkeymap("<S-h>", ":bprevious<CR>")
+nkeymap("]b", ":bnext<CR>")
+nkeymap("[b", ":bprevious<CR>")
+
+-- quick build a block with space
+nkeymap("<leader>o", "o<ESC>O<CR>")
+
 
 -- Insert --
 
@@ -139,7 +148,7 @@ nkeymap("<S-h>", ":bprevious<CR>")
 nkeymap("<leader>u", ":UndotreeToggle<CR>")
 
 -- vim-bbye
-nkeymap("<leader>df", ":Bdelete<CR>") -- quick Bdelete current file
+nkeymap("<leader>db", ":Bdelete<CR>") -- quick Bdelete current buffer
 
 -- surround
 -- see https://github.com/tpope/vim-surround/blob/f51a26d3710629d031806305b6c8727189cd1935/plugin/surround.vim#L603
@@ -163,7 +172,7 @@ imap      <C-G>s <Plug>Isurround
 imap      <C-G>S <Plug>ISurround
 endif
 ]]
-nkeymap("<leader><leader>1", "<Plug>Ysurroundiw*")
+nkeymap("<leader><leader>1", "<Plug>Ysurroundiw*l")
 nkeymap("<leader><leader>2", "<Plug>Ysurroundiw`")
 nkeymap("<leader><leader>3", "<Plug>Ysurroundiw]")
 

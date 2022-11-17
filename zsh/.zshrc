@@ -254,6 +254,8 @@ alias g++="g++ -Wall -g"
 # program init
 alias pyinit="cp ~/MyGit/project_init/python/init/* . && touch .root"
 alias cppinit="cp ~/MyGit/project_init/cpp/init/* . && touch .root"
+alias cppccls="cp ~/MyGit/project_init/cpp/init/.ccls . && touch .root"
+alias cccls="cp ~/MyGit/project_init/c/init/.ccls . && touch .root"
 
 # alacritty themes alias
 LIGHT_COLOR='dark.yml'
@@ -273,6 +275,9 @@ alias dvF='yt-dlp -F'
 alias dvf='yt-dlp -f'
 alias dvmp4='yt-dlp -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]" --merge-output-format mp4'
 alias dvmkv='yt-dlp -f "bestvideo[ext=mkv]+bestaudio[ext=webm]" --merge-output-format mkv'
+alias dvmkv2='yt-dlp -f "bestvideo[ext=webm]+bestaudio[ext=webm]" --merge-output-format mkv'
+alias dvpic='you-get'
+alias tor='(cd /opt/tor-browser_en-US/ && ./start-tor-browser.desktop)'
 
 # disk
 dfu() { du --max-depth=1 -h | sort -h }
