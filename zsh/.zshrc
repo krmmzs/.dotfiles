@@ -188,6 +188,11 @@ alias tkss="tmux kill-session -t"
 alias ta="tmux a"
 alias tn="tmux new -s"
 
+# system
+# cpu
+alias cpuM="cat /proc/cpuinfo | rg cpu\ MHz"
+# memory
+
 # clash alias
 alias prpr="cd ~/MyGit/sciNet/prpr && ./clash -d ."
 # alias prpr="cd ~/MyGit/sciNet/prpr && xdg-open https://clash.razord.top/ && ./clash -d ."
@@ -239,7 +244,7 @@ export BAT_THEME="Coldark-Cold" # bat theme
 alias fzf="fzf --preview 'bat --color=always --style=numbers --line-range=:500 {}'" # 用bat来做fzf的预览器, need to install bat firstly
 alias bd=". bd -si"
 alias lst="ls --tree"
-alias ipy="j ipython && ipython"
+alias ipy="cd ~/ipython && ipython"
 # alias dd="cd $(d | fzf | sed 's/[0-9]\t*~/\/home\/mouzaisi/g')"
 
 # gcc, g++
@@ -301,7 +306,6 @@ source ~/scripts/myscripts/dir_stack.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 eval $(thefuck --alias)

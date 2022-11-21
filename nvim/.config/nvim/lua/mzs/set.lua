@@ -72,3 +72,7 @@ vim.cmd[[
 autocmd InsertLeave,WinEnter * set cursorline
 autocmd InsertEnter,WinLeave * set nocursorline
 ]]
+
+vim.cmd[[
+set statusline+=%{get(b:,'gitsigns_status','added')}
+]]

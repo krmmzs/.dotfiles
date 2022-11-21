@@ -279,6 +279,9 @@ return packer.startup(function(use)
     -- sudo write file
     use { 'lambdalisue/suda.vim' }
 
+    -- debug
+    use 'mfussenegger/nvim-dap'
+
     -- for browser
     --[[ use { ]]
     --[[     'glacambre/firenvim', ]]

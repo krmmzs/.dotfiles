@@ -104,3 +104,6 @@ require("mzs.plugin.copilot")
 
 -- selection search
 require("mzs.plugin.vim-browser-search")
+
+-- debug
+require("mzs.plugin.dap")

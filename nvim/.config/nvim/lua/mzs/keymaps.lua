@@ -36,7 +36,8 @@ nkeymap("<Leader>l", ":noh<CR>")
 
 
 -- quick :q
-nkeymap("<c-q>", ":q<CR>")
+-- but it is a bad habit
+--[[ nkeymap("<c-q>", ":q<CR>") ]]
 
 -- quick copy to outside
 nkeymap("vaey", 'ggVG"+y<c-o>')
