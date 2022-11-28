@@ -29,7 +29,7 @@ nkeymap("gpt", "<cmd>lua require('goto-preview').goto_preview_type_definition()<
 nkeymap("gpi", "<cmd>lua require('goto-preview').goto_preview_implementation()<CR>")
 nkeymap("gP", "<cmd>lua require('goto-preview').close_all_win()<CR>")
 -- Only set if you have telescope installed
--- nkeymap("gpr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>")
+nkeymap("gpr", "<cmd>lua require('goto-preview').goto_preview_references()<CR>")
 
 
 goto_preview.setup {

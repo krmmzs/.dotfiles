@@ -6,6 +6,7 @@ end
 --[[ require("luasnip.loaders.from_vscode").lazy_load() -- have configged in cmp-nvim ]]
 
 -- My added snippets
+-- see https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md#loaders
 require("luasnip.loaders.from_lua").load({ paths = "~/.config/nvim/snippets/" })
 
 require("luasnip").config.setup({ store_selection_keys = "<A-p>" })

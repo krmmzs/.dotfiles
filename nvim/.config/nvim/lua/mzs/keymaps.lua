@@ -83,10 +83,10 @@ nkeymap("\\\\", ":cd %:p:h<CR>")
 
 -- Normal --
 -- Better window navigation
--- keymap("n", "<C-h>", "<C-w>h", opts)
--- keymap("n", "<C-j>", "<C-w>j", opts)
--- keymap("n", "<C-k>", "<C-w>k", opts)
--- keymap("n", "<C-l>", "<C-w>l", opts)
+keymap("n", "<C-h>", "<C-w>h", opts)
+keymap("n", "<C-j>", "<C-w>j", opts)
+keymap("n", "<C-k>", "<C-w>k", opts)
+keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- files navigation
 nkeymap("<leader>e", ":Lex 35<cr>")
@@ -183,11 +183,6 @@ nkeymap("<leader><leader>3", "<Plug>Ysurroundiw]")
 -- Plug Yggdroot/indentLine
 -- :IndentLinesToggle toggles lines on and off.
 nkeymap("<leader>il", ":IndentLinesToggle<CR>")
-
-nkeymap("<c-h>", "<c-w>h")
-nkeymap("<c-j>", "<c-w>j")
-nkeymap("<c-k>", "<c-w>k")
-nkeymap("<c-l>", "<c-w>l")
 
 -- See https://www.reddit.com/r/neovim/comments/ro6oye/open_link_from_neovim/
 -- Becase gx is a netrw's functionality, using nvim-tree will cover this feature(QAQ).
