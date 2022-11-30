@@ -181,6 +181,7 @@ alias gpl="git pull"
 alias gm="git merge"
 alias gb="git branch"
 alias go="git open"
+alias grs="git restore --staged"
 
 # tmux alias
 alias tl="tmux list-sessions"

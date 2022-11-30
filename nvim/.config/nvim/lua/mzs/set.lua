@@ -43,7 +43,8 @@ local options = {
     sidescrolloff = 8,
     softtabstop = 4,
 
-    guifont = "Monaco\\ Nerd\\ Font\\ 12",               -- the font used in graphical neovim applications in my linux
+    --[[ guifont = "Monaco\\ Nerd\\ Font\\ 12",               -- the font used in graphical neovim applications in my linux ]]
+    guifont = "Monaco Nerd Font:h11",
 
     -- tags
     -- find ctags, functions and files in vim

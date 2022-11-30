@@ -105,9 +105,10 @@ nkeymap("<C-Left>", ":vertical resize -2<CR>")
 
 nkeymap("<C-Right>", ":vertical resize +2<CR>")
 
--- Navigate buffers
+-- buffers
 nkeymap("]b", ":bnext<CR>")
 nkeymap("[b", ":bprevious<CR>")
+nkeymap("<leader>cb", ":%bd|e#") -- clear buffer but current buffer
 
 -- quick build a block with space
 nkeymap("<leader>o", "o<ESC>O<CR>")

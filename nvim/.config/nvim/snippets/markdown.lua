@@ -84,8 +84,8 @@ table.insert(snippets, code)
 local url = s("url", fmt([[
 [{}]({})
 ]], {
-        i(1, "text"),
-        i(2, "url")
+        i(1, ""),
+        i(2, "")
     }))
 table.insert(snippets, url)
 

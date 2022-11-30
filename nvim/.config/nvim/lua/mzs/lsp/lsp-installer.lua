@@ -31,6 +31,11 @@ lsp_installer.on_server_ready(function(server)
         opts = vim.tbl_deep_extend("force", ccls_opts, opts)
     end
 
+    --[[ if server.name == "clangd" then ]]
+    --[[     local clangd_opts = require("mzs.lsp.settings.clangd") ]]
+    --[[     opts = vim.tbl_deep_extend("force", clangd_opts, opts) ]]
+    --[[ end ]]
+
     if server.name == "jdtls" then
 
     end

@@ -1,3 +1,5 @@
+-- Document
+-- https://github.com/L3MON4D3/LuaSnip/blob/master/DOC.md
 local ls = require("luasnip") --{{{
 local s = ls.s --> snippet
 local i = ls.i --> insert node
