@@ -31,7 +31,7 @@ cursor:
 # -------------------------------------------------------
 
 window:
-  opacity: 0.7
+  opacity: 0.9
 # decorations: none
 
 colors:
@@ -72,8 +72,8 @@ colors:
     # Default colors
 # ----------------------------------------------------------------
 
-window:
-  opacity: 0.8
+# window:
+#   opacity: 0.8
 
 # colors:
 #   primary:

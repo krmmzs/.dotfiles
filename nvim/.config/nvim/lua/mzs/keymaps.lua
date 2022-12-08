@@ -108,10 +108,15 @@ nkeymap("<C-Right>", ":vertical resize +2<CR>")
 -- buffers
 nkeymap("]b", ":bnext<CR>")
 nkeymap("[b", ":bprevious<CR>")
-nkeymap("<leader>cb", ":%bd|e#") -- clear buffer but current buffer
+nkeymap("<leader>cb", ":%bd|e#<CR>") -- clear buffer but current buffer
 
 -- quick build a block with space
 nkeymap("<leader>o", "o<ESC>O<CR>")
+
+-- debug
+
+-- python
+nkeymap("<leader>ip", "Oipdb.set_trace()  # DEBUG BREAKPOINT<ESC>")
 
 
 -- Insert --

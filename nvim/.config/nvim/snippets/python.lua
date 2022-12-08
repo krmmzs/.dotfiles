@@ -78,6 +78,17 @@ local jupyter = s("ne", {
 })
 table.insert(snippets, jupyter)
 
+local debug = s("debug", fmt([[
+DEBUG = True
+
+
+def log(s):
+    if DEBUG:
+        print(s)
+]], {
+    }))
+table.insert(snippets, debug)
+
 -- End Refactoring --
 
 return snippets, autosnippets

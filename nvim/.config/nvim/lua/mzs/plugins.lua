@@ -126,6 +126,7 @@ return packer.startup(function(use)
     -- interface that lets you easily review all changed files for any git rev.
     use { 'sindrets/diffview.nvim', requires = 'nvim-lua/plenary.nvim' }
     use {"lewis6991/gitsigns.nvim"}
+    use {"rhysd/git-messenger.vim"}
 
     -- Nerdtree
     -- use {'preservim/nerdtree'}
