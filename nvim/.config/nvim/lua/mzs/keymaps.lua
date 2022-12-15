@@ -214,8 +214,8 @@ ckeymap("<c-p>", "<up>")
 -- Quickly add empty lines
 -- Now 5[<space> inserts 5 blank lines above the current line.
 vim.cmd[[
-nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[
-nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>
+nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[j
+nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>k
 ]]
 
 -- Reload a file on saving

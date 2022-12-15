@@ -167,8 +167,9 @@ alias cbr='git branch --sort=-committerdate | fzf --header "Checkout Recent Bran
 alias gs="git status"
 alias ga="git add"
 # alias gl="git log --all --graph --decorate"
+function gl() {git log --color=always --all --graph --decorate=auto}
 # alias gl="git log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
-function gl() {git log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'}
+# functionttt gl() {git log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'}
 alias gcf="git cat-file -p"
 alias git="LANG=en_GB git" # using English message
 alias gs="git status"
@@ -182,6 +183,7 @@ alias gm="git merge"
 alias gb="git branch"
 alias go="git open"
 alias grs="git restore --staged"
+alias gr="git remote"
 
 # tmux alias
 alias tl="tmux list-sessions"
@@ -284,6 +286,16 @@ alias dvmkv='yt-dlp -f "bestvideo[ext=mkv]+bestaudio[ext=webm]" --merge-output-f
 alias dvmkv2='yt-dlp -f "bestvideo[ext=webm]+bestaudio[ext=webm]" --merge-output-format mkv'
 alias dvpic='you-get'
 alias tor='(cd /opt/tor-browser_en-US/ && ./start-tor-browser.desktop)'
+
+# rg function
+
+rgignore() {
+    rg --ignore-file ~/.gitignore "$@"
+}
+
+rgh() {
+    rg --hidden "$@"
+}
 
 # disk
 dfu() { du --max-depth=1 -h | sort -h }
