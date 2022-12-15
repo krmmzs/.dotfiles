@@ -155,23 +155,20 @@ export LANG=en_US.UTF-8
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-# git
-
+# git alais
 # gi for command line to create .gitignore
 function gi() { curl -sLw n https://www.toptal.com/developers/gitignore/api/$@ ;}
-
-# Git alias
 # More in https://github.com/ohmyzsh/ohmyzsh/tree/master/plugins/git
 # But don't use directly this plugin.
-alias cbr='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always | delta" | xargs git checkout'
+alias git="LANG=en_GB git" # using English message
 alias gs="git status"
 alias ga="git add"
+# git log
 # alias gl="git log --all --graph --decorate"
 function gl() {git log --color=always --all --graph --decorate=auto}
 # alias gl="git log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'"
 # functionttt gl() {git log --color --graph --date=format:'%Y-%m-%d %H:%M:%S' --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%ad) %C(bold blue)<%an>%Creset'}
 alias gcf="git cat-file -p"
-alias git="LANG=en_GB git" # using English message
 alias gs="git status"
 alias gcm="git commit -m"
 alias gcma="git commit --amend"
@@ -179,11 +176,19 @@ alias gcl="git clone"
 alias gch="git checkout"
 alias gp="git push"
 alias gpl="git pull"
-alias gm="git merge"
 alias gb="git branch"
 alias go="git open"
 alias grs="git restore --staged"
 alias gr="git remote"
+# git branch
+function gbclear() { git branch --merged master | grep -v '^\*\|  master' | xargs -n 1 git branch -d }
+alias cbr='git branch --sort=-committerdate | fzf --header "Checkout Recent Branch" --preview "git diff {1} --color=always | delta" | xargs git checkout'
+# git merge
+alias gm="git merge"
+# git remote
+function gru() { git remote update }
+function grp1() { git remote prune origin --dry-run }
+function grp2() { git remote prune origin }
 
 # tmux alias
 alias tl="tmux list-sessions"
