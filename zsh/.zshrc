@@ -187,8 +187,8 @@ alias cbr='git branch --sort=-committerdate | fzf --header "Checkout Recent Bran
 alias gm="git merge"
 # git remote
 function gru() { git remote update }
-function grp1() { git remote prune origin --dry-run }
-function grp2() { git remote prune origin }
+function grp1() { git remote prune origin --dry-run } # Preview the running result of the down commandpreview command operation below
+function grp2() { git remote prune origin } # Remote deleted branch local also want to delete
 
 # tmux alias
 alias tl="tmux list-sessions"
