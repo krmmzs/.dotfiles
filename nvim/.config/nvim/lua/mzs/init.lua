@@ -107,3 +107,6 @@ require("mzs.plugin.vim-browser-search")
 
 -- debug
 require("mzs.plugin.dap")
+
+-- navigation
+require("mzs.plugin.harpoon")

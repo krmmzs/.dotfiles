@@ -201,6 +201,9 @@ telescope.load_extension('fzf')
 -- see https://github.com/nvim-telescope/telescope-media-files.nvim
 telescope.load_extension('media_files')
 
+-- see https://github.com/ThePrimeagen/harpoon#telescope-support
+require("telescope").load_extension('harpoon')
+
 -- need sqlite3
 -- Using an implementation of Mozilla's Frecency algorithm (used in Firefox's address bar)
 -- , files edited frecently are given higher precedence in the list index.

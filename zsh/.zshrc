@@ -5,6 +5,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH=$HOME/.local/bin:$PATH
@@ -127,7 +128,7 @@ export EDITOR=nvim
 # zsh-history-substring-search
 # source ~/.oh-my-zsh/custom/plugins/zsh-history-substring-search/zsh-history-substring-search.zsh
 
-# User configuration
+# User cftp domain.comonfiguration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
@@ -237,6 +238,7 @@ nh ()
 {
     nohup "$@" &
 }
+alias n="nvim"
 alias alidrive="cd ~/softwares/阿里小白羊版Linux\ v2.12.14/ && ./阿里云盘小白羊版"
 alias vimal="$EDITOR -u ~/.vimrcs/.algorithm_vimrc"
 alias vimnp="$EDITOR -u ~/.vimrcs/.no_plugins_vimrc"
@@ -430,3 +432,6 @@ prepend() { [ -d "$2" ] && eval $1=\"$2\$\{$2:+':'\$$1\}\" && export $1 ; }
 autoload -Uz compinit
 zstyle ':completion:*' menu select
 fpath+=~/.zfunc
+
+eval "`pip3 completion --zsh`"
+eval "`pip completion --zsh`"

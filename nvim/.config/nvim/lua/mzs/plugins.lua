@@ -128,7 +128,7 @@ return packer.startup(function(use)
     use {"lewis6991/gitsigns.nvim"}
     use {"rhysd/git-messenger.vim"}
 
-    -- Nerdtree
+    -- Navigation
     -- use {'preservim/nerdtree'}
     -- use {'jistr/vim-nerdtree-tabs'}
     -- use {'Xuyuanp/nerdtree-git-plugin'} -- A plugin of NERDTree showing git status flags.
@@ -140,6 +140,7 @@ return packer.startup(function(use)
         },
         tag = 'nightly' -- optional, updated every week. (see issue #1193)
     }
+    use { 'ThePrimeagen/harpoon' }
 
     -- Move
     --[[ use { -- replace easy-motion(deal with bad buffer show) ]]
