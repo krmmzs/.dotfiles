@@ -32,8 +32,7 @@ cursor:
 
 window:
   opacity: 0.9
-# decorations: none
-
+  decorations: none
 colors:
   primary:
     background: '#ffffff'
@@ -74,7 +73,6 @@ colors:
 
 # window:
 #   opacity: 0.8
-
 # colors:
 #   primary:
 #     background: '0x24283b'
@@ -120,3 +118,4 @@ font:
 
 key_bindings:
   - {key: F11, action: ToggleFullscreen}
+  - {key: Return,   mods: Control|Shift, action: SpawnNewInstance }

@@ -86,6 +86,7 @@ options = {
 		icons_enabled = true,
         -- https://github.com/nvim-lualine/lualine.nvim/blob/master/THEMES.md#iceberg_light
 		theme = "iceberg_light", -- for tokeyonight light
+        --[[ theme = "onedark", -- for tokeyonight dark and when transparent is true ]]
         --[[ theme = "papercolor_light", -- for github-nvim-theme light ]]
 
         component_separators = { left = '', right = ''},
