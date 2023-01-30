@@ -239,7 +239,6 @@ nh ()
     nohup "$@" &
 }
 alias n="nvim"
-alias alidrive="cd ~/softwares/阿里小白羊版Linux\ v2.12.14/ && ./阿里云盘小白羊版"
 alias vimal="$EDITOR -u ~/.vimrcs/.algorithm_vimrc"
 alias vimnp="$EDITOR -u ~/.vimrcs/.no_plugins_vimrc"
 alias mvim="$EDITOR -u ~/.vimrcs/.mvimrc"

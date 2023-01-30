@@ -54,10 +54,10 @@ nkeymap('<leader>p', '"+p')
 nkeymap("n", "nzz")
 nkeymap("N", "Nzz")
 nkeymap("J", "Jzz")
-nkeymap("<c-o>", "<c-o>zz")
-nkeymap("<c-i>", "<c-i>zz")
-nkeymap("<c-d>", "<c-d>zz")
-nkeymap("<c-u>", "<c-u>zz")
+--[[ nkeymap("<c-o>", "<c-o>zz") ]]
+--[[ nkeymap("<c-i>", "<c-i>zz") ]]
+--[[ nkeymap("<c-d>", "<c-d>zz") ]]
+--[[ nkeymap("<c-u>", "<c-u>zz") ]]
 
 -- Jumplist mutations, solve jump list could save <number>j or <number>k
 vim.cmd[[
