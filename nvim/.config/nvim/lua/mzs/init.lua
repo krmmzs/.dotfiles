@@ -2,11 +2,11 @@
 require("mzs.set")
 require("mzs.keymaps")
 require("mzs.plugins")
+require("mzs.plugin.nvim-web-devicons")
 require("mzs.colorscheme") -- colorscheme need load after plugins
 require("mzs.lsp")
 
 -- plugins Configs
-require("mzs.plugin.nvim-web-devicons")
 
 -- fzf
 require("mzs.plugin.telescope")

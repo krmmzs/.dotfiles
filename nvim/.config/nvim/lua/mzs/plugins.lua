@@ -159,7 +159,13 @@ return lazy.setup({
     {"hrsh7th/cmp-cmdline"}, -- cmdline completions
     {"saadparwaiz1/cmp_luasnip"}, -- snippet co  -- snippets
     {"hrsh7th/cmp-nvim-lsp"},
-    {"L3MON4D3/LuaSnip", version = "v<CurrentMajor>.*"}, --snippet engine
+    { --snippet engine
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        version = "<CurrentMajor>.*",
+        -- install jsregexp (optional!).
+        build = "make install_jsregexp"
+    },
     {"rafamadriz/friendly-snippets"}, -- a bunch of snippets to usempletions
     {'tzachar/cmp-tabnine', build='./install.sh', dependencies = 'hrsh7th/nvim-cmp'},
 
