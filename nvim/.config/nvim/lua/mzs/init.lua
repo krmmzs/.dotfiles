@@ -1,11 +1,12 @@
+-- basic config require modules
 require("mzs.set")
 require("mzs.keymaps")
-require("mzs.colorscheme")
 require("mzs.plugins")
+require("mzs.colorscheme") -- colorscheme need load after plugins
 require("mzs.lsp")
-require("mzs.plugin.nvim-web-devicons")
 
 -- plugins Configs
+require("mzs.plugin.nvim-web-devicons")
 
 -- fzf
 require("mzs.plugin.telescope")
