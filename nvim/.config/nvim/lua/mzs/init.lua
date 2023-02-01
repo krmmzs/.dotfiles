@@ -1,6 +1,5 @@
 require("mzs.set")
 require("mzs.keymaps")
-require("mzs.remap")
 require("mzs.colorscheme")
 require("mzs.plugins")
 require("mzs.lsp")
