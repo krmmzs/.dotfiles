@@ -1,3 +1,5 @@
+-- https://github.com/folke/lazy.nvim#-installation
+-- bootstrap lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
@@ -19,7 +21,7 @@ if not status_ok then
 end
 
 -- Install your plugins here
-return lazy.setup({
+lazy.setup({
     "nvim-lua/popup.nvim",  -- An implementation of the Popup API from vim in Neovim
     "nvim-lua/plenary.nvim",  -- Useful lua functions used ny lots of plugins
     'kyazdani42/nvim-web-devicons', 

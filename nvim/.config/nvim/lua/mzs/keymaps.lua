@@ -183,6 +183,8 @@ nkeymap("<leader><leader>1", "<Plug>Ysurroundiw*l")
 nkeymap("<leader><leader>2", "<Plug>Ysurroundiw`")
 nkeymap("<leader><leader>3", "<Plug>Ysurroundiw]")
 
+nkeymap("<leader><leader>4", '<Plug>Ysurroundiw"')
+
 
 -- coc Listextend --
 
