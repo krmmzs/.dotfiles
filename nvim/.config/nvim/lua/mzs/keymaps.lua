@@ -26,7 +26,7 @@ local function xkeymap(key, map)
 end
 
 -- Others
-nkeymap("Q", "<Nop>")
+nkeymap("Q", "<Nop>") -- It's the worst place in the universe.
 
 nkeymap("<leader>1", ":set relativenumber!<CR>")
 
@@ -46,18 +46,19 @@ nkeymap("vaep", 'ggVG"+p')
 -- copy and paste in clipboard
 vkeymap('<leader>y', '"+y')
 nkeymap('<leader>p', '"+p')
+xkeymap('p', '\"_dP') -- change the p default behavior
 
 -- greatest remap ever
 --[[ xkeymap('<leader>p', "\"_dP") ]]
 
 -- Keeping it contered
-nkeymap("n", "nzz")
+nkeymap("n", "nzzzv")
 nkeymap("N", "Nzz")
 nkeymap("J", "Jzz")
 --[[ nkeymap("<c-o>", "<c-o>zz") ]]
 --[[ nkeymap("<c-i>", "<c-i>zz") ]]
---[[ nkeymap("<c-d>", "<c-d>zz") ]]
---[[ nkeymap("<c-u>", "<c-u>zz") ]]
+nkeymap("<c-d>", "<c-d>zz")
+nkeymap("<c-u>", "<c-u>zz")
 
 -- Jumplist mutations, solve jump list could save <number>j or <number>k
 vim.cmd[[
@@ -113,10 +114,20 @@ nkeymap("<leader>cb", ":%bd|e#<CR>") -- clear buffer but current buffer
 -- quick build a block with space
 nkeymap("<leader>o", "o<ESC>O<CR>")
 
+-- tmux
+--[[ nkeymap("<leader>tm", "<cmd>silent !tmux neww tmux-sessionizer<CR>") ]]
+nkeymap("<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+
 -- debug
 
 -- python
 nkeymap("<leader>ip", "Oipdb.set_trace()  # DEBUG BREAKPOINT<ESC>")
+
+-- quick command
+-- quick change all same text in all file.
+vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
+-- quick change the bash shell file to executable
+vim.keymap.set("n", "<leader>z", "<cmd>!chmod +x %<CR>", { silent = true })
 
 
 -- Insert --
