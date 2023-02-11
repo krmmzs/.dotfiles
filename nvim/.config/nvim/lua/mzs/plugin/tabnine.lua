@@ -13,11 +13,6 @@ local function ikeymap(key, map)
     keymap('i', key, map, opts)
 end
 
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
-if not status_ok then
-    return
-end
-
 local status_ok, tabnine = pcall(require, 'cmp_tabnine.config')
 if not status_ok then
     return
