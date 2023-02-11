@@ -3,7 +3,6 @@ if not status_ok then
 	return
 end
 
---[[ require("mzs.lsp.lsp-installer") -- replaced by the mason, but config file remain ]]
 -- lsp
 require("mzs.lsp.mason")
 require("mzs.lsp.mason-lspconfig")
