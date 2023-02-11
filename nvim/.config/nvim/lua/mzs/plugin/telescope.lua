@@ -19,6 +19,8 @@ local finders = require("telescope.finders")
 local previewers = require("telescope.previewers")
 local action_state = require("telescope.actions.state")
 local conf = require("telescope.config").values
+local trouble = require("trouble.providers.telescope") -- trouble.nvim
+local builtin = require("telescope.builtin")
 
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
@@ -27,6 +29,13 @@ end
 
 
 nkeymap("<C-f>", "<cmd>lua require('telescope.builtin').find_files()<cr>")
+nkeymap("<C-g>", "<cmd>lua require('telescope.builtin').git_files()<cr>") -- fast than find files when in git repo
+--[[ nkeymap("<leader>fs", function() ]]
+--[[     telescope.builtin.search_string({ search = vim.fn.input("Search > ") }); ]]
+--[[ end) ]]
+vim.keymap.set("n", "<leader>fs", function()
+    builtin.grep_string({ search = vim.fn.input("Grep > ") });
+end)
 nkeymap("<leader>f1", "<cmd>lua require('telescope.builtin').find_files({hidden=true})<cr>")
 nkeymap("<leader>f2", "<cmd>lua require('telescope.builtin').find_files({no_ignore=true})<cr>")
 nkeymap("<leader>f3", "<cmd>lua require('telescope.builtin').find_files({hidden=true, no_ignore=true})<cr>")
@@ -96,7 +105,6 @@ telescope.setup {
                 ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
                 ["<C-l>"] = actions.complete_tag,
                 ["<C-h>"] = actions.which_key, -- keys from pressing <C-/>
-
             },
 
             n = {
