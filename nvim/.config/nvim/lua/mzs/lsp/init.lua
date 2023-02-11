@@ -3,8 +3,13 @@ if not status_ok then
 	return
 end
 
-require("mzs.lsp.lsp-installer")
+--[[ require("mzs.lsp.lsp-installer") -- replaced by the mason, but config file remain ]]
+-- lsp
+require("mzs.lsp.mason")
+require("mzs.lsp.mason-lspconfig")
+-- lsp-config
 require("mzs.lsp.handlers").setup()
+require("mzs.lsp.settings")
 
 -- see https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md#asm_lsp
 require'lspconfig'.asm_lsp.setup{} -- use lsp-installer failed
