@@ -19,4 +19,12 @@ if not status_ok then
 end
 
 -- Default configuration https://github.com/williamboman/mason.nvim#default-configuration
-configs.setup()
+require("mason").setup({
+    ui = {
+        icons = {
+            package_installed = "✓",
+            package_pending = "➜",
+            package_uninstalled = "✗"
+        }
+    }
+})

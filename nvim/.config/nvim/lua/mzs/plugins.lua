@@ -173,7 +173,8 @@ lazy.setup({
 
     -- LSP
     {"neovim/nvim-lspconfig"}, -- enable LSP
-    {"williamboman/nvim-lsp-installer"}, -- simple to use language server installer
+    { "williamboman/mason.nvim" },
+    {"williamboman/mason-lspconfig.nvim"},
     {
         'rmagatti/goto-preview'
     },
@@ -194,7 +195,6 @@ lazy.setup({
 
     -- project
     -- { 'airblade/vim-rooter' }
-    { "williamboman/mason.nvim" },
     {
         "folke/todo-comments.nvim",
         dependencies = "nvim-lua/plenary.nvim",

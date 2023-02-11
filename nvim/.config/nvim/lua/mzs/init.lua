@@ -46,7 +46,6 @@ require("mzs.plugin.treesitter-context")
 
 -- project
 -- require("mzs.plugin.vim-rooter") -- replace by pulugin:project.nvim
-require("mzs.plugin.mason")
 require("mzs.plugin.todo-comments")
 
 -- web
