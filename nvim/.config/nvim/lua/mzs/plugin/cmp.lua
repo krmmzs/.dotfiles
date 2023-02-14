@@ -125,9 +125,9 @@ cmp.setup {
     },
     -- this order is the completion show priority.
     sources = {
+        { name = "nvim_lsp"}, -- from nvim_lsp.
         { name = "buffer" },
         { name = "luasnip" }, -- from a code snippets.
-        { name = "nvim_lsp"}, -- from nvim_lsp.
         { name = 'cmp_tabnine' },
         { name = "path" },
         -- { name = "cmdline" },

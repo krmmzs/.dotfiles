@@ -15,12 +15,12 @@ local capabilities = require("mzs.lsp.handlers").capabilities
 -- language servers config
 
 -- lua
-local sumneko_opts = require("mzs.lsp.settings.sumneko_lua")
-lspconfig.sumneko_lua.setup{
+local lua_ls_opts = require("mzs.lsp.settings.lua_ls")
+lspconfig.lua_ls.setup{
     on_attach = on_attach,
     capabilities = capabilities,
     flags = lsp_flags,
-    sumneko_opts
+    lua_ls_opts
 }
 
 -- json
@@ -67,4 +67,13 @@ lspconfig.gopls.setup{
     capabilities = capabilities,
     flags = lsp_flags,
     gopls_opts
+}
+
+-- markdown
+local marskman_opts = require("mzs.lsp.settings.marksman")
+lspconfig.marksman.setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
+    flags = lsp_flags,
+    marskman_opts
 }

@@ -6,6 +6,9 @@ require("mzs.plugin.nvim-web-devicons")
 require("mzs.colorscheme") -- colorscheme need load after plugins
 require("mzs.lsp")
 
+-- neovim in other place
+require("mzs.neovide")
+
 -- plugins Configs
 
 -- fzf

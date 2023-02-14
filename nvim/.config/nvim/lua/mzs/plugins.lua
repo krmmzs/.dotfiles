@@ -57,10 +57,7 @@ lazy.setup({
     -- {'neoclide/coc.nvim', branch = 'master', build = 'yarn install --frozen-lockfile'},
     -- 'honza/vim-snippets',
 
-    {
-        'nvim-treesitter/nvim-treesitter',
-        build = ":TSUpdate"
-    },
+    {"nvim-treesitter/nvim-treesitter", build = ":TSUpdate"},
     { 'nvim-treesitter/playground' },
     { "p00f/nvim-ts-rainbow" },
     { 'nvim-treesitter/nvim-treesitter-textobjects' },
@@ -253,4 +250,7 @@ lazy.setup({
 
     -- for vim input
     --[[ { 'rlue/vim-barbaric' }, ]]
+
+    -- golang
+    { 'fatih/vim-go' },
 })

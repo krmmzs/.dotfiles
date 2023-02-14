@@ -70,10 +70,11 @@ vim.cmd[[
 
 -- Smarter cursorline
 -- I love the cursorline, but I only want to use it in the current window and not when being in insert mode:
-vim.cmd[[
-autocmd InsertLeave,WinEnter * set cursorline
-autocmd InsertEnter,WinLeave * set nocursorline
-]]
+-- No, I changed my mind now...
+--vim.cmd[[
+--autocmd InsertLeave,WinEnter * set cursorline
+--autocmd InsertEnter,WinLeave * set nocursorline
+-- ]]
 
 vim.cmd[[
 set statusline+=%{get(b:,'gitsigns_status','added')}

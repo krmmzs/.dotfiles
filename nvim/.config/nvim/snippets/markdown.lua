@@ -70,16 +70,14 @@ end --}}}
 
 -- Start Refactoring --
 
-local code = s("code", fmt([[
+local co = s("co", fmt([[
 ```{}
-{}
 ```
 ]], {
         i(1, ""),
-        i(2, "")
     }))
 
-table.insert(snippets, code)
+table.insert(snippets, co)
 
 local url = s("url", fmt([[
 [{}]({})

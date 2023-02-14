@@ -64,6 +64,9 @@ nkeymap("<c-u>", "<c-u>zz")
 vim.cmd[[
 noremap <expr> k (v:count > 1 ? "m'" . v:count : "") . 'k'
 noremap <expr> j (v:count > 1 ? "m'" . v:count : "") . 'j'
+" don't store {} motions in jumplist
+nnoremap <silent> } :<C-u>execute "keepjumps norm! " . v:count1 . "}"<CR>
+nnoremap <silent> { :<C-u>execute "keepjumps norm! " . v:count1 . "{"<CR>
 ]]
 
 -- source: https://vim.fandom.com/wiki/Set_working_directory_to_the_current_file
@@ -127,7 +130,7 @@ nkeymap("<leader>ip", "Oipdb.set_trace()  # DEBUG BREAKPOINT<ESC>")
 -- quick change all same text in all file.
 vim.keymap.set("n", "<leader>r", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])
 -- quick change the bash shell file to executable
-vim.keymap.set("n", "<leader>z", "<cmd>!chmod +x %<CR>", { silent = true })
+vim.keymap.set("n", "<leader><leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 
 -- Insert --
