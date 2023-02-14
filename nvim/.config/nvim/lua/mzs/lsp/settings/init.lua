@@ -77,3 +77,12 @@ lspconfig.marksman.setup{
     flags = lsp_flags,
     marskman_opts
 }
+
+-- shell
+local bashls_opts = require("mzs.lsp.settings.bashls")
+lspconfig.bashls.setup{
+    on_attach = on_attach,
+    capabilities = capabilities,
+    flags = lsp_flags,
+    bashls_opts
+}

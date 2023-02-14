@@ -103,6 +103,7 @@ require("mzs.plugin.copilot")
 
 -- code
 --[[ require("mzs.plugin.sandwich") ]]
+require("mzs.plugin.sniprun")
 
 -- selection search
 require("mzs.plugin.vim-browser-search")

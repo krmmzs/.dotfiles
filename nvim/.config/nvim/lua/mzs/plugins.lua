@@ -141,6 +141,8 @@ lazy.setup({
     { 'tpope/vim-surround' },
     { 'tpope/vim-repeat' },
     --[[ { 'machakann/vim-sandwich' }, ]]
+    -- like code runner
+    {'michaelb/sniprun', build = 'bash ./install.sh'},
 
     -- diagnostics
     {
