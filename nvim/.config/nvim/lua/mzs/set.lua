@@ -1,4 +1,4 @@
-vim.g.mapleader = ","
+vim.g.mapleader = " "
 
 local options = {
     backup = false,                          -- creates a backup file
