@@ -2,6 +2,9 @@ let mapleader = ","
 nnoremap ,, ,
 nnoremap <C-q> :q<CR>
 
+" could use :Man <name> to entry man page in vim
+runtime! ftplugin/man.vim
+
 
 set nocompatible
 

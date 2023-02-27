@@ -27,7 +27,6 @@ end
 
 -- Others
 nkeymap("Q", "<Nop>") -- It's the worst place in the universe.
-
 nkeymap("<leader>1", ":set relativenumber!<CR>")
 
 
@@ -113,9 +112,6 @@ nkeymap("<C-Right>", ":vertical resize +2<CR>")
 nkeymap("]b", ":bnext<CR>")
 nkeymap("[b", ":bprevious<CR>")
 nkeymap("<leader>cb", ":%bd|e#<CR>") -- clear buffer but current buffer
-
--- quick build a block with space
-nkeymap("<leader>o", "o<ESC>O<CR>")
 
 -- tmux
 --[[ nkeymap("<leader>tm", "<cmd>silent !tmux neww tmux-sessionizer<CR>") ]]
@@ -229,10 +225,10 @@ ckeymap("<c-p>", "<up>")
 
 -- Quickly add empty lines
 -- Now 5[<space> inserts 5 blank lines above the current line.
-vim.cmd[[
-nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[j
-nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>k
-]]
+-- vim.cmd[[
+-- nnoremap [<space>  :<c-u>put! =repeat(nr2char(10), v:count1)<cr>'[j
+-- nnoremap ]<space>  :<c-u>put =repeat(nr2char(10), v:count1)<cr>k
+-- ]]
 
 -- Reload a file on saving
 -- see https://github.com/mhinz/vim-galore#reload-a-file-on-saving

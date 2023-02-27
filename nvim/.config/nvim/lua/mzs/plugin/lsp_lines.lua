@@ -18,7 +18,7 @@ local opts = { noremap = true, silent = true }
 -- default
 vim.diagnostic.config({
     virtual_lines = false,
-    virtual_text = false,
+    --[[ virtual_text = false, ]] -- in lsp/handles.lua
 })
 
 vim.keymap.set(

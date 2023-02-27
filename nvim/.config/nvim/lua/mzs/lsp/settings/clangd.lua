@@ -2,5 +2,5 @@
 -- project setup offical document see https://clangd.llvm.org/installation#project-setup
 
 return {
-
+    cmd = { "clangd"},
 }

@@ -80,6 +80,14 @@ local init = s("init", {
 
 table.insert(snippets, init)
 
+local pb = s("pb", fmt([[
+std::cout << {} << std::endl;
+]], {
+        i(1, ""),
+    }))
+
+table.insert(snippets, pb)
+
 local using = s("using", {
     t({"using std::cin;", ""}),
     t({"using std::cout;", ""}),

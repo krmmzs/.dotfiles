@@ -20,8 +20,8 @@ M.setup = function()
         signs = {
             active = signs,
         },
-        update_in_insert = true,
-        underline = true,
+        update_in_insert = false, -- when insert, don't show diagnostic
+        underline = false, -- it is annoying me!!!
         severity_sort = true,
         float = {
             focusable = false,
@@ -94,7 +94,7 @@ local function lsp_keymaps(bufnr)
     -- vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ga", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
     vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ga", "<cmd>Lspsaga code_action<cr>", opts)
 
-    -- vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts)
+    --[[ vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", "<cmd>lua vim.diagnostic.open_float()<CR>", opts) ]]
     vim.api.nvim_buf_set_keymap(bufnr, "n", "gl", "<cmd>Lspsaga show_line_diagnostics<cr>", opts)
 
     -- vim.api.nvim_buf_set_keymap(bufnr, "n", "[d", '<cmd>lua vim.diagnostic.goto_prev({ border = "rounded" })<CR>', opts)
@@ -133,7 +133,7 @@ M.on_attach = function(client, bufnr)
     end
 
     lsp_keymaps(bufnr)
-    lsp_highlight_document(client, bufnr)
+    --[[ lsp_highlight_document(client, bufnr) ]]
 end
 
 local capabilities = vim.lsp.protocol.make_client_capabilities()

@@ -1,4 +1,4 @@
-vim.g.mapleader = " "
+vim.g.mapleader = ","
 
 local options = {
     backup = false,                          -- creates a backup file
@@ -9,7 +9,7 @@ local options = {
     cmdheight = 2,                           -- more space in the neovim command line for displaying messages
     conceallevel = 0,                        -- so that `` is visible in markdown files
     fileencoding = "utf-8",                  -- the encoding written to a file
-    hlsearch = false,                         -- highlight all matches on previous search pattern
+    hlsearch = true,                         -- highlight all matches on previous search pattern
     incsearch = true,                        -- show search matches incrementally
     ignorecase = true,                       -- ignore case in search patterns
     mouse = "a",                             -- allow the mouse to be used in neovim
