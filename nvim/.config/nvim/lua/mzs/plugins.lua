@@ -262,6 +262,8 @@ lazy.setup({
     -- let the leader key work
     --[[ 'rhysd/clever-f.vim', ]]
 
+    { 'itchyny/calendar.vim' },
+
     -- Lazy load firenvim
     -- Explanation: https://github.com/folke/lazy.nvim/discussions/463#discussioncomment-4819297
     cond = not not vim.g.started_by_firenvim,
