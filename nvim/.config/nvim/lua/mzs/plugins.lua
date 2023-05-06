@@ -168,8 +168,11 @@ lazy.setup({
         build = "make install_jsregexp"
     },
     {"rafamadriz/friendly-snippets"}, -- a bunch of snippets to usempletions
-    {'tzachar/cmp-tabnine', build='./install.sh', dependencies = 'hrsh7th/nvim-cmp'},
-
+    {
+        'tzachar/cmp-tabnine',
+        build = './install.sh',
+        dependencies = 'hrsh7th/nvim-cmp',
+    },
     -- LSP
     {"neovim/nvim-lspconfig"}, -- enable LSP
     { "williamboman/mason.nvim" },
