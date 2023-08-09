@@ -20,6 +20,11 @@ if not status_ok then
     return
 end
 
+-- vim plugin
+vim.cmd[[
+    runtime macros/matchit.vim
+]]
+
 -- Install your plugins here
 lazy.setup({
     "nvim-lua/popup.nvim",  -- An implementation of the Popup API from vim in Neovim

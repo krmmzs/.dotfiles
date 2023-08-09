@@ -76,7 +76,6 @@ local co = s("co", fmt([[
 ]], {
         i(1, ""),
     }))
-
 table.insert(snippets, co)
 
 local url = s("url", fmt([[
@@ -94,7 +93,6 @@ local img = s("img", fmt([[
         i(2, ""),
         i(3, "")
     }))
-
 table.insert(snippets, img)
 
 local todo = s("todo", fmt([[
@@ -102,8 +100,18 @@ TODO: {}
 ]], {
         i(1, ""),
     }))
-
 table.insert(snippets, todo)
+
+local de = s("de", {
+    t({"$$"}),
+    t({"", "\\left|"}),
+    t({"", "\\begin{array}{cccc} ", ""}),
+    i(1, ""),
+    t({"", "\\end{array}"}),
+    t({"", "\\right| "}),
+    t({"", "$$"}),
+})
+table.insert(snippets, de)
 
 -- End Refactoring --
 

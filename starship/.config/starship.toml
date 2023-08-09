@@ -4,6 +4,8 @@
 # Inserts a blank line between shell prompts
 add_newline = false
 
+command_timeout = 500
+
 # Replace the '❯' symbol in the prompt with '➜'
 [character] # The name of the module we are configuring is 'character'
 success_symbol = '[➜](bold green)' # The 'success_symbol' segment is being set to '➜' with the color 'bold green'
@@ -105,12 +107,6 @@ format = '🕙[\[ $time \]]($style) '
 time_format = '%T'
 time_range = '23:00:00-04:00:00' # show at a later time
 
-[sudo]
-disabled = false
-symbol = "💪"
-style = "bold blue"
-format = "[as SUDO$symbol]($style)"
-
 [status]
 disabled = false
 symbol = '🔴 '
@@ -124,3 +120,10 @@ sigint_symbol = ''
 ahead = '⇡${count}'
 diverged = '⇕⇡${ahead_count}⇣${behind_count}'
 behind = '⇣${count}'
+
+[sudo]
+disabled = true
+symbol = "💪"
+style = "bold blue"
+format = "[as SUDO$symbol]($style)"
+

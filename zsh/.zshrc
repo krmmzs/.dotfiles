@@ -220,6 +220,9 @@ alias freefly="cd ~/MyGit/sciNet/free && ./clash -d ."
 alias white="cd ~/MyGit/sciNet/white && ./clash -d ."
 # alias white="cd ~/MyGit/sciNet/white && xdg-open https://clash.razord.top/ && ./clash -d ."
 
+# url
+alias daily="xdg-open https://github.com/krmmzs/PFTPE/blob/master/Daily/README.md"
+
 # fzf find files
 alias v="fd --type f --hidden --exclude .git | fzf-tmux -p 70% --reverse | xargs nvim"
 # fzf with cd

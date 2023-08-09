@@ -3,17 +3,16 @@ local term_opts = { silent = true }
 -- Shorten function name
 local keymap = vim.api.nvim_set_keymap
 local function nkeymap(key, map)
-    keymap('n', key, map, opts)
+	keymap("n", key, map, opts)
 end
 local function vkeymap(key, map)
-    keymap('v', key, map, opts)
+	keymap("v", key, map, opts)
 end
 local function ikeymap(key, map)
-    keymap('i', key, map, opts)
+	keymap("i", key, map, opts)
 end
 
-
-local actions = require "telescope.actions"
+local actions = require("telescope.actions")
 local pickers = require("telescope.pickers")
 local finders = require("telescope.finders")
 local previewers = require("telescope.previewers")
@@ -24,9 +23,8 @@ local builtin = require("telescope.builtin")
 
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
-    return
+	return
 end
-
 
 nkeymap("<C-f>", "<cmd>lua require('telescope.builtin').find_files()<cr>")
 nkeymap("<C-g>", "<cmd>lua require('telescope.builtin').git_files()<cr>") -- fast than find files when in git repo
@@ -34,7 +32,7 @@ nkeymap("<C-g>", "<cmd>lua require('telescope.builtin').git_files()<cr>") -- fas
 --[[     telescope.builtin.search_string({ search = vim.fn.input("Search > ") }); ]]
 --[[ end) ]]
 vim.keymap.set("n", "<leader>fs", function()
-    builtin.grep_string({ search = vim.fn.input("Grep > ") });
+	builtin.grep_string({ search = vim.fn.input("Grep > ") })
 end)
 nkeymap("<leader>f1", "<cmd>lua require('telescope.builtin').find_files({hidden=true})<cr>")
 nkeymap("<leader>f2", "<cmd>lua require('telescope.builtin').find_files({no_ignore=true})<cr>")
@@ -42,7 +40,7 @@ nkeymap("<leader>f3", "<cmd>lua require('telescope.builtin').find_files({hidden=
 nkeymap("<leader>fg", "<cmd>lua require('telescope.builtin').live_grep()<cr>")
 nkeymap("<leader>fb", "<cmd>lua require('telescope.builtin').buffers()<cr>")
 -- see https://www.reddit.com/r/neovim/comments/oli7fb/permanent_recent_files_using_telescope/
--- only keeps track of the opened files in the current session. 
+-- only keeps track of the opened files in the current session.
 -- nkeymap("<C-p>", "<cmd>lua require('telescope.builtin').oldfiles()<cr>")
 nkeymap("<leader>fh", ":<cmd>Telescope<CR>")
 
@@ -50,7 +48,7 @@ nkeymap("<leader>fh", ":<cmd>Telescope<CR>")
 nkeymap("<leader>ff", "<cmd>Telescope lsp_document_symbols<cr>")
 
 -- frecency
-nkeymap("<leader>fr", "<cmd>lua require('telescope').extensions.frecency.frecency()<CR>")
+vim.api.nvim_set_keymap("n", "<leader>fr", "<Cmd>Telescope frecency<CR>", opts)
 
 -- TODO
 nkeymap("<leader>fd", ":TodoTelescope<cr>")
@@ -65,121 +63,115 @@ nkeymap("<leader>fj", "<cmd>lua require('telescope.builtin').jumplist()<cr>")
 --[[ nkeymap("<leader>fn", "<cmd>lua require('telescope').extensions.notify.notify()<cr>") ]]
 -- noice.nvim
 --[[ nkeymap("<leader>fn", "<cmd>Noice telescope<cr>") -- replaced by noice.nvim ]]
+telescope.setup({
+	defaults = {
 
+		prompt_prefix = " ",
+		selection_caret = " ",
+		path_display = { "smart" },
 
+		mappings = {
+			i = {
+				["<C-n>"] = actions.cycle_history_next,
+				["<C-p>"] = actions.cycle_history_prev,
 
-telescope.setup {
-    defaults = {
+				["<C-j>"] = actions.move_selection_next,
+				["<C-k>"] = actions.move_selection_previous,
 
-        prompt_prefix = " ",
-        selection_caret = " ",
-        path_display = { "smart" },
+				["<C-c>"] = actions.close,
 
-        mappings = {
-            i = {
-                ["<C-n>"] = actions.cycle_history_next,
-                ["<C-p>"] = actions.cycle_history_prev,
+				["<Down>"] = actions.move_selection_next,
+				["<Up>"] = actions.move_selection_previous,
 
-                ["<C-j>"] = actions.move_selection_next,
-                ["<C-k>"] = actions.move_selection_previous,
+				["<CR>"] = actions.select_default,
+				["<C-x>"] = actions.select_horizontal,
+				["<C-v>"] = actions.select_vertical,
+				["<C-t>"] = actions.select_tab,
 
-                ["<C-c>"] = actions.close,
+				["<C-u>"] = actions.preview_scrolling_up,
+				["<C-d>"] = actions.preview_scrolling_down,
 
-                ["<Down>"] = actions.move_selection_next,
-                ["<Up>"] = actions.move_selection_previous,
+				["<PageUp>"] = actions.results_scrolling_up,
+				["<PageDown>"] = actions.results_scrolling_down,
 
-                ["<CR>"] = actions.select_default,
-                ["<C-x>"] = actions.select_horizontal,
-                ["<C-v>"] = actions.select_vertical,
-                ["<C-t>"] = actions.select_tab,
+				["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
+				["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
+				["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+				["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+				["<C-l>"] = actions.complete_tag,
+				["<C-h>"] = actions.which_key, -- keys from pressing <C-/>
+			},
 
-                ["<C-u>"] = actions.preview_scrolling_up,
-                ["<C-d>"] = actions.preview_scrolling_down,
+			n = {
+				["<esc>"] = actions.close,
+				["<CR>"] = actions.select_default,
+				["<C-x>"] = actions.select_horizontal,
+				["<C-v>"] = actions.select_vertical,
+				["<C-t>"] = actions.select_tab,
 
-                ["<PageUp>"] = actions.results_scrolling_up,
-                ["<PageDown>"] = actions.results_scrolling_down,
+				["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
+				["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
+				["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+				["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
 
-                ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
-                ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
-                ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
-                ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
-                ["<C-l>"] = actions.complete_tag,
-                ["<C-h>"] = actions.which_key, -- keys from pressing <C-/>
-            },
+				["j"] = actions.move_selection_next,
+				["k"] = actions.move_selection_previous,
+				["H"] = actions.move_to_top,
+				["M"] = actions.move_to_middle,
+				["L"] = actions.move_to_bottom,
 
-            n = {
-                ["<esc>"] = actions.close,
-                ["<CR>"] = actions.select_default,
-                ["<C-x>"] = actions.select_horizontal,
-                ["<C-v>"] = actions.select_vertical,
-                ["<C-t>"] = actions.select_tab,
+				["<Down>"] = actions.move_selection_next,
+				["<Up>"] = actions.move_selection_previous,
+				["gg"] = actions.move_to_top,
+				["G"] = actions.move_to_bottom,
 
-                ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
-                ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
-                ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
-                ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+				["<C-u>"] = actions.preview_scrolling_up,
+				["<C-d>"] = actions.preview_scrolling_down,
 
-                ["j"] = actions.move_selection_next,
-                ["k"] = actions.move_selection_previous,
-                ["H"] = actions.move_to_top,
-                ["M"] = actions.move_to_middle,
-                ["L"] = actions.move_to_bottom,
+				["<PageUp>"] = actions.results_scrolling_up,
+				["<PageDown>"] = actions.results_scrolling_down,
 
-                ["<Down>"] = actions.move_selection_next,
-                ["<Up>"] = actions.move_selection_previous,
-                ["gg"] = actions.move_to_top,
-                ["G"] = actions.move_to_bottom,
+				["?"] = actions.which_key,
+			},
+		},
+	},
+	pickers = {
+		-- Default configuration for builtin pickers goes here:
+		-- picker_name = {
+		--   picker_config_key = value,
+		--   ...
+		-- }
+		-- Now the picker_config_key will be applied every time you call this
+		-- builtin picker
+	},
+	extensions = {
+		-- see https://github.com/nvim-telescope/telescope-fzf-native.nvim#telescope-setup-and-configuration
+		fzf = {
+			fuzzy = true, -- false will only do exact matching
+			override_generic_sorter = true, -- override the generic sorter
+			override_file_sorter = true, -- override the file sorter
+			case_mode = "smart_case", -- or "ignore_case" or "respect_case"
+			-- the default case_mode is "smart_case"
+		},
 
-                ["<C-u>"] = actions.preview_scrolling_up,
-                ["<C-d>"] = actions.preview_scrolling_down,
+		media_files = {
+			-- filetypes whitelist
+			-- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
+			filetypes = { "png", "webp", "jpg", "jpeg", "gif" },
+			find_cmd = "rg", -- find command (defaults to `fd`)
+		},
 
-                ["<PageUp>"] = actions.results_scrolling_up,
-                ["<PageDown>"] = actions.results_scrolling_down,
-
-                ["?"] = actions.which_key,
-            },
-        },
-    },
-    pickers = {
-        -- Default configuration for builtin pickers goes here:
-        -- picker_name = {
-        --   picker_config_key = value,
-        --   ...
-        -- }
-        -- Now the picker_config_key will be applied every time you call this
-        -- builtin picker
-    },
-    extensions = {
-        -- see https://github.com/nvim-telescope/telescope-fzf-native.nvim#telescope-setup-and-configuration
-        fzf = {
-            fuzzy = true,                    -- false will only do exact matching
-            override_generic_sorter = true,  -- override the generic sorter
-            override_file_sorter = true,     -- override the file sorter
-            case_mode = "smart_case",        -- or "ignore_case" or "respect_case"
-                                             -- the default case_mode is "smart_case"
-        },
-
-        media_files = {
-            -- filetypes whitelist
-            -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
-            filetypes = {"png", "webp", "jpg", "jpeg", "gif"},
-            find_cmd = "rg" -- find command (defaults to `fd`)
-        },
-
-        -- Your extension configuration goes here:
-        -- extension_name = {
-        --   extension_config_key = value,
-        -- }
-        -- please take a look at the readme of the extension you want to configure
-    },
-
-    -- builtin configs
-    builtin = {
-        git_branches = {
-
-        }
-    },
-}
+		-- Your extension configuration goes here:
+		-- extension_name = {
+		--   extension_config_key = value,
+		-- }
+		-- please take a look at the readme of the extension you want to configure
+	},
+	-- builtin configs
+	builtin = {
+		git_branches = {},
+	},
+})
 
 -- other config
 -- see https://github.com/ThePrimeagen/.dotfiles/blob/master/nvim/.config/nvim/lua/theprimeagen/telescope.lua#L39
@@ -192,30 +184,30 @@ local M = {}
 -- end
 
 M.git_branches = function()
-    require("telescope.builtin").git_branches({
-        attach_mappings = function(_, map)
-            map("i", "<c-d>", actions.git_delete_branch)
-            map("n", "<c-d>", actions.git_delete_branch)
-            return true
-        end,
-    })
+	require("telescope.builtin").git_branches({
+		attach_mappings = function(_, map)
+			map("i", "<c-d>", actions.git_delete_branch)
+			map("n", "<c-d>", actions.git_delete_branch)
+			return true
+		end,
+	})
 end
 
 -- see https://github.com/nvim-telescope/telescope-fzf-native.nvim#telescope-setup-and-configuration
 -- To get fzf loaded and working with telescope, you need to call
 -- load_extension, somewhere after setup function:
-telescope.load_extension('fzf')
+telescope.load_extension("fzf")
 
 -- see https://github.com/nvim-telescope/telescope-media-files.nvim
-telescope.load_extension('media_files')
+telescope.load_extension("media_files")
 
 -- see https://github.com/ThePrimeagen/harpoon#telescope-support
-require("telescope").load_extension('harpoon')
+require("telescope").load_extension("harpoon")
 
 -- need sqlite3
 -- Using an implementation of Mozilla's Frecency algorithm (used in Firefox's address bar)
 -- , files edited frecently are given higher precedence in the list index.
-telescope.load_extension('frecency')
+telescope.load_extension("frecency")
 
 -- https://github.com/nvim-telescope/telescope.nvim/issues/592#issuecomment-789069837
 -- found a plugin airblade/vim-rooter, It can find project root according to the file I set

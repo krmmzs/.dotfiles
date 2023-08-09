@@ -26,13 +26,13 @@ configs.setup({
   auto_preview = false,
   position = 'right',
   relative_width = true,
-  width = 25,
+  width = 38,
   auto_close = false,
   show_numbers = true, -- show numbers beside the list
   show_relative_numbers = true, -- show relative numbers beside the list, I love it !!!
   show_symbol_details = true,
   preview_bg_highlight = 'Pmenu',
-  autofold_depth = nil,
+  autofold_depth = 2,
   auto_unfold_hover = true,
   fold_markers = { '', '' },
   wrap = false,

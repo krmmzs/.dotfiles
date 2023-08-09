@@ -61,7 +61,7 @@ end
 
 
 vim.cmd[[
-    set viminfo='100,n$HOME/.vim/files/info/viminfo
+    " set viminfo='100,n$HOME/.vim/files/info/viminfo // nvim need't viminfo
 ]]
 
 vim.cmd[[

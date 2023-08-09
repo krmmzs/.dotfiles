@@ -13,10 +13,11 @@ local function ikeymap(key, map)
     keymap('i', key, map, opts)
 end
 
-local status_ok, configs = pcall(require, "diffview")
-if not status_ok then
-    return
-end
+--[[ local status_ok, configs = pcall(require, "diffview") ]]
+--[[ if not status_ok then ]]
+--[[     print("diffview require failed") ]]
+--[[     return ]]
+--[[ end ]]
 
 -- Example config with default values
 local actions = require("diffview.actions")
@@ -25,7 +26,7 @@ nkeymap('<leader>do', '<cmd>DiffviewOpen<cr>')
 nkeymap('<leader>dc', '<cmd>DiffviewClose<cr>')
 
 -- see https://github.com/sindrets/diffview.nvim#configuration
-configs.setup({
+require("diffview").setup({
   diff_binaries = false,    -- Show diffs for binaries
   enhanced_diff_hl = false, -- See ':h diffview-config-enhanced_diff_hl'
   git_cmd = { "git" },      -- The git executable followed by default args.
