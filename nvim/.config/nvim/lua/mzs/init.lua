@@ -113,3 +113,6 @@ require("mzs.plugin.dap")
 
 -- navigation
 require("mzs.plugin.harpoon")
+
+-- vim
+require("mzs.plugin.vim-www")

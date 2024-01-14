@@ -208,17 +208,7 @@ alias tn="tmux new -s"
 # cpu
 alias cpuM="cat /proc/cpuinfo | rg cpu\ MHz"
 # memory
-
-# clash alias
-alias prpr="cd ~/MyGit/sciNet/prpr && ./clash -d ."
-# alias prpr="cd ~/MyGit/sciNet/prpr && xdg-open https://clash.razord.top/ && ./clash -d ."
-alias igg="cd ~/MyGit/sciNet/igg && ./clash -d ."
-# alias igg="cd ~/MyGit/sciNet/igg && xdg-open https://clash.razord.top/ && ./clash -d ."
-alias ins="cd ~/MyGit/sciNet/ins && ./clash -d ."
-# alias ins="cd ~/MyGit/sciNet/ins && xdg-open https://clash.razord.top/ && ./clash -d ."
-alias freefly="cd ~/MyGit/sciNet/free && ./clash -d ."
-alias white="cd ~/MyGit/sciNet/white && ./clash -d ."
-# alias white="cd ~/MyGit/sciNet/white && xdg-open https://clash.razord.top/ && ./clash -d ."
+alias ns="notify-send"
 
 # url
 alias daily="xdg-open https://github.com/krmmzs/PFTPE/blob/master/Daily/README.md"
@@ -289,7 +279,7 @@ alias light='alacritty-colorscheme apply $DARK_COLOR'
 alias toggle="alacritty-colorscheme toggle $LIGHT_COLOR $DARK_COLOR"
 
 # config script
-alias config='cd /home/$USER/scripts/myscripts && ./config.sh'
+alias config='/home/$USER/scripts/myscripts/config.sh'
 
 alias todo='cd ~/MyGit/TODO && nvim .'
 
@@ -302,6 +292,8 @@ alias dvmkv='yt-dlp -f "bestvideo[ext=mkv]+bestaudio[ext=webm]" --merge-output-f
 alias dvmkv2='yt-dlp -f "bestvideo[ext=webm]+bestaudio[ext=webm]" --merge-output-format mkv'
 alias dvpic='you-get'
 alias tor='(cd /opt/tor-browser_en-US/ && ./start-tor-browser.desktop)'
+
+rpw() { cat /dev/urandom | tr -dc 'a-zA-Z0-9' | fold -w $@ | head -n 1 }
 
 # rg function
 
