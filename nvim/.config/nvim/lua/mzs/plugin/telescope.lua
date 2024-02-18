@@ -19,7 +19,7 @@ local previewers = require("telescope.previewers")
 local action_state = require("telescope.actions.state")
 local conf = require("telescope.config").values
 local trouble = require("trouble.providers.telescope") -- trouble.nvim
-local builtin = require("telescope.builtin")
+local builtin = require('telescope.builtin')
 
 local status_ok, telescope = pcall(require, "telescope")
 if not status_ok then
