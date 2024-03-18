@@ -5,8 +5,7 @@ if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
     "git",
     "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
+    "--filter=blob:none", "https://github.com/folke/lazy.nvim.git",
     "--branch=stable", -- latest stable release
     lazypath,
   })
@@ -238,7 +237,7 @@ lazy.setup({
     {'uga-rosa/translate.nvim'},
 
     -- AI
-    {'github/copilot.vim'},
+    --[[ {'github/copilot.vim'}, ]]
 
     -- time recorder
     {'ActivityWatch/aw-watcher-vim'},
@@ -273,6 +272,8 @@ lazy.setup({
     { 'itchyny/calendar.vim' },
 
     {'waiting-for-dev/vim-www'},
+
+    {'rainbowhxch/accelerated-jk.nvim'},
 
     -- Lazy load firenvim
     -- Explanation: https://github.com/folke/lazy.nvim/discussions/463#discussioncomment-4819297

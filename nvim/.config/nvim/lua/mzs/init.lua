@@ -116,3 +116,6 @@ require("mzs.plugin.harpoon")
 
 -- vim
 require("mzs.plugin.vim-www")
+
+--- fast jk
+require("mzs.plugin.accelerated-jk")
